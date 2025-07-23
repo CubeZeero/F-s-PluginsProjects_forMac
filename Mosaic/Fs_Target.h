@@ -9,27 +9,29 @@
 #define FS_TAGET_H
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é–¼‘O
+//ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®è¡¨ç¤ºåã«ä½¿ã†åå‰
 #define FS_NAME			"F's Mosaic"
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ìà–¾‚Ég‚í‚ê‚é•¶š
-#define FS_DESCRIPTION	"ƒ‚ƒUƒCƒN"
+//ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®èª¬æ˜ã«ä½¿ã†èª¬æ˜
+#define FS_DESCRIPTION	"ãƒ¢ã‚¶ã‚¤ã‚¯åŠ¹æœ"
 
-	//-----------------------------------------------------------------------------------
-	//ƒvƒ‰ƒOƒCƒ“‚ª•\¦‚³‚ê‚éƒƒjƒ…[–¼
-	//#define FS_CATEGORY "F's Plugins-Channel"
-	//#define FS_CATEGORY "F's Plugins-Draw"
-	#define FS_CATEGORY "NF's Plugins-Filter"
-	//#define FS_CATEGORY "F's Plugins-Cell"
-	//#define FS_CATEGORY "F's Plugins-Colorize"
-	//#define FS_CATEGORY "F's Plugins-Script"
-//#define FS_CATEGORY "F's Plugins-Test"
+//-----------------------------------------------------------------------------------
+//ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’è¡¨ç¤ºã™ã‚‹ã‚«ãƒ†ã‚´ãƒª
+
+//#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#ifndef SUPPORT_SMARTFX			//‚Qd“o˜^‚ğ–h‚®
-#define SUPPORT_SMARTFX			//‚±‚ê‚ğ—LŒø‚É‚·‚é‚ÆSmartFX+Float_Color‚É‘Î‰‚·‚é
+#ifndef SUPPORT_SMARTFX			//ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
+#define SUPPORT_SMARTFX			//ã“ã®è¡Œã‚’æœ‰åŠ¹ã«ã™ã‚‹ã¨SmartFX+Float_Colorã«å¯¾å¿œã™ã‚‹
 #endif
-//#define NO_USE_FSGRAPHICS	//‚±‚ê‚ğ—LŒø‚É‚·‚é‚ÆFsGraphicsŠÖŒW‚ªƒCƒ“ƒNƒ‹[ƒh‚³‚ê‚È‚¢
+//#define NO_USE_FSGRAPHICS	//ã“ã®è¡Œã‚’æœ‰åŠ¹ã«ã™ã‚‹ã¨FsGraphicsé–¢ä¿‚ã®ã‚³ãƒ¼ãƒ‰ã‚’ç„¡åŠ¹ã«ã™ã‚‹
 
 //-----------------------------------------------------------------------------------
 #include "../FsLibrary/FsVersion.h"
@@ -47,8 +49,8 @@ out_data->out_flags
 */
 
 //#define FS_OUT_FLAGS	33556032
-#define FS_OUT_FLAGS	33556036	//‚±‚Á‚¿‚ğ—LŒø‚É‚·‚é‚Æ–ˆƒtƒŒ[ƒ€‚²‚Æ‚É•`‰æ‚·‚é
-//#define FS_OUT_FLAGS	1600		//8bit‚Ì‚İ
+#define FS_OUT_FLAGS	33556036	//ã“ã‚Œã‚’æœ‰åŠ¹ã«ã™ã‚‹ã¨ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å¤‰åŒ–ã‚’æç”»ã™ã‚‹
+//#define FS_OUT_FLAGS	1600		//8bitã®å ´åˆ
 //-----------------------------------------------------------------------------------
 //out_flags2
 /*

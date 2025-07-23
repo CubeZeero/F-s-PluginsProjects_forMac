@@ -1,14 +1,20 @@
 /*
-	各種定数を設定
+	Plugin parameter settings
 
-	PiPLリソースに使う為にマクロ展開は最低限
+	PiPL resource code should be minimum
 
 */
 #pragma once
 #ifndef Filter_Target_H
 #define Filter_Target_H
 
-#include "../FsLibrary_next/FsVersion.h"
+// Version definitions (from FsVersion.h to avoid Rez compile issues)
+#define	MAJOR_VERSION		3
+#define	MINOR_VERSION		0
+#define	BUG_VERSION			0
+#define	STAGE_VERSION		PF_Stage_RELEASE
+#define	BUILD_VERSION		0
+#define FS_VERSION	1572864
 
 
 
@@ -17,35 +23,34 @@
 #define FS_MATCH_NAME		FS_NAME
 #define FS_CREATER			"Copyright (c) 2019 bryful ( bryful@gmail.com/twitter:bryful )"
 //-----------------------------------------------------------------------------------
-//プラグインが表示されるメニュー名
-	//#define FS_CATEGORY "F's Plugins-Channel"
-	//#define FS_CATEGORY "F's Plugins-Draw"
-	#define FS_CATEGORY "NF's Plugins-Filter"
-	//#define FS_CATEGORY "F's Plugins-Cell"
-	//#define FS_CATEGORY "F's Plugins-Colorize"
-	//#define FS_CATEGORY "F's Plugins-Script"
-	//#define FS_CATEGORY "F's Plugins-{Legacy}"
+//Plugin category selection
 
+//#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
-//#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
+//#define SUPPORT_SMARTFX			//Enable SmartFX+Float_Color support
 
+//value:4 [PF_OutFlag_NON_PARAM_VARY] Draw on all layers
 
-
-//value:4 [PF_OutFlag_NON_PARAM_VARY] 全フレームで描画する
-
-//value:64 [PF_OutFlag_USE_OUTPUT_EXTENT] 表示画面全部
+//value:64 [PF_OutFlag_USE_OUTPUT_EXTENT] Use output extent
 //value:16777216 [PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES]
 
 //value:33554432[PF_OutFlag_DEEP_COLOR_AWARE] 16bit
 
-//#define FS_OUT_FLAGS	50332164	//こっちにすると全フレーム描画する
-#define FS_OUT_FLAGS	50332160	//通常はこちら
+//#define FS_OUT_FLAGS	50332164	//Enable to draw on all layers
+#define FS_OUT_FLAGS	50332160	//Normal mode
 
 
 
 #if defined(SUPPORT_SMARTFX)
-//value:8 [PF_OutFlag2_PARAM_GROUP_START_COLLAPSED_FLAG] グループ
-//value:1024 [PF_OutFlag2_SUPPORTS_SMART_RENDER] スマートレンダー
+//value:8 [PF_OutFlag2_PARAM_GROUP_START_COLLAPSED_FLAG] Collapse
+//value:1024 [PF_OutFlag2_SUPPORTS_SMART_RENDER] Smart render support
 //value:4096 [PF_OutFlag2_FLOAT_COLOR_AWARE] 32bit
 #define FS_OUT_FLAGS2	5128
 

@@ -10,27 +10,30 @@
 
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚ÌŽ¯•Ê‚ÉŽg‚í‚ê‚é–¼‘O
+//ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®è¡¨ç¤ºåã«ä½¿ã†åå‰
 #define FS_NAME			"F's Paint"
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ìà–¾‚ÉŽg‚í‚ê‚é•¶Žš
-#define FS_DESCRIPTION	"ƒyƒCƒ“ƒgi‘­‚ÉŒ¾‚¤ƒoƒPƒcƒc[ƒ‹j"
+//ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®èª¬æ˜Žã«ä½¿ã†èª¬æ˜Ž
+#define FS_DESCRIPTION	"Paint (brush stroke effect)"
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚ª•\Ž¦‚³‚ê‚éƒƒjƒ…[–¼
-//#define FS_CATEGORY "F's Plugins-Fx"
-//#define FS_CATEGORY "F's Plugins-Channel"
-#define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "F's Plugins-Script"
-//#define FS_CATEGORY "F's Plugins-Draw"
+//ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’è¡¨ç¤ºã™ã‚‹ã‚«ãƒ†ã‚´ãƒª
 
+#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+//#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//‚±‚ê‚ð—LŒø‚É‚·‚é‚ÆSmartFX+Float_Color‚É‘Î‰ž‚·‚é
-//#define NO_USE_FSGRAPHICS	//‚±‚ê‚ð—LŒø‚É‚·‚é‚ÆFsGraphicsŠÖŒW‚ªƒCƒ“ƒNƒ‹[ƒh‚³‚ê‚È‚¢
+#define SUPPORT_SMARTFX			//ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ã¨SmartFX+Float_Colorã«å¯¾å¿œã™ã‚‹
+//#define NO_USE_FSGRAPHICS	//ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ã¨FsGraphicsé–¢ä¿‚ã®ã‚³ãƒ¼ãƒ‰ã‚’ç„¡åŠ¹ã«ã™ã‚‹
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ìƒo[ƒWƒ‡ƒ“
+//ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³
 #include "../FsLibrary/FsVersion.h"
 
 //-----------------------------------------------------------------------------------
@@ -45,9 +48,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//’Êí‚Í‚±‚¿‚ç
-//#define FS_OUT_FLAGS	33556036	//‚±‚Á‚¿‚ð—LŒø‚É‚·‚é‚Æ–ˆƒtƒŒ[ƒ€‚²‚Æ‚É•`‰æ‚·‚éBNON_PARAM_VARY‚ð“®ì’†‚ÉØ‚è‘Ö‚¦‚é‚Æ‚«‚à‚±‚¿‚ç‚É
-//#define FS_OUT_FLAGS	1600		//8bit‚Ì‚Ý
+#define FS_OUT_FLAGS	33556032	//é€šå¸¸ã¯ã“ã‚Œ
+//#define FS_OUT_FLAGS	33556036	//ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ã¨ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å¤‰åŒ–ã‚’æç”»ã™ã‚‹ã€‚NON_PARAM_VARYã‚’æœ€åˆã«æˆ»ã™ã¨ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãŒå¤‰åŒ–ã™ã‚‹
+//#define FS_OUT_FLAGS	1600		//8bitã®å ´åˆ
 
 //-----------------------------------------------------------------------------------
 //out_flags2

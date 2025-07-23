@@ -83,7 +83,7 @@ ParamsSetup (
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_HUE,
 					STR_REV,
@@ -92,7 +92,7 @@ ParamsSetup (
 					ID_HUE
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_LUM,
 					STR_REV,
@@ -102,7 +102,7 @@ ParamsSetup (
 					);
 
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_SAT,
 					STR_REV,
@@ -112,15 +112,15 @@ ParamsSetup (
 					);
 
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ã‚ªãƒ«ã‚¬ãƒ³ãƒ–ãƒ¬ãƒ³ãƒ‰
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_ORG_BLEND,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					3,				//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_ORG_BLEND,	//ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿å
+					0, 				//å€¤ãŒ0ã®å ´åˆã®æœ€å°å€¤
+					100,			//å€¤ãŒ100ã®å ´åˆã®æœ€å¤§å€¤
+					0,				//ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã®æœ€å°å€¤ 
+					100,			//ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã®æœ€å¤§å€¤
+					0,				//ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã®å€¤
+					3,				//å€¤ã®ç¯„å›²ã«ã¤ã„ã¦ã®ãƒ’ãƒ³ãƒˆ 
 					0,
 					0,
 					ID_ORG_BLEND
@@ -170,8 +170,8 @@ QueryDynamicFlags(
 {
 	PF_Err 	err 	= PF_Err_NONE,
 			err2 	= PF_Err_NONE;
-	//PF_OutFlag_NON_PARAM_VARY‚Ì’l‚ğout_flags‚Öİ’è‚µ‚Ä
-	//–ˆƒtƒŒ[ƒ€‚²‚Æ‚Ì•`‰æ‚ğ‚·‚é‚©Ø‚è‘Ö‚¦‚éB
+	//PF_OutFlag_NON_PARAM_VARYï¿½Ì’lï¿½ï¿½out_flagsï¿½Öİ’è‚µï¿½ï¿½
+	//ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚Ì•`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚©ï¿½Ø‚ï¿½Ö‚ï¿½ï¿½ï¿½B
 	/*
 	CFsAE ae;
 	err = ae.QueryDynamicFlags(in_data,out_data,params,extra,ID_NUM_PARAMS);
@@ -440,7 +440,7 @@ RespondtoAEGP (
 
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -510,7 +510,33 @@ EntryPointFunc (
 	catch(PF_Err &thrown_err){
 		err = thrown_err;
 	}
+	catch(...){
+		err = PF_Err_INTERNAL_STRUCT_DAMAGED;
+	}
 	return err;
+}
+
+//-------------------------------------------------------------------------------------------------
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+	PF_PluginDataPtr inPtr,
+	PF_PluginDataCB2 inPluginDataCallBackPtr,
+	SPBasicSuite* inSPBasicSuitePtr,
+	const char* inHostName,
+	const char* inHostVersion)
+{
+	PF_Err result = PF_Err_INVALID_CALLBACK;
+	result = PF_REGISTER_EFFECT_EXT2(
+		inPtr,
+		inPluginDataCallBackPtr,
+		FS_NAME,
+		FS_NAME,
+		FS_CATEGORY,
+		0,
+		"EffectMain",
+		FS_DESCRIPTION
+	);
+	return result;
 }
 
 //-------------------------------------------------------------------------------------------------

@@ -39,14 +39,14 @@
 #include "../FsLibrary/FsDebug.h"
 #include "../FsLibrary/FsHLS.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer
 	
-	//‹«ŠEü‚Ì‚İ
+	//ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½Ì‚ï¿½
 	ID_LINE_ONLY,
-	//åü‚ÌF
+	//ï¿½ï¿½ï¿½ï¿½ÌF
 	ID_COLOR1_ON,
 	ID_COLOR1,
 	ID_COLOR2_ON,
@@ -60,20 +60,20 @@ enum {
 	ID_COLOR6_ON,
 	ID_COLOR6,
 	
-	//åüŒŸoƒŒƒxƒ‹
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½xï¿½ï¿½
 	ID_LEVEL,
 	
-	//ƒ}ƒbƒ`‚µ‚È‚©‚Á‚½‚ÌF
+	//ï¿½}ï¿½bï¿½`ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌF
 	ID_IG_COLOR,
 	
-	//åü•”•ªÅ‘åÅ¬
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‘ï¿½Åï¿½
 	ID_LINE_MINMAX1,
 	ID_LINE_MINMAX2,
 
-	//åü•”•ª‚Éƒuƒ‰[
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éƒuï¿½ï¿½ï¿½[
 	ID_LINE_BLUR,
 	
-	//åü•”•ª‚ÌF•Ï‚¦
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌFï¿½Ï‚ï¿½
 	ID_LINE_H,
 	ID_LINE_S,
 	ID_LINE_L,
@@ -94,7 +94,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\¦•¶š—ñ
+//UIï¿½Ì•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define	STR_LINE_ONLY		"LineOnly"
 #define	STR_ON				"on"
 #define	STR_COLOR1_ON		"EnabledColor1"
@@ -112,7 +112,7 @@ enum {
 #define	STR_COLOR6			"Color6"
 
 #define	STR_LEVEL			"level"
-#define	STR_IG_COLOR		"‚ ‚«‚ç‚ßF"
+#define	STR_IG_COLOR		"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßF"
 
 #define	STR_LINE_MINMAX1	"Min/Max1"
 #define	STR_LINE_MINMAX2	"Min/Max2"
@@ -139,7 +139,7 @@ enum {
 
 #define COLOR_MAX	6
 #define NEG_COLOR_MAX	4
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	PF_Boolean	lineOnly;
 	A_long		colorMax;
@@ -208,6 +208,39 @@ typedef struct ParamInfo16 {
 
 
 } ParamInfo16;
+typedef struct ParamInfo32 {
+	PF_Boolean	lineOnly;
+	A_long		colorMax;
+	PF_PixelFloat	color[COLOR_MAX];
+	A_long		ngColorMax;
+	PF_PixelFloat	ngColor[NEG_COLOR_MAX];
+	A_long		level;
+
+	PF_PixelFloat	igColor;
+	
+	A_long		blur;
+	A_long		minmax1;
+	A_long		minmax2;
+	PF_FpLong	hue;
+	PF_FpLong	sat;
+	PF_FpLong	light;
+	PF_FpLong	red;
+	PF_FpLong	green;
+	PF_FpLong	blue;
+
+	PF_Handle	scanlineH;
+	PF_PixelFloat	*scanline;
+	PF_PixelFloat	*data;
+	A_long	targetCount;
+	A_long	w;
+	A_long	wt;
+	A_long	wt2;
+	A_long	h;
+	A_long	offset;
+	A_long	nowX;
+	A_long	nowY;
+
+} ParamInfo32;
 //-------------------------------------------------------
 //--------------------------------------------------------------------xFF--------------
 extern "C" {
@@ -226,4 +259,5 @@ EntryPointFunc (
 
 PF_Err irotoreExec8(CFsAE *ae , ParamInfo *infoP);
 PF_Err irotoreExec16(CFsAE *ae , ParamInfo16 *infoP);
+PF_Err irotoreExec32(CFsAE *ae , ParamInfo32 *infoP);
 #endif // IroTore_H

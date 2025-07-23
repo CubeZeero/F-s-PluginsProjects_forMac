@@ -8,7 +8,7 @@
 
 
 //-------------------------------------------------------------------------------------------------
-// Aboutƒ_ƒCƒAƒƒO
+// Aboutï¿½_ï¿½Cï¿½Aï¿½ï¿½ï¿½O
 static PF_Err About (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -69,8 +69,8 @@ static PF_Err SequenceResetup (	PF_InData		*in_data,
 	return PF_Err_NONE;
 }
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -81,9 +81,9 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//F‚Ìw’è
+	//ï¿½Fï¿½Ìwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_COLOR(	STR_BASE_COLOR, 
 					0x00,
 					0x00,
@@ -246,7 +246,7 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 static PF_Err 
 Render ( 
 	PF_InData		*in_dataP,
@@ -339,20 +339,19 @@ RespondtoAEGP (
 
 
 //-----------------------------------------------------------------------------------
-DllExport	PF_Err 
-EntryPointFunc (
+DllExport
+PF_Err
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
 	PF_ParamDef		*params[],
 	PF_LayerDef		*output,
-	void			*extraP)
+	void			*extra)
 {
-	PF_Err		err = PF_Err_NONE;
+	PF_Err err = PF_Err_NONE;
 	
-	try
-	{
-		CFsAE ae;
+	try {
 		switch (cmd) {
 			case PF_Cmd_ABOUT:
 				err = About(in_data,out_data,params,output);
@@ -380,14 +379,14 @@ EntryPointFunc (
 					break;
 #if defined(SUPPORT_SMARTFX)
 			case PF_Cmd_SMART_PRE_RENDER:
-				err = PreRender(in_data,out_data,reinterpret_cast<PF_PreRenderExtra*>(extraP));
+				err = PreRender(in_data,out_data,reinterpret_cast<PF_PreRenderExtra*>(extra));
 				break;
 			case PF_Cmd_SMART_RENDER:
-				err = SmartRender(	in_data,out_data,reinterpret_cast<PF_SmartRenderExtra*>(extraP));
+				err = SmartRender(	in_data,out_data,reinterpret_cast<PF_SmartRenderExtra*>(extra));
 				break;
 #endif
 			case PF_Cmd_COMPLETELY_GENERAL:
-				err = RespondtoAEGP(in_data,out_data,params,output,extraP);
+				err = RespondtoAEGP(in_data,out_data,params,output,extra);
 				break;
 			case PF_Cmd_DO_DIALOG:
 				//err = PopDialog(in_data,out_data,params,output);
@@ -397,20 +396,48 @@ EntryPointFunc (
 											out_data,
 											params,
 											output, 
-											reinterpret_cast<PF_UserChangedParamExtra*>(extraP));
+											reinterpret_cast<PF_UserChangedParamExtra*>(extra));
 				break;
 
 			case PF_Cmd_QUERY_DYNAMIC_FLAGS:
 				err = QueryDynamicFlags(in_data,
 										out_data,
 										params,
-										reinterpret_cast<PF_UserChangedParamExtra*>(extraP));
+										reinterpret_cast<PF_UserChangedParamExtra*>(extra));
 				break;
 		}
 	}
 	catch(PF_Err &thrown_err){
 		err = thrown_err;
 	}
+	catch(...){
+		err = PF_Err_INTERNAL_STRUCT_DAMAGED;
+	}
 	return err;
+}
+
+//-------------------------------------------------------------------------------------------------
+// Modern plugin registration function (required for newer AE versions)
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+	PF_PluginDataPtr inPtr,
+	PF_PluginDataCB2 inPluginDataCallBackPtr,
+	SPBasicSuite* inSPBasicSuitePtr,
+	const char* inHostName,
+	const char* inHostVersion)
+{
+	PF_Err result = PF_Err_INVALID_CALLBACK;
+
+	result = PF_REGISTER_EFFECT_EXT2(
+		inPtr,
+		inPluginDataCallBackPtr,
+		FS_NAME, // Name
+		FS_NAME, // Match Name
+		FS_CATEGORY, // Category
+		AE_RESERVED_INFO, // Reserved Info
+		"EffectMain",	// Entry point
+		"https://www.adobe.com");	// support URL
+
+	return result;
 }
 //-------------------------------------------------------------------------------------------------

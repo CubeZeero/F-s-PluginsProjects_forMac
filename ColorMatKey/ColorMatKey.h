@@ -41,8 +41,8 @@
 #include "../FsLibrary/FsAE.h"
 #include "../FsLibrary/FsHLS.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+//Parameter ID for After Effects
+//These IDs are used in ParamsSetup function and Render function params parameter
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -72,7 +72,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UIの表示文字列
+//UI display strings
 #define	STR_ALPHA_REV			"InvertAlpha"
 
 #define	STR_ON					"on"
@@ -97,7 +97,7 @@ enum {
 #define	STR_TAGET_SOFT3			"Softness3"
 
 
-//UIのパラメータ
+//UI parameters
 typedef struct CInfo {
 	PF_Boolean	target_enabled;
 	PF_FpLong	target_border;
@@ -125,7 +125,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

@@ -42,16 +42,16 @@
 //#include "FsAE.h"
 
 
-#define	StrEXECUTED_CB1		"“h‚è‚Â‚Ô‚·"
+#define	StrEXECUTED_CB1		"å®Ÿè¡Œã™ã‚‹"
 #define	StrEXECUTED_CB2		"ON"
-#define	StrPOS				"ˆÊ’u"
-#define	StrCOLOR			"ƒyƒCƒ“ƒgF"
-#define	StrCOLOR_Opacity	"•s“§–¾“x(%)"
-#define	StrERR_getParams	"ƒpƒ‰ƒ[ƒ^ƒGƒ‰[‚Å‚·BŒä–Æ‚È‚³‚¢B"
+#define	StrPOS				"ä½ç½®"
+#define	StrCOLOR			"ãƒšã‚¤ãƒ³ãƒˆè‰²"
+#define	StrCOLOR_Opacity	"ä¸é€æ˜åº¦(%)"
+#define	StrERR_getParams	"ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚¨ãƒ©ãƒ¼ã§ã™ã€‚çµ‚äº†ã—ã¾ã™ã€‚"
 
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®ID
+//ParamsSetupé–¢æ•°ã¨Renderé–¢æ•°ã®paramsãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®IDã«ãªã‚‹
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_EXECUTED_CB,		//boolean

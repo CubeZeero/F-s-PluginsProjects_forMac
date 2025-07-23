@@ -10,8 +10,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -21,7 +21,7 @@ static PF_Err ParamsSetup (
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_DELTA_CB,
 					STR_CB,
@@ -30,21 +30,21 @@ static PF_Err ParamsSetup (
 					ID_DELTA_CB
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_DELTA_OPACITY,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					500,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					300,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					100,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_DELTA_OPACITY,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					500,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					300,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					100,			//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_DELTA_OPACITY
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_ALPHA_CB,
 					STR_CB,
@@ -53,21 +53,21 @@ static PF_Err ParamsSetup (
 					ID_ALPHA_CB
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_ALPHA_OPACITY,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					500,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					300,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					100,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_ALPHA_OPACITY,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					500,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					300,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					100,			//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_ALPHA_OPACITY
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_LINE_COLOR, 
 					0x0,
@@ -82,15 +82,15 @@ static PF_Err ParamsSetup (
 	PF_ADD_TOPIC(STR_TOPIC, ID_TOPIC);
 	//****************************************************************
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR_OPACITY,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					300,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					100,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR_OPACITY,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					300,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					100,			//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR_OPACITY
@@ -98,7 +98,7 @@ static PF_Err ParamsSetup (
 	//****************************************************************
 	//0
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR0_CB,
 					STR_CB,
@@ -107,7 +107,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR0_CB
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR0, 
 					0x10,
@@ -116,15 +116,15 @@ static PF_Err ParamsSetup (
 					ID_COLOR0
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR0_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR0_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR0_LEVEL
@@ -132,7 +132,7 @@ static PF_Err ParamsSetup (
 	//****************************************************************
 	//1
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR1_CB,
 					STR_CB,
@@ -141,7 +141,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR1_CB
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR1, 
 					0xFF,
@@ -150,15 +150,15 @@ static PF_Err ParamsSetup (
 					ID_COLOR1
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR1_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR1_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR1_LEVEL
@@ -166,7 +166,7 @@ static PF_Err ParamsSetup (
 	//****************************************************************
 	//2
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR2_CB,
 					STR_CB,
@@ -175,7 +175,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR2_CB
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR2, 
 					0x0,
@@ -184,15 +184,15 @@ static PF_Err ParamsSetup (
 					ID_COLOR2
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR2_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR2_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR2_LEVEL
@@ -200,7 +200,7 @@ static PF_Err ParamsSetup (
 	//****************************************************************
 	//3
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR3_CB,
 					STR_CB,
@@ -209,7 +209,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR3_CB
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR3, 
 					0x0,
@@ -218,15 +218,15 @@ static PF_Err ParamsSetup (
 					ID_COLOR1
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR3_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR3_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR3_LEVEL
@@ -234,7 +234,7 @@ static PF_Err ParamsSetup (
 	//****************************************************************
 	//4
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR4_CB,
 					STR_CB,
@@ -243,7 +243,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR4_CB
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR4, 
 					0xFF,
@@ -252,15 +252,15 @@ static PF_Err ParamsSetup (
 					ID_COLOR4
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR4_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR4_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR4_LEVEL
@@ -268,7 +268,7 @@ static PF_Err ParamsSetup (
 	//****************************************************************
 	//5
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR5_CB,
 					STR_CB,
@@ -277,7 +277,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR5_CB
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR5, 
 					0xFF,
@@ -286,15 +286,15 @@ static PF_Err ParamsSetup (
 					ID_COLOR6
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR5_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR5_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR5_LEVEL
@@ -302,7 +302,7 @@ static PF_Err ParamsSetup (
 	//****************************************************************
 	//6
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR6_CB,
 					STR_CB,
@@ -311,7 +311,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR6_CB
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR6, 
 					0x0,
@@ -320,15 +320,15 @@ static PF_Err ParamsSetup (
 					ID_COLOR6
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR6_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR6_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR6_LEVEL
@@ -336,7 +336,7 @@ static PF_Err ParamsSetup (
 	//****************************************************************
 	//7
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR7_CB,
 					STR_CB,
@@ -345,7 +345,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR7_CB
 					);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR7, 
 					0xFF,
@@ -354,15 +354,15 @@ static PF_Err ParamsSetup (
 					ID_COLOR7
 					);
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_COLOR7_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_COLOR7_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR7_LEVEL
@@ -472,7 +472,7 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 static PF_Err Render (
 	PF_InData			*in_data,
 	PF_OutData		*out_data,
@@ -493,7 +493,7 @@ static PF_Err Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

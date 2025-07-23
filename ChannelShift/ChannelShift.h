@@ -12,6 +12,8 @@
 
 #include "AEConfig.h"
 #include "entry.h"
+#include "AE_PluginData.h"
+#include "AE_GeneralPlug.h"
 
 //#include "PrSDKAESupport.h"
 #include "AE_Effect.h"
@@ -100,7 +102,7 @@ enum {
 	edge_mirror
 };
 
-//ƒvƒ‰ƒOƒCƒ““Æ©‚Ìƒpƒ‰ƒ[ƒ^‚ğW‚ß‚½\‘¢‘Ì
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Æï¿½ï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Wï¿½ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 typedef struct{
 	PF_Fixed			r_angle;
 	PF_Fixed			r_length;
@@ -122,7 +124,7 @@ typedef struct{
 extern "C" {
 
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

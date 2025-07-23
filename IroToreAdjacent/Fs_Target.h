@@ -11,28 +11,33 @@
 
 
 //-----------------------------------------------------------------------------------
-//プラグインの識別に使われる名前
+// Plugin name used in the interface
 #define FS_NAME			"F's IroToreAdjacent"
 
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使われる文字
-#define FS_DESCRIPTION	"指定した色に隣接した主線を無理やり色トレスにします"
+// Description used for the plugin
+#define FS_DESCRIPTION	"Replace colors with adjacent color matching"
 
 //-----------------------------------------------------------------------------------
-//プラグインが表示されるメニュー名
-//#define FS_CATEGORY "F's Plugins-Fx"
-//#define FS_CATEGORY "F's Plugins-Channel"
+// Plugin category (choose one)
 #define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "F's Plugins-Script"
+//#define FS_CATEGORY "F's Plugins-Channel"
+//#define FS_CATEGORY "F's Plugins-Colorize"
 //#define FS_CATEGORY "F's Plugins-Draw"
+//#define FS_CATEGORY "F's Plugins-Filter"
+//#define FS_CATEGORY "F's Plugins-Noise"
+//#define FS_CATEGORY "F's Plugins-expression"
+//#define FS_CATEGORY "F's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
-//#define NO_USE_FSGRAPHICS	//これを有効にするとFsGraphics関係がインクルードされない
+#define SUPPORT_SMARTFX			// Enable SmartFX + Float_Color support
+//#define NO_USE_FSGRAPHICS	// Disable FsGraphics include if not needed
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
-
+// Version information
+#define MAJOR_VERSION    1
+#define MINOR_VERSION    0
+#define FS_VERSION       10000
 
 //-----------------------------------------------------------------------------------
 //out_flags
@@ -46,9 +51,10 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//通常はこちら
-//#define FS_OUT_FLAGS	33556036	//こっちを有効にすると毎フレームごとに描画する。NON_PARAM_VARYを動作中に切り替えるときもこちらに
-//#define FS_OUT_FLAGS	1600		//8bitのみ
+//These flags will set PF_OutFlag_PIX_INDEPENDENT
+#define FS_OUT_FLAGS	33556032	//Normal processing
+//#define FS_OUT_FLAGS	33556036	//Enable when processing frame by frame with a key. Switch NON_PARAM_VARY during operation
+//#define FS_OUT_FLAGS	1600		//For 8bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2
@@ -64,9 +70,8 @@ out_data->out_flags2
 //#define FS_OUT_FLAGS2 134222921
 #define FS_OUT_FLAGS2	1097
 #else
-#define FS_OUT_FLAGS2 134217801
+#define FS_OUT_FLAGS2	1097
 #endif
 
 
-//-----------------------------------------------------------------------------------
 #endif

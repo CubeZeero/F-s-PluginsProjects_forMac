@@ -17,13 +17,13 @@
 
 #include "Filter_Target.h"
 
-//CAEƒNƒ‰ƒX‚Ì“Ç‚İ‚İ
+//CAEï¿½Nï¿½ï¿½ï¿½Xï¿½Ì“Ç‚İï¿½ï¿½ï¿½
 #include "../FsLibrary_next/CAE.h"
 
 #ifdef AE_OS_WIN
 #define SPRINTF(STR,IDX) sprintf_s(num, "%s%d", STR, IDX)
 #else
-#define SPRINTF(STR,IDX) sprintf_(num, "%s%d", STR, IDX)
+#define SPRINTF(STR,IDX) sprintf(num, "%s%d", STR, IDX)
 #endif
 
 enum
@@ -63,7 +63,7 @@ enum
 
 //ID_NUM_PARAMS
 
-//UI‚Ì•\¦•¶š—ñ
+//UIï¿½Ì•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define	STR_ON				"on"
 #define	STR_BASE_ENABLED	"BaseEnabled"
 #define	STR_BASE_OPACITY	"BaseOpacity"
@@ -100,7 +100,7 @@ enum EXTRACT_MODE
 	LO
 };
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamSetInfo {
 	PF_Boolean	enabled;
 	A_long		extract_mode;

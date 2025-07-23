@@ -9,7 +9,7 @@ void (*noiseSub)(PrmTbl *prm);
 
 //-------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
-// Aboutƒ_ƒCƒAƒƒO
+// About dialog
 static PF_Err About (	PF_InData		*in_data,
 						PF_OutData		*out_data,
 						PF_ParamDef		*params[],
@@ -75,8 +75,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+//Passing parameters to After Effects
+//Refer to Param_Utils.h
 static PF_Err ParamsSetup (PF_InData		*in_data,
 					PF_OutData		*out_data,
 					PF_ParamDef		*params[],
@@ -86,14 +86,14 @@ static PF_Err ParamsSetup (PF_InData		*in_data,
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//‚PŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½Pï¿½Â–Ú‚Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	def.flags		=	PF_ParamFlag_SUPERVISE			|
 						PF_ParamFlag_CANNOT_INTERP;
 						
 	//def.ui_flags	=	PF_PUI_STD_CONTROL_ONLY; 
-	PF_ADD_CHECKBOX("–ˆƒtƒŒ[ƒ€‚ÅƒmƒCƒY•Ï‰»",
+	PF_ADD_CHECKBOX("Animate noise per frame",
 					"ON",
 					TRUE,
 					0,
@@ -103,46 +103,46 @@ static PF_Err ParamsSetup (PF_InData		*in_data,
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
 	def.ui_flags = PF_PUI_DISABLED;
-	PF_ADD_SLIDER(	"ƒmƒCƒY‚Ì“®‚«",	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0 , 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					F_RAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					F_RAND_MAX/10,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	"Noise intensity",	//Parameter name
+					0 , 				//Minimum value for input
+					F_RAND_MAX,			//Maximum value for input
+					0,				//Slider minimum value 
+					F_RAND_MAX/10,			//Slider maximum value
+					0,				//Default value
 					ID_ANIMATED_ADD
 					);
 	//----------------------------------------------------------------
-	//‚QŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
-	//®”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Qï¿½Â–Ú‚Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	"ƒmƒCƒY‚Ì—Ê",	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					10,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	"Noise strength",	//Parameter name
+					0, 				//Minimum value for input
+					100,			//Maximum value for input
+					0,				//Slider minimum value 
+					100,			//Slider maximum value
+					10,				//Default value
 					ID_VALUE_ADD
 					);
 	//----------------------------------------------------------------
-	//‚RŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½Rï¿½Â–Ú‚Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
+	//ï¿½Å’è¬ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	"ƒmƒCƒY‚Ì‹­‚³",	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					20,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					2,//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	"Noise range",	//Parameter name
+					0, 				//Minimum value for input
+					100,			//Maximum value for input
+					0,				//Slider minimum value 
+					100,			//Slider maximum value
+					20,				//Default value
+					2,//Flag for numeric display 
 					0,
 					0,
 					ID_LENGTH_FIXED
 					);
 	//----------------------------------------------------------------
-	//‚SŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½Sï¿½Â–Ú‚Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("ƒJƒ‰[ƒmƒCƒY",
+	PF_ADD_CHECKBOX("Color noise",
 					"ON",
 					(PF_ParamValue)FALSE,
 					0,
@@ -151,57 +151,57 @@ static PF_Err ParamsSetup (PF_InData		*in_data,
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	"ƒuƒƒbƒN‚Ì—Ê",	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					300,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					5,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					1,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	"Block strength",	//Parameter name
+					0, 				//Minimum value for input
+					300,			//Maximum value for input
+					0,				//Slider minimum value 
+					5,				//Slider maximum value
+					1,				//Default value
+					1,//Flag for numeric display 
 					0,
 					0,
 					ID_BLOCK_VALUE_FIXED
 					);
 	//----------------------------------------------------------------
-	//®”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	"ƒuƒƒbƒN‚Ì‹­‚³",	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					50,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					5,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	"Block range",	//Parameter name
+					0, 				//Minimum value for input
+					100,			//Maximum value for input
+					0,				//Slider minimum value 
+					50,				//Slider maximum value
+					5,				//Default value
+					1,				//Flag for numeric display 
 					0,
 					0,
 					ID_BLOCK_LENGTH_FIXED
 					);
 	//----------------------------------------------------------------
-	//®”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	"ƒuƒƒbƒN‚Ì‰¡•(px)",	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					3, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					512,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					3,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					16,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	"Block width (px)",	//Parameter name
+					3, 				//Minimum value for input
+					512,			//Maximum value for input
+					3,				//Slider minimum value 
+					100,			//Slider maximum value
+					16,				//Default value
 					ID_BLOCK_WIDTH_ADD
 					);
 	//----------------------------------------------------------------
-	//®”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	"ƒuƒƒbƒN‚Ìc•(px)",	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					3, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					512,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					3,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					16,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	"Block height (px)",	//Parameter name
+					3, 				//Minimum value for input
+					512,			//Maximum value for input
+					3,				//Slider minimum value 
+					100,			//Slider maximum value
+					16,				//Default value
 					ID_BLOCK_HEIGHT_ADD
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("ƒJƒ‰[ƒuƒƒbƒN",
+	PF_ADD_CHECKBOX("Color block",
 					"ON",
 					FALSE,
 					0,
@@ -251,8 +251,8 @@ QueryDynamicFlags(
 {
 	PF_Err 	err 	= PF_Err_NONE,
 			err2 	= PF_Err_NONE;
-	//PF_OutFlag_NON_PARAM_VARY‚Ì’l‚ğout_flags‚Öİ’è‚µ‚Ä
-	//–ˆƒtƒŒ[ƒ€‚²‚Æ‚Ì•`‰æ‚ğ‚·‚é‚©Ø‚è‘Ö‚¦‚éB
+	//Set PF_OutFlag_NON_PARAM_VARY value to out_flags
+	//Control whether to render per frame.
 	CFsAE ae;
 	err = ae.QueryDynamicFlags(in_data,out_data,params,extra,ID_NUM_PARAMS);
 	if (!err){
@@ -722,7 +722,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 
 	infoP->data		= ae->output->data;
@@ -775,7 +775,7 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 static PF_Err Render (	PF_InData		*in_data,
 						PF_OutData		*out_data,
 						PF_ParamDef		*params[],
@@ -864,7 +864,7 @@ RespondtoAEGP (
 }
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -934,7 +934,35 @@ EntryPointFunc (
 	catch(PF_Err &thrown_err){
 		err = thrown_err;
 	}
+	catch(...){
+		err = PF_Err_INTERNAL_STRUCT_DAMAGED;
+	}
 	return err;
+}
+
+//-------------------------------------------------------------------------------------------------
+// Modern plugin registration function (required for newer AE versions)
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+	PF_PluginDataPtr inPtr,
+	PF_PluginDataCB2 inPluginDataCallBackPtr,
+	SPBasicSuite* inSPBasicSuitePtr,
+	const char* inHostName,
+	const char* inHostVersion)
+{
+	PF_Err result = PF_Err_INVALID_CALLBACK;
+
+	result = PF_REGISTER_EFFECT_EXT2(
+		inPtr,
+		inPluginDataCallBackPtr,
+		FS_NAME, // Name
+		FS_NAME, // Match Name
+		FS_CATEGORY, // Category
+		0, // Reserved Info
+		"EffectMain", // Entry point
+		"https://www.adobe.com"); // Support URL
+
+	return result;
 }
 
 //-------------------------------------------------------------------------------------------------

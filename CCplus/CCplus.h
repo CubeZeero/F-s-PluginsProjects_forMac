@@ -15,6 +15,8 @@
 
 #include "AEConfig.h"
 #include "entry.h"
+#include "AE_PluginData.h"
+#include "AE_GeneralPlug.h"
 
 //#include "PrSDKAESupport.h"
 #include "AE_Effect.h"
@@ -61,63 +63,63 @@
 #define	StrCOLOR_END			"end_color"//PF_Pixel
 #define	StrCOLOR_CENTER_POS		"center_color_pos(%)"
 
-#define	StrALPHA_START			"start_alpha(%)"	//“§–¾‚É‚·‚é
-#define	StrALPHA_END			"end_alpha(%)"//“§–¾‚É‚·‚é
+#define	StrALPHA_START			"start_alpha(%)"	//ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½
+#define	StrALPHA_END			"end_alpha(%)"//ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½
 
-#define	StrNOISE_VALUE			"noise_value"//ƒmƒCƒY‚ğ‹­‚³
+#define	StrNOISE_VALUE			"noise_value"//ï¿½mï¿½Cï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-#define	StrERR_getFsAEParams	"‰æ‘œƒoƒbƒtƒ@[ƒTƒCƒYƒGƒ‰[‚Å‚·BŒä–Æ‚È‚³‚¢B"
-#define	StrERR_getParams		"ƒpƒ‰ƒ[ƒ^ƒGƒ‰[‚Å‚·BŒä–Æ‚È‚³‚¢B"
-
-
+#define	StrERR_getFsAEParams	"ï¿½æ‘œï¿½oï¿½bï¿½tï¿½@ï¿½[ï¿½Tï¿½Cï¿½Yï¿½Gï¿½ï¿½ï¿½[ï¿½Å‚ï¿½ï¿½Bï¿½ï¿½Æ‚È‚ï¿½ï¿½ï¿½ï¿½B"
+#define	StrERR_getParams		"ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Gï¿½ï¿½ï¿½[ï¿½Å‚ï¿½ï¿½Bï¿½ï¿½Æ‚È‚ï¿½ï¿½ï¿½ï¿½B"
 
 
-//AfterEffects‚Ìî•ñ‚ğ‚Ü‚Æ‚ß‚½\‘¢‘Ì
+
+
+//AfterEffectsï¿½Ìï¿½ï¿½ï¿½ï¿½Ü‚Æ‚ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 typedef struct{
 	PF_InData		*in_data;
 	PF_OutData		*out_data;
 
 	PF_EffectWorld 	*input;
 	PF_EffectWorld	*output;
-	PF_PixelPtr  	inData;			//“ü—Í‰æ‘œ‚ÌƒAƒhƒŒƒX	
-	PF_PixelPtr  	outData;		//o—Í‰æ‘œ‚ÌƒAƒhƒŒƒX	
-	A_long			width;					//‘ÎÛ‰æ‘œ‚Ì‰¡•(pixel)
-	A_long			height;					//‘ÎÛ‰æ‘œ‚Ìc	•(pixel)
+	PF_PixelPtr  	inData;			//ï¿½ï¿½ï¿½Í‰æ‘œï¿½ÌƒAï¿½hï¿½ï¿½ï¿½X	
+	PF_PixelPtr  	outData;		//ï¿½oï¿½Í‰æ‘œï¿½ÌƒAï¿½hï¿½ï¿½ï¿½X	
+	A_long			width;					//ï¿½ÎÛ‰æ‘œï¿½Ì‰ï¿½ï¿½ï¿½(pixel)
+	A_long			height;					//ï¿½ÎÛ‰æ‘œï¿½Ìc	ï¿½ï¿½(pixel)
 	
-	A_long			inWidth;				//“ü—Í‰æ‘œ‚Ì‰¡•‚ÌÀƒTƒCƒYpixel)
-	A_long			outWidth;				//o—Í‰æ‘œ‚Ì‰¡•‚ÌÀƒTƒCƒYpixel)
-	A_long			offsetInWidth;	// inWidth - width	•â³ƒTƒCƒY	
+	A_long			inWidth;				//ï¿½ï¿½ï¿½Í‰æ‘œï¿½Ì‰ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½Tï¿½Cï¿½Ypixel)
+	A_long			outWidth;				//ï¿½oï¿½Í‰æ‘œï¿½Ì‰ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½Tï¿½Cï¿½Ypixel)
+	A_long			offsetInWidth;	// inWidth - width	ï¿½â³ï¿½Tï¿½Cï¿½Y	
 	A_long			offsetOutWidth;	// outWidth - width
-	A_long			Frame;					//•`‰æ’†‚ÌƒtƒŒ[ƒ€i‚OƒXƒ^[ƒgj
-	PF_Boolean		is16Bit;		//ƒ‚[ƒh‚ª16Bit‚È‚çTRUE
+	A_long			Frame;					//ï¿½`ï¿½æ’†ï¿½Ìƒtï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½iï¿½Oï¿½Xï¿½^ï¿½[ï¿½gï¿½j
+	PF_Boolean		is16Bit;		//ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½16Bitï¿½È‚ï¿½TRUE
 	A_u_char		reserve1;
 	A_u_short		reserve2;
 	A_long			reserve3;
 	A_long			reserve4;
-	/* –³—‚â‚è64byte‚É‚·‚é*/
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½64byteï¿½É‚ï¿½ï¿½ï¿½*/
 } FsAEParams;
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer 
 
-	ID_ORG_REV,		//Œ³ŠG‚ğ”’•”½“]
+	ID_ORG_REV,		//ï¿½ï¿½ï¿½Gï¿½ğ”’ï¿½ï¿½ï¿½ï¿½]
 
 	ID_COLOR_START,		//PF_Pixel
 	ID_COLOR_CENTER,	//PF_Pixel
 	ID_COLOR_END,		//PF_Pixel
 	ID_COLOR_CENTER_POS,
 
-	ID_ALPHA_START,		//“§–¾‚É‚·‚é
-	ID_ALPHA_END,		//“§–¾‚É‚·‚é
+	ID_ALPHA_START,		//ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½
+	ID_ALPHA_END,		//ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½
 
-	ID_NOISE_VALUE,		//ƒmƒCƒY‚Ì—Ê
+	ID_NOISE_VALUE,		//ï¿½mï¿½Cï¿½Yï¿½Ì—ï¿½
 	ID_NUM_PARAMS
 
 	};
 /*
-//ƒvƒ‰ƒOƒCƒ““Æ©‚Ìƒpƒ‰ƒ[ƒ^‚ğW‚ß‚½\‘¢‘Ì
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Æï¿½ï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Wï¿½ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 typedef struct{
 	PF_Boolean		org_rev;
 	
@@ -188,9 +190,9 @@ typedef struct {
 
 //-------------------------------------------------------
 extern "C" {
-DllExport	
+DllExport
 PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -199,7 +201,7 @@ EntryPointFunc (
 	void			*extraP);
 }
 //-------------------------------------------------------
-// FsAEParams\‘¢‘Ì‚ğì¬‚·‚é
+// FsAEParamsï¿½\ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ì¬ï¿½ï¿½ï¿½ï¿½
 PF_Err getFsAEParams (	
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

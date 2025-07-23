@@ -40,29 +40,29 @@
 #include "../FsLibrary/FsAE.h"
 
 enum {
-	ID_INPUT = 0,	// default input layer 
-	ID_SIZE,		// モザイクの大きさ
-	ID_POS,			//位置
-	ID_RAND,		//強さのチラツキ
-	ID_RAND_GRAY,		//強さのチラツキ
-	ID_FRAME_RAND_ON,
+	ID_INPUT = 0, // default input layer
+	ID_SIZE,      // Mosaic size
+	ID_POS,       // Position
+	ID_RAND,      // Randomness
+	ID_RAND_GRAY, // Random Gray
+	ID_FRAME_RAND_ON, // Frame Random On
 	ID_NUM_PARAMS
 };
 
-#define STR_SIZE		"サイズ"
-#define STR_POS			"位置"
-#define STR_RAND		"ちらつき"
-#define STR_RAND_GRAY	"ちらつきをグレーに"
-#define STR_FRAME_RAND_ON	"フレーム毎にちらつかせる"
-#define STR_ON			"ON"
+#define STR_SIZE        "Size"
+#define STR_POS         "Position"
+#define STR_RAND        "Randomness"
+#define STR_RAND_GRAY   "Random Gray"
+#define STR_FRAME_RAND_ON "Frame Random On"
+#define STR_ON          "ON"
 
-//UIのパラメータ
+//UIﾌパ[^
 typedef struct ParamInfo {
-	A_long			size;	//モザイクの大きさ
-	PF_FixedPoint	pos;	//モザイクの
-	PF_FpShort		rand;
-	PF_Boolean		rand_gray;
-	PF_Boolean		frameRandOn;
+	A_long      size;   // Mosaic size
+	PF_FixedPoint pos;  // Position
+	PF_FpShort  rand;
+	PF_Boolean  rand_gray;
+	PF_Boolean  frameRandOn;
 } ParamInfo, *ParamInfoP, **ParamInfoH;
 
 //-----------------------------------------------------------------

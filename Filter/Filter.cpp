@@ -11,8 +11,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -88,8 +88,8 @@ static PF_Err ParamsSetup (
 		SPRINTF(STR_EXTRACT, i + 1);
 		AEFX_CLR_STRUCT(def);
 		PF_ADD_POPUP(num,
-			STR_EXTRACT_COUNT,	//ƒƒjƒ…[‚Ì”
-			FLT_EXTRACT_MODE[i],	//ƒfƒtƒHƒ‹ƒg
+			STR_EXTRACT_COUNT,	//ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ìï¿½
+			FLT_EXTRACT_MODE[i],	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½g
 			STR_EXTRACT_ITEMS,
 			ID_NUM(i, ID_EXTRACT)
 		);
@@ -187,12 +187,12 @@ static PF_Err ParamsSetup (
 #pragma region minmax
 		SPRINTF(STR_MINMAX, i + 1);
 		AEFX_CLR_STRUCT(def);
-		PF_ADD_SLIDER(num,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-			0, 			//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-			10,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-			0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-			5,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-			FLT_MINMAX[i],	//ƒfƒtƒHƒ‹ƒg‚Ì’l
+		PF_ADD_SLIDER(num,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+			0, 			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+			10,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+			0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+			5,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+			FLT_MINMAX[i],	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 			ID_NUM(i, ID_MINMAX)
 		);
 #pragma endregion
@@ -201,12 +201,12 @@ static PF_Err ParamsSetup (
 #pragma region max
 		SPRINTF(STR_MAX, i + 1);
 		AEFX_CLR_STRUCT(def);
-		PF_ADD_SLIDER(num,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-			0, 					//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-			50,				//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-			0,					//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-			20,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-			FLT_MAX[i],			//ƒfƒtƒHƒ‹ƒg‚Ì’l
+		PF_ADD_SLIDER(num,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+			0, 					//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+			50,				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+			0,					//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+			20,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+			FLT_MAX_VAL[i],			//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 			ID_NUM(i, ID_MAX)
 		);
 #pragma endregion
@@ -215,12 +215,12 @@ static PF_Err ParamsSetup (
 #pragma region blur
 		SPRINTF(STR_BLUR, i + 1);
 		AEFX_CLR_STRUCT(def);
-		PF_ADD_SLIDER(num,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-			0, 					//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-			200,				//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-			0,					//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-			50,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-			FLT_BLUR[i],		//ƒfƒtƒHƒ‹ƒg‚Ì’l
+		PF_ADD_SLIDER(num,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+			0, 					//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+			200,				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+			0,					//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+			50,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+			FLT_BLUR[i],		//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 			ID_NUM(i, ID_BLUR)
 		);
 #pragma endregion
@@ -248,8 +248,8 @@ static PF_Err ParamsSetup (
 		SPRINTF(STR_BLEND, i + 1);
 		AEFX_CLR_STRUCT(def);
 		PF_ADD_POPUP(num,
-			STR_BLEND_COUNT,	//ƒƒjƒ…[‚Ì”
-			FLT_BLEND_MODE[i],	//ƒfƒtƒHƒ‹ƒg
+			STR_BLEND_COUNT,	//ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ìï¿½
+			FLT_BLEND_MODE[i],	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½g
 			STR_BLEND_ITEMS,
 			ID_NUM(i, ID_BLEND)
 		);
@@ -383,7 +383,7 @@ static PF_Err GetParams(CAE *ae, ParamInfo *infoP)
 	return err;
 }
 //-------------------------------------------------------------------------------------------------
-static PF_Err 
+PF_Err 
 	Exec (CAE *ae , ParamInfo *infoP)
 {
 	PF_Err	err = PF_Err_NONE;

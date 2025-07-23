@@ -123,7 +123,7 @@ RespondtoAEGP (
 }
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -159,8 +159,8 @@ EntryPointFunc (
 				err = SequenceResetup(in_data,out_data,params,output);
 				break;
 			case PF_Cmd_RENDER:
-					err = Render(in_data,out_data,params,output);
-					break;
+				err = Render(in_data,out_data,params,output);
+				break;
 #if defined(SUPPORT_SMARTFX)
 			case PF_Cmd_SMART_PRE_RENDER:
 				err = PreRender(in_data,out_data,reinterpret_cast<PF_PreRenderExtra*>(extraP));
@@ -193,7 +193,33 @@ EntryPointFunc (
 	catch(PF_Err &thrown_err){
 		err = thrown_err;
 	}
+	catch(...){
+		err = PF_Err_INTERNAL_STRUCT_DAMAGED;
+	}
 	return err;
+}
+
+//-----------------------------------------------------------------------------------
+extern "C" DllExport PF_Err PluginDataEntryFunction2(
+	PF_PluginDataPtr inPtr,
+	PF_PluginDataCB2 inPluginDataCallBackPtr,
+	SPBasicSuite* inSPBasicSuitePtr,
+	const char* inHostName,
+	const char* inHostVersion)
+{
+	PF_Err result = PF_Err_INVALID_CALLBACK;
+
+	result = PF_REGISTER_EFFECT_EXT2(
+		inPtr,
+		inPluginDataCallBackPtr,
+		FS_NAME,
+		FS_NAME,
+		FS_CATEGORY,
+		0,
+		"EffectMain",
+		FS_DESCRIPTION
+	);
+	return result;
 }
 
 //-------------------------------------------------------------------------------------------------

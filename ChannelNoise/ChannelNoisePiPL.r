@@ -15,27 +15,28 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
+			/*AEï¿½Ìƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Égï¿½ï¿½ï¿½ï¿½ */
 				FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
+			/*AEï¿½Ìƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Égï¿½ï¿½ï¿½ï¿½ */
 			FS_CATEGORY
 			/*"F's Plugins"*/
 		},
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
-		CodeWin64X86 {"EntryPointFunc"},
+		CodeWin64X86 {"EffectMain"},
 	#else
-		CodeWin32X86 {"EntryPointFunc"},
+		CodeWin32X86 {"EffectMain"},
 	#endif	
 #else
 	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMachOPowerPC {"EffectMain"},
+		CodeMacIntel32 {"EffectMain"},
+		CodeMacIntel64 {"EffectMain"},
+		CodeMacARM64 {"EffectMain"},
 	#endif
 #endif
 		/* [6] */
@@ -65,12 +66,16 @@ resource 'PiPL' (16000) {
 		},
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é */
+			/*ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Ìï¿½ï¿½Ê‚Égï¿½ï¿½ï¿½ï¿½ */
 			FS_NAME
 		},
 		/* [12] */
 		AE_Reserved_Info {
 			0
+		},
+		/* [13] */
+		AE_Effect_Support_URL {
+			"https://www.adobe.com"
 		}
 	}
 };

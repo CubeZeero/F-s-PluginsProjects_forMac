@@ -24,15 +24,14 @@ resource 'PiPL' (16000) {
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
-		CodeWin64X86 {"EntryPointFunc"},
+		CodeWin64X86 {"EffectMain"},
 	#else
-		CodeWin32X86 {"EntryPointFunc"},
+		CodeWin32X86 {"EffectMain"},
 	#endif	
 #else
 	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacIntel64 {"EffectMain"},
+		CodeMacARM64 {"EffectMain"},
 	#endif
 #endif
 

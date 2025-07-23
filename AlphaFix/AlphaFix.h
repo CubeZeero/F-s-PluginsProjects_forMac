@@ -14,7 +14,8 @@
 
 #include "AEConfig.h"
 #include "entry.h"
-
+#include "AE_PluginData.h"
+#include "AE_GeneralPlug.h"
 
 //#include "PrSDKAESupport.h"
 #include "AE_Effect.h"
@@ -41,11 +42,11 @@
 	#include <Windows.h>
 #endif
 
-#define	STR_BASE_COLOR	"”wŒiF"
+#define	STR_BASE_COLOR	"Background Color"
 
 #include "../FsLibrary/FsAE.h"
 	
-//ƒvƒ‰ƒOƒCƒ““Æ©‚Ìƒpƒ‰ƒ[ƒ^‚ğW‚ß‚½\‘¢‘Ì
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Æï¿½ï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Wï¿½ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 typedef struct ParamInfo8{
 	PF_Pixel8	base_color;	
 } ParamInfo8, *ParamInfo8P, **ParamInfo8H;
@@ -58,8 +59,8 @@ typedef struct ParamInfo32{
 	PF_PixelFloat	base_color;	
 } ParamInfo32, *ParamInfo32P, **ParamInfo32H;
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_BASE_COLOR,	//
@@ -91,7 +92,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

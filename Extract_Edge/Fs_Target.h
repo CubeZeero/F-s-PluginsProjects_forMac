@@ -11,27 +11,31 @@
 
 
 //-----------------------------------------------------------------------------------
-//プラグインの識別に使われる名前
+//Plugin name used in the interface
 #define FS_NAME			"F's Extract_Edge"
 
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使われる文字
-#define FS_DESCRIPTION	"プラグインのスケルトン"
+//Plugin description used in the interface
+#define FS_DESCRIPTION	"Plugin for edge extraction"
 
 //-----------------------------------------------------------------------------------
-//プラグインが表示されるメニュー名
-#define FS_CATEGORY "F's Plugins-Fx"
-//#define FS_CATEGORY "F's Plugins-Channel"
-//#define FS_CATEGORY "F's Plugins-Paint"
-//#define FS_CATEGORY "F's Plugins-Script"
-//#define FS_CATEGORY "F's Plugins-Draw"
+//Category displayed in the plugin menu
+
+#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+//#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
-//#define NO_USE_FSGRAPHICS	//これを有効にするとFsGraphics関係がインクルードされない
+#define SUPPORT_SMARTFX			//Enable SmartFX+Float_Color support
+//#define NO_USE_FSGRAPHICS	//Disable FsGraphics related code
 
 //-----------------------------------------------------------------------------------
-//プラグインのバージョン
+//Plugin version number
 #define	MAJOR_VERSION	1
 #define	MINOR_VERSION	1
 #define	BUG_VERSION		0
@@ -41,7 +45,7 @@
 #define	STAGE_VERSION		3	//PF_Stage_RELEASE
 #define	BUILD_VERSION	0
 
-//上の値を計算した結果
+//Calculate this value
 #define FS_VERSION		558592
 
 //-----------------------------------------------------------------------------------
@@ -56,9 +60,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//通常はこちら
-//#define FS_OUT_FLAGS	33556036	//こっちを有効にすると毎フレームごとに描画する。NON_PARAM_VARYを動作中に切り替えるときもこちらに
-//#define FS_OUT_FLAGS	1600		//8bitのみ
+#define FS_OUT_FLAGS	33556032	//Normal setting
+//#define FS_OUT_FLAGS	33556036	//Enable NON_PARAM_VARY for parameter variation
+//#define FS_OUT_FLAGS	1600		//8bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2

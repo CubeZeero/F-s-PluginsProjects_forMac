@@ -8,8 +8,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts�Ƀp�����[�^��ʒB����
-//Param_Utils.h���Q�Ƃ̂���
+//AfterEffectsにパラメータを追加する
+//Param_Utils.hを参照のこと
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -20,32 +20,32 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//�����̃X���C�_�[�o�[
+	//スライダーのパラメータ
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_MAX,	//�p�����[�^�̖��O
-					-512, 				//���l���͂���ꍇ�̍ŏ��l
-					512,			//���l���͂���ꍇ�̍ő�l
-					-50,				//�X���C�_�[�̍ŏ��l 
-					50,			//�X���C�_�[�̍ő�l
-					0,				//�f�t�H���g�̒l
+	PF_ADD_SLIDER(	STR_MAX,	//パラメータ名
+					-512, 				//値が0の場合の最小値
+					512,			//値が100の場合の最大値
+					-50,				//スライダーの最小値 
+					50,			//スライダーの最大値
+					0,				//フィルターの値
 					ID_MAX
 					);
 	
 	//----------------------------------------------------------------
-	//�|�b�v�A�b�v���j���[
+	//ポップアップメニュー
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POPUP(		STR_DIR1, 
-						3,	//���j���[�̐�
-						1,	//�f�t�H���g
+						3,	//メニューの数
+						1,	//デフォルト
 						STR_DIR2,
 						ID_DIR
 						);
 	//----------------------------------------------------------------
-	//�|�b�v�A�b�v���j���[
+	//ポップアップメニュー
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POPUP(		STR_CH1, 
-						3,	//���j���[�̐�
-						1,	//�f�t�H���g
+						3,	//メニューの数
+						1,	//デフォルト
 						STR_CH2,
 						ID_CHANNEL
 						);
@@ -184,7 +184,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX�Ή��̏ꍇ�A�܂����̊֐����Ă΂�ăp�����[�^�̊l�����s��
+	SmartFXの場合は、事前にパラメータを設定しておく
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

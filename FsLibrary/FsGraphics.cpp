@@ -1,20 +1,26 @@
 #include "FsGraphics.h"
 
 
+//******************************************************************************
+/*
+	CFsGraph
+	Drawing utility class
+*/
+//******************************************************************************
+	//-----------------------
 CFsGraph::CFsGraph(
-		PF_EffectWorld	*world, 
+		PF_EffectWorld  *world, 
 		PF_InData		*in_data,
-		PF_PixelFormat	format)
+		PF_PixelFormat  format)
 {
-	PF_Err err = PF_Err_NONE;
-	//ƒƒ“ƒo‚Ì‰Šú‰»
+	// Member variable initialization
 
 	lineHeiht		= 1;
 
 	m_frame = 0;
 	if (in_data!=NULL){
 		m_in_data = in_data;
-		//ƒJƒŒƒ“ƒgƒtƒŒ[ƒ€‚ð‹‚ß‚é‰æ“ª‚Í‚O
+		//ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½gï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½æ“ªï¿½Í‚O
 		if ( (in_data->current_time>=0)&&(in_data->time_step>0) ) {
 			m_frame	=(in_data->current_time/in_data->time_step); 
 		}
@@ -43,7 +49,7 @@ CFsGraph::CFsGraph(
 
 		PF_NewWorldFlags f = PF_NewWorldFlag_CLEAR_PIXELS | PF_NewWorldFlag_NONE;
 
-		// NULLƒ`ƒFƒbƒN‚ð’Ç‰Á
+		// NULLï¿½`ï¿½Fï¿½bï¿½Nï¿½ï¿½Ç‰ï¿½
 		if (m_in_data != NULL && m_in_data->utils != NULL && m_in_data->effect_ref != NULL) {
 			m_vurWorld.data = NULL;
 			ERR((*m_in_data->utils->new_world)(m_in_data->effect_ref, m_height/4, 8, PF_PixelFormat_ARGB32, &m_vurWorld));
@@ -67,5 +73,4 @@ CFsGraph::~CFsGraph()
 		m_vurWorld.data = NULL;
 	}
 }
-//******************************************************************************
 //******************************************************************************

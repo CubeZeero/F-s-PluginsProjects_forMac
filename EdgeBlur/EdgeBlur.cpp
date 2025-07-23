@@ -75,8 +75,8 @@ static PF_Err SequenceResetup (
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -87,25 +87,25 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//®”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_BLUR,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					50,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_BLUR,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					50,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_BLUR
 					);
 	//----------------------------------------------------------------
-	//®”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ÌƒXï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½oï¿½[
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_OFFSET,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					-50, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					50,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					-36,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					36,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_OFFSET,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					-50, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					50,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					-36,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					36,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_OFFSET
 					);
 
@@ -154,8 +154,8 @@ QueryDynamicFlags(
 {
 	PF_Err 	err 	= PF_Err_NONE,
 			err2 	= PF_Err_NONE;
-	//PF_OutFlag_NON_PARAM_VARY‚Ì’l‚ðout_flags‚ÖÝ’è‚µ‚Ä
-	//–ˆƒtƒŒ[ƒ€‚²‚Æ‚Ì•`‰æ‚ð‚·‚é‚©Ø‚è‘Ö‚¦‚éB
+	//PF_OutFlag_NON_PARAM_VARYï¿½Ì’lï¿½ï¿½out_flagsï¿½ÖÝ’è‚µï¿½ï¿½
+	//ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚Ì•`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚©ï¿½Ø‚ï¿½Ö‚ï¿½ï¿½ï¿½B
 	/*
 	CFsAE ae;
 	err = ae.QueryDynamicFlags(in_data,out_data,params,extra,ID_NUM_PARAMS);
@@ -213,10 +213,10 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ðƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	//---------------
-	//•`‰æŽÀs
+	//ï¿½`ï¿½ï¿½ï¿½ï¿½s
 	if (infoP->blur>0){
 		switch(ae->pixelFormat()){
 		case PF_PixelFormat_ARGB128:
@@ -358,7 +358,7 @@ RespondtoAEGP (
 
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -429,6 +429,27 @@ EntryPointFunc (
 		err = thrown_err;
 	}
 	return err;
+}
+
+//-------------------------------------------------------------------------------------------------
+PF_Err PluginDataEntryFunction2(
+	PF_PluginDataPtr inPtr,
+	PF_PluginDataCB2 inPluginDataCallBackPtr,
+	SPBasicSuite* inSPBasicSuitePtr,
+	const char* inHostName,
+	const char* inHostVersion)
+{
+	PF_Err result = PF_Err_INVALID_CALLBACK;
+
+	result = PF_REGISTER_EFFECT_EXT2(
+		inPtr, inPluginDataCallBackPtr, "F's EdgeBlur", // Name
+		"ADBE EdgeBlur", // Match Name
+		"Sample", // Category
+		AE_RESERVED_INFO, // Reserved Info
+		"EffectMain", // Entry Point
+		""); // Support URL
+
+	return result;
 }
 
 //-------------------------------------------------------------------------------------------------

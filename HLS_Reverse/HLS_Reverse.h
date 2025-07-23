@@ -48,8 +48,8 @@
 #define	STR_REV			"Reverse"
 #define	STR_ORG_BLEND	"blend original(%)"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®ãƒ•ã‚¡ã‚¤ãƒ«ID
+//ParamsSetupé–¢æ•°ã¨Renderé–¢æ•°ã®paramsãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®IDã«ãªã‚‹
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_HUE,
@@ -59,7 +59,7 @@ enum {
 	ID_NUM_PARAMS
 	};
 
-//ƒvƒ‰ƒOƒCƒ““Æ©‚Ìƒpƒ‰ƒ[ƒ^‚ğW‚ß‚½\‘¢‘Ì
+//ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã¨ãã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ã¾ã¨ã‚ãŸæ§‹é€ ä½“
 typedef struct{
 	PF_FpShort		org_blend;
 	PF_Boolean		h;
@@ -73,7 +73,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

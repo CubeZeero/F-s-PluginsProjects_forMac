@@ -10,16 +10,17 @@
 
 #include "Fs_Target.h"
 
+#include "AE_PluginData.h"
+#include "AE_GeneralPlug.h"
 
 #include "AEConfig.h"
 #include "entry.h"
 
-
 /*
-	CS5‚ÅƒRƒ“ƒpƒCƒ‹‚·‚é‚ÍATARGETCS5‚ğ—LŒø‚É‚µ‚Ä
-	Supporting code‚ÌCS4only‚ğƒrƒ‹ƒh‚©‚çœŠOACS5only‚ğƒrƒ‹ƒh—LŒø‚É‚·‚é
-
-	‚»‚µ‚ÄAƒvƒ‰ƒbƒgƒtƒH[ƒ€‚ğx64‚ÖƒvƒƒpƒeƒB‚ğ•ÏX‚·‚é–
+	For CS5 compilation, enable TARGETCS5 define.
+	Exclude Supporting code from CS4only build, enable CS5only build.
+	
+	Change platform properties to x64.
 */
 
 
@@ -94,41 +95,41 @@ enum {
 };
 
 
-#define STR_LV		"‹–—e’l"
-#define STR_MODE1	"ƒ‚[ƒh"
-#define STR_EXEC	"Às‚·‚é"
+#define STR_LV		"ï¿½ï¿½ï¿½eï¿½l"
+#define STR_MODE1	"ï¿½ï¿½ï¿½[ï¿½h"
+#define STR_EXEC	"ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½"
 
 #define STR_TARGET0	"Target0"
-#define STR_SRCCOL0	"Œ³‚ÌF0"
-#define STR_DSTCOL0	"V‚µ‚¢F0"
+#define STR_SRCCOL0	"ï¿½ï¿½ï¿½ÌF0"
+#define STR_DSTCOL0	"ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½F0"
 
 #define STR_TARGET1	"Target1"
-#define STR_SRCCOL1	"Œ³‚ÌF1"
-#define STR_DSTCOL1	"V‚µ‚¢F1"
+#define STR_SRCCOL1	"ï¿½ï¿½ï¿½ÌF1"
+#define STR_DSTCOL1	"ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½F1"
 
 #define STR_TARGET2	"Target2"
-#define STR_SRCCOL2	"Œ³‚ÌF2"
-#define STR_DSTCOL2	"V‚µ‚¢F2"
+#define STR_SRCCOL2	"ï¿½ï¿½ï¿½ÌF2"
+#define STR_DSTCOL2	"ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½F2"
 
 #define STR_TARGET3	"Target3"
-#define STR_SRCCOL3	"Œ³‚ÌF3"
-#define STR_DSTCOL3	"V‚µ‚¢F3"
+#define STR_SRCCOL3	"ï¿½ï¿½ï¿½ÌF3"
+#define STR_DSTCOL3	"ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½F3"
 
 #define STR_TARGET4	"Target4"
-#define STR_SRCCOL4	"Œ³‚ÌF4"
-#define STR_DSTCOL4	"V‚µ‚¢F4"
+#define STR_SRCCOL4	"ï¿½ï¿½ï¿½ÌF4"
+#define STR_DSTCOL4	"ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½F4"
 
 #define STR_TARGET5	"Target5"
-#define STR_SRCCOL5	"Œ³‚ÌF5"
-#define STR_DSTCOL5	"V‚µ‚¢F5"
+#define STR_SRCCOL5	"ï¿½ï¿½ï¿½ÌF5"
+#define STR_DSTCOL5	"ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½F5"
 
 #define STR_TARGET6	"Target6"
-#define STR_SRCCOL6	"Œ³‚ÌF6"
-#define STR_DSTCOL6	"V‚µ‚¢F6"
+#define STR_SRCCOL6	"ï¿½ï¿½ï¿½ÌF6"
+#define STR_DSTCOL6	"ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½F6"
 
 #define STR_TARGET7	"Target7"
-#define STR_SRCCOL7	"Œ³‚ÌF7"
-#define STR_DSTCOL7	"V‚µ‚¢F7"
+#define STR_SRCCOL7	"ï¿½ï¿½ï¿½ÌF7"
+#define STR_DSTCOL7	"ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½F7"
 
 
 typedef struct ParamInfo{
@@ -147,7 +148,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

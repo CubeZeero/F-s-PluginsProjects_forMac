@@ -8,7 +8,7 @@
 
 
 //-------------------------------------------------------------------------------------------------
-// Aboutƒ_ƒCƒAƒƒO
+// About dialog
 static PF_Err About (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -74,8 +74,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+// Pass parameters to After Effects
+// Reference to Param_Utils.h
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -86,7 +86,7 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//F‚Ìw’è
+	// Color specification
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR, 
 					0xff,
@@ -95,7 +95,7 @@ static PF_Err ParamsSetup (
 					ID_COLOR
 					);
 	//----------------------------------------------------------------
-	//ˆÊ’u‚Ìw’è
+	// Position specification
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POINT(STR_TOPLEFT,			/*"New Center"*/ 
 				25,	// X
@@ -104,7 +104,7 @@ static PF_Err ParamsSetup (
 				ID_TOPLEFT
 				);
 	//----------------------------------------------------------------
-	//ˆÊ’u‚Ìw’è
+	// Position specification
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POINT(STR_BOTTOMRIGHT,			/*"New Center"*/ 
 				75,	// X
@@ -113,7 +113,7 @@ static PF_Err ParamsSetup (
 				ID_BOTTOMRIGHT
 				);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	// Checkbox
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_CHK1,
 					STR_CHK2,
@@ -122,7 +122,7 @@ static PF_Err ParamsSetup (
 					ID_CHK
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	// Checkbox
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_SMOOTH1,
 					STR_SMOOTH2,
@@ -177,7 +177,7 @@ static void chkW8(CFsAE *ae)
 	A_long x0,x1,y0,y1;
 
 	A_long i,j,t;
-	//‚Ü‚¸ã‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½ã‚©ï¿½ï¿½Tï¿½ï¿½
 	y0 = -1;
 	t = 0;
 	for (j=0;j<h;j++){
@@ -194,7 +194,7 @@ static void chkW8(CFsAE *ae)
 
 	}
 	if (y0==-1) return;
-	//‰º‚©‚ç’T‚·
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	y1 = -1;
 	for (j = h-1;j>=0;j--){
 		t = j * tw;
@@ -209,7 +209,7 @@ static void chkW8(CFsAE *ae)
 		if (y1!=-1) break;
 	}
 
-	//‚Ü‚¸¶‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	x0 = -1;
 	t = 0;
 	for (j=0;j<w;j++){
@@ -225,7 +225,7 @@ static void chkW8(CFsAE *ae)
 		if (x0!=-1) break;
 
 	}
-	//‚Ü‚¸‰E‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½Eï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	x1 = -1;
 	t = 0;
 	for (j=w-1;j>=0;j--){
@@ -272,7 +272,7 @@ static void chkW16(CFsAE *ae)
 	A_long x0,x1,y0,y1;
 
 	A_long i,j,t;
-	//‚Ü‚¸ã‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½ã‚©ï¿½ï¿½Tï¿½ï¿½
 	y0 = -1;
 	t = 0;
 	for (j=0;j<h;j++){
@@ -289,7 +289,7 @@ static void chkW16(CFsAE *ae)
 
 	}
 	if (y0==-1) return;
-	//‰º‚©‚ç’T‚·
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	y1 = -1;
 	for (j = h-1;j>=0;j--){
 		t = j * tw;
@@ -304,7 +304,7 @@ static void chkW16(CFsAE *ae)
 		if (y1!=-1) break;
 	}
 
-	//‚Ü‚¸¶‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	x0 = -1;
 	t = 0;
 	for (j=0;j<w;j++){
@@ -320,7 +320,7 @@ static void chkW16(CFsAE *ae)
 		if (x0!=-1) break;
 
 	}
-	//‚Ü‚¸‰E‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½Eï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	x1 = -1;
 	t = 0;
 	for (j=w-1;j>=0;j--){
@@ -367,7 +367,7 @@ static void chkW32(CFsAE *ae)
 	A_long x0,x1,y0,y1;
 
 	A_long i,j,t;
-	//‚Ü‚¸ã‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½ã‚©ï¿½ï¿½Tï¿½ï¿½
 	y0 = -1;
 	t = 0;
 	for (j=0;j<h;j++){
@@ -384,7 +384,7 @@ static void chkW32(CFsAE *ae)
 
 	}
 	if (y0==-1) return;
-	//‰º‚©‚ç’T‚·
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	y1 = -1;
 	for (j = h-1;j>=0;j--){
 		t = j * tw;
@@ -399,7 +399,7 @@ static void chkW32(CFsAE *ae)
 		if (y1!=-1) break;
 	}
 
-	//‚Ü‚¸¶‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	x0 = -1;
 	t = 0;
 	for (j=0;j<w;j++){
@@ -415,7 +415,7 @@ static void chkW32(CFsAE *ae)
 		if (x0!=-1) break;
 
 	}
-	//‚Ü‚¸‰E‚©‚ç’T‚·
+	//ï¿½Ü‚ï¿½ï¿½Eï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 	x1 = -1;
 	t = 0;
 	for (j=w-1;j>=0;j--){
@@ -466,7 +466,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 
 	A_long x0 = infoP->top_left.x >> 16;
@@ -495,7 +495,7 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+// Main rendering loop
 static PF_Err Render (
 	PF_InData			*in_data,
 	PF_OutData		*out_data,
@@ -517,7 +517,7 @@ static PF_Err Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ğs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err
@@ -592,7 +592,7 @@ RespondtoAEGP (
 
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -662,7 +662,33 @@ EntryPointFunc (
 	catch(PF_Err &thrown_err){
 		err = thrown_err;
 	}
+	catch(...){  // Add comprehensive error handling
+		err = PF_Err_INTERNAL_STRUCT_DAMAGED;
+	}
 	return err;
+}
+
+//-----------------------------------------------------------------------------------
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+	PF_PluginDataPtr inPtr,
+	PF_PluginDataCB2 inPluginDataCallBackPtr,
+	SPBasicSuite* inSPBasicSuitePtr,
+	const char* inHostName,
+	const char* inHostVersion)
+{
+	PF_Err result = PF_Err_INVALID_CALLBACK;
+	result = PF_REGISTER_EFFECT_EXT2(
+		inPtr,
+		inPluginDataCallBackPtr,
+		FS_NAME,
+		FS_NAME,
+		FS_CATEGORY,
+		0,  // AE_RESERVED_INFO â†’ 0 for Mac compatibility
+		"EffectMain",
+		FS_DESCRIPTION
+	);
+	return result;
 }
 
 //-------------------------------------------------------------------------------------------------

@@ -10,27 +10,30 @@
 
 
 //-----------------------------------------------------------------------------------
-//プラグインの識別に使われる名前
-#define FS_NAME			"F's PaintMalutPaint"
+//Plugin name used in After Effects
+#define FS_NAME			"F's PaintMultPoint"
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使われる文字
-#define FS_DESCRIPTION	"ペイント（俗に言うバケツツール）を改造"
+//Plugin description used in After Effects
+#define FS_DESCRIPTION	"Paint multiple points (for cell animation)"
 
 //-----------------------------------------------------------------------------------
-//プラグインが表示されるメニュー名
-//#define FS_CATEGORY "F's Plugins-Fx"
-//#define FS_CATEGORY "F's Plugins-Channel"
+//Category displayed in After Effects
+
 #define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "F's Plugins-Script"
-//#define FS_CATEGORY "F's Plugins-Draw"
-
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+//#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
-//#define NO_USE_FSGRAPHICS	//これを有効にするとFsGraphics関係がインクルードされない
+#define SUPPORT_SMARTFX			//Enable SmartFX+Float_Color support
+//#define NO_USE_FSGRAPHICS	//Disable FsGraphics related code
 
 //-----------------------------------------------------------------------------------
-//プラグインのバージョン
+//Plugin version
 #include "../FsLibrary/FsVersion.h"
 
 
@@ -46,9 +49,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//通常はこちら
-//#define FS_OUT_FLAGS	33556036	//こっちを有効にすると毎フレームごとに描画する。NON_PARAM_VARYを動作中に切り替えるときもこちらに
-//#define FS_OUT_FLAGS	1600		//8bitのみ
+#define FS_OUT_FLAGS	33556032	//Normal setting
+//#define FS_OUT_FLAGS	33556036	//Enable for SmartFX to prevent flickering. NON_PARAM_VARY may need to be set manually
+//#define FS_OUT_FLAGS	1600		//8bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2

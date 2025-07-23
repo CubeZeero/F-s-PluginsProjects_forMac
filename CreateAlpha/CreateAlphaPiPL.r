@@ -15,26 +15,27 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AEのメニューに使われる */
+			/*Used in AE menu */
 			FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*AEのメニューに使われる */
+			/*Used in AE menu */
 			FS_CATEGORY
 		},
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
-		CodeWin64X86 {"EntryPointFunc"},
+		CodeWin64X86 {"EffectMain"},
 	#else
-		CodeWin32X86 {"EntryPointFunc"},
+		CodeWin32X86 {"EffectMain"},
 	#endif	
 #else
 	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMachOPowerPC {"EffectMain"},
+		CodeMacIntel32 {"EffectMain"},
+		CodeMacIntel64 {"EffectMain"},
+		CodeMacARM64 {"EffectMain"}, // Added
 	#endif
 #endif
 
@@ -66,7 +67,7 @@ resource 'PiPL' (16000) {
 		},
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*プラグインの識別に使われる */
+			/*Plugin name used in matching */
 			FS_NAME
 		},
 		/* [12] */

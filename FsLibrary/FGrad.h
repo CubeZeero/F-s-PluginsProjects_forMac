@@ -37,10 +37,10 @@ typedef struct GradInfo {
 class FGrad
 {
 private:
-	//ƒAƒhƒŒƒXŒvŽZƒe[ƒuƒ‹Eƒ|ƒCƒ“ƒgƒe[ƒuƒ‹—p
+	//ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½vï¿½Zï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Eï¿½|ï¿½Cï¿½ï¿½ï¿½gï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½p
 	PF_Handle	m_bufH = NULL;
 
-	// ƒAƒhƒŒƒXŒvŽZƒe[ƒuƒ‹
+	// ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½vï¿½Zï¿½eï¿½[ï¿½uï¿½ï¿½
 	A_long* m_vurTbl = NULL;
 
 
@@ -58,7 +58,7 @@ public:
 	A_long	width() { return m_width; }
 	A_long	height() { return m_height; }
 	A_long	widthTrue() { return  m_widthTrue; }
-	A_long	offsetWidth() { m_offsetWidth; }
+	A_long	offsetWidth() { return m_offsetWidth; }
 	PF_Pixel* data8() { return (PF_Pixel*)m_data; }
 	PF_Pixel16* data16() { return (PF_Pixel16*)m_data; }
 	PF_PixelFloat* data32() { return (PF_PixelFloat*)m_data; }
@@ -561,8 +561,9 @@ public:
 		switch (m_format)
 		{
 		case PF_PixelFormat_ARGB128:
-			PF_PixelFloat sc32 = CONV8TO32(stc);
-			PF_PixelFloat lc32 = CONV8TO32(ltc);
+			{
+				PF_PixelFloat sc32 = CONV8TO32(stc);
+				PF_PixelFloat lc32 = CONV8TO32(ltc);
 			gi.startColP = (PF_PixelPtr)&sc32;
 			gi.lastColP = (PF_PixelPtr)&lc32;
 			if (F_ABS(gi.dx) >= F_ABS(gi.dy))
@@ -572,10 +573,12 @@ public:
 			else {
 				execY32(gi);
 			}
+			}
 			break;
 		case PF_PixelFormat_ARGB64:
-			PF_Pixel16 sc16 = CONV8TO16(stc);
-			PF_Pixel16 lc16 = CONV8TO16(ltc);
+			{
+				PF_Pixel16 sc16 = CONV8TO16(stc);
+				PF_Pixel16 lc16 = CONV8TO16(ltc);
 			gi.startColP = (PF_PixelPtr)&sc16;
 			gi.lastColP = (PF_PixelPtr)&lc16;
 			if (F_ABS(gi.dx) >= F_ABS(gi.dy))
@@ -585,11 +588,13 @@ public:
 			else {
 				execY16(gi);
 			}
+			}
 			break;
 		default:
 		case PF_PixelFormat_ARGB32:
-			PF_Pixel sc = stc;
-			PF_Pixel lc = ltc;
+			{
+				PF_Pixel sc = stc;
+				PF_Pixel lc = ltc;
 			gi.startColP = (PF_PixelPtr)&sc;
 			gi.lastColP = (PF_PixelPtr)&lc;
 			if (F_ABS(gi.dx) >= F_ABS(gi.dy))
@@ -598,6 +603,7 @@ public:
 			}
 			else {
 				execY8(gi);
+			}
 			}
 			break;
 		}

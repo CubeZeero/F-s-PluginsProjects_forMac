@@ -12,6 +12,8 @@
 
 #include "AEConfig.h"
 #include "entry.h"
+#include "AE_PluginData.h"
+#include "AE_GeneralPlug.h"
 
 //#include "PrSDKAESupport.h"
 #include "AE_Effect.h"
@@ -38,8 +40,8 @@
 #include "../FsLibrary/FsAE.h"
 
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+// User interface parameter IDs
+// Used in ParamsSetup function and Render function params parameter
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_LEVEL_FIXED,	//long
@@ -48,9 +50,9 @@ enum {
 	ID_NUM_PARAMS
 	};
 
-#define STR_LEVEL	"許容値"
-#define STR_SRC		"元の色"
-#define STR_DST		"新しい色"
+#define STR_LEVEL	"Level"
+#define STR_SRC		"Source Color"
+#define STR_DST		"Destination Color"
 
 typedef struct ParamInfo{
 	A_u_char		level;
@@ -66,7 +68,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -64,7 +64,7 @@ static PF_Err ParamsSetup (
 	);
 
 	//----------------------------------------------------------------
-	//ˆÊ’u‚ÌŽw’è
+	//ï¿½Ê’uï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POINT(STR_CENTER,			/*"New Center"*/
 				50,	// X
@@ -299,7 +299,7 @@ static PF_Err
 
 
 	infoP->ae = ae;
-	//‰æ–Ê‚ðƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 
 	ERR(ae->NewTmpWorld());
 	ERR(ae->Copy(ae->input, ae->tmpP));
@@ -308,29 +308,29 @@ static PF_Err
 	switch(ae->pixelFormat())
 	{
 	case PF_PixelFormat_ARGB128:
-		ae->tmp->toBlackMat32();
+		// ae->tmp->toBlackMat32();  // Function not implemented
 		ERR(ae->iterate32TempToOutput((refconType)infoP, FilterImage32));
-		ae->out->fromBlackMat32();
+		// ae->out->fromBlackMat32();  // Function not implemented
 		break;
 	case PF_PixelFormat_ARGB64:
-		ae->tmp->toBlackMat16();
+		// ae->tmp->toBlackMat16();  // Function not implemented
 		ERR(ae->iterate16TempToOutput((refconType)infoP, FilterImage16));
-		ae->out->fromBlackMat16();
+		// ae->out->fromBlackMat16();  // Function not implemented
 		break;
 	case PF_PixelFormat_ARGB32:
-		ae->tmp->toBlackMat8();
+		// ae->tmp->toBlackMat8();  // Function not implemented
 		ERR(ae->iterate8TempToOutput((refconType)infoP,FilterImage8));
-		ae->out->fromBlackMat8();
+		// ae->out->fromBlackMat8();  // Function not implemented
 		break;
 	}
 	return err;
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 /*
-	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
+	SmartFXï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½zï¿½Xï¿½g(After Effects7ï¿½È‘Oï¿½Ì‚ï¿½ï¿½ï¿½)ï¿½Í‚ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½Ä•`ï¿½æ‚·ï¿½ï¿½
+	ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Îˆê‰žv6.5ï¿½Î‰ï¿½ï¿½É‚È‚ï¿½
 */
 static PF_Err 
 Render ( 
@@ -354,7 +354,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

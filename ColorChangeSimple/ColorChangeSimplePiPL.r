@@ -9,33 +9,34 @@
 
 
 resource 'PiPL' (16000) {
-	{	/* array properties: 12 elements */
+	{	/* array properties: 13 elements */
 		/* [1] */
 		Kind {
 			AEEffect
 		},
 		/* [2] */
 		Name {
-			/*AEのメニューに使われる */
+			/* Used in AE menu */
 			FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*AEのメニューに使われる */
+			/* Used in AE menu */
 			FS_CATEGORY
 		},
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
-		CodeWin64X86 {"EntryPointFunc"},
+		CodeWin64X86 {"EffectMain"},
 	#else
-		CodeWin32X86 {"EntryPointFunc"},
+		CodeWin32X86 {"EffectMain"},
 	#endif	
 #else
 	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMachOPowerPC {"EffectMain"},
+		CodeMacIntel32 {"EffectMain"},
+		CodeMacIntel64 {"EffectMain"},
+		CodeMacARM64 {"EffectMain"},
 	#endif
 #endif
 		/* [6] */
@@ -66,12 +67,16 @@ resource 'PiPL' (16000) {
 		},
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*プラグインの識別に使われる */
+			/* Used in plugin identification */
 			FS_NAME
 		},
 		/* [12] */
 		AE_Reserved_Info {
 			0
+		},
+		/* [13] */
+		AE_Effect_Support_URL {
+			"https://www.adobe.com"
 		}
 	}
 };

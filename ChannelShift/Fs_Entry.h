@@ -147,7 +147,7 @@ RespondtoAEGP (
 }
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -217,7 +217,36 @@ EntryPointFunc (
 	catch(PF_Err &thrown_err){
 		err = thrown_err;
 	}
+	catch(...){
+		err = PF_Err_INTERNAL_STRUCT_DAMAGED;
+	}
 	return err;
+}
+
+//-------------------------------------------------------------------------------------------------
+// Modern plugin registration function (required for newer AE versions)
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+	PF_PluginDataPtr inPtr,
+	PF_PluginDataCB2 inPluginDataCallBackPtr,
+	SPBasicSuite* inSPBasicSuitePtr,
+	const char* inHostName,
+	const char* inHostVersion)
+{
+	PF_Err result = PF_Err_INVALID_CALLBACK;
+
+	result = PF_REGISTER_EFFECT_EXT2(
+		inPtr,
+		inPluginDataCallBackPtr,
+		FS_NAME, // Name
+		FS_NAME, // Match Name
+		FS_CATEGORY, // Category
+		AE_RESERVED_INFO, // Reserved Info
+		"EffectMain", // Entry point
+		FS_DESCRIPTION // Description
+	);
+
+	return result;
 }
 
 //-------------------------------------------------------------------------------------------------

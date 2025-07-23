@@ -28,7 +28,7 @@ static PF_Err BlurHor(PF_EffectWorldPtr g, A_long blue, PF_Pixel16 *scanline, A_
 	A_long adr = 0;
 	for (A_long y = 0; y < h; y++)
 	{
-		//ƒXƒLƒƒƒ“ƒ‰ƒCƒ“‚Ö“]‘—
+		//ï¿½Xï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Ö“]ï¿½ï¿½
 		for (A_long x = 0; x < w; x++) {
 			scanline[x] = data[adr + x];
 		}
@@ -39,7 +39,7 @@ static PF_Err BlurHor(PF_EffectWorldPtr g, A_long blue, PF_Pixel16 *scanline, A_
 			A_long g = 0;
 			A_long b = 0;
 			A_long a = 0;
-			//^‚ñ’†
+			//ï¿½^ï¿½ï¿½
 			gauss = tbl[0];
 			if (scanline[x].alpha > 0) {
 				r += scanline[x].red * gauss;
@@ -97,7 +97,7 @@ static PF_Err BlurVur(PF_EffectWorldPtr g, A_long blue, PF_Pixel16 *scanline, A_
 	A_long adr = 0;
 	for (A_long x = 0; x < w; x++)
 	{
-		//ƒXƒLƒƒƒ“ƒ‰ƒCƒ“‚Ö“]‘—
+		//ï¿½Xï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Ö“]ï¿½ï¿½
 		adr = 0;
 		for (A_long y = 0; y < h; y++) {
 			scanline[y] = data[x + adr];
@@ -111,7 +111,7 @@ static PF_Err BlurVur(PF_EffectWorldPtr g, A_long blue, PF_Pixel16 *scanline, A_
 			A_long g = 0;
 			A_long b = 0;
 			A_long a = 0;
-			//^‚ñ’†
+			//ï¿½^ï¿½ï¿½
 			gauss = tbl[0];
 			if (scanline[y].alpha > 0) {
 				r += scanline[y].red * gauss;

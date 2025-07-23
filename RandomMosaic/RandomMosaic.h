@@ -48,26 +48,26 @@ typedef struct ParamInfo{
 
 enum {
 	ID_INPUT = 0,	// default input layer 
-	ID_Y,		// ƒmƒCƒY—Ê
-	ID_SIZEMAX,		// ƒ‚ƒUƒCƒN‚Ì‘å‚«‚³(Å‘å’l)
-	ID_SIZEMIN,		// ƒ‚ƒUƒCƒN‚Ì‘å‚«‚³(Å¬’l)
-	ID_ASPECT,		// ƒ‚ƒUƒCƒN‚Ì¶‰E
-	ID_RANDCOLOR,	// F‚Ì‚Î‚ç‚Â‚«
+	ID_Y,		// ï¿½mï¿½Cï¿½Yï¿½ï¿½
+	ID_SIZEMAX,		// ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ì‘å‚«ï¿½ï¿½(ï¿½Å‘ï¿½l)
+	ID_SIZEMIN,		// ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ì‘å‚«ï¿½ï¿½(ï¿½Åï¿½ï¿½l)
+	ID_ASPECT,		// ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ìï¿½ï¿½E
+	ID_RANDCOLOR,	// ï¿½Fï¿½Ì‚Î‚ï¿½Â‚ï¿½
 	ID_NUM_PARAMS
 };
 
-#define STR_Y		"—Ê"
-#define STR_SIZEMAX		"ƒTƒCƒY(Å‘å)"
-#define STR_SIZEMIN		"ƒTƒCƒY(Å¬)"
-#define STR_ASPECT		"c‰¡‚Ì‚Î‚ç‚Â‚«"
-#define STR_RANDOMCOLOR	"–¾‚é‚³‚Ì‚Î‚ç‚Â‚«"
+#define STR_Y		"ï¿½ï¿½"
+#define STR_SIZEMAX		"ï¿½Tï¿½Cï¿½Y(ï¿½Å‘ï¿½)"
+#define STR_SIZEMIN		"ï¿½Tï¿½Cï¿½Y(ï¿½Åï¿½)"
+#define STR_ASPECT		"ï¿½cï¿½ï¿½ï¿½Ì‚Î‚ï¿½Â‚ï¿½"
+#define STR_RANDOMCOLOR	"ï¿½ï¿½ï¿½é‚³ï¿½Ì‚Î‚ï¿½Â‚ï¿½"
 
 
 
 extern "C" {
 DllExport
 PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

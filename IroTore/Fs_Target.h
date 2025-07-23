@@ -11,29 +11,33 @@
 
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é–¼‘O
+// Plugin name used in the interface
 #define FS_NAME			"F's IroTore"
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ìà–¾‚Ég‚í‚ê‚é•¶š
-#define FS_DESCRIPTION	"åü‚ğ–³—‚â‚èFƒgƒŒƒX‚É‚µ‚Ü‚·"
+// Description used for the plugin
+#define FS_DESCRIPTION	"Color extraction by adjacent color"
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚ª•\¦‚³‚ê‚éƒƒjƒ…[–¼
-//#define FS_CATEGORY "F's Plugins-Fx"
-//#define FS_CATEGORY "F's Plugins-Channel"
+// Plugin category (choose one)
 #define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "F's Plugins-Script"
+//#define FS_CATEGORY "F's Plugins-Channel"
+//#define FS_CATEGORY "F's Plugins-Colorize"
 //#define FS_CATEGORY "F's Plugins-Draw"
+//#define FS_CATEGORY "F's Plugins-Filter"
+//#define FS_CATEGORY "F's Plugins-Noise"
+//#define FS_CATEGORY "F's Plugins-expression"
+//#define FS_CATEGORY "F's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//‚±‚ê‚ğ—LŒø‚É‚·‚é‚ÆSmartFX+Float_Color‚É‘Î‰‚·‚é
-//#define NO_USE_FSGRAPHICS	//‚±‚ê‚ğ—LŒø‚É‚·‚é‚ÆFsGraphicsŠÖŒW‚ªƒCƒ“ƒNƒ‹[ƒh‚³‚ê‚È‚¢
+#define SUPPORT_SMARTFX			// Enable SmartFX + Float_Color support
+//#define NO_USE_FSGRAPHICS	// Disable FsGraphics include if not needed
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
-
-
+// Version information
+#define MAJOR_VERSION    1
+#define MINOR_VERSION    5
+#define FS_VERSION       ((MAJOR_VERSION << 20) | MINOR_VERSION)  // 1572864
 
 //-----------------------------------------------------------------------------------
 //out_flags
@@ -47,9 +51,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//’Êí‚Í‚±‚¿‚ç
-//#define FS_OUT_FLAGS	33556036	//‚±‚Á‚¿‚ğ—LŒø‚É‚·‚é‚Æ–ˆƒtƒŒ[ƒ€‚²‚Æ‚É•`‰æ‚·‚éBNON_PARAM_VARY‚ğ“®ì’†‚ÉØ‚è‘Ö‚¦‚é‚Æ‚«‚à‚±‚¿‚ç‚É
-//#define FS_OUT_FLAGS	1600		//8bit‚Ì‚İ
+#define FS_OUT_FLAGS	33556032	//ÊÍ‚
+//#define FS_OUT_FLAGS	33556036	//LÉ‚Æ–t[Æ‚É•`æ‚·BNON_PARAM_VARYğ“®ì’†ÉØ‚Ö‚Æ‚
+//#define FS_OUT_FLAGS	1600		//8bitÌ‚
 
 //-----------------------------------------------------------------------------------
 //out_flags2

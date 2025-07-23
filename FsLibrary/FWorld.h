@@ -9,10 +9,10 @@
 class FWorld
 {
 protected:
-	//ƒAƒhƒŒƒXŒvZƒe[ƒuƒ‹Eƒ|ƒCƒ“ƒgƒe[ƒuƒ‹—p
+	//ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½vï¿½Zï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Eï¿½|ï¿½Cï¿½ï¿½ï¿½gï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½p
 	PF_Handle	m_bufH = NULL;
 
-	// ƒAƒhƒŒƒXŒvZƒe[ƒuƒ‹
+	// ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½vï¿½Zï¿½eï¿½[ï¿½uï¿½ï¿½
 	A_long* m_vurTbl = NULL;
 
 
@@ -34,7 +34,7 @@ public:
 	A_long	width() { return m_width; }
 	A_long	height() { return m_height; }
 	A_long	widthTrue() { return  m_widthTrue; }
-	A_long	offsetWidth() { m_offsetWidth; }
+	A_long	offsetWidth() { return m_offsetWidth; }
 	PF_Pixel* data8() { return (PF_Pixel*)m_data; }
 	PF_Pixel16* data16() { return (PF_Pixel16*)m_data; }
 	PF_PixelFloat* data32() { return (PF_PixelFloat*)m_data; }

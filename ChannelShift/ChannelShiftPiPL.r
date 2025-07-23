@@ -23,15 +23,16 @@ resource 'PiPL' (16000) {
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
-		CodeWin64X86 {"EntryPointFunc"},
+		CodeWin64X86 {"EffectMain"},
 	#else
-		CodeWin32X86 {"EntryPointFunc"},
+		CodeWin32X86 {"EffectMain"},
 	#endif	
 #else
 	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMachOPowerPC {"EffectMain"},
+		CodeMacIntel32 {"EffectMain"},
+		CodeMacIntel64 {"EffectMain"},
+		CodeMacARM64 {"EffectMain"},
 	#endif
 #endif
 
@@ -72,6 +73,10 @@ resource 'PiPL' (16000) {
 		/* [12] */
 		AE_Reserved_Info {
 			0
+		},
+		/* [13] */
+		AE_Effect_Support_URL {
+			"https://www.adobe.com"
 		}
 	}
 };

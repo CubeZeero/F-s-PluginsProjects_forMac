@@ -40,18 +40,18 @@
 //#include "FsAE.h"
 
 
-#define STR_ENABLED_CB1	"Às‚·‚é"
+#define STR_ENABLED_CB1	"ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½"
 #define STR_ENABLED_CB2	"ON"
-#define STR_COLOR		"F"
-#define STR_OPA_FIXED	"•s“§–¾“x"
+#define STR_COLOR		"ï¿½F"
+#define STR_OPA_FIXED	"ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½x"
 
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer 
 	
-	//ˆÈ‰ºQl—p
+	//ï¿½È‰ï¿½ï¿½Qï¿½lï¿½p
 	ID_ENABLED_CB,			//boolean
 	ID_FILL_COLOR,	//
 	ID_OPA_COLOR_FIXED,
@@ -87,7 +87,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

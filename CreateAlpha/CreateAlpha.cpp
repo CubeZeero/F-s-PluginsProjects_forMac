@@ -8,7 +8,7 @@
 #include "CreateAlpha.h"
 
 //-------------------------------------------------------------------------------------------------
-//Aboutï\é¶
+//About displayÔøΩ\ÔøΩÔøΩ
 static PF_Err About (	PF_InData		*in_data,
 						PF_OutData		*out_data,
 						PF_ParamDef		*params[],
@@ -74,7 +74,7 @@ static PF_Err SequenceResetup (
 
 
 //-------------------------------------------------------------------------------------------------
-//Param_Utils.hÇéQè∆ÇÃÇ±Ç∆
+//Param_Utils.hÔøΩÔøΩÔøΩQÔøΩ∆ÇÃÇÔøΩÔøΩÔøΩ
 static PF_Err ParamsSetup (	PF_InData		*in_data,
 							PF_OutData		*out_data,
 							PF_ParamDef		*params[],
@@ -126,8 +126,8 @@ QueryDynamicFlags(
 {
 	PF_Err 	err 	= PF_Err_NONE,
 			err2 	= PF_Err_NONE;
-	//PF_OutFlag_NON_PARAM_VARYÇÃílÇout_flagsÇ÷ê›íËÇµÇƒ
-	//ñàÉtÉåÅ[ÉÄÇ≤Ç∆ÇÃï`âÊÇÇ∑ÇÈÇ©êÿÇËë÷Ç¶ÇÈÅB
+	//PF_OutFlag_NON_PARAM_VARYÔøΩÃílÔøΩÔøΩout_flagsÔøΩ÷ê›íËÇµÔøΩÔøΩ
+	//ÔøΩÔøΩÔøΩtÔøΩÔøΩÔøΩ[ÔøΩÔøΩÔøΩÔøΩÔøΩ∆ÇÃï`ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÈÇ©ÔøΩÿÇÔøΩ÷ÇÔøΩÔøΩÔøΩB
 	/*
 	CFsAE ae;
 	err = ae.QueryDynamicFlags(in_data,out_data,params,extra,ID_NUM_PARAMS);
@@ -207,7 +207,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//âÊñ ÇÉRÉsÅ[
+	//ÔøΩÔøΩ ÇÔøΩÔøΩRÔøΩsÔøΩ[
 	ERR(ae->CopyInToOut());
 	
 	switch(ae->pixelFormat())
@@ -228,7 +228,7 @@ static PF_Err
 
 
 //-------------------------------------------------------------------------------------------------
-//ÉåÉìÉ_ÉäÉìÉOÇÃÉÅÉCÉì
+//ÔøΩÔøΩÔøΩÔøΩÔøΩ_ÔøΩÔøΩÔøΩÔøΩÔøΩOÔøΩÃÉÔøΩÔøΩCÔøΩÔøΩ
 static PF_Err 
 Render ( 
 	PF_InData		*in_data,
@@ -304,7 +304,7 @@ RespondtoAEGP (
 
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -374,7 +374,33 @@ EntryPointFunc (
 	catch(PF_Err &thrown_err){
 		err = thrown_err;
 	}
+	catch(...){ // Added
+		err = PF_Err_INTERNAL_STRUCT_DAMAGED;
+	}
 	return err;
+}
+
+//-----------------------------------------------------------------------------------
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+    PF_PluginDataPtr inPtr,
+    PF_PluginDataCB2 inPluginDataCallBackPtr,
+    SPBasicSuite* inSPBasicSuitePtr,
+    const char* inHostName,
+    const char* inHostVersion)
+{
+    PF_Err result = PF_Err_INVALID_CALLBACK;
+    result = PF_REGISTER_EFFECT_EXT2(
+        inPtr,
+        inPluginDataCallBackPtr,
+        FS_NAME,
+        FS_NAME,
+        FS_CATEGORY,
+        AE_RESERVED_INFO,
+        "EffectMain",
+        FS_DESCRIPTION
+    );
+    return result;
 }
 
 //-------------------------------------------------------------------------------------------------

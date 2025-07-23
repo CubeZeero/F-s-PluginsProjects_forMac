@@ -38,8 +38,8 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+//Parameter ID definitions
+//Used as parameter ID in ParamsSetup function and Render function
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -53,14 +53,14 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UIの表示文字列
+//UI display strings
 #define	STR_HI_POS			"HightPos(%)"
 #define	STR_LO_POS			"LoPos(%)"
 #define	STR_HI_LV			"HighLevel(%)"
 #define	STR_MD_LV			"MidLevel(%)"
 #define	STR_LO_LV			"LoLevel(%)"
 
-//UIのパラメータ
+//UI parameters
 typedef struct ParamInfo {
 	PF_FpLong	hiPos;
 	PF_FpLong	loPos;
@@ -106,7 +106,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

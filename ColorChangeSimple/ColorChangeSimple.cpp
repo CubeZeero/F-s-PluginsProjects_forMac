@@ -13,8 +13,8 @@ PF_Err (*subFunc16)(refconType	refcon, A_long xL, A_long yL,PF_Pixel16	*inP, PF_
 PF_Err (*subFunc32)(refconType	refcon, A_long xL, A_long yL,PF_PixelFloat	*inP, PF_PixelFloat	*outP);
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+// Parameters passed to After Effects
+// See Param_Utils.h for reference
 static PF_Err ParamsSetup (	PF_InData		*in_data,
 							PF_OutData		*out_data,
 							PF_ParamDef		*params[],
@@ -24,22 +24,22 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	// Level setting slider bar
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 			//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,		//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,			//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					10,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_LEVEL,	// Parameter name
+					0, 			// Minimum value for numeric input
+					100,		// Maximum value for numeric input
+					0,			// Slider minimum value 
+					10,			// Slider maximum value
+					0,			// Default value
+					1,			// Numeric display related flag 
 					0,
 					0,
 					ID_LEVEL_FIXED
 					);
 
 	//----------------------------------------------------------------
-	//F‚Ìw’è
+	// Color specification
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_SRC, 
 					0xFF,
@@ -48,7 +48,7 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 					ID_SRC_COLOR
 					);
 
-	//F‚Ìw’è
+	// Color specification
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_DST, 
 					0x00,
@@ -229,7 +229,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	if ( infoP->level ==0){
 		subFunc8 = FilterImage8Zero;
@@ -257,7 +257,7 @@ static PF_Err
 
 //-------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 static PF_Err 
 Render ( 
 	PF_InData		*in_data,

@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------
 /*
-	PluginSkeleton for VS2010
+	GuideFrame Plugin for After Effects
 */
 //-----------------------------------------------------------------------------------
 #pragma once
@@ -43,7 +43,7 @@
 
 
 	
-#define STR_COLOR			"color"
+#define STR_COLOR			"Color"
 #define STR_TOPLEFT			"TopLeft"
 #define STR_BOTTOMRIGHT		"BottomRight"
 #define STR_CHK1			"Check"
@@ -52,13 +52,13 @@
 #define STR_SMOOTH2			"on"
 
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+// User interface parameter IDs
+// Used in ParamsSetup function and Render function params parameter ID
 enum {
 	ID_INPUT = 0,	// default input layer 
-	ID_COLOR,	//
-	ID_TOPLEFT,		//
-	ID_BOTTOMRIGHT,		//
+	ID_COLOR,	// Color parameter
+	ID_TOPLEFT,		// Top left position
+	ID_BOTTOMRIGHT,		// Bottom right position
 	ID_CHK,	
 	ID_SMOOTH,	
 
@@ -92,13 +92,13 @@ public:
 		PF_LayerDef		*output ):CFsAE(in_data,out_data,params,output){
 			getParams(in_data,out_data,params,output);
 		}
-	//ƒpƒ‰ƒ[ƒ^‚ğŠl“¾‚·‚éŠÖ”
+	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öï¿½
 	PF_Err getParams(
 		PF_InData			*in_data,
 		PF_OutData		*out_data,
 		PF_ParamDef		*params[],
 		PF_LayerDef		*output );
-	//ˆÈ‰ºŒÅ—L‚Ìƒpƒ‰ƒ[ƒ^
+	//ï¿½È‰ï¿½ï¿½Å—Lï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 	PF_Pixel  		color;
 	PF_FixedPoint	top_left;
 	PF_FixedPoint	bottom_right;
@@ -106,7 +106,7 @@ public:
 	PF_Boolean		smooth;
 
 
-	//˜g‚ğ•`‚­
+	//ï¿½gï¿½ï¿½`ï¿½ï¿½
 	void drawRect(){
 		long x0 = top_left.x >> 16;
 		long y0 = top_left.y >> 16;
@@ -146,7 +146,7 @@ public:
 		long x0,x1,y0,y1;
 
 		long i,j,t;
-		//‚Ü‚¸ã‚©‚ç’T‚·
+		//ï¿½Ü‚ï¿½ï¿½ã‚©ï¿½ï¿½Tï¿½ï¿½
 		y0 = -1;
 		t = 0;
 		for (j=0;j<h;j++){
@@ -163,7 +163,7 @@ public:
 
 		}
 		if (y0==-1) return;
-		//‰º‚©‚ç’T‚·
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 		y1 = -1;
 		for (j = h-1;j>=0;j--){
 			t = j * tw;
@@ -178,7 +178,7 @@ public:
 			if (y1!=-1) break;
 		}
 
-		//‚Ü‚¸¶‚©‚ç’T‚·
+		//ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 		x0 = -1;
 		t = 0;
 		for (j=0;j<w;j++){
@@ -194,7 +194,7 @@ public:
 			if (x0!=-1) break;
 
 		}
-		//‚Ü‚¸‰E‚©‚ç’T‚·
+		//ï¿½Ü‚ï¿½ï¿½Eï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 		x1 = -1;
 		t = 0;
 		for (j=w-1;j>=0;j--){
@@ -241,7 +241,7 @@ public:
 		long x0,x1,y0,y1;
 
 		long i,j,t;
-		//‚Ü‚¸ã‚©‚ç’T‚·
+		//ï¿½Ü‚ï¿½ï¿½ã‚©ï¿½ï¿½Tï¿½ï¿½
 		y0 = -1;
 		t = 0;
 		for (j=0;j<h;j++){
@@ -258,7 +258,7 @@ public:
 
 		}
 		if (y0==-1) return;
-		//‰º‚©‚ç’T‚·
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 		y1 = -1;
 		for (j = h-1;j>=0;j--){
 			t = j * tw;
@@ -273,7 +273,7 @@ public:
 			if (y1!=-1) break;
 		}
 
-		//‚Ü‚¸¶‚©‚ç’T‚·
+		//ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 		x0 = -1;
 		t = 0;
 		for (j=0;j<w;j++){
@@ -289,7 +289,7 @@ public:
 			if (x0!=-1) break;
 
 		}
-		//‚Ü‚¸‰E‚©‚ç’T‚·
+		//ï¿½Ü‚ï¿½ï¿½Eï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
 		x1 = -1;
 		t = 0;
 		for (j=w-1;j>=0;j--){
@@ -337,7 +337,7 @@ public:
 extern "C" {
 DllExport	
 PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

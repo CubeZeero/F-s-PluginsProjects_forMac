@@ -77,8 +77,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -89,87 +89,83 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//‚PŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
-	//ŒÅ’è¬”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	// First parameter
+	// Default slider value
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_Y,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					10000,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					1000,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					100,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					ID_Y
-					);
+	PF_ADD_SLIDER( STR_Y, // Parameter name
+				0, // Minimum value if not specified
+				10000, // Maximum value if not specified
+				0, // Slider minimum value
+				1000, // Slider maximum value
+				100, // Default value
+				ID_Y
+				);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_STRONG,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					50,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					10,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
-					0,
-					0,
-					ID_STRONG
-					);
-
+	PF_ADD_FIXED( STR_STRONG, // Parameter name
+				0, // Minimum value if not specified
+				100, // Maximum value if not specified
+				0, // Slider minimum value
+				50, // Slider maximum value
+				10, // Default value
+				1, // Flag for display
+				0,
+				0,
+				ID_STRONG
+				);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_LENGTH_MIN,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					1024,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					10,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					ID_LENGTH_MIN
-					);
+	PF_ADD_SLIDER( STR_LENGTH_MIN, // Parameter name
+				0, // Minimum value if not specified
+				1024, // Maximum value if not specified
+				0, // Slider minimum value
+				100, // Slider maximum value
+				10, // Default value
+				ID_LENGTH_MIN
+				);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_LENGTH_MAX,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					1024,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					30,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					ID_LENGTH_MAX
-					);
-
+	PF_ADD_SLIDER( STR_LENGTH_MAX, // Parameter name
+				0, // Minimum value if not specified
+				1024, // Maximum value if not specified
+				0, // Slider minimum value
+				100, // Slider maximum value
+				30, // Default value
+				ID_LENGTH_MAX
+				);
 	//----------------------------------------------------------------
-	//‚SŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	// Additional parameters
+	// Checkbox
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_COLOR1,
-					STR_COLOR2,
-					FALSE,
-					0,
-					ID_COLOR
-					);
+				STR_COLOR2,
+				FALSE,
+				0,
+				ID_COLOR
+				);
 	//----------------------------------------------------------------
-	//‚SŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	// Additional parameters
+	// Checkbox
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_WEIGHT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					1, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					16,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					1,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					4,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					2,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					ID_WEIGHT
-					);
+	PF_ADD_SLIDER( STR_WEIGHT, // Parameter name
+				1, // Minimum value if not specified
+				16, // Maximum value if not specified
+				1, // Slider minimum value
+				4, // Slider maximum value
+				2, // Default value
+				ID_WEIGHT
+				);
 	//----------------------------------------------------------------
-	//‚SŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	// Additional parameters
+	// Checkbox
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_VERTUAL1,
-					STR_VERTUAL2,
-					FALSE,
-					0,
-					ID_VERTUAL
-					);
-
+				STR_VERTUAL2,
+				FALSE,
+				0,
+				ID_VERTUAL
+				);
 	//----------------------------------------------------------------
-	out_data->num_params = 	ID_NUM_PARAMS; 
-
+	out_data->num_params =  ID_NUM_PARAMS; 
 	return err;
 }
 //-------------------------------------------------------------------------------------------------
@@ -345,7 +341,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ðƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	if ( (infoP->value>0)&&(infoP->strong>0)){
 
@@ -376,10 +372,10 @@ static PF_Err
 	return err;
 }
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 /*
-	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
+	SmartFXï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½zï¿½Xï¿½g(After Effects7ï¿½È‘Oï¿½Ì‚ï¿½ï¿½ï¿½)ï¿½Í‚ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½Ä•`ï¿½æ‚·ï¿½ï¿½
+	ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Îˆê‰žv6.5ï¿½Î‰ï¿½ï¿½É‚È‚ï¿½
 */
 static PF_Err 
 Render ( 
@@ -405,7 +401,7 @@ Render (
 //-------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err
@@ -480,7 +476,7 @@ RespondtoAEGP (
 
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

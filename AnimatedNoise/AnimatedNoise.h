@@ -13,8 +13,8 @@
 
 #include "AEConfig.h"
 #include "entry.h"
-
-
+#include "AE_PluginData.h"
+#include "AE_GeneralPlug.h"
 
 //#include "PrSDKAESupport.h"
 #include "AE_Effect.h"
@@ -39,28 +39,28 @@
 
 #include "../FsLibrary/FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+//User interface parameter IDs
+//Parameter IDs for ParamsSetup and Render functions
 enum {
 	ID_INPUT = 0,			// default input layer 
-	ID_ANIMATED_CB,			//動き
-	ID_ANIMATED_ADD,		//動き
-	ID_VALUE_ADD,			//ノイズの量
-	ID_LENGTH_FIXED,		//ノイズの強さ
-	ID_COLOR_CB,			//カラーかモノクロか
-	ID_BLOCK_VALUE_FIXED,	//ブロックノイズの量
-	ID_BLOCK_LENGTH_FIXED,	//ブロックノイズの強さ
-	ID_BLOCK_WIDTH_ADD,		//ブロックノイズ横幅
-	ID_BLOCK_HEIGHT_ADD,	//ブロックノイズ縦幅
-	ID_BLOCK_COLOR_CB,		//カラーかモノクロか
+	ID_ANIMATED_CB,			//Animate
+	ID_ANIMATED_ADD,		//Animate
+	ID_VALUE_ADD,			//Noise strength
+	ID_LENGTH_FIXED,		//Noise range
+	ID_COLOR_CB,			//Color monochrome
+	ID_BLOCK_VALUE_FIXED,	//Block noise strength
+	ID_BLOCK_LENGTH_FIXED,	//Block noise range
+	ID_BLOCK_WIDTH_ADD,		//Block noise width
+	ID_BLOCK_HEIGHT_ADD,	//Block noise height
+	ID_BLOCK_COLOR_CB,		//Color monochrome
 
 	ID_NUM_PARAMS
 	};
 typedef struct PrmTbl{
-	PF_PixelPtr	data;		//画像
-	A_long 		width;		//画像の横幅
-	A_long 		height;		//画像の高さ
-	A_long 		w;			//ターゲット
+	PF_PixelPtr	data;		//Image
+	A_long 		width;		//Image width
+	A_long 		height;		//Image height
+	A_long 		w;			//Target
 	A_long 		h;
 	A_long 		target;
 
@@ -92,7 +92,7 @@ static void NoiseBlock32(PrmTbl *prm);
 extern "C" {
 DllExport
 PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

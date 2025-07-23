@@ -45,7 +45,7 @@
 #define SAMPLE_MAX	4
 #define SAMPLE_HARF	2
 //#define SAMPLE_LEN	53.693575034635196099350836586682 // 
-#define SAMPLE_LEN	5369 //  100”{
+#define SAMPLE_LEN	5369 //  100ï¿½{
 
 #define FROM8_SAMPLE(A)  ((((A_long)(A) * SAMPLE_MAX) + PF_HALF_CHAN8) / PF_MAX_CHAN8)
 #define FROM16_SAMPLE(A) ((((A_long)(A) * SAMPLE_MAX) + PF_HALF_CHAN16) / PF_MAX_CHAN16)
@@ -88,8 +88,8 @@ inline PF_Pixel convSampleTo8(PF_Pixel s)
 }
 
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer
 	ID_ALPHA_THRESHOLD,
@@ -103,7 +103,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\¦•¶š—ñ
+//UIï¿½Ì•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 #define	STR_ALPHA_THRESHOLD		"AlphaThreshold"
 #define	STR_MAT_CB				"Mat"
@@ -119,7 +119,7 @@ enum {
 #define	STR_ON					"on"
 
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	PF_FpLong	alpha_level;
 	A_u_char	alpha_border;
@@ -159,7 +159,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

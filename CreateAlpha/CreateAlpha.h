@@ -39,10 +39,8 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-
-
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+//Parameter ID for After Effects
+//These IDs are used in ParamsSetup function and Render function params parameter
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_NUM_PARAMS
@@ -52,7 +50,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

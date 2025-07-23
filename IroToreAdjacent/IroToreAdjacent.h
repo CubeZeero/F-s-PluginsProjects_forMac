@@ -39,36 +39,36 @@
 #include "../FsLibrary/FsDebug.h"
 #include "../FsLibrary/FsHLS.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer
 	
-	//‹«ŠEü‚Ì‚İ
+	//ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½Ì‚ï¿½
 	ID_LINE_ONLY,
 	
-	//•ÏXŒã‚ÌF
+	//ï¿½ÏXï¿½ï¿½ÌF
 	ID_NEW_COLOR,
 
-	//•
+	//ï¿½ï¿½
 	ID_Y,
 
-	//åü•”•ªÅ‘åÅ¬
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‘ï¿½Åï¿½
 	ID_LINE_MINMAX,
 	
-	//åü•”•ª‚Ì‚Ú‚©‚µ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Ú‚ï¿½ï¿½ï¿½
 	ID_LINE_BLUR,
 
-	//åü‚ÌF
+	//ï¿½ï¿½ï¿½ï¿½ÌF
 	ID_MN_COLOR1_ON,
 	ID_MN_COLOR1,
 	ID_MN_COLOR2_ON,
 	ID_MN_COLOR2,
 	
-	//åüŒŸoƒŒƒxƒ‹
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½xï¿½ï¿½
 	ID_LEVEL,
 	
-	//—×ÚF
+	//ï¿½×ÚF
 	ID_AD_COLOR1_ON,
 	ID_AD_COLOR1,
 	ID_AD_COLOR2_ON,
@@ -85,7 +85,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\¦•¶š—ñ
+//UIï¿½Ì•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define	STR_LINE_ONLY		"LineOnly"
 
 #define	STR_NEW_COLOR		"NewColor"
@@ -133,7 +133,7 @@ enum {
 
 #define MN_COLOR_MAX	2
 #define AD_COLOR_MAX	6
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	PF_Boolean	lineOnly;
 
@@ -195,12 +195,12 @@ typedef struct ParamInfo16 {
 
 } ParamInfo16;
 //-------------------------------------------------------
-//--------------------------------------------------------------------xFF--------------
+//--------------------------------------------------------------------
 extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

@@ -12,6 +12,7 @@
 
 #include "AEConfig.h"
 #include "entry.h"
+#include "AE_PluginData.h"
 
 //#include "PrSDKAESupport.h"
 #include "AE_Effect.h"
@@ -150,7 +151,7 @@ RespondtoAEGP (
 }
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -221,6 +222,29 @@ EntryPointFunc (
 		err = thrown_err;
 	}
 	return err;
+}
+
+//-------------------------------------------------------------------------------------------------
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+    PF_PluginDataPtr inPtr,
+    PF_PluginDataCB2 inPluginDataCallBackPtr,
+    SPBasicSuite* inSPBasicSuitePtr,
+    const char* inHostName,
+    const char* inHostVersion)
+{
+    PF_Err result = PF_Err_INVALID_CALLBACK;
+    result = PF_REGISTER_EFFECT_EXT2(
+        inPtr,
+        inPluginDataCallBackPtr,
+        FS_NAME,
+        FS_NAME,
+        FS_CATEGORY,
+        0,
+        "EffectMain",
+        FS_DESCRIPTION
+    );
+    return result;
 }
 
 //-------------------------------------------------------------------------------------------------

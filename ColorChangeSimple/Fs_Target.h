@@ -9,30 +9,36 @@
 #define FS_TAGET_H
 
 //-----------------------------------------------------------------------------------
-//プラグインの識別に使われる名前
+// Plugin name used in plugin identification
 #define FS_NAME			"F's ColorChangeSimple"
 
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使われる文字
-#define FS_DESCRIPTION	"単色の色変えをします"
+// Plugin description string
+#define FS_DESCRIPTION	"Simple color change effect"
 
 //-----------------------------------------------------------------------------------
-//プラグインが表示されるメニュー名
-//#define FS_CATEGORY "F's Plugins-Channel"
-//#define FS_CATEGORY "F's Plugins-Draw"
-//#define FS_CATEGORY "F's Plugins-Filter"
+// Plugin menu category
+
 #define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "F's Plugins-Colorize"
-//#define FS_CATEGORY "F's Plugins-Script"
-//#define FS_CATEGORY "F's Plugins-Test"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+//#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
-//#define NO_USE_FSGRAPHICS	//これを有効にするとFsGraphics関係がインクルードされない
+#define SUPPORT_SMARTFX			// Enable SmartFX + Float Color support
+//#define NO_USE_FSGRAPHICS	// Do not include FsGraphics related libraries
 
-///-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
-
+// Version definitions (embedded to avoid FsVersion.h issues)
+#define MAJOR_VERSION 3
+#define MINOR_VERSION 0
+#define BUG_VERSION 0
+#define STAGE_VERSION PF_Stage_RELEASE
+#define BUILD_VERSION 0
+#define FS_VERSION 1572864
 
 //-----------------------------------------------------------------------------------
 //out_flags
@@ -46,9 +52,8 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//通常はこちら
-//#define FS_OUT_FLAGS	33556036	//こっちを有効にすると毎フレームごとに描画する。NON_PARAM_VARYを動作中に切り替えるときもこちらに
-//#define FS_OUT_FLAGS	1600		//8bitのみ
+#define FS_OUT_FLAGS	33556032	// Standard output flags
+//#define FS_OUT_FLAGS	33556036	// Alternative flags for frame-by-frame rendering
 
 //-----------------------------------------------------------------------------------
 //out_flags2

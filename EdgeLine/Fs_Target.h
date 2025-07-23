@@ -11,29 +11,34 @@
 
 
 //-----------------------------------------------------------------------------------
-//プラグインの識別に使われる名前
+//Plugin display name
 #define FS_NAME			"F's EdgeLine"
 
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使われる文字
-#define FS_DESCRIPTION	"境界線を描く"
+//Plugin description
+#define FS_DESCRIPTION	"Draw edge lines"
 
 //-----------------------------------------------------------------------------------
-	//プラグインが表示されるメニュー名
-	//#define FS_CATEGORY "F's Plugins-Channel"
-	//#define FS_CATEGORY "F's Plugins-Draw"
-	//#define FS_CATEGORY "F's Plugins-Filter"
-	#define FS_CATEGORY "NF's Plugins-Cell"
-	//#define FS_CATEGORY "F's Plugins-Colorize"
-	//#define FS_CATEGORY "F's Plugins-Script"
-	//#define FS_CATEGORY "F's Plugins-Test"
+//Plugin category
+
+#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+//#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
-//#define NO_USE_FSGRAPHICS	//これを有効にするとFsGraphics関係がインクルードされない
+#define SUPPORT_SMARTFX			//Support for SmartFX+Float_Color
+//#define NO_USE_FSGRAPHICS	//Disable FsGraphics related code
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
+//#include "../FsLibrary/FsVersion.h"
+#define MAJOR_VERSION 1
+#define MINOR_VERSION 0
+#define FS_VERSION ((MAJOR_VERSION << 16) | MINOR_VERSION)
 
 //-----------------------------------------------------------------------------------
 //out_flags
@@ -47,9 +52,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//通常はこちら
-//#define FS_OUT_FLAGS	33556036	//こっちを有効にすると毎フレームごとに描画する。NON_PARAM_VARYを動作中に切り替えるときもこちらに
-//#define FS_OUT_FLAGS	1600		//8bitのみ
+#define FS_OUT_FLAGS	33556032	//Normal settings
+//#define FS_OUT_FLAGS	33556036	//For SmartFX, NON_PARAM_VARY is set
+//#define FS_OUT_FLAGS	1600		//8bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2

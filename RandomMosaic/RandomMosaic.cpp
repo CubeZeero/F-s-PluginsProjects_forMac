@@ -75,8 +75,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -86,50 +86,50 @@ static PF_Err ParamsSetup (
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 
-	//‚PŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
+	//ï¿½Pï¿½Â–Ú‚Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_Y,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					2048,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					512,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,					//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_Y,//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					2048,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					512,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,					//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_Y
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_SIZEMAX,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					3, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					1024,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					12,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					64,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					24,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_SIZEMAX,//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					3, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					1024,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					12,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					64,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					24,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_SIZEMAX
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_SIZEMIN,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					3, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					1024,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					6,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					64,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					6,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_SIZEMIN,//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					3, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					1024,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					6,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					64,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					6,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_SIZEMIN
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_ASPECT,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_ASPECT,//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_ASPECT
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_RANDOMCOLOR,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					255,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					16,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_RANDOMCOLOR,//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					255,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					16,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_RANDCOLOR
 					);
 
@@ -197,10 +197,10 @@ static PF_Err Exec8(CFsAE *ae, ParamInfo *infoP)
 		FsPixelRand	pr;
 		pr.a = pr.b = pr.g = pr.r = prValue;
 
-		//value‰ñŒJ‚è•Ô‚·
+		//valueï¿½ï¿½Jï¿½ï¿½Ô‚ï¿½
 		for(A_long i=0;i<infoP->value;i++ ){
-			//ƒTƒCƒY
-			fp.sizeX = F_RAND2(infoP->sizeMin,infoP->sizeMax); //ƒTƒCƒY‚ð“K“–‚É•Ï‚¦‚é
+			//ï¿½Tï¿½Cï¿½Y
+			fp.sizeX = F_RAND2(infoP->sizeMin,infoP->sizeMax); //ï¿½Tï¿½Cï¿½Yï¿½ï¿½Kï¿½ï¿½ï¿½É•Ï‚ï¿½ï¿½ï¿½
 			fp.sizeY = fp.sizeX;
 			if (infoP->aspect>0){
 				A_long temp = (infoP->sizeMax - infoP->sizeMin) * infoP->aspect / 100;
@@ -212,10 +212,10 @@ static PF_Err Exec8(CFsAE *ae, ParamInfo *infoP)
 				F_RAND();
 				F_RAND();
 			}
-			//ˆÊ’u
+			//ï¿½Ê’u
 			fp.x = F_RAND2(-fp.sizeX,ae->out->width());
 			fp.y = F_RAND2(-fp.sizeY,ae->out->height());
-			//–¾‚é‚³
+			//ï¿½ï¿½ï¿½é‚³
 			if ( prValue>0){
 				pr.b = pr.g = pr.r =
 				pr.a =F_RAND2(-prValue,prValue);
@@ -239,10 +239,10 @@ static PF_Err Exec16(CFsAE *ae, ParamInfo *infoP)
 		FsPixelRand	pr;
 		pr.a = pr.b = pr.g = pr.r = prValue;
 
-		//value‰ñŒJ‚è•Ô‚·
+		//valueï¿½ï¿½Jï¿½ï¿½Ô‚ï¿½
 		for(A_long i=0;i<infoP->value;i++ ){
-			//ƒTƒCƒY
-			fp.sizeX = F_RAND2(infoP->sizeMin,infoP->sizeMax); //ƒTƒCƒY‚ð“K“–‚É•Ï‚¦‚é
+			//ï¿½Tï¿½Cï¿½Y
+			fp.sizeX = F_RAND2(infoP->sizeMin,infoP->sizeMax); //ï¿½Tï¿½Cï¿½Yï¿½ï¿½Kï¿½ï¿½ï¿½É•Ï‚ï¿½ï¿½ï¿½
 			fp.sizeY = fp.sizeX;
 			if (infoP->aspect>0){
 				A_long temp = (infoP->sizeMax - infoP->sizeMin) * infoP->aspect / 100;
@@ -254,10 +254,10 @@ static PF_Err Exec16(CFsAE *ae, ParamInfo *infoP)
 				F_RAND();
 				F_RAND();
 			}
-			//ˆÊ’u
+			//ï¿½Ê’u
 			fp.x = F_RAND2(-fp.sizeX,ae->out->width());
 			fp.y = F_RAND2(-fp.sizeY,ae->out->height());
-			//–¾‚é‚³
+			//ï¿½ï¿½ï¿½é‚³
 			if ( prValue>0){
 				pr.b = pr.g = pr.r =
 				pr.a = F_RAND2(-prValue,prValue);
@@ -280,10 +280,10 @@ static PF_Err Exec32(CFsAE *ae, ParamInfo *infoP)
 		A_long prValue = FS_CONVERT8TO16(infoP->randomColor);
 		FsPixelRandFloat pr;
 
-		//value‰ñŒJ‚è•Ô‚·
+		//valueï¿½ï¿½Jï¿½ï¿½Ô‚ï¿½
 		for(A_long i=0;i<infoP->value;i++ ){
-			//ƒTƒCƒY
-			fp.sizeX = F_RAND2(infoP->sizeMin,infoP->sizeMax); //ƒTƒCƒY‚ð“K“–‚É•Ï‚¦‚é
+			//ï¿½Tï¿½Cï¿½Y
+			fp.sizeX = F_RAND2(infoP->sizeMin,infoP->sizeMax); //ï¿½Tï¿½Cï¿½Yï¿½ï¿½Kï¿½ï¿½ï¿½É•Ï‚ï¿½ï¿½ï¿½
 			fp.sizeY = fp.sizeX;
 			if (infoP->aspect>0){
 				A_long temp = (infoP->sizeMax - infoP->sizeMin) * infoP->aspect / 100;
@@ -295,10 +295,10 @@ static PF_Err Exec32(CFsAE *ae, ParamInfo *infoP)
 				F_RAND();
 				F_RAND();
 			}
-			//ˆÊ’u
+			//ï¿½Ê’u
 			fp.x = F_RAND2(-fp.sizeX,ae->out->width());
 			fp.y = F_RAND2(-fp.sizeY,ae->out->height());
-			//–¾‚é‚³
+			//ï¿½ï¿½ï¿½é‚³
 			if ( prValue>0){
 				PF_FpShort rr = (PF_FpShort)F_RAND2(-prValue,prValue)/PF_MAX_CHAN16;
 				pr.b = pr.g = pr.r =
@@ -317,7 +317,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ðƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	if (infoP->value>0){
 		F_SRAND(ae->frame());
@@ -361,7 +361,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err
@@ -436,7 +436,7 @@ RespondtoAEGP (
 
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

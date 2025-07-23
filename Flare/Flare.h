@@ -42,14 +42,14 @@
 #ifdef AE_OS_WIN
 #define SPRINTF(STR,IDX) sprintf_s(num, "%s%d", STR, IDX)
 #else
-#define SPRINTF(STR,IDX) sprintf_(num, "%s%d", STR, IDX)
+#define SPRINTF(STR,IDX) sprintf(num, "%s%d", STR, IDX)
 #endif
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer
-	ID_MODE,		//ƒ‚[ƒh  WhiteBaseMask or BlackBaseMask or Image(lumnan) 
+	ID_MODE,		//ï¿½ï¿½ï¿½[ï¿½h  WhiteBaseMask or BlackBaseMask or Image(lumnan) 
 	ID_BASE_ON,
 	ID_BASE_COLOR,
 	ID_BASE_OPACITY,
@@ -58,16 +58,16 @@ enum {
 enum
 {
 	ID_TOPIC = 0,
-	ID_ENABLED,		// ‚±‚ê‚ª—LŒø
+	ID_ENABLED,		// ï¿½ï¿½ï¿½ê‚ªï¿½Lï¿½ï¿½
 	ID_REV,			// rev none rev or revandMask
 	ID_BORDER_TOPIC,
-	ID_BORDER,		//‹«ŠEü Image
-	ID_INSIDE,		// border‚Ì“à‘¤
-	ID_OUTSIDE,		// border‚ÌŠO‘¤
+	ID_BORDER,		//ï¿½ï¿½ï¿½Eï¿½ï¿½ Image
+	ID_INSIDE,		// borderï¿½ï¿½ï¿½Ì“ï¿½ï¿½ï¿½
+	ID_OUTSIDE,		// borderï¿½ï¿½ï¿½ÌŠOï¿½ï¿½
 	ID_BORDER_TOPIC_END,
-	ID_MAX,			// –c’£ƒTƒCƒY
-	ID_BLUR,		// ‚Ú‚©‚µƒTƒCƒY
-	ID_COLOR,		// color and border‚Ì‚Ég‚¤
+	ID_MAX,			// ï¿½cï¿½ï¿½ï¿½Tï¿½Cï¿½Y
+	ID_BLUR,		// ï¿½Ú‚ï¿½ï¿½ï¿½ï¿½Tï¿½Cï¿½Y
+	ID_COLOR,		// color and borderï¿½Ìï¿½ï¿½Égï¿½ï¿½
 	ID_BLEND,		// normal or screen or Add
 	ID_OPACITY,
 	ID_TOPIC_END,
@@ -100,7 +100,7 @@ enum BLEND
 	Normal,
 };
 
-//UI‚Ì•\¦•¶š—ñ
+//UIï¿½Ì•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define	STR_ON				"on"
 #define	STR_BASE_ON			"baseOn"
 #define	STR_BASE_COLOR		"baseColor"
@@ -134,7 +134,7 @@ enum BLEND
 
 
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct FlareInfo {
 	PF_Boolean enabled;
 	PF_Boolean	border;
@@ -208,7 +208,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EntryPointFunc (	
+EffectMain (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

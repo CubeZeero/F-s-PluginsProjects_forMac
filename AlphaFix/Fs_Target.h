@@ -9,28 +9,28 @@
 #define FS_TAGET_H
 
 #define FS_NAME			"F's AlphaFix"
-#define FS_DESCRIPTION	"不透明部分を塗りつぶします。"
+#define FS_DESCRIPTION	"Restores transparency values."
 
 //-----------------------------------------------------------------------------------
-//プラグインが表示されるメニュー名
+// Menu category where the plugin will be displayed
+
+//#define FS_CATEGORY "NF's Plugins-Cell"
 #define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
 //#define FS_CATEGORY "NF's Plugins-Draw"
 //#define FS_CATEGORY "NF's Plugins-Filter"
-//#define FS_CATEGORY "NF's Plugins-FX"
-//#define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "NF's Plugins-Script"
-//#define FS_CATEGORY "NF's Plugins-Test"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 
 //-----------------------------------------------------------
-#ifndef SUPPORT_SMARTFX			//２重登録を防ぐ
-#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
+#ifndef SUPPORT_SMARTFX			// Prevent double registration
+#define SUPPORT_SMARTFX			// Enable this to support SmartFX+Float_Color
 #endif
-//#define NO_USE_FSGRAPHICS	//これを有効にするとFsGraphics関係がインクルードされない
+//#define NO_USE_FSGRAPHICS	// Enable this to not include FsGraphics related code
 
 
-//-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
 //-----------------------------------------------------------------------------------
 //out_flags
 /*
@@ -65,5 +65,15 @@
 #else
 #define FS_OUT_FLAGS2 134217801
 #endif
+
+//-----------------------------------------------------------------------------------
+// Version definitions (from FsVersion.h to avoid Rez compile issues)
+#define	MAJOR_VERSION		3
+#define	MINOR_VERSION		0
+#define	BUG_VERSION			0
+#define	STAGE_VERSION		PF_Stage_RELEASE
+#define	BUILD_VERSION		0
+#define FS_VERSION	1572864
+//-----------------------------------------------------------------------------------
 
 #endif

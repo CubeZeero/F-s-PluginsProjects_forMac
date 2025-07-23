@@ -41,8 +41,8 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_WIDTH_ADD,	//long
@@ -78,7 +78,7 @@ enum {
 #define	Str_OUT_OPACITY			"out_opacity"
 #define	Str_LINE_HEIGHT			"line_height"
 #define	Str_SIZE_POP1			"size"
-#define	Str_SIZE_POP2			"ã‚Ì”’l|720x540|1024x576|1024x768|1280x720|1440x810|1920x1080"
+#define	Str_SIZE_POP2			"ï¿½ï¿½Ìï¿½ï¿½l|720x540|1024x576|1024x768|1280x720|1440x810|1920x1080"
 
 
 typedef struct {
@@ -104,7 +104,7 @@ typedef struct {
 extern "C" {
 DllExport	
 PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

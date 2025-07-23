@@ -39,72 +39,68 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+// Parameter IDs for user interface
+// These IDs are used in ParamsSetup and Render functions
 enum {
-	ID_INPUT = 0,	// default input layer 
-	ID_Y,
-	ID_STRONG,
-	ID_LENGTH_MIN,
-	ID_LENGTH_MAX,
-	ID_COLOR,
-	ID_WEIGHT,
-	ID_VERTUAL,
-	ID_NUM_PARAMS
-	};
+	ID_INPUT = 0, // default input layer
+	ID_Y,         // Noise Y
+	ID_STRONG,    // Noise Strength (%)
+	ID_LENGTH_MIN, // Minimum Noise Length
+	ID_LENGTH_MAX, // Maximum Noise Length
+	ID_COLOR,     // Noise Color
+	ID_WEIGHT,    // Noise Weight
+	ID_VERTUAL,   // Vertical flag
+	ID_NUM_PARAMS // Number of parameters
+};
 
-#define STR_Y		"ノイズ量"
-#define STR_STRONG		"ノイズの強さ(%)"
-#define STR_LENGTH_MIN	"ノイズの長さ(最小)"
-#define STR_LENGTH_MAX	"ノイズの長さ(最大)"
-#define STR_COLOR1		"ノイズの色"
-#define STR_COLOR2		"カラー"
-
-#define STR_WEIGHT		"ノイズの幅"
-#define STR_VERTUAL1	"縦方向に"
-#define STR_VERTUAL2	"縦"
-
+#define STR_Y           "Noise Y"
+#define STR_STRONG      "Noise Strength (%)"
+#define STR_LENGTH_MIN  "Noise Length (Min)"
+#define STR_LENGTH_MAX  "Noise Length (Max)"
+#define STR_COLOR1      "Noise Color"
+#define STR_COLOR2      "Color"
+#define STR_WEIGHT      "Noise Weight"
+#define STR_VERTUAL1    "Vertical"
+#define STR_VERTUAL2    "V"
 
 typedef struct ParamInfo{
-	A_long		value;
-	PF_Fixed	strong;
-	A_long		lengthMin;
-	A_long		lengthMax;
-	PF_Boolean	color;
-	PF_Boolean	vertualFlag;
-	A_long		weight;
-	A_long		x;
-	A_long		y;
+	A_long      value;
+	PF_Fixed    strong;
+	A_long      lengthMin;
+	A_long      lengthMax;
+	PF_Boolean  color;
+	PF_Boolean  vertualFlag;
+	A_long      weight;
+	A_long      x;
+	A_long      y;
 }ParamInfo;
 typedef struct LineDrawParam{
-	A_long		x0;
-	A_long		x1;
-	A_long		y0;
-	A_long		y1;
+	A_long      x0;
+	A_long      x1;
+	A_long      y0;
+	A_long      y1;
 
-	A_long		r;
-	A_long		g;
-	A_long		b;
+	A_long      r;
+	A_long      g;
+	A_long      b;
 
-	PF_PixelPtr	data;
-	A_long		width;
-	A_long		widthTrue;
-	A_long		height;
+	PF_PixelPtr data;
+	A_long      width;
+	A_long      widthTrue;
+	A_long      height;
 }LineDrawParam;
 //-----------------------------------------------------------------
 extern "C" {
 DllExport
 PF_Err 
-EntryPointFunc (
-	PF_Cmd			cmd,
-	PF_InData		*in_data,
-	PF_OutData		*out_data,
-	PF_ParamDef		*params[],
-	PF_LayerDef		*output,
-	void			*extraP);
+EffectMain (
+	PF_Cmd         cmd,
+	PF_InData      *in_data,
+	PF_OutData     *out_data,
+	PF_ParamDef    *params[],
+	PF_LayerDef    *output,
+	void           *extraP);
 }
-
 //-------------------------------------------------------
 
 #endif // RandomLineNoise_H

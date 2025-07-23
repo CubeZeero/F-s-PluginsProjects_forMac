@@ -12,47 +12,59 @@
 
 
 //-----------------------------------------------------------------------------------
-//プラグインの識別に使われる名前
+// Plugin name used in the interface
 #define FS_NAME			"F's LineDetection"
 
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使われる文字
-#define FS_DESCRIPTION	"輪郭線検出"
-
-	//-----------------------------------------------------------------------------------
-	//プラグインが表示されるメニュー名
-	//#define FS_CATEGORY "F's Plugins-Channel"
-	//#define FS_CATEGORY "F's Plugins-Draw"
-	#define FS_CATEGORY "NF's Plugins-Filter"
-	//#define FS_CATEGORY "F's Plugins-Cell"
-	//#define FS_CATEGORY "F's Plugins-Colorize"
-	//#define FS_CATEGORY "F's Plugins-Script"
-//#define FS_CATEGORY "F's Plugins-Test"
-
-//-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
-//#define NO_USE_FSGRAPHICS	//これを有効にするとFsGraphics関係がインクルードされない
+// Description used for the plugin
+#define FS_DESCRIPTION	"Line detection filter"
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
-
-
+// Plugin category (choose one)
+//#define FS_CATEGORY "F's Plugins-Cell"
+//#define FS_CATEGORY "F's Plugins-Channel"
+//#define FS_CATEGORY "F's Plugins-Colorize"
+//#define FS_CATEGORY "F's Plugins-Draw"
+#define FS_CATEGORY "F's Plugins-Filter"
+//#define FS_CATEGORY "F's Plugins-Noise"
+//#define FS_CATEGORY "F's Plugins-expression"
+//#define FS_CATEGORY "F's Plugins-{Legacy}"
 
 //-----------------------------------------------------------------------------------
-//out_flags
+// Support SmartFX+Float_Color when enabled
+#define SUPPORT_SMARTFX
+//#define NO_USE_FSGRAPHICS	// Do not include FsGraphics related when enabled
+
+//-----------------------------------------------------------------------------------
+// Version information
+#define MAJOR_VERSION	1
+#define MINOR_VERSION	0
+#define FS_MAJOR_VERSION	1
+#define FS_MINOR_VERSION	0
+#define FS_BUG_VERSION	    0
+#define FS_STAGE_VERSION	PF_Stage_DEVELOP
+#define FS_BUILD_VERSION	0
+
+//-----------------------------------------------------------------------------------
+// Version value for plugin
+#define FS_VERSION	1572864
+
+//-----------------------------------------------------------------------------------
+// out_flags
 /*
 out_data->out_flags
-	PF_OutFlag_PIX_INDEPENDENT		1024
-	PF_OutFlag_NON_PARAM_VARY			4
-	PF_OutFlag_DEEP_COLOR_AWARE		33554432
-	PF_OutFlag_USE_OUTPUT_EXTENT	64
-	PF_OutFlag_I_EXPAND_BUFFER		512
+	PF_OutFlag_PIX_INDEPENDENT		1	Pixel processing does not refer to neighboring pixels
+	PF_OutFlag_NON_PARAM_VARY		2	Input parameters do not change during processing
+	PF_OutFlag_I_DO_DIALOG			32	Dialog to set parameters
+	PF_OutFlag_USE_OUTPUT_EXTENT	64	Output area is used
+	PF_OutFlag_I_EXPAND_BUFFER		512	Buffer extension is used
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//通常はこちら
-//#define FS_OUT_FLAGS	33556036	//こっちを有効にすると毎フレームごとに描画する。NON_PARAM_VARYを動作中に切り替えるときもこちらに
-//#define FS_OUT_FLAGS	1600		//8bitのみ
+//These flags will set PF_OutFlag_PIX_INDEPENDENT
+#define FS_OUT_FLAGS	33556032	//Normal processing
+//#define FS_OUT_FLAGS	33556036	//Enable when processing frame by frame with a key. Switch NON_PARAM_VARY during operation
+//#define FS_OUT_FLAGS	1600		//For 8bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2
@@ -65,9 +77,10 @@ out_data->out_flags2
 	PF_OutFlag2_DOESNT_NEED_EMPTY_PIXELS;
 */
 #if defined(SUPPORT_SMARTFX)
-#define FS_OUT_FLAGS2 134222921
+//#define FS_OUT_FLAGS2 134222921
+#define FS_OUT_FLAGS2	1097
 #else
-#define FS_OUT_FLAGS2 134217801
+#define FS_OUT_FLAGS2	1097
 #endif
 
 

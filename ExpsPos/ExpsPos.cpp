@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//Register parameters in AfterEffects
+//See Param_Utils.h for reference
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -29,17 +29,18 @@ static PF_Err ParamsSetup (
 	);
 
 	//----------------------------------------------------------------
-//ˆÊ’u‚ÌŽw’è
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos0", 00, 00, 0, ID_POS0);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos1", 10, 10, 0, ID_POS1);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos2", 20, 20, 0, ID_POS2);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos3", 30, 30, 0, ID_POS3);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos4", 40, 40, 0, ID_POS4);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos5", 50, 50, 0, ID_POS5);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos6", 60, 60, 0, ID_POS6);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos7", 70, 70, 0, ID_POS7);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos8", 80, 80, 0, ID_POS8);
-	AEFX_CLR_STRUCT(def); PF_ADD_POINT("pos9", 90, 90, 0, ID_POS9);
+	//Position settings
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos0", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS0);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos1", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS1);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos2", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS2);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos3", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS3);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos4", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS4);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos5", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS5);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos6", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS6);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos7", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS7);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos8", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS8);
+	AEFX_CLR_STRUCT(def); PF_ADD_FLOAT_SLIDERX("pos9", 0, 100, 0, 100, 0, PF_Precision_INTEGER, PF_ParamFlag_NONE, PF_ParamFlag_NONE, ID_POS9);
+
 	//----------------------------------------------------------------
 	out_data->num_params = 	ID_NUM_PARAMS; 
 
@@ -76,16 +77,16 @@ static PF_Err GetParams(CFsAE *ae, ParamInfo *infoP)
 
 	ERR(ae->GetCHECKBOX(ID_ON, &infoP->on));
 
-	ERR(ae->GetFIXEDPOINT(ID_POS0, &infoP->pos[0]));
-	ERR(ae->GetFIXEDPOINT(ID_POS1, &infoP->pos[1]));
-	ERR(ae->GetFIXEDPOINT(ID_POS2, &infoP->pos[2]));
-	ERR(ae->GetFIXEDPOINT(ID_POS3, &infoP->pos[3]));
-	ERR(ae->GetFIXEDPOINT(ID_POS4, &infoP->pos[4]));
-	ERR(ae->GetFIXEDPOINT(ID_POS5, &infoP->pos[5]));
-	ERR(ae->GetFIXEDPOINT(ID_POS6, &infoP->pos[6]));
-	ERR(ae->GetFIXEDPOINT(ID_POS7, &infoP->pos[7]));
-	ERR(ae->GetFIXEDPOINT(ID_POS8, &infoP->pos[8]));
-	ERR(ae->GetFIXEDPOINT(ID_POS9, &infoP->pos[9]));
+	ERR(ae->GetFLOAT(ID_POS0, &infoP->pos[0]));
+	ERR(ae->GetFLOAT(ID_POS1, &infoP->pos[1]));
+	ERR(ae->GetFLOAT(ID_POS2, &infoP->pos[2]));
+	ERR(ae->GetFLOAT(ID_POS3, &infoP->pos[3]));
+	ERR(ae->GetFLOAT(ID_POS4, &infoP->pos[4]));
+	ERR(ae->GetFLOAT(ID_POS5, &infoP->pos[5]));
+	ERR(ae->GetFLOAT(ID_POS6, &infoP->pos[6]));
+	ERR(ae->GetFLOAT(ID_POS7, &infoP->pos[7]));
+	ERR(ae->GetFLOAT(ID_POS8, &infoP->pos[8]));
+	ERR(ae->GetFLOAT(ID_POS9, &infoP->pos[9]));
 	return err;
 }
 //-------------------------------------------------------------------------------------------------
@@ -94,7 +95,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ðƒRƒs[
+	//Skip if off
 	if (infoP->on == TRUE) {
 		ERR(ae->CopyInToOut());
 	}
@@ -105,10 +106,10 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 /*
-	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
+	SmartFXï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½zï¿½Xï¿½g(After Effects7ï¿½È‘Oï¿½Ì‚ï¿½ï¿½ï¿½)ï¿½Í‚ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½Ä•`ï¿½æ‚·ï¿½ï¿½
+	ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Îˆê‰žv6.5ï¿½Î‰ï¿½ï¿½É‚È‚ï¿½
 */
 static PF_Err 
 Render ( 
@@ -132,7 +133,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

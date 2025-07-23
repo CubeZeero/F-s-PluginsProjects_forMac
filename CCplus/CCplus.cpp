@@ -7,8 +7,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -53,39 +53,39 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	StrCOLOR_CENTER_POS,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					50,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	StrCOLOR_CENTER_POS,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					50,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_COLOR_CENTER_POS
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	StrALPHA_START,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					-200, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					200,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					100,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	StrALPHA_START,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					-200, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					200,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					100,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_ALPHA_START
 					);
 
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	StrALPHA_END,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					-200, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					200,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	StrALPHA_END,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					-200, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					200,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_ALPHA_END
@@ -93,12 +93,12 @@ static PF_Err ParamsSetup (
 
 //----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	StrNOISE_VALUE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					64,		//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,		//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					8,		//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					2,		//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	StrNOISE_VALUE,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					64,		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,		//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					8,		//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					2,		//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_NOISE_VALUE
 					);
 
@@ -220,14 +220,14 @@ PF_PixelFloat colorValue32(CCPInfo32 *infoP, PF_FpShort value)
 	return r;
 }
 //---------------------------------------------------------------------------------------------
-//ƒJƒ‰[ƒe[ƒuƒ‹‚Ìì¬
+//ï¿½Jï¿½ï¿½ï¿½[ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Ìì¬
 void makeColorTbl8(CCPInfo *infoP)
 {
 	for ( A_long i=0; i<PF_MAX_CHAN8; i++)
 		infoP->colorTbl[i] = colorValue8(infoP,(A_u_char)i);
 }
 //---------------------------------------------------------------------------------------------
-//ƒJƒ‰[ƒe[ƒuƒ‹‚Ìì¬
+//ï¿½Jï¿½ï¿½ï¿½[ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Ìì¬
 void makeColorTbl16(CCPInfo16 *infoP)
 {
 	for ( A_long i=0; i<PF_MAX_CHAN16; i++)
@@ -495,7 +495,6 @@ static PF_Err
 
 	ae->out->clear();
 	if ( infoP->noise_value>0) F_SRAND(ae->frame());
-	CFsBuffer buf(ae->in_data);
 	switch(ae->pixelFormat())
 	{
 #if defined(SUPPORT_SMARTFX)
@@ -513,6 +512,7 @@ static PF_Err
 	case PF_PixelFormat_ARGB64:
 		CCPInfo16 info16;
 		info16 = to16(infoP);
+		info16.colorTbl = NULL; // Don't use color table for 16bit to avoid memory issues
 		ERR(ae->iterate16((refconType)&info16, AddColor16));
 		if (!err) {
 			if (info16.noise_value > 0) {
@@ -521,6 +521,7 @@ static PF_Err
 		}
 		break;
 	case PF_PixelFormat_ARGB32:
+		infoP->colorTbl = NULL; // Don't use color table for 8bit to avoid memory issues
 		ERR(ae->iterate8((refconType)infoP, AddColor8));
 		if (!err) {
 			if (infoP->noise_value > 0) {
@@ -537,7 +538,7 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 static PF_Err Render (
 	PF_InData			*in_data,
 	PF_OutData		*out_data,
@@ -555,8 +556,6 @@ static PF_Err Render (
 		ERR(GetParams(&ae,&info));
 		ERR(Exec(&ae,&info));
 	}
-	return err;
-
 	return err;
 }
 //-------------------------------------------------------------------------------------------------

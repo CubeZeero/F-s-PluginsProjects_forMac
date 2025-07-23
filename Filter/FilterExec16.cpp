@@ -44,7 +44,7 @@ PF_Err Exec16(CAE *ae, ParamInfo *infoP)
 	PF_InData *in_data;
 	in_data = ae->in_data;
 
-	//base‚Ìˆ— Mat‚É‚·‚é
+	//baseï¿½Ìï¿½ï¿½ï¿½ Matï¿½É‚ï¿½ï¿½ï¿½
 	if (infoP->base_enabled == TRUE) {
 		ERR(ae->iterate16((refconType)infoP, BaseCopy16));
 	}
@@ -54,12 +54,12 @@ PF_Err Exec16(CAE *ae, ParamInfo *infoP)
 		&& (infoP->paramset[3].enabled == FALSE)) {
 	}
 	else {
-		//16bit‚Ì‰æ‘œì¬
+		//16bitï¿½Ì‰æ‘œï¿½ì¬
 		PF_EffectWorld world;
 		AEFX_CLR_STRUCT(world);
 		PF_EffectWorldPtr worldP = &world;
 
-		//ƒoƒbƒtƒ@[‚Ìì¬
+		//ï¿½oï¿½bï¿½tï¿½@ï¿½[ï¿½Ìì¬
 		ERR(ae->NewWorld(ae->output->width, ae->output->height, PF_PixelFormat_ARGB64,worldP));
 
 		A_long w = ae->output->width;
@@ -77,9 +77,9 @@ PF_Err Exec16(CAE *ae, ParamInfo *infoP)
 			si = infoP->paramset[i];
 			if (si.enabled == FALSE) continue;
 			if (si.opacity <= 0) continue;
-			//ƒoƒbƒtƒ@[‚É“]‘—
+			//ï¿½oï¿½bï¿½tï¿½@ï¿½[ï¿½É“]ï¿½ï¿½
 			ERR(World16To16(ae->input, worldP));
-			//Mat‚Ìˆ—
+			//Matï¿½Ìï¿½ï¿½ï¿½
 			ERR(ToPremultiply16(worldP));
 			switch (si.extract_mode)
 			{
@@ -116,7 +116,7 @@ PF_Err Exec16(CAE *ae, ParamInfo *infoP)
 				ERR(ToDoubleSize16(worldP, bufH));
 			}
 
-			//out‚Ö“]‘— Blendˆ—
+			//outï¿½Ö“]ï¿½ï¿½ Blendï¿½ï¿½ï¿½ï¿½
 			ERR(Blend16To16(worldP, ae->output, si.blend_mode,si.opacity));
 
 		}
@@ -125,7 +125,7 @@ PF_Err Exec16(CAE *ae, ParamInfo *infoP)
 		{
 			PF_DISPOSE_HANDLE(bufH);
 		}
-		//ƒoƒbƒtƒ@[‚ðÁ‚·
+		//ï¿½oï¿½bï¿½tï¿½@ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		ERR(ae->DisposeWorld(worldP));
 	}
 
@@ -136,7 +136,7 @@ PF_Err Exec16(CAE *ae, ParamInfo *infoP)
 
 
 
-	//Mat‚©‚çŒ³‚É–ß‚·
+	//Matï¿½ï¿½ï¿½çŒ³ï¿½É–ß‚ï¿½
 	if (infoP->alpha_on == TRUE)
 	{
 		ERR(AlphaON16(ae->output));

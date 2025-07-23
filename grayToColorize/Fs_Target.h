@@ -11,29 +11,34 @@
 
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é–¼‘O
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Ìï¿½ï¿½Ê‚Égï¿½ï¿½ï¿½é–¼ï¿½O
 #define FS_NAME			"F's grayToColorize"
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ìà–¾‚Ég‚í‚ê‚é•¶š
-#define FS_DESCRIPTION	"“K“–‚È‘fŞ‚ğ“K“–‚ÉF‚ğ•t‚¯‚é"
-
-	//-----------------------------------------------------------------------------------
-	//ƒvƒ‰ƒOƒCƒ“‚ª•\¦‚³‚ê‚éƒƒjƒ…[–¼
-	//#define FS_CATEGORY "F's Plugins-Channel"
-	//#define FS_CATEGORY "F's Plugins-Draw"
-	//#define FS_CATEGORY "F's Plugins-Filter"
-	//#define FS_CATEGORY "F's Plugins-Cell"
-	#define FS_CATEGORY "NF's Plugins-Colorize"
-	//#define FS_CATEGORY "F's Plugins-Script"
-//#define FS_CATEGORY "F's Plugins-Test"
-
-//-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//‚±‚ê‚ğ—LŒø‚É‚·‚é‚ÆSmartFX+Float_Color‚É‘Î‰‚·‚é
-//#define NO_USE_FSGRAPHICS	//‚±‚ê‚ğ—LŒø‚É‚·‚é‚ÆFsGraphicsŠÖŒW‚ªƒCƒ“ƒNƒ‹[ƒh‚³‚ê‚È‚¢
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½Égï¿½ï¿½ï¿½é•¶ï¿½ï¿½
+#define FS_DESCRIPTION	"ï¿½Kï¿½ï¿½ï¿½È‘fï¿½Ş‚ï¿½Kï¿½ï¿½ï¿½ÉFï¿½ï¿½tï¿½ï¿½ï¿½ï¿½"
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½éƒï¿½jï¿½ï¿½ï¿½[ï¿½ï¿½
+
+//#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+//#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
+
+//-----------------------------------------------------------
+#define SUPPORT_SMARTFX			//ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½SmartFX+Float_Colorï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½ï¿½
+//#define NO_USE_FSGRAPHICS	//ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½FsGraphicsï¿½ÖŒWï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½È‚ï¿½
+
+//-----------------------------------------------------------------------------------
+//#include "../FsLibrary/FsVersion.h"
+#define MAJOR_VERSION 1
+#define MINOR_VERSION 0
+#define FS_VERSION ((MAJOR_VERSION << 16) | MINOR_VERSION)
 
 //-----------------------------------------------------------------------------------
 //out_flags
@@ -47,9 +52,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//’Êí‚Í‚±‚¿‚ç
-//#define FS_OUT_FLAGS	33556036	//‚±‚Á‚¿‚ğ—LŒø‚É‚·‚é‚Æ–ˆƒtƒŒ[ƒ€‚²‚Æ‚É•`‰æ‚·‚éBNON_PARAM_VARY‚ğ“®ì’†‚ÉØ‚è‘Ö‚¦‚é‚Æ‚«‚à‚±‚¿‚ç‚É
-//#define FS_OUT_FLAGS	1600		//8bit‚Ì‚İ
+#define FS_OUT_FLAGS	33556032	//ï¿½Êï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½
+//#define FS_OUT_FLAGS	33556036	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½Æ–ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚É•`ï¿½æ‚·ï¿½ï¿½BNON_PARAM_VARYï¿½ğ“®ì’†ï¿½ÉØ‚ï¿½Ö‚ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//#define FS_OUT_FLAGS	1600		//8bitï¿½Ì‚ï¿½
 
 //-----------------------------------------------------------------------------------
 //out_flags2

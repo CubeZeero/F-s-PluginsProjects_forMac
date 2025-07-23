@@ -7,31 +7,29 @@
 
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚ÌŽ¯•Ê‚ÉŽg‚í‚ê‚é–¼‘O
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ÌŽï¿½ï¿½Ê‚ÉŽgï¿½ï¿½ï¿½é–¼ï¿½O
 #define NFS_NAME			"F's UsedColorList"
 #define NFS_DISPNAME		"F's UsedColorList"
 
 
 //-----------------------------------------------------------------------------------
-//ƒvƒ‰ƒOƒCƒ“‚Ìà–¾‚ÉŽg‚í‚ê‚é•¶Žš
-#define NFS_DESCRIPTION	"ƒvƒ‰ƒOƒCƒ“‚ÌƒXƒPƒ‹ƒgƒ“"
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ÉŽgï¿½ï¿½ï¿½é•¶ï¿½ï¿½
+#define NFS_DESCRIPTION	"ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ÌƒXï¿½Pï¿½ï¿½ï¿½gï¿½ï¿½"
 
-	//-----------------------------------------------------------------------------------
-	//ƒvƒ‰ƒOƒCƒ“‚ª•\Ž¦‚³‚ê‚éƒƒjƒ…[–¼
-	//#define NFS_CATEGORY "NF's Plugins-Cell"
-	//#define NFS_CATEGORY "NF's Plugins-Channel"
-	//#define NFS_CATEGORY "NF's Plugins-Colorize"
-	//#define NFS_CATEGORY "NF's Plugins-Draw"
-	//#define NFS_CATEGORY "NF's Plugins-Filter"
-	//#define NFS_CATEGORY "NF's Plugins-Noise"
-	//#define NFS_CATEGORY "NF's Plugins-Script"
-	//#define NFS_CATEGORY "NF's Plugins-{DEBUG}"
-	//#define NFS_CATEGORY "NF's Plugins-{Legacy}"
+//-----------------------------------------------------------------------------------
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½éƒï¿½jï¿½ï¿½ï¿½[ï¿½ï¿½
 
-	#define NFS_CATEGORY "NF's Plugins-Cell"
+#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+//#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+//#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
-	//-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//‚±‚ê‚ð—LŒø‚É‚·‚é‚ÆSmartFX+Float_Color‚É‘Î‰ž‚·‚é
+//-----------------------------------------------------------
+#define SUPPORT_SMARTFX			//ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½SmartFX+Float_Colorï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 //-----------------------------------------------------------------------------------
@@ -46,9 +44,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-//#define NFS_OUT_FLAGS	33556032	//’Êí‚Í‚±‚¿‚ç
-//#define NFS_OUT_FLAGS	33556036	//‚±‚Á‚¿‚ð—LŒø‚É‚·‚é‚Æ–ˆƒtƒŒ[ƒ€‚²‚Æ‚É•`‰æ‚·‚éBNON_PARAM_VARY‚ð“®ì’†‚ÉØ‚è‘Ö‚¦‚é‚Æ‚«‚à‚±‚¿‚ç‚É
-#define NFS_OUT_FLAGS	1600		//8bit‚Ì‚Ý
+//#define NFS_OUT_FLAGS	33556032	//ï¿½Êï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½
+//#define NFS_OUT_FLAGS	33556036	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½Æ–ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚É•`ï¿½æ‚·ï¿½ï¿½BNON_PARAM_VARYï¿½ð“®ì’†ï¿½ÉØ‚ï¿½Ö‚ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define NFS_OUT_FLAGS	1600		//8bitï¿½Ì‚ï¿½
 
 //-----------------------------------------------------------------------------------
 //out_flags2

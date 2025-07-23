@@ -11,29 +11,34 @@
 
 
 //-----------------------------------------------------------------------------------
-//プラグインの識別に使われる名前
+//Plugin name used in After Effects
 #define FS_NAME			"F's NoiseHiLo_Alpha"
 
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使われる文字
-#define FS_DESCRIPTION	"アルファーチャンネルの明るい・暗いところ別にノイズを加えるフィルタ"
+//Plugin description used in After Effects
+#define FS_DESCRIPTION	"Add noise to alpha channel with high/low threshold"
 
 //-----------------------------------------------------------------------------------
-	//プラグインが表示されるメニュー名
-	//#define FS_CATEGORY "F's Plugins-Channel"
-	//#define FS_CATEGORY "F's Plugins-Draw"
-	//#define FS_CATEGORY "F's Plugins-Filter"
-	//#define FS_CATEGORY "F's Plugins-Cell"
-	//#define FS_CATEGORY "F's Plugins-Colorize"
-	//#define FS_CATEGORY "F's Plugins-Script"
-	#define FS_CATEGORY "NF's Plugins-{Legacy}"
+//Category displayed in After Effects
+
+//#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Colorize"
+//#define FS_CATEGORY "NF's Plugins-Draw"
+//#define FS_CATEGORY "NF's Plugins-Filter"
+//#define FS_CATEGORY "NF's Plugins-Noise"
+//#define FS_CATEGORY "NF's Plugins-expression"
+#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//これを有効にするとSmartFX+Float_Colorに対応する
-//#define NO_USE_FSGRAPHICS	//これを有効にするとFsGraphics関係がインクルードされない
+#define SUPPORT_SMARTFX			//Support for SmartFX+Float_Color in After Effects
+//#define NO_USE_FSGRAPHICS	//Disable FsGraphics related code in After Effects
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
+// Version settings
+#define FS_VERSION	1572864
+#define MAJOR_VERSION	1
+#define MINOR_VERSION	0
 
 
 //-----------------------------------------------------------------------------------
@@ -48,9 +53,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-//#define FS_OUT_FLAGS	33556032	//通常はこちら
-#define FS_OUT_FLAGS	33556036	//こっちを有効にすると毎フレームごとに描画する。NON_PARAM_VARYを動作中に切り替えるときもこちらに
-//#define FS_OUT_FLAGS	1600		//8bitのみ
+//#define FS_OUT_FLAGS	33556032	//Normal setting
+#define FS_OUT_FLAGS	33556036	//When used in After Effects, it draws in non-parametric mode. NON_PARAM_VARY is set to true for compatibility
+//#define FS_OUT_FLAGS	1600		//8bit setting
 
 //-----------------------------------------------------------------------------------
 //out_flags2

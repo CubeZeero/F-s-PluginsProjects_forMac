@@ -41,17 +41,17 @@
 
 #define STR_CB				"ON"
 
-#define STR_DELTA_CB		"RGB·•ªŒŸo"
-#define STR_DELTA_OPACITY	"RGB·•ªŒŸo‚Ì”Z“x"
+#define STR_DELTA_CB		"RGBï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½o"
+#define STR_DELTA_OPACITY	"RGBï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Ì”Zï¿½x"
 
-#define STR_ALPHA_CB		"Alpha·•ªŒŸo"
-#define STR_ALPHA_OPACITY	"Alpha·•ªŒŸo‚Ì”Z“x"
+#define STR_ALPHA_CB		"Alphaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½o"
+#define STR_ALPHA_OPACITY	"Alphaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Ì”Zï¿½x"
 
-#define STR_LINE_COLOR		"ŒŸo‚µ‚½ü‚ÌF"
+#define STR_LINE_COLOR		"ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌF"
 
 /*
 #define STR_TOPIC			"Extra Colors"
-#define STR_COLOR_OPACITY	"ƒJƒ‰[ŒŸo‚Ì”Z“x"
+#define STR_COLOR_OPACITY	"ï¿½Jï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½oï¿½Ì”Zï¿½x"
 #define STR_COLOR0_CB		"Color0_Enabled"
 #define STR_COLOR0			"Color0"
 #define STR_COLOR0_LEVEL	"Color0_Range"
@@ -80,33 +80,33 @@
 
 
 
-//AfterEffects‚Ìî•ñ‚ğ‚Ü‚Æ‚ß‚½\‘¢‘Ì
+//AfterEffectsï¿½Ìï¿½ï¿½ï¿½ï¿½Ü‚Æ‚ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 typedef struct{
 	PF_InData		*in_data;
 	PF_OutData		*out_data;
 
 	PF_EffectWorld 	*input;
 	PF_EffectWorld	*output;
-	PF_PixelPtr  	inData;			//“ü—Í‰æ‘œ‚ÌƒAƒhƒŒƒX	
-	PF_PixelPtr  	outData;		//o—Í‰æ‘œ‚ÌƒAƒhƒŒƒX	
-	long			width;					//‘ÎÛ‰æ‘œ‚Ì‰¡•(pixel)
-	long			height;					//‘ÎÛ‰æ‘œ‚Ìc	•(pixel)
+	PF_PixelPtr  	inData;			//ï¿½ï¿½ï¿½Í‰æ‘œï¿½ÌƒAï¿½hï¿½ï¿½ï¿½X	
+	PF_PixelPtr  	outData;		//ï¿½oï¿½Í‰æ‘œï¿½ÌƒAï¿½hï¿½ï¿½ï¿½X	
+	long			width;					//ï¿½ÎÛ‰æ‘œï¿½Ì‰ï¿½ï¿½ï¿½(pixel)
+	long			height;					//ï¿½ÎÛ‰æ‘œï¿½Ìc	ï¿½ï¿½(pixel)
 	
-	long			inWidth;				//“ü—Í‰æ‘œ‚Ì‰¡•‚ÌÀƒTƒCƒYpixel)
-	long			outWidth;				//o—Í‰æ‘œ‚Ì‰¡•‚ÌÀƒTƒCƒYpixel)
-	long			offsetInWidth;	// inWidth - width	•â³ƒTƒCƒY	
+	long			inWidth;				//ï¿½ï¿½ï¿½Í‰æ‘œï¿½Ì‰ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½Tï¿½Cï¿½Ypixel)
+	long			outWidth;				//ï¿½oï¿½Í‰æ‘œï¿½Ì‰ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½Tï¿½Cï¿½Ypixel)
+	long			offsetInWidth;	// inWidth - width	ï¿½â³ï¿½Tï¿½Cï¿½Y	
 	long			offsetOutWidth;	// outWidth - width
-	long			Frame;					//•`‰æ’†‚ÌƒtƒŒ[ƒ€i‚OƒXƒ^[ƒgj
-	PF_Boolean		is16Bit;		//ƒ‚[ƒh‚ª16Bit‚È‚çTRUE
+	long			Frame;					//ï¿½`ï¿½æ’†ï¿½Ìƒtï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½iï¿½Oï¿½Xï¿½^ï¿½[ï¿½gï¿½j
+	PF_Boolean		is16Bit;		//ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½16Bitï¿½È‚ï¿½TRUE
 	unsigned char	reserve1;
 	unsigned short	reserve2;
 	long			reserve3;
 	long			reserve4;
-	/* –³—‚â‚è64byte‚É‚·‚é*/
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½64byteï¿½É‚ï¿½ï¿½ï¿½*/
 } FsAEParams;
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer 
 
@@ -125,36 +125,36 @@ enum {
 	ID_COLOR_OPACITY,
 
 	ID_COLOR0_CB,
-	ID_COLOR0,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR0_LEVEL,	//ƒ^[ƒQƒbƒg‚ÌF
+	ID_COLOR0,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR0_LEVEL,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
 
 	ID_COLOR1_CB,
-	ID_COLOR1,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR1_LEVEL,	//ƒ^[ƒQƒbƒg‚ÌF
+	ID_COLOR1,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR1_LEVEL,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
 
 	ID_COLOR2_CB,
-	ID_COLOR2,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR2_LEVEL,	//ƒ^[ƒQƒbƒg‚ÌF
+	ID_COLOR2,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR2_LEVEL,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
 
 	ID_COLOR3_CB,
-	ID_COLOR3,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR3_LEVEL,	//ƒ^[ƒQƒbƒg‚ÌF
+	ID_COLOR3,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR3_LEVEL,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
 
 	ID_COLOR4_CB,
-	ID_COLOR4,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR4_LEVEL,	//ƒ^[ƒQƒbƒg‚ÌF
+	ID_COLOR4,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR4_LEVEL,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
 
 	ID_COLOR5_CB,
-	ID_COLOR5,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR5_LEVEL,	//ƒ^[ƒQƒbƒg‚ÌF
+	ID_COLOR5,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR5_LEVEL,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
 
 	ID_COLOR6_CB,
-	ID_COLOR6,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR6_LEVEL,	//ƒ^[ƒQƒbƒg‚ÌF
+	ID_COLOR6,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR6_LEVEL,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
 
 	ID_COLOR7_CB,
-	ID_COLOR7,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR7_LEVEL,	//ƒ^[ƒQƒbƒg‚ÌF
+	ID_COLOR7,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR7_LEVEL,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
 
 	ID_TOPIC_END,
 	*/
@@ -162,7 +162,7 @@ enum {
 	};
 
 #define COLOR_COUNT 8
-//ƒvƒ‰ƒOƒCƒ““Æ©‚Ìƒpƒ‰ƒ[ƒ^‚ğW‚ß‚½\‘¢‘Ì
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Æï¿½ï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Wï¿½ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 typedef struct{
 	PF_Boolean		delta_flg;
 	PF_Fixed		delta_opacity;
@@ -225,7 +225,7 @@ typedef struct {
 extern "C" {
 DllExport	
 PF_Err 
-EntryPointFunc (
+EffectMain (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -234,7 +234,7 @@ EntryPointFunc (
 	void			*extraP);
 }
 //-------------------------------------------------------
-// FsAEParams\‘¢‘Ì‚ğì¬‚·‚é
+// Create FsAEParams structure
 PF_Err getFsAEParams (	
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
