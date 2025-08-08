@@ -37,8 +37,8 @@
 
 #include "../FsLibrary/FsAE.h"
 
-//ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®ID
-//ParamsSetupé–¢æ•°ã¨Renderé–¢æ•°ã®paramsãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®IDã«ãªã‚‹
+//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
+//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -48,13 +48,13 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UIã®è¡¨ç¤ºæ–‡å­—åˆ—
+//UI‚Ì•\¦•¶š—ñ
 #define	STR_Y			"Value"
 #define	STR_COLOR			"Color"
 #define	STR_LEVEL			"Level(%)"
 
 
-//UIã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿
+//UI‚Ìƒpƒ‰ƒ[ƒ^
 typedef struct ParamInfo {
 	A_long			value;
 	PF_Pixel		color;

@@ -358,7 +358,7 @@ RespondtoAEGP (
 
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EffectMain (
+EntryPointFunc (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -446,7 +446,7 @@ PF_Err PluginDataEntryFunction2(
 		"ADBE EdgeBlur", // Match Name
 		"Sample", // Category
 		AE_RESERVED_INFO, // Reserved Info
-		"EffectMain", // Entry Point
+		"EntryPointFunc", // Entry Point
 		""); // Support URL
 
 	return result;

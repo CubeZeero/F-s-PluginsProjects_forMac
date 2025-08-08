@@ -1,0 +1,243 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		UL00001095A3D3A0012CA3F /* UsedColorList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UL100001095A3C810012CA3F /* UsedColorList.cpp */; };
+		UL00002095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = UL100010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		UL00003095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UL100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		UL00004095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UL100012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		UL00005095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UL100013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		UL00006095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UL100015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		UL00008095A3D3A0012CA3F /* UsedColorListPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = UL10000F095A3C810012CA3F /* UsedColorListPiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		UL100001095A3C810012CA3F /* UsedColorList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UsedColorList.cpp; path = ../UsedColorList.cpp; sourceTree = SOURCE_ROOT; };
+		UL10000F095A3C810012CA3F /* UsedColorListPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = UsedColorListPiPL.r; path = ../UsedColorListPiPL.r; sourceTree = SOURCE_ROOT; };
+		UL100010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		UL100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		UL100012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		UL100013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		UL100015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		UL10001A095A3C810012CA3F /* UsedColorList.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = UsedColorList.plugin-Info.plist; path = UsedColorList.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		UL1001001095A3C810012CA3F /* UsedColorList.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = UsedColorList.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ULFRAMEWORKS095A3CE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ULGROUPROOT095A3CE8 = {
+			isa = PBXGroup;
+			children = (
+				ULREZGROUP095A3E04 /* Rez */,
+				ULFRAMEWORKSGROUP095A3CE8 /* Frameworks */,
+				ULPRODUCTSGROUP095A3CE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ULPRODUCTSGROUP095A3CE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				UL1001001095A3C810012CA3F /* UsedColorList.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ULREZGROUP095A3E04 /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				UL10000F095A3C810012CA3F /* UsedColorListPiPL.r */,
+				UL100001095A3C810012CA3F /* UsedColorList.cpp */,
+				UL100010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				UL100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				UL100012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				UL100013095A3C810012CA3F /* Smart_Utils.cpp */,
+				UL100015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				UL10001A095A3C810012CA3F /* UsedColorList.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		ULFRAMEWORKSGROUP095A3CE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ULNATIVE095A3CE8 /* UsedColorList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ULBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "UsedColorList" */;
+			buildPhases = (
+				ULFRAMEWORKS095A3CE8 /* Frameworks */,
+				ULREZPHASE095A3E04 /* Rez */,
+				ULSOURCESPHASE095A3CE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UsedColorList;
+			productName = UsedColorList;
+			productReference = UL1001001095A3C810012CA3F /* UsedColorList.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ULPROJECTOBJ095A3CE8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = ULPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "UsedColorList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ULGROUPROOT095A3CE8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ULNATIVE095A3CE8 /* UsedColorList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		ULREZPHASE095A3E04 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				UL00008095A3D3A0012CA3F /* UsedColorListPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ULSOURCESPHASE095A3CE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				UL00001095A3D3A0012CA3F /* UsedColorList.cpp in Sources */,
+				UL00002095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				UL00003095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				UL00004095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				UL00005095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				UL00006095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ULPROJECTDEBUG095A3CE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = UsedColorList.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.UsedColorList;
+				PRODUCT_NAME = UsedColorList;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../NFsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../NFsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		ULPROJECTRELEASE095A3CE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = UsedColorList.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.UsedColorList;
+				PRODUCT_NAME = UsedColorList;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../NFsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../NFsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ULPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "UsedColorList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ULPROJECTDEBUG095A3CE8 /* Debug */,
+				ULPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		ULBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "UsedColorList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ULPROJECTDEBUG095A3CE8 /* Debug */,
+				ULPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = ULPROJECTOBJ095A3CE8 /* Project object */;
+}

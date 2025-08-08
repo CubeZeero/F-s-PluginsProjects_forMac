@@ -34,13 +34,8 @@
 #define SUPPORT_SMARTFX			//Enable SmartFX+Float_Color support in AfterEffects
 //#define NO_USE_FSGRAPHICS	//Disable FsGraphics related code in AfterEffects
 
-//#include "../FsLibrary/FsVersion.h"
-
-//-----------------------------------------------------------------------------------
-//Version definitions
-#define MAJOR_VERSION	1
-#define MINOR_VERSION	0
-#define FS_VERSION		((MAJOR_VERSION << 16) | MINOR_VERSION)
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

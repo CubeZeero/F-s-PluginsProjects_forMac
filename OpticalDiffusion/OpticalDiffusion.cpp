@@ -8,8 +8,8 @@
 #include "OpticalDiffusion.h"
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+//Register parameters to AfterEffects
+//Refer to Param_Utils.h for details
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -29,47 +29,47 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);	
-	def.flags 	= 	PF_ParamFlag_START_COLLAPSED;	//‚±‚ê‚ğ‚Â‚¯‚é‚Æ•\¦‚ÉŠJ‚¢‚½ó‘Ô‚É‚È‚é
+	def.flags 	= 	PF_ParamFlag_START_COLLAPSED;	//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_TOPIC(STR_EXTRACT_TOPIC, ID_EXTRACT_TOPIC);
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_EXTRACT_BLACK_POINT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					128,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					128,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					64,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_EXTRACT_BLACK_POINT,	//Parameter name
+					0, 		//Minimum value when valid
+					128,			//Maximum value when valid
+					0,				//Slider minimum value 
+					128,			//Slider maximum value
+					64,				//Default value
 					ID_EXTRACT_BLACK_POINT
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_EXTRACT_WHITE_POINT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					100, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					255,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					128,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					255,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					128,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_EXTRACT_WHITE_POINT,	//Parameter name
+					100, 		//Minimum value when valid
+					255,			//Maximum value when valid
+					128,				//Slider minimum value 
+					255,			//Slider maximum value
+					128,				//Default value
 					ID_EXTRACT_WHITE_POINT
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_EXTRACT_BLACK_SOFTNESS,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					255,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					128,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					128,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_EXTRACT_BLACK_SOFTNESS,	//Parameter name
+					0, 		//Minimum value when valid
+					255,			//Maximum value when valid
+					0,				//Slider minimum value 
+					128,			//Slider maximum value
+					128,				//Default value
 					ID_EXTRACT_BLACK_SOFTNESS
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_EXTRACT_WHITE_SOFTNESS,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					255,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					64,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					64,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_EXTRACT_WHITE_SOFTNESS,	//Parameter name
+					0, 		//Minimum value when valid
+					255,			//Maximum value when valid
+					0,				//Slider minimum value 
+					64,			//Slider maximum value
+					64,				//Default value
 					ID_EXTRACT_WHITE_SOFTNESS
 					);
 	//----------------------------------------------------------------
@@ -87,35 +87,35 @@ static PF_Err ParamsSetup (
 	//**********************************
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);	
-	def.flags 	= 	PF_ParamFlag_START_COLLAPSED;	//‚±‚ê‚ğ‚Â‚¯‚é‚Æ•\¦‚ÉŠJ‚¢‚½ó‘Ô‚É‚È‚é
+	def.flags 	= 	PF_ParamFlag_START_COLLAPSED;	//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_TOPIC(STR_EXTRACT_COLOR_TOPIC, ID_EXTRACT_COLOR_TOPIC);
 	//----------------------------------------------------------------
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_EXTRACT_COLOR_COUNT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 						//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					8,						//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,						//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					8,						//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,						//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_EXTRACT_COLOR_COUNT,	//Parameter name
+					0, 						//Minimum value when valid
+					8,						//Maximum value when valid
+					0,						//Slider minimum value 
+					8,						//Slider maximum value
+					0,						//Default value
 					ID_EXTRACT_COL_COUNT
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_EXTRACT_COLOR_RANGE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					10,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0.5,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_EXTRACT_COLOR_RANGE,	//Parameter name
+					0, 				//Minimum value when valid
+					100,			//Maximum value when valid
+					0,				//Slider minimum value 
+					10,				//Slider maximum value
+					0.5,			//Default value
+					1,				//Parameter for display 
 					0,
 					0,
 					ID_EXTRACT_COLOR_RANGE
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_COLOR(	STR_EXTRACT_COL1, 
 					0xFF,
 					0x00,
@@ -124,7 +124,7 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_COLOR(	STR_EXTRACT_COL2, 
 					0x00,
 					0xFF,
@@ -133,7 +133,7 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_COLOR(	STR_EXTRACT_COL3, 
 					0x00,
 					0x00,
@@ -143,7 +143,7 @@ static PF_Err ParamsSetup (
 	
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_COLOR(	STR_EXTRACT_COL4, 
 					0xFF,
 					0xFF,
@@ -152,7 +152,7 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_COLOR(	STR_EXTRACT_COL5, 
 					0xFF,
 					0x00,
@@ -161,7 +161,7 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_COLOR(	STR_EXTRACT_COL6, 
 					0x00,
 					0xFF,
@@ -171,7 +171,7 @@ static PF_Err ParamsSetup (
 	
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_COLOR(	STR_EXTRACT_COL7, 
 					0xFF,
 					0x80,
@@ -180,7 +180,7 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 	PF_ADD_COLOR(	STR_EXTRACT_COL8, 
 					0x00,
 					0x80,
@@ -194,22 +194,22 @@ static PF_Err ParamsSetup (
 	//**********************************
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_MINIMAX_1ST,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					-100, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					-25,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					25,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					-3,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_MINIMAX_1ST,	//Parameter name
+					-100, 		//Minimum value when valid
+					100,			//Maximum value when valid
+					-25,				//Slider minimum value 
+					25,			//Slider maximum value
+					-3,				//Default value
 					ID_MINIMAX_1ST
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_MINIMAX_2ND,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					-100, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					-25,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					25,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					3,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_MINIMAX_2ND,	//Parameter name
+					-100, 		//Minimum value when valid
+					100,			//Maximum value when valid
+					-25,				//Slider minimum value 
+					25,			//Slider maximum value
+					3,				//Default value
 					ID_MINIMAX_2ND
 					);
 	//----------------------------------------------------------------
@@ -227,36 +227,36 @@ static PF_Err ParamsSetup (
 						);
 	//----------------------------------------------------------------
 	//----------------------------------------------------------------
-	//ƒ|ƒbƒvƒAƒbƒvƒƒjƒ…[
+	//ï¿½|ï¿½bï¿½vï¿½Aï¿½bï¿½vï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POPUP(		STR_BLEND_MODE, 
-						STR_BLEND_COUNT,	//ƒƒjƒ…[‚Ì”
-						STR_BLEND_DFLT,	//ƒfƒtƒHƒ‹ƒg
+						STR_BLEND_COUNT,	//ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ìï¿½
+						STR_BLEND_DFLT,	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½g
 						STR_BLEND_ITEMS,
 						ID_BLEND_MODE
 						);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_BLEND_OPACITY,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					70,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_BLEND_OPACITY,	//Parameter name
+					0, 				//Minimum value when valid
+					100,			//Maximum value when valid
+					0,				//Slider minimum value 
+					100,			//Slider maximum value
+					70,			//Default value
+					1,				//Parameter for display 
 					0,
 					0,
 					ID_BLEND_OPACITY
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_NOISE_VALUE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					300,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					10,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					1,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_NOISE_VALUE,	//Parameter name
+					0, 				//Minimum value when valid
+					300,			//Maximum value when valid
+					0,				//Slider minimum value 
+					10,				//Slider maximum value
+					1,				//Default value
+					1,				//Parameter for display 
 					0,
 					0,
 					ID_NOISE_VALUE
@@ -374,10 +374,10 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//Legacy render function
 /*
-	SmartFX‚É‘Î‰‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ğ‘‚¢‚Ä‚¨‚¯‚Îˆê‰v6.5‘Î‰‚É‚È‚é
+	For plugins that do not support SmartFX (before After Effects 7), this function is called to draw
+	If this function is missing, it will be compatible with v6.5
 */
 static PF_Err 
 Render ( 
@@ -401,7 +401,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ğs‚¤
+	For SmartFX compatibility, this function is called first to cache parameters
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

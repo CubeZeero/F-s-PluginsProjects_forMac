@@ -11,16 +11,16 @@
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+// Plugin name used in specifications
 #define FS_NAME			"F's RandomLineNoise"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�����_���ȉ����m�C�Y"
+// Plugin description text
+#define FS_DESCRIPTION	"Random line noise effect"
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C�����\������郁�j���[��
+// Menu category where the plugin appears
 
 //#define FS_CATEGORY "NF's Plugins-Cell"
 //#define FS_CATEGORY "NF's Plugins-Channel"
@@ -32,18 +32,15 @@
 //#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
-//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
+#define SUPPORT_SMARTFX			// Enable SmartFX and Float_Color support
+//#define NO_USE_FSGRAPHICS	// Exclude FsGraphics related includes
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
-
-// Version settings
-#define FS_VERSION	1572864
-#define MAJOR_VERSION	1
-#define MINOR_VERSION	0
+// Plugin version
+// Resolved via REZ_SEARCH_PATHS
+#include "FsVersion.h"
 //-----------------------------------------------------------------------------------
-//out_flags
+// out_flags
 /*
 out_data->out_flags
 	PF_OutFlag_PIX_INDEPENDENT		1024
@@ -54,9 +51,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-//#define FS_OUT_FLAGS	33556032	//�ʏ�͂�����
-#define FS_OUT_FLAGS	33556036	//��������L���ɂ���Ɩ��t���[�����Ƃɕ`�悷��BNON_PARAM_VARY�𓮍쒆�ɐ؂�ւ���Ƃ����������
-//#define FS_OUT_FLAGS	1600		//8bit�̂�
+//#define FS_OUT_FLAGS	33556032	// Standard setting
+#define FS_OUT_FLAGS	33556036	// Always render with NON_PARAM_VARY flag for dynamic parameter changes
+//#define FS_OUT_FLAGS	1600		// 8-bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2

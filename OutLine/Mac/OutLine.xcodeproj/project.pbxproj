@@ -1,0 +1,166 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		OUTL000010001 /* OutLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000010001 /* OutLine.cpp */; };
+		OUTL000010101 /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000100101 /* AEFX_SuiteHelper.c */; };
+		OUTL000010102 /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000100102 /* AEGP_SuiteHandler.cpp */; };
+		OUTL000010103 /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000100103 /* MissingSuiteError.cpp */; };
+		OUTL000010104 /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000100104 /* Smart_Utils.cpp */; };
+		OUTL000010105 /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000100105 /* AEGP_Utils.cpp */; };
+		OUTL000010201 /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000200101 /* FsGraphics.cpp */; };
+		OUTL000010202 /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000200102 /* FsGraphicsBlend.cpp */; };
+		OUTL000010203 /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000200103 /* FsGraphicsBox.cpp */; };
+		OUTL000010204 /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000200104 /* FsGraphicsCircle.cpp */; };
+		OUTL000010205 /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000200105 /* FsGraphicsLine.cpp */; };
+		OUTL000010206 /* FsGraphicsPaint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000200106 /* FsGraphicsPaint.cpp */; };
+		OUTL000010208 /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OUTL1000200108 /* FsMat.cpp */; };
+		OUTL000020001 /* OutLinePiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = OUTL1000030001 /* OutLinePiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		OUTL1000010001 /* OutLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OutLine.cpp; path = ../OutLine.cpp; sourceTree = "<group>"; };
+		OUTL1000020001 /* Fs_Target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fs_Target.h; path = ../Fs_Target.h; sourceTree = "<group>"; };
+		OUTL1000030001 /* OutLinePiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = OutLinePiPL.r; path = ../OutLinePiPL.r; sourceTree = "<group>"; };
+		OUTL1000100101 /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		OUTL1000100102 /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000100103 /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000100104 /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000100105 /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000200101 /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000200102 /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000200103 /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000200104 /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000200105 /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000200106 /* FsGraphicsPaint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsPaint.cpp; path = ../../FsLibrary/FsGraphicsPaint.cpp; sourceTree = SOURCE_ROOT; };
+		OUTL1000200108 /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		OUTLPROJ /* Project */ = {isa = PBXGroup; children = (
+			OUTLSRCS /* Sources */,
+			OUTLUTIL /* AEUtil */,
+			OUTLLIB /* FsLibrary */,
+			OUTLRES /* Resources */,
+		); sourceTree = "<group>"; };
+		OUTLSRCS /* Sources */ = {isa = PBXGroup; children = (
+			OUTL1000010001 /* OutLine.cpp */, OUTL1000020001 /* Fs_Target.h */); name = Sources; sourceTree = "<group>"; };
+		OUTLUTIL /* AEUtil */ = {isa = PBXGroup; children = (
+			OUTL1000100101 /* AEFX_SuiteHelper.c */, OUTL1000100102 /* AEGP_SuiteHandler.cpp */, OUTL1000100104 /* Smart_Utils.cpp */, OUTL1000100105 /* AEGP_Utils.cpp */, OUTL1000100103 /* MissingSuiteError.cpp */); name = AEUtil; sourceTree = "<group>"; };
+		OUTLLIB /* FsLibrary */ = {isa = PBXGroup; children = (
+			OUTL1000200101 /* FsGraphics.cpp */, OUTL1000200102 /* FsGraphicsBlend.cpp */, OUTL1000200103 /* FsGraphicsBox.cpp */, OUTL1000200104 /* FsGraphicsCircle.cpp */, OUTL1000200105 /* FsGraphicsLine.cpp */, OUTL1000200106 /* FsGraphicsPaint.cpp */, OUTL1000200108 /* FsMat.cpp */); name = FsLibrary; sourceTree = "<group>"; };
+		OUTLRES /* Resources */ = {isa = PBXGroup; children = (
+			OUTL1000030001 /* OutLinePiPL.r */); name = Resources; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		OUTLAPP /* OutLine */ = {isa = PBXNativeTarget; buildConfigurationList = OUTLBUILDSET; buildPhases = (
+			OUTLSOURCESPHASE /* Sources */, OUTLREZPHASE /* Rez */, OUTLBUILDRES /* Resources */); name = OutLine; productName = OutLine; productType = "com.apple.product-type.bundle"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OUTLPROJOBJ /* Project object */ = {isa = PBXProject; buildConfigurationList = OUTLPROJECTBUILDSET; compatibilityVersion = "Xcode 3.2"; hasScannedForEncodings = 0; mainGroup = OUTLPROJ; productRefGroup = OUTLPROJ; projectDirPath = ""; targets = (OUTLAPP); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		OUTLBUILDRES /* Resources */ = {isa = PBXResourcesBuildPhase; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		OUTLREZPHASE /* Rez */ = {isa = PBXRezBuildPhase; files = (
+			OUTL000020001 /* OutLinePiPL.r in Rez */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OUTLSOURCESPHASE /* Sources */ = {isa = PBXSourcesBuildPhase; files = (
+			OUTL000010001 /* OutLine.cpp in Sources */, OUTL000010101 /* AEFX_SuiteHelper.c in Sources */, OUTL000010102 /* AEGP_SuiteHandler.cpp in Sources */, OUTL000010103 /* MissingSuiteError.cpp in Sources */, OUTL000010104 /* Smart_Utils.cpp in Sources */, OUTL000010105 /* AEGP_Utils.cpp in Sources */, OUTL000010201 /* FsGraphics.cpp in Sources */, OUTL000010202 /* FsGraphicsBlend.cpp in Sources */, OUTL000010203 /* FsGraphicsBox.cpp in Sources */, OUTL000010204 /* FsGraphicsCircle.cpp in Sources */, OUTL000010205 /* FsGraphicsLine.cpp in Sources */, OUTL000010206 /* FsGraphicsPaint.cpp in Sources */, OUTL000010208 /* FsMat.cpp in Sources */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+        OUTLBUILDDEBUG /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+            CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/OutLine.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.OutLine;
+			PRODUCT_NAME = OutLine;
+            WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Debug; };
+        OUTLBUILDRELEASE /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+            CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/OutLine.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.OutLine;
+			PRODUCT_NAME = OutLine;
+            WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OUTLBUILDSET /* Build configuration list for PBXNativeTarget */ = {isa = XCConfigurationList; buildConfigurations = (OUTLBUILDDEBUG, OUTLBUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		OUTLPROJECTBUILDSET /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (OUTLBUILDDEBUG, OUTLBUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+};
+	rootObject = OUTLPROJOBJ /* Project object */;
+}

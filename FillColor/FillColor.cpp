@@ -75,8 +75,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts�Ƀp�����[�^��ʒB����
-//Param_Utils.h���Q�Ƃ̂���
+// Pass parameters to After Effects
+// Reference to Param_Utils.h
 static PF_Err 
 ParamsSetup (
 	PF_InData		*in_data,
@@ -87,7 +87,7 @@ ParamsSetup (
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 	//----------------------------------------------------------------
-	//�`�F�b�N�{�b�N�X
+	// Checkbox
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_ENABLED_CB1,
 					STR_ENABLED_CB2,
@@ -97,7 +97,7 @@ ParamsSetup (
 					);
 
 	//----------------------------------------------------------------
-	//�F�̎w��
+	// Color specification
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR, 
 					0xff,
@@ -107,13 +107,13 @@ ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_OPA_FIXED,	//�p�����[�^�̖��O
-					0, 				//���l���͂���ꍇ�̍ŏ��l
-					100,			//���l���͂���ꍇ�̍ő�l
-					0,				//�X���C�_�[�̍ŏ��l 
-					100,			//�X���C�_�[�̍ő�l
-					100,			//�f�t�H���g�̒l
-					1,				//���l�\���Ɋւ���t���O 
+	PF_ADD_FIXED(	STR_OPA_FIXED,	// Parameter name
+					0, 				// Minimum value for numeric input
+					100,			// Maximum value for numeric input
+					0,				// Slider minimum value 
+					100,			// Slider maximum value
+					100,			// Default value
+					1,				// Flag for numeric display 
 					0,
 					0,
 					ID_OPA_COLOR_FIXED
@@ -164,8 +164,8 @@ QueryDynamicFlags(
 {
 	PF_Err 	err 	= PF_Err_NONE,
 			err2 	= PF_Err_NONE;
-	//PF_OutFlag_NON_PARAM_VARY�̒l��out_flags�֐ݒ肵��
-	//���t���[�����Ƃ̕`������邩�؂�ւ���B
+	// Set PF_OutFlag_NON_PARAM_VARY value to out_flags
+	// Control whether to redraw when the current frame changes
 	/*
 	CFsAE ae;
 	err = ae.QueryDynamicFlags(in_data,out_data,params,extra,ID_NUM_PARAMS);
@@ -330,7 +330,7 @@ static PF_Err
 
 
 //-------------------------------------------------------------------------------------------------
-//�����_�����O�̃��C��
+// Main rendering routine
 static PF_Err 
 Render ( 
 	PF_InData		*in_data,
@@ -424,7 +424,7 @@ RespondtoAEGP (
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EffectMain (
+EntryPointFunc (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

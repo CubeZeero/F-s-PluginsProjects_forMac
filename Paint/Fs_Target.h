@@ -33,8 +33,8 @@
 //#define NO_USE_FSGRAPHICS	//コメントアウトするとFsGraphics関係のコードを無効にする
 
 //-----------------------------------------------------------------------------------
-//プラグインのバージョン
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

@@ -11,7 +11,7 @@ static PF_Pixel COL_W = {0xFF,0xFF,0xFF,0xFF};
 static PF_Pixel COL_BL = {0xFF,0,0,0};
 
 //-------------------------------------------------------------------------------------------------
-//About•\¦
+// About dialog
 static PF_Err About (	PF_InData		*in_data,
 						PF_OutData		*out_data,
 						PF_ParamDef		*params[],
@@ -76,8 +76,8 @@ static PF_Err SequenceResetup (
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+// Register parameters to AfterEffects
+// Refer to Param_Utils.h for details
 static PF_Err ParamsSetup (PF_InData		*in_data,
 					PF_OutData		*out_data,
 					PF_ParamDef		*params[],
@@ -91,8 +91,8 @@ static PF_Err ParamsSetup (PF_InData		*in_data,
 						PF_ParamFlag_CANNOT_INTERP;
 						
 	PF_ADD_POPUP(		STR_POP1, 
-						STR_POP,	//ƒƒjƒ…[‚Ì”
-						STR_POP_DEF,	//ƒfƒtƒHƒ‹ƒg
+					STR_POP,
+					STR_POP_DEF,
 						STR_POP2,
 						ID_POP
 						);
@@ -157,8 +157,8 @@ QueryDynamicFlags(
 {
 	PF_Err 	err 	= PF_Err_NONE,
 			err2 	= PF_Err_NONE;
-	//PF_OutFlag_NON_PARAM_VARY‚Ì’l‚ğout_flags‚Öİ’è‚µ‚Ä
-	//–ˆƒtƒŒ[ƒ€‚²‚Æ‚Ì•`‰æ‚ğ‚·‚é‚©Ø‚è‘Ö‚¦‚éB
+	//PF_OutFlag_NON_PARAM_VARYï¿½Ì’lï¿½ï¿½out_flagsï¿½Öİ’è‚µï¿½ï¿½
+	//ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚Ì•`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é‚©ï¿½Ø‚ï¿½Ö‚ï¿½ï¿½ï¿½B
 	/*
 	CFsAE ae;
 	err = ae.QueryDynamicFlags(in_data,out_data,params,extra,ID_NUM_PARAMS);
@@ -302,7 +302,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	switch(ae->pixelFormat())
 	{
@@ -323,7 +323,7 @@ static PF_Err
 	return err;
 }
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 static PF_Err 
 Render ( 
 	PF_InData		*in_data,
@@ -491,3 +491,24 @@ EntryPointFunc (
 }
 
 //-------------------------------------------------------------------------------------------------
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+    PF_PluginDataPtr inPtr,
+    PF_PluginDataCB2 inPluginDataCallBackPtr,
+    SPBasicSuite* inSPBasicSuitePtr,
+    const char* inHostName,
+    const char* inHostVersion)
+{
+    PF_Err result = PF_Err_INVALID_CALLBACK;
+    result = PF_REGISTER_EFFECT_EXT2(
+        inPtr,
+        inPluginDataCallBackPtr,
+        FS_NAME,
+        FS_NAME,
+        FS_CATEGORY,
+        0,  // AE_RESERVED_INFO â†’ 0 (Macäº’æ›æ€§)
+        "EntryPointFunc",
+        FS_DESCRIPTION
+    );
+    return result;
+}

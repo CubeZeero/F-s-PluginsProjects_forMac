@@ -42,12 +42,12 @@
 //#include "FsAE.h"
 
 
-#define	StrEXECUTED_CB1		"実行する"
+#define	StrEXECUTED_CB1		"Execute"
 #define	StrEXECUTED_CB2		"ON"
-#define	StrPOS				"位置"
-#define	StrCOLOR			"ペイント色"
-#define	StrCOLOR_Opacity	"不透明度(%)"
-#define	StrERR_getParams	"パラメータエラーです。終了します。"
+#define	StrPOS				"Position"
+#define	StrCOLOR			"Paint color"
+#define	StrCOLOR_Opacity	"Opacity(%)"
+#define	StrERR_getParams	"Parameter error. Aborting."
 
 
 //パラメータのID

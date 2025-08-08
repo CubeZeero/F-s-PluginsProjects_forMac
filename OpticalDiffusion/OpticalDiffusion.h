@@ -43,8 +43,8 @@
 #include "../FsLibrary/FsHLS.h"
 //#include "FsAE.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//Layer parameter file ID
+//ParamsSetup function and Render function params parameter ID
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -81,7 +81,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\¦•¶š—ñ
+//UI display string
 #define	STR_EXTRACT_ENABLED			"Extract Enabled"
 #define	STR_EXTRACT_TOPIC			"Extract lightness"
 #define	STR_EXTRACT_BLACK_POINT		"Black Point"
@@ -127,7 +127,7 @@ namespace BLEND_MODE
 	};
 }
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	PF_Boolean	extractEnabled;
 	A_long		blackPoint;

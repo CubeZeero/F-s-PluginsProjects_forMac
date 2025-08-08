@@ -1,4 +1,4 @@
-/* 設定はFs_Target.hで行っている。このファイルは編集する必要ない */
+/* Settings are in Fs_Target.h. This file does not need editing. */
 #include "Fs_Target.h"
 
 #include "AEConfig.h"
@@ -15,27 +15,27 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AEのプラグインに使われる */
+            /*Used in AE menu */
 			FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*AEのプラグインに使われる */
+            /*Used in AE menu */
 			FS_CATEGORY
 		},
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
-		CodeWin64X86 {"EffectMain"},
+		CodeWin64X86 {"EntryPointFunc"},
 	#else
-		CodeWin32X86 {"EffectMain"},
+		CodeWin32X86 {"EntryPointFunc"},
 	#endif	
 #else
 	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EffectMain"},
-		CodeMacIntel32 {"EffectMain"},
-		CodeMacIntel64 {"EffectMain"},
-		CodeMacARM64 {"EffectMain"},
+        CodeMachOPowerPC {"EntryPointFunc"},
+		CodeMacIntel32 {"EntryPointFunc"},
+		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacARM64 {"EntryPointFunc"},
 	#endif
 #endif
 		/* [6] */

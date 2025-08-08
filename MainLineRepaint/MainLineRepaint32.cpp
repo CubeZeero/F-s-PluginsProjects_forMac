@@ -17,17 +17,17 @@ PF_Err Exec32(CFsAE* ae, ParamInfo* infoP)
 
 	A_long targetP = PPTRANS;
 
-	//…•½•ûŒü
+    // Initialize
 	A_long cnt = 0;
 	for (A_long j = 0; j < h; j++) {
 		A_long adrY = j * wt;
-		//Œ³‰æ‘œ‚ğƒXƒLƒƒƒ“ƒ‰ƒCƒ“‚²‚Æ‚É‘Ş”ğ
+        // Copy current scanline and evaluate pixel class
 		for (A_long i = 0; i < w; i++) {
 			scanline[i] = data[adrY + i];
-			//åüE“§–¾‚Æ–¾‚é‚³‚Ìƒe[ƒuƒ‹
-			//@–¾‚é‚³ 0-255
-			// “§–¾ 256 PPTRANS
-			// åü 257 PPMAIN
+            // Table of classes
+            // normal: 0-255
+            // trans : 256 PPTRANS
+            // main  : 257 PPMAIN
 			scanlineV[i] = pV32(scanline[i], infoP->Main_Color, infoP->lv);
 			scanlineV2[i] = PxStatus(scanlineV[i]);
 		}
@@ -37,7 +37,7 @@ PF_Err Exec32(CFsAE* ae, ParamInfo* infoP)
 				PF_PixelFloat dst = scanline[i];
 				PF_Boolean dv = TRUE;
 
-				A_long lc = i;//Œ»İ‚Ìƒ|ƒWƒVƒ‡ƒ“‚ğ‰Šú’l‚É
+                A_long lc = i; // current position as initial index
 				A_long rc = i;
 
 				for (int k = 1; k < infoP->scanLength; k++)
@@ -121,7 +121,7 @@ PF_Err Exec32(CFsAE* ae, ParamInfo* infoP)
 		}
 	}
 	if (cnt == 0) return err;
-	// ‚’¼•ûŒü
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	cnt = 0;
 	for (A_long i = 0; i < w; i++) {
 		for (A_long j = 0; j < h; j++) {
@@ -140,7 +140,7 @@ PF_Err Exec32(CFsAE* ae, ParamInfo* infoP)
 				//PF_Pixel rp = infoP->Main_Color;
 				//A_long lv = PPMAIN;
 				//A_long rv = PPMAIN;
-				A_long lc = j;//Œ»İ‚Ìƒ|ƒWƒVƒ‡ƒ“‚ğ‰Šú’l‚É
+				A_long lc = j;//ï¿½ï¿½ï¿½İ‚Ìƒ|ï¿½Wï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½
 				A_long rc = j;
 
 

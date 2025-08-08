@@ -34,8 +34,7 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
-//#include "FsAE.h"
+#include "FsAE.h"
 
 enum {
 	ID_INPUT = 0,		// default input layer 
@@ -46,12 +45,12 @@ enum {
 	ID_HEIGHT,
 	ID_NUM_PARAMS
 };
-#define STR_GRIDSIZE	"グリッドサイズ"
-#define STR_MODE1		"モード"
-#define STR_MODE2		"モザイク"
-#define STR_HILIGHT		"ハイライト(%)"
-#define STR_SHADOW		"シャドウ(%)"
-#define STR_HEIGHT		"ライン幅"
+#define STR_GRIDSIZE	"Grid Size"
+#define STR_MODE1		"Mode"
+#define STR_MODE2		"Mosaic"
+#define STR_HILIGHT		"Highlight(%)"
+#define STR_SHADOW		"Shadow(%)"
+#define STR_HEIGHT		"Line Height"
 
 typedef struct ParamInfo{
 	A_long			gridSize;

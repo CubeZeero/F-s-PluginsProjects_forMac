@@ -11,12 +11,12 @@
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+// Name shown in AE menus
 #define FS_NAME			"F's SparkRing"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�A�j�����ۂ���Ȃ̕`��"
+// Description shown in AE UI
+#define FS_DESCRIPTION	"Generates animated spark-like ring"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -31,10 +31,12 @@
 //#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 	//-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
-//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
+// Enable SmartFX + Float color support
+#define SUPPORT_SMARTFX
+//#define NO_USE_FSGRAPHICS	// If defined, exclude FsGraphics related code
 
-#include "../FsLibrary/FsVersion.h"
+// Use centralized version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags
@@ -48,7 +50,8 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//�ʏ�͂�����
+// Normal flags
+#define FS_OUT_FLAGS	33556032
 //#define FS_OUT_FLAGS	33556036	//��������L���ɂ���Ɩ��t���[�����Ƃɕ`�悷��BNON_PARAM_VARY�𓮍쒆�ɐ؂�ւ���Ƃ����������
 //#define FS_OUT_FLAGS	1600		//8bit�̂�
 

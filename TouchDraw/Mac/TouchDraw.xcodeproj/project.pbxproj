@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		TD000001095A3D3A0012CA3F /* TouchDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100001095A3C810012CA3F /* TouchDraw.cpp */; };
+		TD000002095A3D3A0012CA3F /* FsTDblockDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100002095A3C810012CA3F /* FsTDblockDraw.cpp */; };
+		TD000003095A3D3A0012CA3F /* FsTDcopyAlpha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100003095A3C810012CA3F /* FsTDcopyAlpha.cpp */; };
+		TD000004095A3D3A0012CA3F /* FsTDFindTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100004095A3C810012CA3F /* FsTDFindTarget.cpp */; };
+		TD000005095A3D3A0012CA3F /* FsTDFindTargetDelta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100005095A3C810012CA3F /* FsTDFindTargetDelta.cpp */; };
+		TD000006095A3D3A0012CA3F /* FsTDgreenBlur.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100006095A3C810012CA3F /* FsTDgreenBlur.cpp */; };
+		TD000007095A3D3A0012CA3F /* ToutchDraw8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100007095A3C810012CA3F /* ToutchDraw8.cpp */; };
+		TD000008095A3D3A0012CA3F /* ToutchDraw16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100008095A3C810012CA3F /* ToutchDraw16.cpp */; };
+		TD000009095A3D3A0012CA3F /* ToutchDraw32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100009095A3C810012CA3F /* ToutchDraw32.cpp */; };
+		TD00000A095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD10000A095A3C810012CA3F /* FsGraphics.cpp */; };
+		TD00000B095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD10000B095A3C810012CA3F /* FsGraphicsLine.cpp */; };
+		TD00000C095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD10000C095A3C810012CA3F /* FsGraphicsCircle.cpp */; };
+		TD00000D095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD10000D095A3C810012CA3F /* FsGraphicsBox.cpp */; };
+		TD00000E095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD10000E095A3C810012CA3F /* FsGraphicsBlend.cpp */; };
+		TD00000F095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = TD100010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		TD000010095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		TD000011095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		TD000012095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		TD000013095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		TD000014095A3D3A0012CA3F /* TouchDrawPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = TD10000F095A3C810012CA3F /* TouchDrawPiPL.r */; };
+		TD000015095A3D3A0012CA3F /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TD100016095A3C810012CA3F /* FsMat.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		TD100001095A3C810012CA3F /* TouchDraw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TouchDraw.cpp; path = ../TouchDraw.cpp; sourceTree = SOURCE_ROOT; };
+		TD100002095A3C810012CA3F /* FsTDblockDraw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsTDblockDraw.cpp; path = ../FsTDblockDraw.cpp; sourceTree = SOURCE_ROOT; };
+		TD100003095A3C810012CA3F /* FsTDcopyAlpha.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsTDcopyAlpha.cpp; path = ../FsTDcopyAlpha.cpp; sourceTree = SOURCE_ROOT; };
+		TD100004095A3C810012CA3F /* FsTDFindTarget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsTDFindTarget.cpp; path = ../FsTDFindTarget.cpp; sourceTree = SOURCE_ROOT; };
+		TD100005095A3C810012CA3F /* FsTDFindTargetDelta.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsTDFindTargetDelta.cpp; path = ../FsTDFindTargetDelta.cpp; sourceTree = SOURCE_ROOT; };
+		TD100006095A3C810012CA3F /* FsTDgreenBlur.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsTDgreenBlur.cpp; path = ../FsTDgreenBlur.cpp; sourceTree = SOURCE_ROOT; };
+		TD100007095A3C810012CA3F /* ToutchDraw8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ToutchDraw8.cpp; path = ../ToutchDraw8.cpp; sourceTree = SOURCE_ROOT; };
+		TD100008095A3C810012CA3F /* ToutchDraw16.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ToutchDraw16.cpp; path = ../ToutchDraw16.cpp; sourceTree = SOURCE_ROOT; };
+		TD100009095A3C810012CA3F /* ToutchDraw32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ToutchDraw32.cpp; path = ../ToutchDraw32.cpp; sourceTree = SOURCE_ROOT; };
+		TD10000A095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		TD10000B095A3C810012CA3F /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		TD10000C095A3C810012CA3F /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		TD10000D095A3C810012CA3F /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		TD10000E095A3C810012CA3F /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		TD10000F095A3C810012CA3F /* TouchDrawPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = TouchDrawPiPL.r; path = ../TouchDrawPiPL.r; sourceTree = SOURCE_ROOT; };
+		TD100010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		TD100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		TD100012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		TD100013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		TD100015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		TD100016095A3C810012CA3F /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+		TD10001A095A3C810012CA3F /* TouchDraw.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = TouchDraw.plugin-Info.plist; path = TouchDraw.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		TD1001001095A3C810012CA3F /* TouchDraw.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = TouchDraw.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		TDFRAMEWORKS095A3CE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		TDGROUPROOT095A3CE8 = {
+			isa = PBXGroup;
+			children = (
+				TDREZGROUP095A3E04 /* Rez */,
+				TDFRAMEWORKSGROUP095A3CE8 /* Frameworks */,
+				TDPRODUCTSGROUP095A3CE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		TDPRODUCTSGROUP095A3CE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				TD1001001095A3C810012CA3F /* TouchDraw.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		TDREZGROUP095A3E04 /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				TD10000F095A3C810012CA3F /* TouchDrawPiPL.r */,
+				TD100001095A3C810012CA3F /* TouchDraw.cpp */,
+				TD100002095A3C810012CA3F /* FsTDblockDraw.cpp */,
+				TD100003095A3C810012CA3F /* FsTDcopyAlpha.cpp */,
+				TD100004095A3C810012CA3F /* FsTDFindTarget.cpp */,
+				TD100005095A3C810012CA3F /* FsTDFindTargetDelta.cpp */,
+				TD100006095A3C810012CA3F /* FsTDgreenBlur.cpp */,
+				TD100007095A3C810012CA3F /* ToutchDraw8.cpp */,
+				TD100008095A3C810012CA3F /* ToutchDraw16.cpp */,
+				TD100009095A3C810012CA3F /* ToutchDraw32.cpp */,
+				TD10000A095A3C810012CA3F /* FsGraphics.cpp */,
+				TD10000B095A3C810012CA3F /* FsGraphicsLine.cpp */,
+				TD10000C095A3C810012CA3F /* FsGraphicsCircle.cpp */,
+				TD10000D095A3C810012CA3F /* FsGraphicsBox.cpp */,
+				TD10000E095A3C810012CA3F /* FsGraphicsBlend.cpp */,
+				TD100016095A3C810012CA3F /* FsMat.cpp */,
+				TD100010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				TD100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				TD100012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				TD100013095A3C810012CA3F /* Smart_Utils.cpp */,
+				TD100015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				TD10001A095A3C810012CA3F /* TouchDraw.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		TDFRAMEWORKSGROUP095A3CE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TDNATIVE095A3CE8 /* TouchDraw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = TDBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "TouchDraw" */;
+			buildPhases = (
+				TDFRAMEWORKS095A3CE8 /* Frameworks */,
+				TDREZPHASE095A3E04 /* Rez */,
+				TDSOURCESPHASE095A3CE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchDraw;
+			productName = TouchDraw;
+			productReference = TD1001001095A3C810012CA3F /* TouchDraw.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		TDPROJECTOBJ095A3CE8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = TDPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "TouchDraw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = TDGROUPROOT095A3CE8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TDNATIVE095A3CE8 /* TouchDraw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		TDREZPHASE095A3E04 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TD000014095A3D3A0012CA3F /* TouchDrawPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		TDSOURCESPHASE095A3CE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TD000001095A3D3A0012CA3F /* TouchDraw.cpp in Sources */,
+				TD000002095A3D3A0012CA3F /* FsTDblockDraw.cpp in Sources */,
+				TD000003095A3D3A0012CA3F /* FsTDcopyAlpha.cpp in Sources */,
+				TD000004095A3D3A0012CA3F /* FsTDFindTarget.cpp in Sources */,
+				TD000005095A3D3A0012CA3F /* FsTDFindTargetDelta.cpp in Sources */,
+				TD000006095A3D3A0012CA3F /* FsTDgreenBlur.cpp in Sources */,
+				TD000007095A3D3A0012CA3F /* ToutchDraw8.cpp in Sources */,
+				TD000008095A3D3A0012CA3F /* ToutchDraw16.cpp in Sources */,
+				TD000009095A3D3A0012CA3F /* ToutchDraw32.cpp in Sources */,
+				TD00000A095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+				TD00000B095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */,
+				TD00000C095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */,
+				TD00000D095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */,
+				TD00000E095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */,
+				TD00000F095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				TD000010095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				TD000011095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				TD000012095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				TD000013095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+				TD000015095A3D3A0012CA3F /* FsMat.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		TDPROJECTDEBUG095A3CE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = TouchDraw.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.TouchDraw;
+				PRODUCT_NAME = TouchDraw;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		TDPROJECTRELEASE095A3CE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = TouchDraw.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.TouchDraw;
+				PRODUCT_NAME = TouchDraw;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		TDPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "TouchDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TDPROJECTDEBUG095A3CE8 /* Debug */,
+				TDPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		TDBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "TouchDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TDPROJECTDEBUG095A3CE8 /* Debug */,
+				TDPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = TDPROJECTOBJ095A3CE8 /* Project object */;
+}

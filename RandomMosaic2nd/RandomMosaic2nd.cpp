@@ -74,8 +74,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -85,46 +85,46 @@ static PF_Err ParamsSetup (
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 
-	//‚PŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
+	//ï¿½Pï¿½Â–Ú‚Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_Y,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_Y,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,			//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_Y
 					);
 
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_STRENGTH,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					255,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					128,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					10,					//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_STRENGTH,//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					255,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					128,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					10,					//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_STRENGTH
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_SIZEX,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					1, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					256,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					1,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					256,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					8,					//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_SIZEX,//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					1, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					256,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					1,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					256,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					8,					//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_SIZEX
 					);
 
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_SIZEY,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					1, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					256,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					1,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					256,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					8,					//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_SIZEY,//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					1, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					256,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					1,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					256,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					8,					//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_SIZEY
 					);
 	out_data->num_params = ID_NUM_PARAMS;
@@ -279,7 +279,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	if (infoP->value>0){
 		F_SRAND(ae->frame());
@@ -323,7 +323,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ğs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err
@@ -486,7 +486,7 @@ PF_Err GetParams (
 						)
 {
 	PF_Err		err 		= PF_Err_NONE;
-	PF_EffectWorld 	*input	=	&params[MY_INPUT]->u.ld;	//“ü—Í‰æ‘œ‚ÌƒAƒhƒŒƒX
+	PF_EffectWorld 	*input	=	&params[MY_INPUT]->u.ld;	//ï¿½ï¿½ï¿½Í‰æ‘œï¿½ÌƒAï¿½hï¿½ï¿½ï¿½X
 	if ( (params==NULL)||(output==NULL)||(input==NULL) ) {
 		return 0xFF;
 	}
@@ -514,7 +514,7 @@ PF_Err GetParams (
 	if ( input->height != output->height) {
 		err = 0xFF;
 	}
-	//ƒJƒŒƒ“ƒgƒtƒŒ[ƒ€‚ğ‹‚ß‚é‰æ“ª‚Í‚O
+	//ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½gï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½æ“ªï¿½Í‚O
 	if ( (in_data->current_time>=0)&&(in_data->time_step>0) ) {
 		aeprm->Frame	=(in_data->current_time/in_data->time_step); 
 	}else{
@@ -534,14 +534,14 @@ PF_Err GetParams (
 	mprm->width			= aeprm->width;
 
 	//-----------------------
-	//ƒ‚ƒUƒCƒN‚Ì—Ê
+	//ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ì—ï¿½
 	prm->value	= params[MY_VALUE]->u.sd.value /100;
 	prm->strangth = params[MY_STRENGTH]->u.sd.value;
 	if (aeprm->is16Bit) {
 		prm->strangth =  CONVERT8TO16(prm->strangth);	
 	}
 	mprm->randValue = prm->strangth;
-	//ƒ‚ƒUƒCƒN‚Ì‘å‚«‚³
+	//ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ì‘å‚«ï¿½ï¿½
 	prm->sizeX	=params[MY_SIZEX]->u.sd.value * in_data->downsample_x.num / in_data->downsample_x.den;
 	if (prm->sizeX<1) {prm->sizeX=1;}
 	prm->sizeY	=params[MY_SIZEY]->u.sd.value * in_data->downsample_x.num / in_data->downsample_x.den;
@@ -567,13 +567,13 @@ static PF_Err Render (	PF_InData		*in_data,
 
 	if  ( GetParams(in_data,out_data,params,output,&aprm,&prm,&mprm) != PF_Err_NONE ) {
 		PF_SPRINTF(	out_data->return_msg, 
-					"[%s] ‰æ‘œƒTƒCƒYƒGƒ‰[‚Å‚·BŒä–Æ‚È‚³‚¢B",
+					"[%s] ï¿½æ‘œï¿½Tï¿½Cï¿½Yï¿½Gï¿½ï¿½ï¿½[ï¿½Å‚ï¿½ï¿½Bï¿½ï¿½Æ‚È‚ï¿½ï¿½ï¿½ï¿½B",
 					FS_NAME
 					);
 		return err;
 	}
 	
-	//æ‚è‚ ‚¦‚¸•¡Ê
+	//ï¿½ï¿½è‚ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	PF_COPY(input, output, NULL, NULL);
 
 	if ( prm.value<=0 ){
@@ -616,39 +616,4 @@ inline long divCeil(long v0, long v1)
 
 }
 //-------------------------------------------------------------------------------------------------
-DllExport PF_Err EntryPointFunc(
-	PF_Cmd			cmd,
-	PF_InData		*in_data,
-	PF_OutData		*out_data,
-	PF_ParamDef		*params[],
-	PF_LayerDef		*output,
-	void			*extra)
-{
-	PF_Err		err = PF_Err_NONE;
-	
-	switch (cmd) {
-		case PF_Cmd_ABOUT:
-			err = About(in_data,out_data,params,output);
-			break;
-		case PF_Cmd_GLOBAL_SETUP:
-			err = GlobalSetup(in_data,out_data,params,output);
-			break;
-		case PF_Cmd_PARAMS_SETUP:
-			err = ParamsSetup(in_data,out_data,params,output);
-			break;
-		case PF_Cmd_SEQUENCE_SETUP:
-			err = SequenceSetup(in_data,out_data,params,output);
-			break;
-		case PF_Cmd_SEQUENCE_SETDOWN:
-			err = SequenceSetdown(in_data,out_data,params,output);
-			break;
-		case PF_Cmd_SEQUENCE_RESETUP:
-			err = SequenceResetup(in_data,out_data,params,output);
-			break;
-		case PF_Cmd_RENDER:
-			err = Render(in_data,out_data,params,output);
-			break;
-	}
-	return err;
-}//-------------------------------------------------------------------------------------------------
 */

@@ -37,11 +37,10 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
-//#include "FsAE.h"
+#include "FsAE.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_Highlights_COLOR,	//PF_Pixel
@@ -53,7 +52,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//ƒvƒ‰ƒOƒCƒ““Æ©‚Ìƒpƒ‰ƒ[ƒ^‚ğW‚ß‚½\‘¢‘Ì
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Æï¿½ï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Wï¿½ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 
 #define COLOR_TABLE_LENGTH8		256
 #define COLOR_TABLE_LENGTH16	(32768+1)
@@ -75,7 +74,7 @@ enum {
 #define STR_Midtones_OFFSET			"MidtonesOffset"
 #define STR_Blend_w_Original_FIXED	"Blend w. Original"
 
-//ƒpƒ‰ƒ[ƒ^‚Ì‰Šú’l
+//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ìï¿½ï¿½ï¿½ï¿½l
 #define Highlights_def_red		0xFF
 #define Highlights_def_green	0xFF
 #define Highlights_def_blue		0xFF

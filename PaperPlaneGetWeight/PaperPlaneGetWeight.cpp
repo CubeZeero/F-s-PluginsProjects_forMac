@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+// Place parameters in After Effects UI
+// See Param_Utils.h for details
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -22,7 +22,7 @@ static PF_Err ParamsSetup (
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY; // Keyframe not allowed
 	PF_ADD_CHECKBOX(STR_ISHALF,
 					"on",
 					FALSE,
@@ -31,23 +31,23 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(STR_COUNT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					5,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					5,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					1,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY; // Keyframe not allowed
+	PF_ADD_SLIDER(STR_COUNT,	// Name
+					0, 		// VALID_MIN
+					5,			// VALID_MAX
+					0,				// SLIDER_MIN 
+					5,			// SLIDER_MAX
+					1,				// DFLT
 					ID_COUNT
 					);
 
 	//----------------------------------------------------------------
-	//ƒ|ƒbƒvƒAƒbƒvƒƒjƒ…[
+// Popup menu
 	AEFX_CLR_STRUCT(def);	
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ğ‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY; // Keyframe not allowed
 	PF_ADD_POPUP(		STR_WEIGHT, 
-						STR_WEIGHT_COUNT,	//ƒƒjƒ…[‚Ì”
-						STR_WEIGHT_DFLT,	//ƒfƒtƒHƒ‹ƒg
+						STR_WEIGHT_COUNT,	//ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ìï¿½
+						STR_WEIGHT_DFLT,	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½g
 						STR_WEIGHT_ITEMS,
 						ID_WEIGHT
 						);
@@ -154,7 +154,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	if (infoP->count<=0) {
 		ERR(ae->out->clear());
 		return err;
@@ -178,10 +178,9 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+// Main render for non-SmartFX hosts
 /*
-	SmartFX‚É‘Î‰‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ğ‘‚¢‚Ä‚¨‚¯‚Îˆê‰v6.5‘Î‰‚É‚È‚é
+	For legacy hosts not supporting SmartFX (e.g., AE7 or older), this function is used for rendering.
 */
 static PF_Err 
 Render ( 
@@ -205,7 +204,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ğs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

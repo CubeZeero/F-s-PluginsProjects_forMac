@@ -13,8 +13,8 @@
 #define FS_NAME			"F's Tone"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�g���C�g�[���Ɠ���"
+// Description shown in AE UI
+#define FS_DESCRIPTION	"Tone: Highlights/Midtones/Shadows colorize"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -34,8 +34,8 @@
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

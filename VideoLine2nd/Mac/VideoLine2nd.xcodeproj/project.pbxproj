@@ -1,0 +1,206 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		VL2_0001 /* VideoLine2nd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_F0001 /* VideoLine2nd.cpp */; };
+		VL2_0101 /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = VL2_U0101 /* AEFX_SuiteHelper.c */; };
+		VL2_0102 /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_U0102 /* AEGP_SuiteHandler.cpp */; };
+		VL2_0103 /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_U0103 /* MissingSuiteError.cpp */; };
+		VL2_0104 /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_U0104 /* Smart_Utils.cpp */; };
+		VL2_0105 /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_U0105 /* AEGP_Utils.cpp */; };
+		VL2_0201 /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_L0201 /* FsGraphics.cpp */; };
+		VL2_0202 /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_L0202 /* FsGraphicsBox.cpp */; };
+		VL2_0203 /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_L0203 /* FsGraphicsCircle.cpp */; };
+		VL2_0204 /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_L0204 /* FsMat.cpp */; };
+		VL2_0205 /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VL2_L0205 /* FsGraphicsLine.cpp */; };
+		VL2_0301 /* VideoLine2ndPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = VL2_R0301 /* VideoLine2ndPiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		VL2_F0001 /* VideoLine2nd.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VideoLine2nd.cpp; path = ../VideoLine2nd.cpp; sourceTree = SOURCE_ROOT; };
+		VL2_F0002 /* VideoLine2nd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoLine2nd.h; path = ../VideoLine2nd.h; sourceTree = SOURCE_ROOT; };
+		VL2_R0301 /* VideoLine2ndPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = VideoLine2ndPiPL.r; path = ../VideoLine2ndPiPL.r; sourceTree = SOURCE_ROOT; };
+
+		VL2_U0101 /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		VL2_U0102 /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		VL2_U0103 /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		VL2_U0104 /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		VL2_U0105 /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+
+		VL2_L0201 /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		VL2_L0202 /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		VL2_L0203 /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		VL2_L0204 /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+		VL2_L0205 /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		VL2_PBXGroup /* Project */ = {isa = PBXGroup; children = (
+			VL2_SRC /* Sources */,
+			VL2_UTIL /* AE Util */,
+			VL2_LIB /* FsLibrary */,
+			VL2_RSC /* Resources */,
+		); sourceTree = "<group>"; };
+
+		VL2_SRC /* Sources */ = {isa = PBXGroup; children = (
+			VL2_F0001 /* VideoLine2nd.cpp */,
+			VL2_F0002 /* VideoLine2nd.h */,
+		); name = Sources; sourceTree = "<group>"; };
+
+		VL2_UTIL /* AE Util */ = {isa = PBXGroup; children = (
+			VL2_U0101 /* AEFX_SuiteHelper.c */,
+			VL2_U0102 /* AEGP_SuiteHandler.cpp */,
+			VL2_U0103 /* MissingSuiteError.cpp */,
+			VL2_U0104 /* Smart_Utils.cpp */,
+			VL2_U0105 /* AEGP_Utils.cpp */,
+		); name = Util; sourceTree = "<group>"; };
+
+		VL2_LIB /* FsLibrary */ = {isa = PBXGroup; children = (
+			VL2_L0201 /* FsGraphics.cpp */,
+			VL2_L0202 /* FsGraphicsBox.cpp */,
+			VL2_L0203 /* FsGraphicsCircle.cpp */,
+			VL2_L0204 /* FsMat.cpp */,
+			VL2_L0205 /* FsGraphicsLine.cpp */,
+		); name = FsLibrary; sourceTree = "<group>"; };
+
+		VL2_RSC /* Resources */ = {isa = PBXGroup; children = (
+			VL2_R0301 /* VideoLine2ndPiPL.r */,
+		); name = Resources; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		VL2_TARGET /* VideoLine2nd */ = {isa = PBXNativeTarget; buildConfigurationList = VL2_CONF_LIST; buildPhases = (
+			VL2_SOURCES /* Sources */,
+			VL2_REZ /* Rez */,
+			VL2_RESOURCES /* Resources */,
+		); buildRules = (
+		); dependencies = (
+		); name = VideoLine2nd; productName = VideoLine2nd; productType = "com.apple.product-type.bundle"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		VL2_PROJECT /* Project object */ = {isa = PBXProject; buildConfigurationList = VL2_PRJ_CONF_LIST; compatibilityVersion = "Xcode 3.2"; mainGroup = VL2_PBXGroup; targets = (
+			VL2_TARGET /* VideoLine2nd */,
+		); };
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		VL2_REZ /* Rez */ = {isa = PBXRezBuildPhase; buildActionMask = 2147483647; files = (
+			VL2_0301 /* VideoLine2ndPiPL.r in Rez */,
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		VL2_SOURCES /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+			VL2_0001 /* VideoLine2nd.cpp in Sources */,
+			VL2_0101 /* AEFX_SuiteHelper.c in Sources */,
+			VL2_0102 /* AEGP_SuiteHandler.cpp in Sources */,
+			VL2_0103 /* MissingSuiteError.cpp in Sources */,
+			VL2_0104 /* Smart_Utils.cpp in Sources */,
+			VL2_0105 /* AEGP_Utils.cpp in Sources */,
+			VL2_0201 /* FsGraphics.cpp in Sources */,
+			VL2_0202 /* FsGraphicsBox.cpp in Sources */,
+			VL2_0203 /* FsGraphicsCircle.cpp in Sources */,
+			VL2_0204 /* FsMat.cpp in Sources */,
+			VL2_0205 /* FsGraphicsLine.cpp in Sources */,
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		VL2_RESOURCES /* Resources */ = {isa = PBXResourcesBuildPhase; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		VL2_BUILD_DEBUG /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+			CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/VideoLine2nd.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LD_DYLIB_INSTALL_NAME = "";
+			MACH_O_TYPE = mh_bundle;
+			LIBRARY_STYLE = Bundle;
+			WRAPPER_EXTENSION = plugin;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.VideoLine2nd;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			OTHER_CFLAGS = ("-DFsAE_MAC_ENV");
+			PRODUCT_NAME = VideoLine2nd;
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Debug; };
+		VL2_BUILD_RELEASE /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+			CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/VideoLine2nd.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LD_DYLIB_INSTALL_NAME = "";
+			MACH_O_TYPE = mh_bundle;
+			LIBRARY_STYLE = Bundle;
+			WRAPPER_EXTENSION = plugin;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.VideoLine2nd;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			OTHER_CFLAGS = ("-DFsAE_MAC_ENV");
+			PRODUCT_NAME = VideoLine2nd;
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		VL2_CONF_LIST = {isa = XCConfigurationList; buildConfigurations = (
+			VL2_BUILD_DEBUG /* Debug */,
+			VL2_BUILD_RELEASE /* Release */,
+		); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		VL2_PRJ_CONF_LIST = {isa = XCConfigurationList; buildConfigurations = (
+			VL2_BUILD_DEBUG /* Debug */,
+			VL2_BUILD_RELEASE /* Release */,
+		); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+};
+	rootObject = VL2_PROJECT /* Project object */;
+}

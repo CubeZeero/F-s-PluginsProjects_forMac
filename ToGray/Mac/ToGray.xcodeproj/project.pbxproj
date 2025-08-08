@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		TG000001095A3D3A0012CA3F /* ToGray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100001095A3C810012CA3F /* ToGray.cpp */; };
+		TG000002095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100005095A3C810012CA3F /* FsGraphics.cpp */; };
+		TG000003095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100006095A3C810012CA3F /* FsGraphicsLine.cpp */; };
+		TG000004095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100007095A3C810012CA3F /* FsGraphicsCircle.cpp */; };
+		TG000005095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100008095A3C810012CA3F /* FsGraphicsBox.cpp */; };
+		TG000006095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100009095A3C810012CA3F /* FsGraphicsBlend.cpp */; };
+		TG000007095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = TG100010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		TG000008095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		TG000009095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		TG00000A095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		TG00000B095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG100015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		TG00000C095A3D3A0012CA3F /* ToGrayPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = TG10000A095A3C810012CA3F /* ToGrayPiPL.r */; };
+		TG00000D095A3D3A0012CA3F /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TG10000C095A3C810012CA3F /* FsMat.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		TG100001095A3C810012CA3F /* ToGray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ToGray.cpp; path = ../ToGray.cpp; sourceTree = SOURCE_ROOT; };
+		TG100005095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		TG100006095A3C810012CA3F /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		TG100007095A3C810012CA3F /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		TG100008095A3C810012CA3F /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		TG100009095A3C810012CA3F /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		TG10000A095A3C810012CA3F /* ToGrayPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = ToGrayPiPL.r; path = ../ToGrayPiPL.r; sourceTree = SOURCE_ROOT; };
+		TG10000B095A3C810012CA3F /* ToGray.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ToGray.plugin-Info.plist; path = ToGray.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		TG1001001095A3C810012CA3F /* ToGray.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = ToGray.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		TG100010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		TG100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		TG100012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		TG100013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		TG100015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		TG10000C095A3C810012CA3F /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		TGFRAMEWORKS095A3CE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		TGGROUPROOT095A3CE8 = {
+			isa = PBXGroup;
+			children = (
+				TGREZGROUP095A3E04 /* Rez */,
+				TGFRAMEWORKSGROUP095A3CE8 /* Frameworks */,
+				TGPRODUCTSGROUP095A3CE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		TGPRODUCTSGROUP095A3CE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				TG1001001095A3C810012CA3F /* ToGray.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		TGREZGROUP095A3E04 /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				TG10000A095A3C810012CA3F /* ToGrayPiPL.r */,
+				TG100001095A3C810012CA3F /* ToGray.cpp */,
+				TG100005095A3C810012CA3F /* FsGraphics.cpp */,
+				TG100006095A3C810012CA3F /* FsGraphicsLine.cpp */,
+				TG100007095A3C810012CA3F /* FsGraphicsCircle.cpp */,
+				TG100008095A3C810012CA3F /* FsGraphicsBox.cpp */,
+				TG100009095A3C810012CA3F /* FsGraphicsBlend.cpp */,
+				TG10000C095A3C810012CA3F /* FsMat.cpp */,
+				TG100010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				TG100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				TG100012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				TG100013095A3C810012CA3F /* Smart_Utils.cpp */,
+				TG100015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				TG10000B095A3C810012CA3F /* ToGray.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		TGFRAMEWORKSGROUP095A3CE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TGNATIVE095A3CE8 /* ToGray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = TGBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "ToGray" */;
+			buildPhases = (
+				TGFRAMEWORKS095A3CE8 /* Frameworks */,
+				TGREZPHASE095A3E04 /* Rez */,
+				TGSOURCESPHASE095A3CE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToGray;
+			productName = ToGray;
+			productReference = TG1001001095A3C810012CA3F /* ToGray.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		TGPROJECTOBJ095A3CE8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = TGPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "ToGray" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = TGGROUPROOT095A3CE8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TGNATIVE095A3CE8 /* ToGray */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		TGREZPHASE095A3E04 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TG00000C095A3D3A0012CA3F /* ToGrayPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		TGSOURCESPHASE095A3CE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TG000001095A3D3A0012CA3F /* ToGray.cpp in Sources */,
+				TG000002095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+				TG000003095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */,
+				TG000004095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */,
+				TG000005095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */,
+				TG000006095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */,
+				TG000007095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				TG000008095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				TG000009095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				TG00000A095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				TG00000B095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+				TG00000D095A3D3A0012CA3F /* FsMat.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		TGPROJECTDEBUG095A3CE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = ToGray.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.ToGray;
+				PRODUCT_NAME = ToGray;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		TGPROJECTRELEASE095A3CE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = ToGray.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.ToGray;
+				PRODUCT_NAME = ToGray;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		TGPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "ToGray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TGPROJECTDEBUG095A3CE8 /* Debug */,
+				TGPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		TGBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "ToGray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TGPROJECTDEBUG095A3CE8 /* Debug */,
+				TGPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = TGPROJECTOBJ095A3CE8 /* Project object */;
+}

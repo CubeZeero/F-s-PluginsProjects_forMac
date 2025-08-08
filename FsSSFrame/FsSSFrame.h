@@ -41,8 +41,8 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+// UI parameter IDs
+// Used by ParamsSetup and Render functions
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_WIDTH_ADD,	//long
@@ -78,7 +78,7 @@ enum {
 #define	Str_OUT_OPACITY			"out_opacity"
 #define	Str_LINE_HEIGHT			"line_height"
 #define	Str_SIZE_POP1			"size"
-#define	Str_SIZE_POP2			"上の数値|720x540|1024x576|1024x768|1280x720|1440x810|1920x1080"
+#define	Str_SIZE_POP2			"custom|720x540|1024x576|1024x768|1280x720|1440x810|1920x1080"
 
 
 typedef struct {

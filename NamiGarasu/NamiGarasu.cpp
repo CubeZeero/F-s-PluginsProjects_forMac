@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+// Place parameters in After Effects UI
+// See Param_Utils.h for details
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -21,33 +21,33 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_Y,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					50,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_Y,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					50,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_VALE
 					);
 
 	//----------------------------------------------------------------
-	//Šp“x
+	//ï¿½pï¿½x
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_ANGLE(STR_ROT,45,ID_ROT); 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_FIXED(	STR_SPEED,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					32000,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					20,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_FIXED(	STR_SPEED,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					32000,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					20,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_SPEED
@@ -55,26 +55,26 @@ static PF_Err ParamsSetup (
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					25,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_LEVEL,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					25,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_LEVEL
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_NOISE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					25,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_NOISE,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					25,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_NOISE
@@ -84,31 +84,31 @@ static PF_Err ParamsSetup (
 	PF_ADD_TOPIC(STR_A, ID_TOPIC_A);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_A_SIZE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					1, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					6,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					1,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					6,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					2,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_A_SIZE,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					1, 		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					6,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					1,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					6,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					2,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_A_SIZE
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_A_VALUE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					200,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					40,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_A_VALUE,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					200,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					40,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_A_VALUE
 					);
 
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_FLOAT_SLIDER(STR_A_STRONG,	//Name
 						0,						//VALID_MIN
 						100,					//VALID_MAX
@@ -123,7 +123,7 @@ static PF_Err ParamsSetup (
 						);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_FLOAT_SLIDER(STR_A_SPEED,	//Name
 						-500,					//VALID_MIN
 						500,					//VALID_MAX
@@ -138,13 +138,13 @@ static PF_Err ParamsSetup (
 						);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_A_SEED,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 			//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					30000,		//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,			//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					10000,		//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_A_SEED,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					30000,		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					10000,		//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,			//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_A_SEED
 					);
 
@@ -156,31 +156,31 @@ static PF_Err ParamsSetup (
 	PF_ADD_TOPIC(STR_B, ID_TOPIC_B);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_B_SIZE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					1, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					6,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					1,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					6,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					3,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_B_SIZE,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					1, 		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					6,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					1,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					6,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					3,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_B_SIZE
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_B_VALUE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					200,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					20,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_B_VALUE,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					200,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					20,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_B_VALUE
 					);
 
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_FLOAT_SLIDER(STR_B_STRONG,	//Name
 						0,						//VALID_MIN
 						100,					//VALID_MAX
@@ -195,7 +195,7 @@ static PF_Err ParamsSetup (
 						);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_FLOAT_SLIDER(STR_B_SPEED,	//Name
 						-500,					//VALID_MIN
 						500,					//VALID_MAX
@@ -210,13 +210,13 @@ static PF_Err ParamsSetup (
 						);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_B_SEED,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 			//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					30000,		//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,			//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					10000,		//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					1000,		//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_B_SEED,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					30000,		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					10000,		//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					1000,		//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_B_SEED
 					);
 	//----------------------------------------------------------------
@@ -227,31 +227,31 @@ static PF_Err ParamsSetup (
 	PF_ADD_TOPIC(STR_C, ID_TOPIC_C);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_C_SIZE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					1, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					6,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					1,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					6,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					6,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_C_SIZE,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					1, 		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					6,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					1,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					6,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					6,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_C_SIZE
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_C_VALUE,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					200,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					30,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_C_VALUE,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					200,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					30,			//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_C_VALUE
 					);
 
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_FLOAT_SLIDER(STR_C_STRONG,	//Name
 						0,						//VALID_MIN
 						100,					//VALID_MAX
@@ -266,7 +266,7 @@ static PF_Err ParamsSetup (
 						);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_FLOAT_SLIDER(STR_C_SPEED,	//Name
 						-500,						//VALID_MIN
 						500,					//VALID_MAX
@@ -281,13 +281,13 @@ static PF_Err ParamsSetup (
 						);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
-	PF_ADD_SLIDER(	STR_C_SEED,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 			//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					30000,		//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,			//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					10000,		//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					2000,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
+	PF_ADD_SLIDER(	STR_C_SEED,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					30000,		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					10000,		//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					2000,			//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_C_SEED
 					);
 	//----------------------------------------------------------------
@@ -295,7 +295,7 @@ static PF_Err ParamsSetup (
 	PF_END_TOPIC(ID_TOPIC_C_END);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+	def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆƒLï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚È‚ï¿½ï¿½È‚ï¿½
 	PF_ADD_CHECKBOX(STR_DISPMAP,
 					"on",
 					FALSE,
@@ -304,26 +304,26 @@ static PF_Err ParamsSetup (
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_LENGTH_X,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					1000,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					100,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_LENGTH_X,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					1000,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					100,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_LENGTH_X
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_LENGTH_Y,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					1000,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					100,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\Ž¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_LENGTH_Y,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					1000,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					100,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_LENGTH_Y
@@ -358,7 +358,7 @@ QueryDynamicFlags(
 }
 //-------------------------------------------------------------------------------------------------
 /*
-	ƒAƒ‹ƒtƒ@[ƒ`ƒƒƒ“ƒlƒ‹‚É•`‚©‚ê‚½ƒ}ƒbƒv‚ð•\Ž¦
+	ï¿½Aï¿½ï¿½ï¿½tï¿½@ï¿½[ï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½É•`ï¿½ï¿½ï¿½ê‚½ï¿½}ï¿½bï¿½vï¿½ï¿½\ï¿½ï¿½
 */
 //-------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
@@ -449,7 +449,7 @@ inToAlphap32 (
 }
 //-------------------------------------------------------------------------------------------------
 /*
-	ƒOƒŒ[‚Å“h‚è‚Â‚Ô‚µ	
+	ï¿½Oï¿½ï¿½ï¿½[ï¿½Å“hï¿½ï¿½Â‚Ô‚ï¿½	
 */
 //-------------------------------------------------------------------------------------------------
 static PF_Err 
@@ -537,7 +537,7 @@ clearHalf32 (
 }
 //-------------------------------------------------------------------------------------------------
 /*
-	redƒ`ƒƒƒ“ƒlƒ‹‚¾‚¯ƒOƒŒ[‚É
+	redï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½[ï¿½ï¿½
 */
 //-------------------------------------------------------------------------------------------------
 static PF_Err 
@@ -1081,10 +1081,9 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+// Render entry point
 /*
-	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
+	If host does not support SmartFX (AE7 or older), use this Render.
 */
 static PF_Err 
 Render ( 
@@ -1108,7 +1107,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

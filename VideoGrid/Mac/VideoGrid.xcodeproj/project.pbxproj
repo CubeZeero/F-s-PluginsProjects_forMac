@@ -1,0 +1,174 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		VG000010001 /* VideoGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000010001 /* VideoGrid.cpp */; };
+		VG000010002 /* GridSub8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000010002 /* GridSub8.cpp */; };
+		VG000010003 /* GridSub16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000010003 /* GridSub16.cpp */; };
+		VG000010004 /* GridSub32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000010004 /* GridSub32.cpp */; };
+		VG000010101 /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = VG1000100101 /* AEFX_SuiteHelper.c */; };
+		VG000010102 /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000100102 /* AEGP_SuiteHandler.cpp */; };
+		VG000010103 /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000100103 /* MissingSuiteError.cpp */; };
+		VG000010104 /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000100104 /* Smart_Utils.cpp */; };
+		VG000010105 /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000100105 /* AEGP_Utils.cpp */; };
+		VG000010201 /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000200101 /* FsGraphics.cpp */; };
+		VG000010202 /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000200102 /* FsGraphicsBlend.cpp */; };
+		VG000010203 /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000200103 /* FsGraphicsBox.cpp */; };
+		VG000010204 /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000200104 /* FsGraphicsCircle.cpp */; };
+		VG000010205 /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000200105 /* FsGraphicsLine.cpp */; };
+		VG000010206 /* FsGraphicsPaint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000200106 /* FsGraphicsPaint.cpp */; };
+		VG000010207 /* FsMosaic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000200107 /* FsMosaic.cpp */; };
+		VG000010208 /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = VG1000200108 /* FsMat.cpp */; };
+		VG000020001 /* VideoGridPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = VG1000030001 /* VideoGridPiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		VG1000010001 /* VideoGrid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VideoGrid.cpp; path = ../VideoGrid.cpp; sourceTree = "<group>"; };
+		VG1000010002 /* GridSub8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GridSub8.cpp; path = ../GridSub8.cpp; sourceTree = "<group>"; };
+		VG1000010003 /* GridSub16.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GridSub16.cpp; path = ../GridSub16.cpp; sourceTree = "<group>"; };
+		VG1000010004 /* GridSub32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GridSub32.cpp; path = ../GridSub32.cpp; sourceTree = "<group>"; };
+		VG1000020001 /* Fs_Target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fs_Target.h; path = ../Fs_Target.h; sourceTree = "<group>"; };
+		VG1000030001 /* VideoGridPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = VideoGridPiPL.r; path = ../VideoGridPiPL.r; sourceTree = "<group>"; };
+		VG1000100101 /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		VG1000100102 /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000100103 /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000100104 /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000100105 /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000200101 /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000200102 /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000200103 /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000200104 /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000200105 /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000200106 /* FsGraphicsPaint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsPaint.cpp; path = ../../FsLibrary/FsGraphicsPaint.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000200107 /* FsMosaic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMosaic.cpp; path = ../../FsLibrary/FsMosaic.cpp; sourceTree = SOURCE_ROOT; };
+		VG1000200108 /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		VGPROJ /* Project */ = {isa = PBXGroup; children = (
+			VGSRCS /* Sources */,
+			VGUTIL /* AEUtil */,
+			VGLIB /* FsLibrary */,
+			VGRES /* Resources */,
+		); sourceTree = "<group>"; };
+		VGSRCS /* Sources */ = {isa = PBXGroup; children = (
+			VG1000010001 /* VideoGrid.cpp */, VG1000010002 /* GridSub8.cpp */, VG1000010003 /* GridSub16.cpp */, VG1000010004 /* GridSub32.cpp */, VG1000020001 /* Fs_Target.h */); name = Sources; sourceTree = "<group>"; };
+		VGUTIL /* AEUtil */ = {isa = PBXGroup; children = (
+			VG1000100101 /* AEFX_SuiteHelper.c */, VG1000100102 /* AEGP_SuiteHandler.cpp */, VG1000100104 /* Smart_Utils.cpp */, VG1000100105 /* AEGP_Utils.cpp */, VG1000100103 /* MissingSuiteError.cpp */); name = AEUtil; sourceTree = "<group>"; };
+		VGLIB /* FsLibrary */ = {isa = PBXGroup; children = (
+			VG1000200101 /* FsGraphics.cpp */, VG1000200102 /* FsGraphicsBlend.cpp */, VG1000200103 /* FsGraphicsBox.cpp */, VG1000200104 /* FsGraphicsCircle.cpp */, VG1000200105 /* FsGraphicsLine.cpp */, VG1000200106 /* FsGraphicsPaint.cpp */, VG1000200107 /* FsMosaic.cpp */, VG1000200108 /* FsMat.cpp */); name = FsLibrary; sourceTree = "<group>"; };
+		VGRES /* Resources */ = {isa = PBXGroup; children = (
+			VG1000030001 /* VideoGridPiPL.r */); name = Resources; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		VGAPP /* VideoGrid */ = {isa = PBXNativeTarget; buildConfigurationList = VGBUILDSET; buildPhases = (
+			VGSOURCESPHASE /* Sources */, VGREZPHASE /* Rez */, VGBUILDRES /* Resources */); name = VideoGrid; productName = VideoGrid; productType = "com.apple.product-type.bundle"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		VGPROJOBJ /* Project object */ = {isa = PBXProject; buildConfigurationList = VGPROJECTBUILDSET; compatibilityVersion = "Xcode 3.2"; hasScannedForEncodings = 0; mainGroup = VGPROJ; productRefGroup = VGPROJ; projectDirPath = ""; targets = (VGAPP); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		VGBUILDRES /* Resources */ = {isa = PBXResourcesBuildPhase; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		VGREZPHASE /* Rez */ = {isa = PBXRezBuildPhase; files = (
+			VG000020001 /* VideoGridPiPL.r in Rez */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		VGSOURCESPHASE /* Sources */ = {isa = PBXSourcesBuildPhase; files = (
+			VG000010001 /* VideoGrid.cpp in Sources */, VG000010002 /* GridSub8.cpp in Sources */, VG000010003 /* GridSub16.cpp in Sources */, VG000010004 /* GridSub32.cpp in Sources */, VG000010101 /* AEFX_SuiteHelper.c in Sources */, VG000010102 /* AEGP_SuiteHandler.cpp in Sources */, VG000010103 /* MissingSuiteError.cpp in Sources */, VG000010104 /* Smart_Utils.cpp in Sources */, VG000010105 /* AEGP_Utils.cpp in Sources */, VG000010201 /* FsGraphics.cpp in Sources */, VG000010202 /* FsGraphicsBlend.cpp in Sources */, VG000010203 /* FsGraphicsBox.cpp in Sources */, VG000010204 /* FsGraphicsCircle.cpp in Sources */, VG000010205 /* FsGraphicsLine.cpp in Sources */, VG000010206 /* FsGraphicsPaint.cpp in Sources */, VG000010207 /* FsMosaic.cpp in Sources */, VG000010208 /* FsMat.cpp in Sources */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+        VGBUILDDEBUG /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+            CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/VideoGrid.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.VideoGrid;
+			PRODUCT_NAME = VideoGrid;
+            WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Debug; };
+        VGBUILDRELEASE /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+            CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/VideoGrid.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.VideoGrid;
+			PRODUCT_NAME = VideoGrid;
+            WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		VGBUILDSET /* Build configuration list for PBXNativeTarget */ = {isa = XCConfigurationList; buildConfigurations = (VGBUILDDEBUG, VGBUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		VGPROJECTBUILDSET /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (VGBUILDDEBUG, VGBUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+};
+	rootObject = VGPROJOBJ /* Project object */;
+}

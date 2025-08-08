@@ -35,13 +35,13 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
-//#include "FsAE.h"
+// Use shared FsLibrary include path via project search paths
+#include "FsAE.h"
 
 //-----------------------------------------------------------------------------------
 #define	STR_BLUR_VALUE	"blur"
 #define	STR_TARGET_RNG	"range"
-#define	STR_TARGET_ENABLE0	"—LŒø"
+#define	STR_TARGET_ENABLE0	"Enable"
 #define	STR_TARGET_ENABLE1	"ON"
 
 #define	STR_TARGET_COL0	"target0"
@@ -57,12 +57,12 @@
 #define COLOR_COUNT 8
 
 //-----------------------------------------------------------------------------------
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+// User interface IDs
+// Used by ParamsSetup and Render
 enum {
 	ID_INPUT = 0,	// default input layer 
 	
-	//ˆÈ‰ºQl—p
+	//ï¿½È‰ï¿½ï¿½Qï¿½lï¿½p
 	ID_BLUR_VALUE,
 	ID_TARGET_RANGE,
 	

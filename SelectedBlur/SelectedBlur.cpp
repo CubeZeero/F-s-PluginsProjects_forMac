@@ -6,8 +6,8 @@
 #include "SelectedBlur.h"
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+// Place parameters in After Effects UI
+// See Param_Utils.h for details
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -18,31 +18,31 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//®”‚ÌƒXƒ‰ƒCƒ_[ƒo[
+	// Blur slider
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_BLUR_VALUE,//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					300,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					30,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_BLUR_VALUE,// Blur amount
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					300,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					30,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_BLUR_VALUE
 					);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_TARGET_RNG,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					16,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,				//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_TARGET_RNG,	// Target color range
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					16,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,				//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_TARGET_RANGE
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	// Checkbox
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TARGET_ENABLE0,
 					STR_TARGET_ENABLE1,
@@ -50,7 +50,7 @@ static PF_Err ParamsSetup (
 					0,
 					ID_TARGET_ENABLED0
 					);
-	//F‚Ìw’è
+	// Color selection
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_TARGET_COL0, 
 					0xFF,
@@ -59,7 +59,7 @@ static PF_Err ParamsSetup (
 					ID_TARGET_COL0
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TARGET_ENABLE0,
 					STR_TARGET_ENABLE1,
@@ -67,7 +67,7 @@ static PF_Err ParamsSetup (
 					0,
 					ID_TARGET_ENABLED1
 					);
-	//F‚Ìw’è
+	//ï¿½Fï¿½Ìwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_TARGET_COL1, 
 					0x00,
@@ -76,7 +76,7 @@ static PF_Err ParamsSetup (
 					ID_TARGET_COL1
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TARGET_ENABLE0,
 					STR_TARGET_ENABLE1,
@@ -84,7 +84,7 @@ static PF_Err ParamsSetup (
 					0,
 					ID_TARGET_ENABLED2
 					);
-	//F‚Ìw’è
+	//ï¿½Fï¿½Ìwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_TARGET_COL2, 
 					0x00,
@@ -93,7 +93,7 @@ static PF_Err ParamsSetup (
 					ID_TARGET_COL2
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TARGET_ENABLE0,
 					STR_TARGET_ENABLE1,
@@ -101,7 +101,7 @@ static PF_Err ParamsSetup (
 					0,
 					ID_TARGET_ENABLED3
 					);
-	//F‚Ìw’è
+	//ï¿½Fï¿½Ìwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_TARGET_COL3, 
 					0xFF,
@@ -110,7 +110,7 @@ static PF_Err ParamsSetup (
 					ID_TARGET_COL3
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TARGET_ENABLE0,
 					STR_TARGET_ENABLE1,
@@ -118,7 +118,7 @@ static PF_Err ParamsSetup (
 					0,
 					ID_TARGET_ENABLED4
 					);
-	//F‚Ìw’è
+	//ï¿½Fï¿½Ìwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_TARGET_COL4, 
 					0x00,
@@ -127,7 +127,7 @@ static PF_Err ParamsSetup (
 					ID_TARGET_COL4
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TARGET_ENABLE0,
 					STR_TARGET_ENABLE1,
@@ -135,7 +135,7 @@ static PF_Err ParamsSetup (
 					0,
 					ID_TARGET_ENABLED5
 					);
-	//F‚Ìw’è
+	//ï¿½Fï¿½Ìwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_TARGET_COL5, 
 					0x00,
@@ -144,7 +144,7 @@ static PF_Err ParamsSetup (
 					ID_TARGET_COL5
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TARGET_ENABLE0,
 					STR_TARGET_ENABLE1,
@@ -152,7 +152,7 @@ static PF_Err ParamsSetup (
 					0,
 					ID_TARGET_ENABLED6
 					);
-	//F‚Ìw’è
+	//ï¿½Fï¿½Ìwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_TARGET_COL6, 
 					0x80,
@@ -161,7 +161,7 @@ static PF_Err ParamsSetup (
 					ID_TARGET_COL6
 					);
 	//----------------------------------------------------------------
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TARGET_ENABLE0,
 					STR_TARGET_ENABLE1,
@@ -169,7 +169,7 @@ static PF_Err ParamsSetup (
 					0,
 					ID_TARGET_ENABLED7
 					);
-	//F‚Ìw’è
+	//ï¿½Fï¿½Ìwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_TARGET_COL7, 
 					0x80,
@@ -219,7 +219,7 @@ CopyImage8 (
 				outP->blue	= inP->blue;
 			}
 		}else{
-			//“§–¾‚Ì‚Æ‚±‚ë‚Ì‚İ‚ğ•¡Ê
+			//ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Æ‚ï¿½ï¿½ï¿½Ì‚İ‚ğ•¡ï¿½
 			if ( outP->alpha ==0){
 				outP->alpha	= inP->alpha;
 				outP->red	= inP->red;
@@ -272,7 +272,7 @@ CopyImage16 (
 				outP->blue	= inP->blue;
 			}
 		}else{
-			//“§–¾‚Ì‚Æ‚±‚ë‚Ì‚İ‚ğ•¡Ê
+			//ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Æ‚ï¿½ï¿½ï¿½Ì‚İ‚ğ•¡ï¿½
 			if ( outP->alpha ==0){
 				outP->alpha	= inP->alpha;
 				outP->red	= inP->red;
@@ -326,7 +326,7 @@ CopyImage32 (
 				outP->blue	= inP->blue;
 			}
 		}else{
-			//“§–¾‚Ì‚Æ‚±‚ë‚Ì‚İ‚ğ•¡Ê
+			//ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Æ‚ï¿½ï¿½ï¿½Ì‚İ‚ğ•¡ï¿½
 			if ( outP->alpha ==0){
 				outP->alpha	= inP->alpha;
 				outP->red	= inP->red;

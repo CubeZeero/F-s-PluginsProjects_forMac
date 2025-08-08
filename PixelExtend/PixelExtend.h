@@ -51,8 +51,8 @@ enum
 	LEN_COUNT
 };
 #define EXPAND_MAX 8
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//Layer parameter file ID
+//ParamsSetup function and Render function params parameter ID
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -113,7 +113,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\¦•¶š—ñ
+//UIï¿½Ì•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define	STR_TARGET_TOPIC			"Target"
 #define	STR_RANGE					"Range"
 #define	STR_ON						"on"
@@ -137,7 +137,7 @@ enum {
 
 #define	STR_TARGET_ONLY				"TargetOnly"
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	A_long		colTableCount;
 	PF_Pixel	colTable[EXPAND_MAX];

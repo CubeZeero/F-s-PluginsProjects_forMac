@@ -37,8 +37,8 @@
 
 #include "../FsLibrary/FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+//Parameter ID for slider control
+//Used as parameter ID in ParamsSetup function and Render function
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -48,11 +48,11 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UIの表示文字列
+//UI display strings
 #define	STR_LEVEL			"level"
 #define	STR_G				"grayOnly"
 
-//UIのパラメータ
+//UI parameters
 typedef struct ParamInfo {
 	PF_Boolean	grayOnly;
 	A_long		level;

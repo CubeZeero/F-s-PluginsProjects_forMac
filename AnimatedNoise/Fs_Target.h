@@ -34,13 +34,8 @@
 //#define NO_USE_FSGRAPHICS	// Enable this to not include FsGraphics related code
 
 //-----------------------------------------------------------------------------------
-// Version definitions (from FsVersion.h to avoid Rez compile issues)
-#define	MAJOR_VERSION		3
-#define	MINOR_VERSION		0
-#define	BUG_VERSION			0
-#define	STAGE_VERSION		PF_Stage_RELEASE
-#define	BUILD_VERSION		0
-#define FS_VERSION	1572864
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 //-----------------------------------------------------------------------------------
 
 

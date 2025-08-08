@@ -32,13 +32,8 @@
 #define SUPPORT_SMARTFX			// Enable SmartFX + Float Color support
 //#define NO_USE_FSGRAPHICS	// Do not include FsGraphics related libraries
 
-// Version definitions (embedded to avoid FsVersion.h issues)
-#define MAJOR_VERSION 3
-#define MINOR_VERSION 0
-#define BUG_VERSION 0
-#define STAGE_VERSION PF_Stage_RELEASE
-#define BUILD_VERSION 0
-#define FS_VERSION 1572864
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

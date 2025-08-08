@@ -11,12 +11,12 @@
 
 
 //-----------------------------------------------------------------------------------
-//プラグインの表示名に使う名前
+// Plugin name used in the interface
 #define FS_NAME			"F's grayToCountourLine"
 
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使う説明
-#define FS_DESCRIPTION	"グレー画像から輪郭線を生成"
+// Plugin description used in the interface
+#define FS_DESCRIPTION	"Generate contour lines from grayscale image"
 
 //-----------------------------------------------------------------------------------
 //プラグインを表示するカテゴリ
@@ -34,10 +34,8 @@
 #define SUPPORT_SMARTFX			//この行を有効にするとSmartFX+Float_Colorに対応する
 //#define NO_USE_FSGRAPHICS	//この行を有効にするとFsGraphics関係のコードを無効にする
 
-//#include "../FsLibrary/FsVersion.h"
-#define MAJOR_VERSION 1
-#define MINOR_VERSION 0
-#define FS_VERSION ((MAJOR_VERSION << 16) | MINOR_VERSION)
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

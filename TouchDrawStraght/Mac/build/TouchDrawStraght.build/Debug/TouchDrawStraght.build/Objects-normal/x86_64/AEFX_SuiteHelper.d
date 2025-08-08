@@ -1,0 +1,32 @@
+dependencies: \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Util/AEFX_SuiteHelper.c \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Util/AEFX_SuiteHelper.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/AEFX_SuiteHandlerTemplate.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/AE_Effect.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/A.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/adobesdk/config/PreConfig.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/adobesdk/config/PostConfig.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/AE_EffectCB.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPBasic.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPTypes.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPConfig.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/PSIntTypes.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPErrorCodes.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPSuites.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPAccess.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPPlugs.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPFiles.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPProps.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPMData.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPPiPL.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/photoshop/config/platform.hpp \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/artemis/config/platform.hpp \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPAdapts.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPCaches.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/SP/SPStrngs.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/AE_EffectSuites.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/AE_EffectUI.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/adobesdk/drawbotsuite/DrawbotSuiteTypes.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/AE_EffectSuitesOld.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/adobesdk/DrawbotSuite.h \
+  /Users/cubezeero/Desktop/F-s-Plugins_forMac/AfterEffectsSDK/Examples/Headers/adobesdk/config/AdobesdkTypes.h

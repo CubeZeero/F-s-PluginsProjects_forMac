@@ -9,32 +9,31 @@
 #define FS_TAGET_H
 
 //-----------------------------------------------------------------------------------
-//プラグインの表示名に使う名前
+//�v���O�C���̎��ʂɎg���閼�O
 #define FS_NAME			"F's Mosaic"
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使う説明
-#define FS_DESCRIPTION	"モザイク効果"
+// Description used in the plugin UI
+#define FS_DESCRIPTION	"Mosaic effect"
 
-//-----------------------------------------------------------------------------------
-//プラグインを表示するカテゴリ
-
-//#define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "NF's Plugins-Channel"
-//#define FS_CATEGORY "NF's Plugins-Colorize"
-//#define FS_CATEGORY "NF's Plugins-Draw"
-#define FS_CATEGORY "NF's Plugins-Filter"
-//#define FS_CATEGORY "NF's Plugins-Noise"
-//#define FS_CATEGORY "NF's Plugins-expression"
-//#define FS_CATEGORY "NF's Plugins-{Legacy}"
+	//-----------------------------------------------------------------------------------
+	//�v���O�C�����\������郁�j���[��
+	//#define FS_CATEGORY "F's Plugins-Channel"
+	//#define FS_CATEGORY "F's Plugins-Draw"
+	#define FS_CATEGORY "NF's Plugins-Filter"
+	//#define FS_CATEGORY "F's Plugins-Cell"
+	//#define FS_CATEGORY "F's Plugins-Colorize"
+	//#define FS_CATEGORY "F's Plugins-Script"
+//#define FS_CATEGORY "F's Plugins-Test"
 
 //-----------------------------------------------------------
-#ifndef SUPPORT_SMARTFX			//コメントアウト
-#define SUPPORT_SMARTFX			//この行を有効にするとSmartFX+Float_Colorに対応する
+#ifndef SUPPORT_SMARTFX			//�Q�d�o�^��h��
+#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
 #endif
-//#define NO_USE_FSGRAPHICS	//この行を有効にするとFsGraphics関係のコードを無効にする
+//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags
@@ -49,8 +48,8 @@ out_data->out_flags
 */
 
 //#define FS_OUT_FLAGS	33556032
-#define FS_OUT_FLAGS	33556036	//これを有効にするとパラメータの変化を描画する
-//#define FS_OUT_FLAGS	1600		//8bitの場合
+#define FS_OUT_FLAGS	33556036	//��������L���ɂ���Ɩ��t���[�����Ƃɕ`�悷��
+//#define FS_OUT_FLAGS	1600		//8bit�̂�
 //-----------------------------------------------------------------------------------
 //out_flags2
 /*

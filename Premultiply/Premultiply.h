@@ -40,8 +40,9 @@
 
 #include "../FsLibrary/FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+
+// User interface parameter IDs
+// These become parameter IDs for ParamsSetup and Render functions
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_MODE,
@@ -50,11 +51,11 @@ enum {
 	};
 	
 #define STR_POP1	"mode"
-#define STR_POP2	"マットからストレート|ストレートからマット"
+#define STR_POP2	"Matte to Straight|Straight to Matte"
 #define STR_POP		2
 #define STR_POP_DEF	1
 
-#define STR_COLOR	"マットカラー"
+#define STR_COLOR	"Matte Color"
 
 typedef struct ParamInfo{
 	A_long		mode;

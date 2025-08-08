@@ -1,0 +1,166 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		PMPT000010001 /* PaintMultPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000010001 /* PaintMultPoint.cpp */; };
+		PMPT000010101 /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000100101 /* AEFX_SuiteHelper.c */; };
+		PMPT000010102 /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000100102 /* AEGP_SuiteHandler.cpp */; };
+		PMPT000010103 /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000100103 /* MissingSuiteError.cpp */; };
+		PMPT000010104 /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000100104 /* Smart_Utils.cpp */; };
+		PMPT000010105 /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000100105 /* AEGP_Utils.cpp */; };
+		PMPT000010201 /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000200101 /* FsGraphics.cpp */; };
+		PMPT000010202 /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000200102 /* FsGraphicsBlend.cpp */; };
+		PMPT000010203 /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000200103 /* FsGraphicsBox.cpp */; };
+		PMPT000010204 /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000200104 /* FsGraphicsCircle.cpp */; };
+		PMPT000010205 /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000200105 /* FsGraphicsLine.cpp */; };
+		PMPT000010206 /* FsGraphicsPaint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000200106 /* FsGraphicsPaint.cpp */; };
+		PMPT000010208 /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = PMPT1000200108 /* FsMat.cpp */; };
+		PMPT000020001 /* PaintMultPointPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = PMPT1000030001 /* PaintMultPointPiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		PMPT1000010001 /* PaintMultPoint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PaintMultPoint.cpp; path = ../PaintMultPoint.cpp; sourceTree = "<group>"; };
+		PMPT1000020001 /* Fs_Target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fs_Target.h; path = ../Fs_Target.h; sourceTree = "<group>"; };
+		PMPT1000030001 /* PaintMultPointPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = PaintMultPointPiPL.r; path = ../PaintMultPointPiPL.r; sourceTree = "<group>"; };
+		PMPT1000100101 /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		PMPT1000100102 /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000100103 /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000100104 /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000100105 /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000200101 /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000200102 /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000200103 /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000200104 /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000200105 /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000200106 /* FsGraphicsPaint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsPaint.cpp; path = ../../FsLibrary/FsGraphicsPaint.cpp; sourceTree = SOURCE_ROOT; };
+		PMPT1000200108 /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		PMPTPROJ /* Project */ = {isa = PBXGroup; children = (
+			PMPTSRCS /* Sources */,
+			PMPTUTIL /* AEUtil */,
+			PMPTLIB /* FsLibrary */,
+			PMPTRES /* Resources */,
+		); sourceTree = "<group>"; };
+		PMPTSRCS /* Sources */ = {isa = PBXGroup; children = (
+			PMPT1000010001 /* PaintMultPoint.cpp */, PMPT1000020001 /* Fs_Target.h */); name = Sources; sourceTree = "<group>"; };
+		PMPTUTIL /* AEUtil */ = {isa = PBXGroup; children = (
+			PMPT1000100101 /* AEFX_SuiteHelper.c */, PMPT1000100102 /* AEGP_SuiteHandler.cpp */, PMPT1000100104 /* Smart_Utils.cpp */, PMPT1000100105 /* AEGP_Utils.cpp */, PMPT1000100103 /* MissingSuiteError.cpp */); name = AEUtil; sourceTree = "<group>"; };
+		PMPTLIB /* FsLibrary */ = {isa = PBXGroup; children = (
+			PMPT1000200101 /* FsGraphics.cpp */, PMPT1000200102 /* FsGraphicsBlend.cpp */, PMPT1000200103 /* FsGraphicsBox.cpp */, PMPT1000200104 /* FsGraphicsCircle.cpp */, PMPT1000200105 /* FsGraphicsLine.cpp */, PMPT1000200106 /* FsGraphicsPaint.cpp */, PMPT1000200108 /* FsMat.cpp */); name = FsLibrary; sourceTree = "<group>"; };
+		PMPTRES /* Resources */ = {isa = PBXGroup; children = (
+			PMPT1000030001 /* PaintMultPointPiPL.r */); name = Resources; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		PMPTAPP /* PaintMultPoint */ = {isa = PBXNativeTarget; buildConfigurationList = PMPTBUILDSET; buildPhases = (
+			PMPTSOURCESPHASE /* Sources */, PMPTREZPHASE /* Rez */, PMPTBUILDRES /* Resources */); name = PaintMultPoint; productName = PaintMultPoint; productType = "com.apple.product-type.bundle"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PMPTPROJOBJ /* Project object */ = {isa = PBXProject; buildConfigurationList = PMPTPROJECTBUILDSET; compatibilityVersion = "Xcode 3.2"; hasScannedForEncodings = 0; mainGroup = PMPTPROJ; productRefGroup = PMPTPROJ; projectDirPath = ""; targets = (PMPTAPP); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		PMPTBUILDRES /* Resources */ = {isa = PBXResourcesBuildPhase; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		PMPTREZPHASE /* Rez */ = {isa = PBXRezBuildPhase; files = (
+			PMPT000020001 /* PaintMultPointPiPL.r in Rez */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		PMPTSOURCESPHASE /* Sources */ = {isa = PBXSourcesBuildPhase; files = (
+			PMPT000010001 /* PaintMultPoint.cpp in Sources */, PMPT000010101 /* AEFX_SuiteHelper.c in Sources */, PMPT000010102 /* AEGP_SuiteHandler.cpp in Sources */, PMPT000010103 /* MissingSuiteError.cpp in Sources */, PMPT000010104 /* Smart_Utils.cpp in Sources */, PMPT000010105 /* AEGP_Utils.cpp in Sources */, PMPT000010201 /* FsGraphics.cpp in Sources */, PMPT000010202 /* FsGraphicsBlend.cpp in Sources */, PMPT000010203 /* FsGraphicsBox.cpp in Sources */, PMPT000010204 /* FsGraphicsCircle.cpp in Sources */, PMPT000010205 /* FsGraphicsLine.cpp in Sources */, PMPT000010206 /* FsGraphicsPaint.cpp in Sources */, PMPT000010208 /* FsMat.cpp in Sources */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+        PMPTBUILDDEBUG /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+            CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/PaintMultPoint.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.PaintMultPoint;
+			PRODUCT_NAME = PaintMultPoint;
+            WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Debug; };
+        PMPTBUILDRELEASE /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+            CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/PaintMultPoint.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.PaintMultPoint;
+			PRODUCT_NAME = PaintMultPoint;
+            WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		PMPTBUILDSET /* Build configuration list for PBXNativeTarget */ = {isa = XCConfigurationList; buildConfigurations = (PMPTBUILDDEBUG, PMPTBUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		PMPTPROJECTBUILDSET /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (PMPTBUILDDEBUG, PMPTBUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+};
+	rootObject = PMPTPROJOBJ /* Project object */;
+}

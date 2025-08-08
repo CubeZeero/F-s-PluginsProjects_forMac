@@ -35,7 +35,7 @@
 #endif
 
 
-#include "../FsLibrary/FsAE.h"
+#include "FsAE.h"
 
 
 
@@ -54,29 +54,29 @@
 #define	STR_ORG_CB2			"ON"
 
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer 
 	
-	ID_SEED,		//ƒ‰ƒ“ƒ_ƒ€‚ÌŠî“_
+	ID_SEED,		//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ÌŠï¿½_
 	ID_CENTER,
-	ID_LENGTH_MAX,		//ƒ^ƒbƒ`ü‚Ì’·‚³
-	ID_LENGTH_RND,		//’·‚³‚Ìƒ‰ƒ“ƒ_ƒ€‚³
+	ID_LENGTH_MAX,		//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ï¿½
+	ID_LENGTH_RND,		//ï¿½ï¿½ï¿½ï¿½ï¿½Ìƒï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½
 
-	ID_Y,		//ƒ^ƒbƒ`‚ª”­¶‚·‚é”
-	ID_COLOR,				//ƒ^ƒbƒ`ü‚ÌF
-	ID_OPACITY,				//ƒ^ƒbƒ`ü‚ÌF
-	ID_OPACITY_RND,				//ƒ^ƒbƒ`ü‚ÌF
+	ID_Y,		//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é”
+	ID_COLOR,				//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ÌF
+	ID_OPACITY,				//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ÌF
+	ID_OPACITY_RND,				//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ÌF
 
-	ID_POINT_COUNT,		//ƒ^ƒbƒ`‚ª”­¶‚·‚é”
-	ID_POINT_LENGTH,		//ƒ^ƒbƒ`‚ª”­¶‚·‚é”ÍˆÍ
+	ID_POINT_COUNT,		//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é”
+	ID_POINT_LENGTH,		//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íˆï¿½
 	ID_ORG,
 
 	ID_NUM_PARAMS
 	};
 
-//ƒvƒ‰ƒOƒCƒ““ÆŽ©‚Ìƒpƒ‰ƒ[ƒ^‚ðW‚ß‚½\‘¢‘Ì
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ÆŽï¿½ï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Wï¿½ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 #define GSeedLength 4
 
 typedef struct ParamInfo{

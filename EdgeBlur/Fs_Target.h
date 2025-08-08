@@ -33,10 +33,8 @@
 //#define NO_USE_FSGRAPHICS	//FsGraphics関係のコードを無効にする
 
 //-----------------------------------------------------------------------------------
-//#include "../FsLibrary/FsVersion.h"
-#define MAJOR_VERSION 1
-#define MINOR_VERSION 0
-#define FS_VERSION ((MAJOR_VERSION << 16) | MINOR_VERSION)
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 ///-----------------------------------------------------------------------------------
 //out_flags

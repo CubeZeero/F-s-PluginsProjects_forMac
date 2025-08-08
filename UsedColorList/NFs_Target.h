@@ -3,7 +3,8 @@
 #ifndef NFs_TARGET_H
 #define NFs_TARGET_H
 
-#include "../NFsLibrary/NFsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "NFsVersion.h"
 
 
 //-----------------------------------------------------------------------------------
@@ -14,7 +15,7 @@
 
 //-----------------------------------------------------------------------------------
 //�v���O�C���̐����Ɏg���镶��
-#define NFS_DESCRIPTION	"�v���O�C���̃X�P���g��"
+#define NFS_DESCRIPTION	"List used colors"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -30,6 +31,12 @@
 
 //-----------------------------------------------------------
 #define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
+
+//-----------------------------------------------------------------------------------
+// Backward compatibility for PiPL macros expecting NFS_CATEGORY
+#ifndef NFS_CATEGORY
+#define NFS_CATEGORY FS_CATEGORY
+#endif
 
 
 //-----------------------------------------------------------------------------------

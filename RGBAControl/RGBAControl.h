@@ -36,12 +36,13 @@
 #endif
 
 
-#include "../FsLibrary/FsAE.h"
+// Use shared FsLibrary include path via project search paths
+#include "FsAE.h"
 //#include "FsAE.h"
 
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+// UI parameter IDs
+// Used by ParamsSetup and Render functions
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_RED_FIXED,	//PF_Fixed(long)
@@ -56,8 +57,7 @@ enum {
 #define STR_BLUE	"Blue(%)"
 #define STR_ALPHA	"Alpha(%)"
 
-//ＡＥ上のパラメータは -100 ～ 100の値を取るが
-//内部では -1 ～ 1の値とする
+// UI parameter values are -100 to 100 (%), used as -1.0 to 1.0 internally
 typedef struct ParamInfo{
 	PF_FpShort		red;
 	PF_FpShort		green;

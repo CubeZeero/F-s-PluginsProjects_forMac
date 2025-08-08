@@ -3,33 +3,35 @@
 #ifndef NFs_TARGET_H
 #define NFs_TARGET_H
 
-#include "../NFsLibrary/NFsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "NFsVersion.h"
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+// Name shown in AE menus
 #define NFS_NAME			"F's Shine"
 #define NFS_DISPNAME		"F's Shine"
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
+// Description shown in AE UI
 #define NFS_DESCRIPTION	"Fake shine"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C�����\������郁�j���[��
+// Category in AE menu
 
 //#define FS_CATEGORY "NF's Plugins-Cell"
 //#define FS_CATEGORY "NF's Plugins-Channel"
 //#define FS_CATEGORY "NF's Plugins-Colorize"
 //#define FS_CATEGORY "NF's Plugins-Draw"
 #define FS_CATEGORY "NF's Plugins-Filter"
+#define NFS_CATEGORY FS_CATEGORY
 //#define FS_CATEGORY "NF's Plugins-Noise"
 //#define FS_CATEGORY "NF's Plugins-expression"
 //#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
+#define SUPPORT_SMARTFX			// Enable SmartFX + Float color support
 
 
 //-----------------------------------------------------------------------------------
@@ -44,9 +46,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define NFS_OUT_FLAGS	33556032	//�ʏ�͂�����
-//#define NFS_OUT_FLAGS	33556036	//��������L���ɂ���Ɩ��t���[�����Ƃɕ`�悷��BNON_PARAM_VARY�𓮍쒆�ɐ؂�ւ���Ƃ����������
-//#define NFS_OUT_FLAGS	1600		//8bit�̂�
+#define NFS_OUT_FLAGS	33556032	// Normal
+//#define NFS_OUT_FLAGS	33556036	// Draw when output frame changes; NON_PARAM_VARY behaves differently
+//#define NFS_OUT_FLAGS	1600		// 8-bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2

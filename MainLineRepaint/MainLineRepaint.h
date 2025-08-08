@@ -38,8 +38,8 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+// UI parameter IDs
+// Used by ParamsSetup and Render functions via params
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -49,11 +49,11 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\¦•¶š—ñ
-#define	STR_Main_Color	"åü‚ÌF"
-#define	STR_level		"‹–—e’l(%)"
+// UI strings
+#define	STR_Main_Color	"Main Color"
+#define	STR_level		"Level(%)"
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	PF_Pixel  		Main_Color;
 	A_u_char		lv;

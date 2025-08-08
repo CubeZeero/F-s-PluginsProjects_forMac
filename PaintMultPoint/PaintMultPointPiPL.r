@@ -15,12 +15,12 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*Name used in After Effects */
+			/*AE�̃��j���[�Ɏg���� */
 			FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*Category used in After Effects */
+			/*AE�̃��j���[�Ɏg���� */
 			FS_CATEGORY
 		},
 		
@@ -35,6 +35,7 @@ resource 'PiPL' (16000) {
 		CodeMachOPowerPC {"EntryPointFunc"},
 		CodeMacIntel32 {"EntryPointFunc"},
 		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacARM64 {"EntryPointFunc"},
 	#endif
 #endif
 
@@ -66,7 +67,7 @@ resource 'PiPL' (16000) {
 		},
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*Name used for plugin matching */
+			/*�v���O�C���̎��ʂɎg���� */
 				FS_NAME
 		},
 		/* [12] */

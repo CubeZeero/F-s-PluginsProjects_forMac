@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffectsã«ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’è¿½åŠ ã™ã‚‹
-//Param_Utils.hã‚’å‚ç…§ã®ã“ã¨
+//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
+//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -22,19 +22,19 @@ static PF_Err ParamsSetup (
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_Y,	//ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®åå‰
-					1, 		//å€¤ãŒå…¥ã‚‹å ´åˆã®æœ€å°å€¤
-					100,			//å€¤ãŒå…¥ã‚‹å ´åˆã®æœ€å¤§å€¤
-					1,				//ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã®æœ€å°å€¤ 
-					10,			//ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã®æœ€å¤§å€¤
-					1,				//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®å€¤
+	PF_ADD_SLIDER(	STR_Y,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
+					1, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
+					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
+					1,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
+					10,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
+					1,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
 					ID_Y
 					);
 
 	//----------------------------------------------------------------
-	//è‰²ã®æŒ‡å®š
+	//F‚ÌŽw’è
 	AEFX_CLR_STRUCT(def);
-	//def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ã¨ã‚¿ã‚¤ãƒ ãƒ©ã‚¤ãƒ³ãŒå‹•ã‹ãªããªã‚‹
+	//def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
 	PF_ADD_COLOR(	STR_COLOR, 
 					0xFF,
 					0xFF,
@@ -514,7 +514,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//Ê‚ï¿½ï¿½Rï¿½sï¿½[
+	//‰æ–Ê‚ðƒRƒs[
 	MinInfo mi;
 	mi.data = ae->out->data();
 	mi.width = ae->out->width();
@@ -547,10 +547,10 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
+//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
 /*
-	SmartFXï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½zï¿½Xï¿½g(After Effects7ï¿½È‘Oï¿½Ì‚ï¿½ï¿½ï¿½)ï¿½Í‚ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½Ä•`ï¿½æ‚·ï¿½ï¿½
-	ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Îˆê‰žv6.5ï¿½Î‰ï¿½ï¿½É‚È‚ï¿½
+	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
+	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
 */
 static PF_Err 
 Render ( 
@@ -574,7 +574,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
+	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

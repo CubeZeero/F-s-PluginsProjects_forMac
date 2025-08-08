@@ -35,10 +35,8 @@
 //#define NO_USE_FSGRAPHICS	// For plugins that don't use FsGraphics related code
 
 //-----------------------------------------------------------------------------------
-// Version information
-#define MAJOR_VERSION    1
-#define MINOR_VERSION    0
-#define FS_VERSION       10000
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

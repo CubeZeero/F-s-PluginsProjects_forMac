@@ -10,8 +10,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts�Ƀp�����[�^��ʒB����
-//Param_Utils.h���Q�Ƃ̂���
+// Pass parameters to After Effects
+// Reference to Param_Utils.h
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -21,7 +21,7 @@ static PF_Err ParamsSetup (
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 	//----------------------------------------------------------------
-	//�`�F�b�N�{�b�N�X
+	// Checkbox
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_DELTA_CB,
 					STR_CB,
@@ -30,15 +30,15 @@ static PF_Err ParamsSetup (
 					ID_DELTA_CB
 					);
 	//----------------------------------------------------------------
-	//�Œ菬���̃X���C�_�[�o�[
+	// Fixed value slider bar
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_DELTA_OPACITY,	//�p�����[�^�̖��O
-					0, 				//���l���͂���ꍇ�̍ŏ��l
-					500,			//���l���͂���ꍇ�̍ő�l
-					0,				//�X���C�_�[�̍ŏ��l 
-					300,			//�X���C�_�[�̍ő�l
-					100,			//�f�t�H���g�̒l
-					1,				//���l�\���Ɋւ���t���O 
+	PF_ADD_FIXED(	STR_DELTA_OPACITY,	// Parameter name
+					0, 				// Minimum value for numeric input
+					500,			// Maximum value for numeric input
+					0,				// Slider minimum value 
+					300,			// Slider maximum value
+					100,			// Default value
+					1,				// Flag for numeric display 
 					0,
 					0,
 					ID_DELTA_OPACITY

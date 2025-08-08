@@ -3,21 +3,22 @@
 #ifndef NFs_TARGET_H
 #define NFs_TARGET_H
 
-#include "../NFsLibrary/NFsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "NFsVersion.h"
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+// Plugin name used in specifications
 #define NFS_NAME			"F's ColorChangeFromPoint"
 #define NFS_DISPNAME		"F's ColorChangeFromPoint"
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define NFS_DESCRIPTION	"�v���O�C���̃X�P���g��"
+// Plugin description text
+#define NFS_DESCRIPTION	"Change specific colors from a point selection"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C�����\������郁�j���[��
+// Menu category where the plugin appears
 
 #define FS_CATEGORY "NF's Plugins-Cell"
 //#define FS_CATEGORY "NF's Plugins-Channel"
@@ -29,7 +30,7 @@
 //#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
+#define SUPPORT_SMARTFX			// Enable SmartFX and Float_Color support
 
 
 //-----------------------------------------------------------------------------------
@@ -44,9 +45,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-//#define NFS_OUT_FLAGS	33556032	//�ʏ�͂�����
-#define NFS_OUT_FLAGS	33556036	//��������L���ɂ���Ɩ��t���[�����Ƃɕ`�悷��BNON_PARAM_VARY�𓮍쒆�ɐ؂�ւ���Ƃ����������
-//#define NFS_OUT_FLAGS	1600		//8bit�̂�
+//#define NFS_OUT_FLAGS	33556032	// Standard setting
+#define NFS_OUT_FLAGS	33556036	// Always render with NON_PARAM_VARY flag for dynamic parameter changes
+//#define NFS_OUT_FLAGS	1600		// 8-bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2

@@ -11,12 +11,12 @@
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+// Name shown in AE menus
 #define FS_NAME			"F's RgbToAlpha"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"RGB�̒l��Alpha�֏������݂܂��B"
+// Description shown in AE UI
+#define FS_DESCRIPTION	"Convert RGB to Alpha"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -31,13 +31,13 @@
 //#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
-//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
+#define SUPPORT_SMARTFX			// Enable SmartFX + Float color support
+//#define NO_USE_FSGRAPHICS	// If defined, excludes FsGraphics related includes
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

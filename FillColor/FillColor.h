@@ -40,18 +40,18 @@
 //#include "FsAE.h"
 
 
-#define STR_ENABLED_CB1	"���s����"
+#define STR_ENABLED_CB1	"Execute"
 #define STR_ENABLED_CB2	"ON"
-#define STR_COLOR		"�F"
-#define STR_OPA_FIXED	"�s�����x"
+#define STR_COLOR		"Color"
+#define STR_OPA_FIXED	"Opacity"
 
 
-//���[�U�[�C���^�[�t�F�[�X��ID
-//ParamsSetup�֐���Render�֐���params�p�����[�^��ID�ɂȂ�
+// User interface parameter IDs
+// These become parameter IDs for ParamsSetup and Render functions
 enum {
 	ID_INPUT = 0,	// default input layer 
 	
-	//�ȉ��Q�l�p
+	// Reference parameters below
 	ID_ENABLED_CB,			//boolean
 	ID_FILL_COLOR,	//
 	ID_OPA_COLOR_FIXED,
@@ -87,7 +87,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EffectMain (	
+EntryPointFunc (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

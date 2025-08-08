@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'Star_Colorful' in project 'Star_Colorful' (no dependencies)

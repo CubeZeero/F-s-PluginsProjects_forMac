@@ -14,7 +14,7 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AEÇÃÉÅÉjÉÖÅ[Ç…égÇÌÇÍÇÈ */
+			/* Name shown in AE menu */
 			FS_NAME
 		},
 		/* [3] */
@@ -32,6 +32,7 @@ resource 'PiPL' (16000) {
 		CodeMachOPowerPC {"EntryPointFunc"},
 		CodeMacIntel32 {"EntryPointFunc"},
 		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacARM64 {"EntryPointFunc"},
 	#endif
 #endif
 		/* [6] */

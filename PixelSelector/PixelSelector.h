@@ -40,7 +40,7 @@
 //#include "FsAE.h"
 
 //-----------------------------------------------------------------------------
-//ParamsSetup用の定数
+//ParamsSetup parameters
 #define PS_PRM_COUNT	24
 enum {
 	paramsOffset_topic = 0,
@@ -66,11 +66,11 @@ enum{
 #define PixelSelector_NUM_PARAMS (PixelSelector_NUM + PS_PRM_COUNT * paramsOffset_num+2)
 #define ID_NUM_PARAMS PixelSelector_NUM_PARAMS
 //-----------------------------------------------------------------------------
-//パラメータUI用の文字列
+//Parameter UI strings
 #define UI_TOPIC	"Option"
 #define UI_ON		"ON"
-#define UI_REV		"反転する"
-#define UI_FILL		"塗りつぶす"
+#define UI_REV		"Reverse"
+#define UI_FILL		"Fill"
 #define UI_FILL_COLOR	"fillColor"
 #define UI_FILL_OPA		"fillColor_opacity"
 
@@ -82,8 +82,8 @@ enum{
 #define UI_POP1			"Disp"
 #define UI_POP2			"1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24"
 
-#define ERR_GET_AEPRM	"すみませんエラーです。\nAfterEffects_Params error!"
-#define ERR_GET_PRM		"すみませんエラーです。\nPixelSelector_Params error!"
+#define ERR_GET_AEPRM	"AfterEffects_Params error!"
+#define ERR_GET_PRM		"PixelSelector_Params error!"
 //-----------------------------------------------------------------------------
 
 typedef struct

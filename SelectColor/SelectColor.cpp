@@ -11,7 +11,7 @@ PF_Err (*subFunc8)(refconType	refcon, A_long xL, A_long yL,PF_Pixel8	*inP, PF_Pi
 PF_Err (*subFunc16)(refconType	refcon, A_long xL, A_long yL,PF_Pixel16	*inP, PF_Pixel16	*outP);
 PF_Err (*subFunc32)(refconType	refcon, A_long xL, A_long yL,PF_PixelFloat	*inP, PF_PixelFloat	*outP);
 //-------------------------------------------------------------------------------------------------
-//About•\¦
+// About dialog
 static PF_Err About (	PF_InData		*in_data,
 						PF_OutData		*out_data,
 						PF_ParamDef		*params[],
@@ -73,8 +73,8 @@ static PF_Err SequenceResetup (
 	return PF_Err_NONE;
 }
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+// Place parameters in After Effects UI
+// See Param_Utils.h for details
 static PF_Err ParamsSetup (	PF_InData		*in_data,
 							PF_OutData		*out_data,
 							PF_ParamDef		*params[],
@@ -83,9 +83,9 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 
-	//‚PŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
+    // First parameter block
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Target0","Às‚·‚é", FALSE,0, ID_TARGET0);
+    PF_ADD_CHECKBOX("Target0","Enable", FALSE,0, ID_TARGET0);
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	"color0", 
 					255,
@@ -95,7 +95,7 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 					);
 
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Target1","Às‚·‚é", FALSE,0, ID_TARGET1);
+    PF_ADD_CHECKBOX("Target1","Enable", FALSE,0, ID_TARGET1);
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	"color1", 
 					0,
@@ -104,7 +104,7 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 					ID_SRCCOL1
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Target2","Às‚·‚é", FALSE,0, ID_TARGET2);
+    PF_ADD_CHECKBOX("Target2","Enable", FALSE,0, ID_TARGET2);
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	"color2", 
 					0,
@@ -113,7 +113,7 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 					ID_SRCCOL2
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Target3","Às‚·‚é", FALSE,0, ID_TARGET3);
+    PF_ADD_CHECKBOX("Target3","Enable", FALSE,0, ID_TARGET3);
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	"color3", 
 					0,
@@ -122,7 +122,7 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 					ID_SRCCOL3
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Target4","Às‚·‚é", FALSE,0, ID_TARGET4);
+    PF_ADD_CHECKBOX("Target4","Enable", FALSE,0, ID_TARGET4);
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	"color4", 
 					255,
@@ -131,7 +131,7 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 					ID_SRCCOL4
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Target5","Às‚·‚é", FALSE,0, ID_TARGET5);
+    PF_ADD_CHECKBOX("Target5","Enable", FALSE,0, ID_TARGET5);
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	"color5", 
 					255,
@@ -140,7 +140,7 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 					ID_SRCCOL5
 					);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Target6","Às‚·‚é", FALSE,0, ID_TARGET6);
+    PF_ADD_CHECKBOX("Target6","Enable", FALSE,0, ID_TARGET6);
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	"color6", 
 					255,
@@ -152,9 +152,9 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 
 	
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Target7","Às‚·‚é", FALSE,0, ID_TARGET7);
+    PF_ADD_CHECKBOX("Target7","Enable", FALSE,0, ID_TARGET7);
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_COLOR(	"Œ³‚ÌF7", 
+    PF_ADD_COLOR(	"color7", 
 					0,
 					0,
 					0,
@@ -163,15 +163,15 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 
 
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_CHECKBOX("Rev","”½“]‚·‚é", FALSE,0, ID_REV);
+    PF_ADD_CHECKBOX("Rev","Invert", FALSE,0, ID_REV);
 
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	"‹–—e’l",//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					PF_MAX_CHAN8,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					15,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+    PF_ADD_SLIDER(	"Tolerance",
+                    0, 				// Min input value
+                    PF_MAX_CHAN8,			// Max input value
+                    0,				// Slider min 
+                    15,			// Slider max
+                    0,				// Default value
 					ID_LEVEL
 					);
 
@@ -238,8 +238,7 @@ QueryDynamicFlags(
 {
 	PF_Err 	err 	= PF_Err_NONE,
 			err2 	= PF_Err_NONE;
-	//PF_OutFlag_NON_PARAM_VARY‚Ì’l‚ğout_flags‚Öİ’è‚µ‚Ä
-	//–ˆƒtƒŒ[ƒ€‚²‚Æ‚Ì•`‰æ‚ğ‚·‚é‚©Ø‚è‘Ö‚¦‚éB
+    // Set NON_PARAM_VARY depending on UI if needed
 	/*
 	CFsAE ae;
 	err = ae.QueryDynamicFlags(in_data,out_data,params,extra,ID_NUM_PARAMS);
@@ -510,7 +509,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	// Copy source to output first
 	ERR(ae->CopyInToOut());
 	
 	if (infoP->count<=0)
@@ -543,7 +542,7 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 static PF_Err 
 Render ( 
 	PF_InData		*in_data,

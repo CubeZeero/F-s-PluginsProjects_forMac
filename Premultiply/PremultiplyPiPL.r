@@ -15,12 +15,12 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
+			/*AEï¿½Ìƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Égï¿½ï¿½ï¿½ï¿½ */
 			FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
+			/*AEï¿½Ìƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Égï¿½ï¿½ï¿½ï¿½ */
 			FS_CATEGORY
 		},
 		
@@ -35,6 +35,7 @@ resource 'PiPL' (16000) {
 		CodeMachOPowerPC {"EntryPointFunc"},
 		CodeMacIntel32 {"EntryPointFunc"},
 		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacARM64 {"EntryPointFunc"},
 	#endif
 #endif
 
@@ -65,7 +66,7 @@ resource 'PiPL' (16000) {
 		},
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é */
+			/* Used for plugin identification */
 			FS_NAME
 		},
 		/* [12] */

@@ -48,26 +48,26 @@ typedef struct ParamInfo{
 
 enum {
 	ID_INPUT = 0,	// default input layer 
-	ID_Y,		// �m�C�Y��
-	ID_SIZEMAX,		// ���U�C�N�̑傫��(�ő�l)
-	ID_SIZEMIN,		// ���U�C�N�̑傫��(�ŏ��l)
-	ID_ASPECT,		// ���U�C�N�̍��E
-	ID_RANDCOLOR,	// �F�̂΂��
+	ID_Y,		// Vertical size
+	ID_SIZEMAX,		// Mosaic size (maximum value)
+	ID_SIZEMIN,		// Mosaic size (minimum value)
+	ID_ASPECT,		// Mosaic aspect ratio
+	ID_RANDCOLOR,	// Random color
 	ID_NUM_PARAMS
 };
 
-#define STR_Y		"��"
-#define STR_SIZEMAX		"�T�C�Y(�ő�)"
-#define STR_SIZEMIN		"�T�C�Y(�ŏ�)"
-#define STR_ASPECT		"�c���̂΂��"
-#define STR_RANDOMCOLOR	"���邳�̂΂��"
+#define STR_Y		"Vertical"
+#define STR_SIZEMAX		"Size (Max)"
+#define STR_SIZEMIN		"Size (Min)"
+#define STR_ASPECT		"Random aspect ratio"
+#define STR_RANDOMCOLOR	"Random color"
 
 
 
 extern "C" {
 DllExport
 PF_Err 
-EffectMain (
+EntryPointFunc (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

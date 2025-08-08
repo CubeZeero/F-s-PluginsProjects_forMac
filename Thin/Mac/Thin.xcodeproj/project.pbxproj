@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		T0000001095A3D3A0012CA3F /* Thin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000001095A3C810012CA3F /* Thin.cpp */; };
+		T0000002095A3D3A0012CA3F /* ThinSub8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000002095A3C810012CA3F /* ThinSub8.cpp */; };
+		T0000003095A3D3A0012CA3F /* ThinSub16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000003095A3C810012CA3F /* ThinSub16.cpp */; };
+		T0000004095A3D3A0012CA3F /* ThinSub32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000004095A3C810012CA3F /* ThinSub32.cpp */; };
+		T0000005095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000005095A3C810012CA3F /* FsGraphics.cpp */; };
+		T0000006095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000006095A3C810012CA3F /* FsGraphicsLine.cpp */; };
+		T0000007095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000007095A3C810012CA3F /* FsGraphicsCircle.cpp */; };
+		T0000008095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000008095A3C810012CA3F /* FsGraphicsBox.cpp */; };
+		T0000009095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000009095A3C810012CA3F /* FsGraphicsBlend.cpp */; };
+		T000000A095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = T1000010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		T000000B095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		T000000C095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		T000000D095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		T000000E095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T1000015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		T000000F095A3D3A0012CA3F /* ThinPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = T100000A095A3C810012CA3F /* ThinPiPL.r */; };
+		T0000010095A3D3A0012CA3F /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = T100000C095A3C810012CA3F /* FsMat.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		T1000001095A3C810012CA3F /* Thin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Thin.cpp; path = ../Thin.cpp; sourceTree = SOURCE_ROOT; };
+		T1000002095A3C810012CA3F /* ThinSub8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ThinSub8.cpp; path = ../ThinSub8.cpp; sourceTree = SOURCE_ROOT; };
+		T1000003095A3C810012CA3F /* ThinSub16.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ThinSub16.cpp; path = ../ThinSub16.cpp; sourceTree = SOURCE_ROOT; };
+		T1000004095A3C810012CA3F /* ThinSub32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ThinSub32.cpp; path = ../ThinSub32.cpp; sourceTree = SOURCE_ROOT; };
+		T1000005095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		T1000006095A3C810012CA3F /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		T1000007095A3C810012CA3F /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		T1000008095A3C810012CA3F /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		T1000009095A3C810012CA3F /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		T100000A095A3C810012CA3F /* ThinPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = ThinPiPL.r; path = ../ThinPiPL.r; sourceTree = SOURCE_ROOT; };
+		T100000B095A3C810012CA3F /* Thin.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Thin.plugin-Info.plist; path = Thin.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		T10001001095A3C810012CA3F /* Thin.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = Thin.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		T1000010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		T1000011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		T1000012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		T1000013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		T1000015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		T100000C095A3C810012CA3F /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		T1FFC9095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		T1FFB6095A3CE80012CA3F = {
+			isa = PBXGroup;
+			children = (
+				T1FFE0095A3E040012CA3F /* Rez */,
+				T1FFCA095A3CE80012CA3F /* Frameworks */,
+				T1FFC8095A3CE80012CA3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		T1FFC8095A3CE80012CA3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				T10001001095A3C810012CA3F /* Thin.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		T1FFE0095A3E040012CA3F /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				T100000A095A3C810012CA3F /* ThinPiPL.r */,
+				T1000001095A3C810012CA3F /* Thin.cpp */,
+				T1000002095A3C810012CA3F /* ThinSub8.cpp */,
+				T1000003095A3C810012CA3F /* ThinSub16.cpp */,
+				T1000004095A3C810012CA3F /* ThinSub32.cpp */,
+				T1000005095A3C810012CA3F /* FsGraphics.cpp */,
+				T1000006095A3C810012CA3F /* FsGraphicsLine.cpp */,
+				T1000007095A3C810012CA3F /* FsGraphicsCircle.cpp */,
+				T1000008095A3C810012CA3F /* FsGraphicsBox.cpp */,
+				T1000009095A3C810012CA3F /* FsGraphicsBlend.cpp */,
+				T100000C095A3C810012CA3F /* FsMat.cpp */,
+				T1000010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				T1000011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				T1000012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				T1000013095A3C810012CA3F /* Smart_Utils.cpp */,
+				T1000015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				T100000B095A3C810012CA3F /* Thin.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		T1FFCA095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T1FFA9095A3CE80012CA3F /* Thin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = T1FFB0095A3CE80012CA3F /* Build configuration list for PBXNativeTarget "Thin" */;
+			buildPhases = (
+				T1FFC9095A3CE80012CA3F /* Frameworks */,
+				T1FFE1095A3E040012CA3F /* Rez */,
+				T1FFC7095A3CE80012CA3F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Thin;
+			productName = Thin;
+			productReference = T10001001095A3C810012CA3F /* Thin.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		T1FFAA095A3CE80012CA3F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = T1FFAD095A3CE80012CA3F /* Build configuration list for PBXProject "Thin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = T1FFB6095A3CE80012CA3F;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T1FFA9095A3CE80012CA3F /* Thin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		T1FFE1095A3E040012CA3F /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				T000000F095A3D3A0012CA3F /* ThinPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		T1FFC7095A3CE80012CA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				T0000001095A3D3A0012CA3F /* Thin.cpp in Sources */,
+				T0000002095A3D3A0012CA3F /* ThinSub8.cpp in Sources */,
+				T0000003095A3D3A0012CA3F /* ThinSub16.cpp in Sources */,
+				T0000004095A3D3A0012CA3F /* ThinSub32.cpp in Sources */,
+				T0000005095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+				T0000006095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */,
+				T0000007095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */,
+				T0000008095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */,
+				T0000009095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */,
+				T000000A095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				T000000B095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				T000000C095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				T000000D095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				T000000E095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+				T0000010095A3D3A0012CA3F /* FsMat.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		T1FFAE095A3CE80012CA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Thin.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Thin;
+				PRODUCT_NAME = Thin;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		T1FFAF095A3CE80012CA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Thin.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Thin;
+				PRODUCT_NAME = Thin;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		T1FFAD095A3CE80012CA3F /* Build configuration list for PBXProject "Thin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				T1FFAE095A3CE80012CA3F /* Debug */,
+				T1FFAF095A3CE80012CA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		T1FFB0095A3CE80012CA3F /* Build configuration list for PBXNativeTarget "Thin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				T1FFAE095A3CE80012CA3F /* Debug */,
+				T1FFAF095A3CE80012CA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = T1FFAA095A3CE80012CA3F /* Project object */;
+}

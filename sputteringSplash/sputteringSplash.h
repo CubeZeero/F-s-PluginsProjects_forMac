@@ -38,21 +38,21 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
+#include "FsAE.h"
 #include "../FsLibrary/FsSputtering.h"
 
 //-----------------------------------------------------------------------------
-//ParamsSetup—p‚Ì’è”
+//ParamsSetupï¿½pï¿½Ì’è”
 enum {
 	ID_INPUT = 0,
 
-	ID_SEED,		//—”‚ÌŠî€
-	ID_Y,		//—Ê
-	ID_DIR,		//Œü‚«
-	ID_OPACITY_RAND,		//—Ê
+	ID_SEED,		//ï¿½ï¿½ï¿½ï¿½ï¿½ÌŠî€
+	ID_Y,		//ï¿½ï¿½
+	ID_DIR,		//ï¿½ï¿½ï¿½ï¿½
+	ID_OPACITY_RAND,		//ï¿½ï¿½
 	
-	ID_POINT_VALUE,	//ˆê‰ñ‚Ì•`‰æ‚Å‘Å‚Â“_‚Ì”
-	ID_POINT_LENGTH,	//“_‚Ì‹——£
+	ID_POINT_VALUE,	//ï¿½ï¿½ï¿½Ì•`ï¿½ï¿½Å‘Å‚Â“_ï¿½Ìï¿½
+	ID_POINT_LENGTH,	//ï¿½_ï¿½Ì‹ï¿½ï¿½ï¿½
 
 	ID_SIZE,
 
@@ -68,11 +68,11 @@ enum {
 	ID_NUM_PARAMS
 };
 //-----------------------------------------------------------------------------
-//ƒpƒ‰ƒ[ƒ^UI—p‚Ì•¶š—ñ
+//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^UIï¿½pï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½
 #define UI_SEED			"seed"
 #define UI_VALUE		"value(%)"
 #define UI_DIR1			"direction"
-#define UI_DIR2		"ã(0)|‰Eã(45)|‰E(90)|‰E‰º(135)|‰º(180)|¶‰º(235)|¶(270)|¶ã(315)"
+#define UI_DIR2		"east(0)|southeast(45)|south(90)|southwest(135)|west(180)|northwest(235)|north(270)|northeast(315)"
 #define UI_DIR_COUNT	8
 #define UI_DIR_DFLT	1
 #define UI_OPA_RND		"opacity_rand"
@@ -83,7 +83,7 @@ enum {
 #define UI_POINT_LEN_SYSNC2	"ON"
 
 #define UI_SIZE1		"size"
-#define UI_SIZE2		"‹É¬|¬|’†|‘å|“Á‘å"
+#define UI_SIZE2		"very_small|small|medium|large|very_large"
 #define UI_SIZE_COUNT	5
 #define UI_SIZE_DFLT	2
 
@@ -127,7 +127,7 @@ typedef struct
 
 
 //-----------------------------------------------------------------------------
-//ŠÖ”‚ÌéŒ¾
+//ï¿½Öï¿½ï¿½ÌéŒ¾
 PF_Err MainRender8 (CFsAE *ae, ParamInfo *prm);
 PF_Err MainRender16 (CFsAE *ae, ParamInfo *prm);
 PF_Err MainRender32 (CFsAE *ae, ParamInfo *prm);

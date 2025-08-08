@@ -4,8 +4,8 @@
 
 #include "CPointInfo.h"
 
-#include "../FsLibrary/Fs.h"
-#include "../FsLibrary/FsAE.h"
+#include "Fs.h"
+#include "FsAE.h"
 
 
 #ifndef PointInfo_H
@@ -26,10 +26,10 @@ typedef struct PointInfo {
 class CLineDraw
 {
 private:
-	//ƒAƒhƒŒƒXŒvZƒe[ƒuƒ‹Eƒ|ƒCƒ“ƒgƒe[ƒuƒ‹—p
+	//ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½vï¿½Zï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Eï¿½|ï¿½Cï¿½ï¿½ï¿½gï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½p
 	PF_Handle	m_bufH = NULL;
 
-	// ƒAƒhƒŒƒXŒvZƒe[ƒuƒ‹
+	// ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½vï¿½Zï¿½eï¿½[ï¿½uï¿½ï¿½
 	A_long* m_vurTbl = NULL;
 
 
@@ -40,7 +40,7 @@ private:
 	PF_PixelPtr m_data = NULL;
 	PF_PixelFormat	m_format = PF_PixelFormat_ARGB32;
 
-	//ŠÖ”ƒ|ƒCƒ“ƒ^—p‚ÌéŒ¾
+	//ï¿½Öï¿½ï¿½|ï¿½Cï¿½ï¿½ï¿½^ï¿½pï¿½ÌéŒ¾
 	typedef void (CLineDraw::* XLINE_FUNC)(PF_FpLong x0, PF_FpLong x1, A_long y);
 	XLINE_FUNC m_XLINE_FUNC = NULL;
 	//A_long x, PF_FpLong y0, PF_FpLong y1
@@ -54,8 +54,8 @@ public:
 
 	A_long	width() { return m_width; }
 	A_long	height() { return m_height; }
-	A_long	widthTrue() { return  m_widthTrue; }
-	A_long	offsetWidth() { m_offsetWidth; }
+    A_long	widthTrue() { return  m_widthTrue; }
+    A_long	offsetWidth() { return m_offsetWidth; }
 	PF_Pixel* data8() { return (PF_Pixel*)m_data; }
 	PF_Pixel16* data16() { return (PF_Pixel16*)m_data; }
 	PF_PixelFloat* data32() { return (PF_PixelFloat*)m_data; }

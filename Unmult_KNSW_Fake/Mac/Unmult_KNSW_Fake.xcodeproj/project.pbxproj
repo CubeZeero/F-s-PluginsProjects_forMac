@@ -1,0 +1,246 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		UM00001095A3D3A0012CA3F /* Unmult_KNSW_Fake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UM100001095A3C810012CA3F /* Unmult_KNSW_Fake.cpp */; };
+		UM00002095A3D3A0012CA3F /* Unmult_KNSW_FakeFX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UM100002095A3C810012CA3F /* Unmult_KNSW_FakeFX.cpp */; };
+		UM00003095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = UM100010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		UM00004095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UM100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		UM00005095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UM100012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		UM00006095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UM100013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		UM00007095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UM100015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		UM00008095A3D3A0012CA3F /* Unmult_KNSW_FakePiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = UM10000F095A3C810012CA3F /* Unmult_KNSW_FakePiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		UM100001095A3C810012CA3F /* Unmult_KNSW_Fake.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Unmult_KNSW_Fake.cpp; path = ../Unmult_KNSW_Fake.cpp; sourceTree = SOURCE_ROOT; };
+		UM100002095A3C810012CA3F /* Unmult_KNSW_FakeFX.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Unmult_KNSW_FakeFX.cpp; path = ../Unmult_KNSW_FakeFX.cpp; sourceTree = SOURCE_ROOT; };
+		UM10000F095A3C810012CA3F /* Unmult_KNSW_FakePiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = Unmult_KNSW_FakePiPL.r; path = ../Unmult_KNSW_FakePiPL.r; sourceTree = SOURCE_ROOT; };
+		UM100010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		UM100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		UM100012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		UM100013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		UM100015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		UM10001A095A3C810012CA3F /* Unmult_KNSW_Fake.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Unmult_KNSW_Fake.plugin-Info.plist; path = Unmult_KNSW_Fake.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		UM1001001095A3C810012CA3F /* Unmult_KNSW_Fake.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = Unmult_KNSW_Fake.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		UMFRAMEWORKS095A3CE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		UMGROUPROOT095A3CE8 = {
+			isa = PBXGroup;
+			children = (
+				UMREZGROUP095A3E04 /* Rez */,
+				UMFRAMEWORKSGROUP095A3CE8 /* Frameworks */,
+				UMPRODUCTSGROUP095A3CE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		UMPRODUCTSGROUP095A3CE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				UM1001001095A3C810012CA3F /* Unmult_KNSW_Fake.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		UMREZGROUP095A3E04 /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				UM10000F095A3C810012CA3F /* Unmult_KNSW_FakePiPL.r */,
+				UM100001095A3C810012CA3F /* Unmult_KNSW_Fake.cpp */,
+				UM100002095A3C810012CA3F /* Unmult_KNSW_FakeFX.cpp */,
+				UM100010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				UM100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				UM100012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				UM100013095A3C810012CA3F /* Smart_Utils.cpp */,
+				UM100015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				UM10001A095A3C810012CA3F /* Unmult_KNSW_Fake.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		UMFRAMEWORKSGROUP095A3CE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		UMNATIVE095A3CE8 /* Unmult_KNSW_Fake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = UMBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "Unmult_KNSW_Fake" */;
+			buildPhases = (
+				UMFRAMEWORKS095A3CE8 /* Frameworks */,
+				UMREZPHASE095A3E04 /* Rez */,
+				UMSOURCESPHASE095A3CE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Unmult_KNSW_Fake;
+			productName = Unmult_KNSW_Fake;
+			productReference = UM1001001095A3C810012CA3F /* Unmult_KNSW_Fake.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		UMPROJECTOBJ095A3CE8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = UMPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "Unmult_KNSW_Fake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = UMGROUPROOT095A3CE8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				UMNATIVE095A3CE8 /* Unmult_KNSW_Fake */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		UMREZPHASE095A3E04 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				UM00008095A3D3A0012CA3F /* Unmult_KNSW_FakePiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		UMSOURCESPHASE095A3CE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				UM00001095A3D3A0012CA3F /* Unmult_KNSW_Fake.cpp in Sources */,
+				UM00003095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				UM00004095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				UM00005095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				UM00006095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				UM00007095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		UMPROJECTDEBUG095A3CE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Unmult_KNSW_Fake.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Unmult_KNSW_Fake;
+				PRODUCT_NAME = Unmult_KNSW_Fake;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../NFsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../NFsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		UMPROJECTRELEASE095A3CE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Unmult_KNSW_Fake.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Unmult_KNSW_Fake;
+				PRODUCT_NAME = Unmult_KNSW_Fake;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../NFsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../NFsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		UMPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "Unmult_KNSW_Fake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				UMPROJECTDEBUG095A3CE8 /* Debug */,
+				UMPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		UMBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "Unmult_KNSW_Fake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				UMPROJECTDEBUG095A3CE8 /* Debug */,
+				UMPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = UMPROJECTOBJ095A3CE8 /* Project object */;
+}

@@ -76,7 +76,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EffectMain (	
+EntryPointFunc (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

@@ -38,7 +38,8 @@
 #endif
 
 
-#include "../FsLibrary/FsAE.h"
+// Use shared FsLibrary include path via project search paths
+#include "FsAE.h"
 //#include "FsAE.h"
 
 
@@ -51,17 +52,17 @@ typedef struct ParamInfo{
 
 enum {
 	ID_INPUT = 0,			// default input layer 
-	ID_Y,				//ƒ‚ƒUƒCƒN‚Ì—Ê(%)
-	ID_STRENGTH,			//ƒ‚ƒUƒCƒN‚Ì‹­‚³
-	ID_SIZEX,				// ƒ‚ƒUƒCƒN‚Ì‘å‚«‚³
-	ID_SIZEY,				// ƒ‚ƒUƒCƒN‚Ì‘å‚«‚³
+	ID_Y,				//ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ì—ï¿½(%)
+	ID_STRENGTH,			//ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ì‹ï¿½ï¿½ï¿½
+	ID_SIZEX,				// ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ì‘å‚«ï¿½ï¿½
+	ID_SIZEY,				// ï¿½ï¿½ï¿½Uï¿½Cï¿½Nï¿½Ì‘å‚«ï¿½ï¿½
 	ID_NUM_PARAMS
 };
 
-#define STR_Y		"—Ê(%)"
-#define STR_STRENGTH	"‹­‚³"
-#define STR_SIZEX		"‰¡ƒTƒCƒY"
-#define STR_SIZEY		"cƒTƒCƒY"
+#define STR_Y		"Rate(%)"
+#define STR_STRENGTH	"Strength"
+#define STR_SIZEX		"Width Size"
+#define STR_SIZEY		"Height Size"
 
 extern "C" {
 DllExport

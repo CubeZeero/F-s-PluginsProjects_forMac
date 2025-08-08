@@ -11,15 +11,15 @@
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+//Plugin name used in effect name
 #define FS_NAME			"F's Posterization8bit"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�|�X�^���[�[�V�����@�����I��8Bit�ł��ׂčs���܂�"
+//Plugin description used in effect description
+#define FS_DESCRIPTION	"Posterization effect - completely processed in 8Bit"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C�����\������郁�j���[��
+//Category to display plugin in
 
 //#define FS_CATEGORY "NF's Plugins-Cell"
 //#define FS_CATEGORY "NF's Plugins-Channel"
@@ -31,13 +31,13 @@
 //#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
-//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
+#define SUPPORT_SMARTFX			//Support SmartFX+Float_Color in smart rendering
+//#define NO_USE_FSGRAPHICS	//Comment out FsGraphics related code in smart rendering
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
+//Plugin version number
 
-#include "../FsLibrary/FsVersion.h"
+#include "FsVersion.h"
 //-----------------------------------------------------------------------------------
 //out_flags
 /*
@@ -50,9 +50,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//�ʏ�͂�����
-//#define FS_OUT_FLAGS	33556036	//��������L���ɂ���Ɩ��t���[�����Ƃɕ`�悷��BNON_PARAM_VARY�𓮍쒆�ɐ؂�ւ���Ƃ����������
-//#define FS_OUT_FLAGS	1600		//8bit�̂�
+#define FS_OUT_FLAGS	33556032	//Normal setting
+//#define FS_OUT_FLAGS	33556036	//When using smart rendering, draw in non-parametric area. NON_PARAM_VARY is returned immediately when parameter changes
+//#define FS_OUT_FLAGS	1600		//8bit only
 
 //-----------------------------------------------------------------------------------
 //out_flags2

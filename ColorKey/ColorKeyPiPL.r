@@ -34,10 +34,10 @@ resource 'PiPL' (16000) {
 	#endif	
 #else
 	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EffectMain"},
-		CodeMacIntel32 {"EffectMain"},
-		CodeMacIntel64 {"EffectMain"},
-		CodeMacARM64 {"EffectMain"},
+		CodeMachOPowerPC {"EntryPointFunc"},
+		CodeMacIntel32 {"EntryPointFunc"},
+		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacARM64 {"EntryPointFunc"},
 	#endif
 #endif
 

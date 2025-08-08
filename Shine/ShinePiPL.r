@@ -1,4 +1,4 @@
-/* ’è‹`‚ÍNFs_Target.h‚Ås‚È‚Á‚Ä‚¢‚éB‚±‚Ìƒtƒ@ƒCƒ‹‚Í•ÒW‚·‚é•K—v‚È‚µ */
+/* ï¿½ï¿½`ï¿½ï¿½NFs_Target.hï¿½Åsï¿½È‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½Ìƒtï¿½@ï¿½Cï¿½ï¿½ï¿½Í•ÒWï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½È‚ï¿½ */
 #include "NFs_Target.h"
 
 #include "AEConfig.h"
@@ -16,23 +16,28 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
+			/* Name shown in AE menu */
 			NFS_DISPNAME
 		},
 		/* [3] */
 		Category {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
+			/* Category in AE menu */
 			NFS_CATEGORY
 		},
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
 		CodeWin64X86 {"EffectMain"},
+	#else
+		CodeWin32X86 {"EffectMain"},
 	#endif	
 #else
-	#ifdef AE_OS_MAC
-		CodeMacIntel64 {"EffectMain"},
-	#endif
+    #ifdef AE_OS_MAC
+        CodeMachOPowerPC {"EffectMain"},
+        CodeMacIntel32 {"EffectMain"},
+        CodeMacIntel64 {"EffectMain"},
+        CodeMacARM64 {"EffectMain"},
+    #endif
 #endif
 		/* [6] */
 		AE_PiPL_Version {
@@ -63,7 +68,7 @@ resource 'PiPL' (16000) {
 
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é */
+			/* Match name */
 			NFS_NAME
 		},
 		/* [12] */

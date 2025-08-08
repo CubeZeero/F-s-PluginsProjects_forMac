@@ -37,7 +37,7 @@
 
 #include <math.h>
 
-#include "../FsLibrary/FsAE.h"
+#include "FsAE.h"
 
 //���[�U�[�C���^�[�t�F�[�X��ID
 //ParamsSetup�֐���Render�֐���params�p�����[�^��ID�ɂȂ�
@@ -86,7 +86,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EffectMain (	
+EntryPointFunc (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

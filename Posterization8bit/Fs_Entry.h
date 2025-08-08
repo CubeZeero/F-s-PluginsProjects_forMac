@@ -224,4 +224,17 @@ EntryPointFunc (
 }
 
 //-------------------------------------------------------------------------------------------------
+//PluginDataEntryFunction2 for Mac compatibility
+DllExport	PF_Err 
+PluginDataEntryFunction2(
+	PF_Cmd			cmd,
+	PF_InData		*in_data,
+	PF_OutData		*out_data,
+	PF_ParamDef		*params[],
+	PF_LayerDef		*output,
+	void			*extraP)
+{
+	return EntryPointFunc(cmd, in_data, out_data, params, output, extraP);
+}
+//-------------------------------------------------------------------------------------------------
 #endif

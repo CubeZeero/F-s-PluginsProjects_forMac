@@ -8,16 +8,16 @@
 #ifndef UsedColorListMain_H
 #define UsedColorListMain_H
 
-#include "../NFsLibrary/AE_SDK.h"
-#include "../NFsLibrary/AEInfo.h"
-#include "../NFsLibrary/NFsWorld.h"
+#include "AE_SDK.h"
+#include "AEInfo.h"
+#include "NFsWorld.h"
 
 
 #include "NFs_Target.h"
 
 
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	PF_Pixel	Colors[64];
 	A_long		ColorsMax[64];
@@ -36,8 +36,8 @@ typedef struct ParamInfo {
 
 #include "UsedColorListFX.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer
 	ID_POS0,
@@ -51,7 +51,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\Ž¦•¶Žš—ñ
+//UIï¿½Ì•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define	STR_POS0			"PosStart"
 #define	STR_POS1			"PosEnd"
 #define	STR_ISDISP			"Disp"
@@ -123,12 +123,12 @@ public:
 
 		suitesP = new AEGP_SuiteHandler(in_dataP->pica_basicP);
 
-		//Fs_Target.h‚Å’è‹`
+		//Fs_Target.hï¿½Å’ï¿½`
 		out_dataP->my_version = NFS_VERSION;
 		out_dataP->out_flags = NFS_OUT_FLAGS;
 		out_dataP->out_flags2 = NFS_OUT_FLAGS2;
 		/*
-		ƒvƒ‰ƒOƒCƒ“ID‚ðŠl“¾‚µ‚ÄAƒOƒ[ƒoƒ‹‚ÉƒAƒNƒZƒX‚Å‚«‚é‚æ‚¤‚É•Û‘¶
+		ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½IDï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ÄAï¿½Oï¿½ï¿½ï¿½[ï¿½oï¿½ï¿½ï¿½ÉƒAï¿½Nï¿½Zï¿½Xï¿½Å‚ï¿½ï¿½ï¿½æ‚¤ï¿½É•Û‘ï¿½
 		*/
 		ae_plugin_idH = suitesP->HandleSuite1()->host_new_handle(sizeof(ae_global_data));
 

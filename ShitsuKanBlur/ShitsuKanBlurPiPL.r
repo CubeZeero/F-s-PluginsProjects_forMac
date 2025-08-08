@@ -1,4 +1,4 @@
-/* ’è‹`‚ÍFs_Target.h‚Ås‚È‚Á‚Ä‚¢‚éB‚±‚Ìƒtƒ@ƒCƒ‹‚Í•ÒW‚·‚é•K—v‚È‚µ */
+/* ï¿½ï¿½`ï¿½ï¿½Fs_Target.hï¿½Åsï¿½È‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½Ìƒtï¿½@ï¿½Cï¿½ï¿½ï¿½Í•ÒWï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½È‚ï¿½ */
 #include "Fs_Target.h"
 
 #include "AEConfig.h"
@@ -16,12 +16,12 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
+			/* Name shown in AE menu */
 			FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
+			/* Category in AE menu */
 			FS_CATEGORY
 		},
 		
@@ -36,6 +36,7 @@ resource 'PiPL' (16000) {
 		CodeMachOPowerPC {"EntryPointFunc"},
 		CodeMacIntel32 {"EntryPointFunc"},
 		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacARM64 {"EntryPointFunc"},
 	#endif
 #endif
 		/* [6] */
@@ -67,7 +68,7 @@ resource 'PiPL' (16000) {
 
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é */
+			/* Match name */
 			FS_NAME
 		},
 		/* [12] */

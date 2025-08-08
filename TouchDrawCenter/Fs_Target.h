@@ -13,8 +13,8 @@
 #define FS_NAME			"F's TouchDrawCenter"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"���͂���̏W������`���܂�"
+// Plugin description (translated)
+#define FS_DESCRIPTION	"Draw strokes centered around the specified point"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -34,8 +34,8 @@
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

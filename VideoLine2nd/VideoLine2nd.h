@@ -37,8 +37,7 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
-//#include "FsAE.h"
+#include "FsAE.h"
 
 
 enum {
@@ -50,11 +49,11 @@ enum {
 	ID_NUM_PARAMS
 };
 
-#define	STR_BRIGHT "ƒ‰ƒCƒ“‚Ì–¾‚é‚³(%)"
-#define	STR_HEIGHT "ƒ‰ƒCƒ“‚Ì‚‚³(dot)"
-#define STR_INTER	"ŠÔŠu•â³(dot)"
-#define STR_DIR		"•ûŒü"
-#define STR_DIRSTR	"…•½|‚’¼"
+#define	STR_BRIGHT "Line intensity(%)"
+#define	STR_HEIGHT "Line height(dot)"
+#define STR_INTER	"Interval offset(dot)"
+#define STR_DIR		"Direction"
+#define STR_DIRSTR	"Vertical|Horizontal"
 
 typedef struct{
 	PF_FpLong	bright;

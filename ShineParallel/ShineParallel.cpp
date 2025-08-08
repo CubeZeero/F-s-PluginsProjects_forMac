@@ -4,8 +4,8 @@
 
 
 // **********************************************************
-/*in‰æ‘œ‚©‚çbuf1‚Ö‰æ‘œ‚ðk¬ƒRƒs[
-* 4“_’†ˆê”Ô–¾‚é‚¢F‚ð‘I‚Ô
+/*inï¿½æ‘œï¿½ï¿½ï¿½ï¿½buf1ï¿½Ö‰æ‘œï¿½ï¿½ï¿½kï¿½ï¿½ï¿½Rï¿½sï¿½[
+* 4ï¿½_ï¿½ï¿½ï¿½ï¿½Ô–ï¿½ï¿½é‚¢ï¿½Fï¿½ï¿½Iï¿½ï¿½
 */
 // **********************************************************
 #pragma region Copy in to buf1
@@ -129,8 +129,8 @@ PF_Err CopyIntoBuf1_32(ParamInfo* infoP)
 #pragma endregion
 
 // **********************************************************
-/*in‰æ‘œ‚©‚çbuf1‚Ö‰æ‘œ‚ðk¬ƒRƒs[
-* 4“_’†ˆê”Ô–¾‚é‚¢F‚ð‘I‚Ô ƒOƒŒ[
+/*inï¿½æ‘œï¿½ï¿½ï¿½ï¿½buf1ï¿½Ö‰æ‘œï¿½ï¿½ï¿½kï¿½ï¿½ï¿½Rï¿½sï¿½[
+* 4ï¿½_ï¿½ï¿½ï¿½ï¿½Ô–ï¿½ï¿½é‚¢ï¿½Fï¿½ï¿½Iï¿½ï¿½ ï¿½Oï¿½ï¿½ï¿½[
 */
 // **********************************************************
 #pragma region CopyG in to buf1
@@ -321,8 +321,8 @@ PF_Err CopyBuf1ToDst_32(ParamInfo* infoP)
 	return err;
 }
 // **********************************************************
-/*buf2‰æ‘œ‚©‚çout‚Ö‰æ‘œ‚ðŠg‘åƒRƒs[
-* 4“_’†ˆê”Ô–¾‚é‚¢F‚ð‘I‚Ô
+/*buf2ï¿½æ‘œï¿½ï¿½ï¿½ï¿½outï¿½Ö‰æ‘œï¿½ï¿½ï¿½gï¿½ï¿½Rï¿½sï¿½[
+* 4ï¿½_ï¿½ï¿½ï¿½ï¿½Ô–ï¿½ï¿½é‚¢ï¿½Fï¿½ï¿½Iï¿½ï¿½
 */
 // **********************************************************
 #pragma region Copy buf2 to out
@@ -402,7 +402,7 @@ PF_Err CopyBuf2ToDst_32(ParamInfo* infoP)
 
 
 // **********************************************************
-/*@shine‚ÌŽÀ‘Ô
+/*ï¿½@shineï¿½ÌŽï¿½ï¿½ï¿½
 */
 // **********************************************************
 #pragma region sub
@@ -424,19 +424,19 @@ sub8(
 	{
 		return err;
 	}
-	//buf‚ªƒn[ƒtƒTƒCƒY‚È‚Ì‚ÅˆÊ’u•â³
-	PF_FpLong cx = infoP->pos.x / 2;
-	PF_FpLong cy = infoP->pos.y / 2;
+    // Use direction vector (offsetX, offsetY) instead of absolute position
+    PF_FpLong cx = (PF_FpLong)xL + (infoP->offsetX / 2);
+    PF_FpLong cy = (PF_FpLong)yL + (infoP->offsetY / 2);
 
 	//sqrt( (x1-x2)^2 + (y1-y2)^2 )
-	//lenDƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£
+	//lenDï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 	PF_FpLong lenD = pointLength(infoP->outP->in_data,
 		(PF_FpLong)xL,
 		(PF_FpLong)yL,
 		cx,
 		cy
 	);
-	// len ƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£ long
+	// len ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½ long
 	A_long len = (A_long)(lenD + 0.5);
 	if (len <= 0)
 	{
@@ -508,19 +508,19 @@ sub16(
 	{
 		return err;
 	}
-	//buf‚ªƒn[ƒtƒTƒCƒY‚È‚Ì‚ÅˆÊ’u•â³
-	PF_FpLong cx = infoP->pos.x / 2;
-	PF_FpLong cy = infoP->pos.y / 2;
+    // Use direction vector (offsetX, offsetY) instead of absolute position
+    PF_FpLong cx = (PF_FpLong)xL + (infoP->offsetX / 2);
+    PF_FpLong cy = (PF_FpLong)yL + (infoP->offsetY / 2);
 
 	//sqrt( (x1-x2)^2 + (y1-y2)^2 )
-	//lenDƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£
+	//lenDï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 	PF_FpLong lenD = pointLength(infoP->outP->in_data,
 		(PF_FpLong)xL,
 		(PF_FpLong)yL,
 		cx,
 		cy
 	);
-	// len ƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£ long
+	// len ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½ long
 	A_long len = (A_long)(lenD + 0.5);
 	if (len <= 0)
 	{
@@ -592,19 +592,19 @@ sub32(
 	{
 		return err;
 	}
-	//buf‚ªƒn[ƒtƒTƒCƒY‚È‚Ì‚ÅˆÊ’u•â³
-	PF_FpLong cx = infoP->pos.x / 2;
-	PF_FpLong cy = infoP->pos.y / 2;
+    // Use direction vector (offsetX, offsetY) instead of absolute position
+    PF_FpLong cx = (PF_FpLong)xL + (infoP->offsetX / 2);
+    PF_FpLong cy = (PF_FpLong)yL + (infoP->offsetY / 2);
 
 	//sqrt( (x1-x2)^2 + (y1-y2)^2 )
-	//lenDƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£
+	//lenDï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 	PF_FpLong lenD = pointLength(infoP->outP->in_data,
 		(PF_FpLong)xL,
 		(PF_FpLong)yL,
 		cx,
 		cy
 	);
-	// len ƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£ long
+	// len ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½ long
 	A_long len = (A_long)(lenD + 0.5);
 	if (len <= 0)
 	{
@@ -683,19 +683,19 @@ subG8(
 	}
 
 
-	//buf‚ªƒn[ƒtƒTƒCƒY‚È‚Ì‚ÅˆÊ’u•â³
-	PF_FpLong cx = infoP->pos.x / 2;
-	PF_FpLong cy = infoP->pos.y / 2;
+    // Use direction vector (offsetX, offsetY) instead of absolute position
+    PF_FpLong cx = (PF_FpLong)xL + (infoP->offsetX / 2);
+    PF_FpLong cy = (PF_FpLong)yL + (infoP->offsetY / 2);
 
 	//sqrt( (x1-x2)^2 + (y1-y2)^2 )
-	//lenDƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£
+	//lenDï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 	PF_FpLong lenD = pointLength(infoP->outP->in_data,
 		(PF_FpLong)xL,
 		(PF_FpLong)yL,
 		cx,
 		cy
 	);
-	// len ƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£ long
+	// len ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½ long
 	A_long len = (A_long)(lenD + 0.5);
 	if (len <= 0) {
 		*outP = infoP->Color;
@@ -753,19 +753,19 @@ subG16(
 	}
 
 
-	//buf‚ªƒn[ƒtƒTƒCƒY‚È‚Ì‚ÅˆÊ’u•â³
-	PF_FpLong cx = infoP->pos.x / 2;
-	PF_FpLong cy = infoP->pos.y / 2;
+    // Use direction vector (offsetX, offsetY) instead of absolute position
+    PF_FpLong cx = (PF_FpLong)xL + (infoP->offsetX / 2);
+    PF_FpLong cy = (PF_FpLong)yL + (infoP->offsetY / 2);
 
 	//sqrt( (x1-x2)^2 + (y1-y2)^2 )
-	//lenDƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£
+	//lenDï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 	PF_FpLong lenD = pointLength(infoP->outP->in_data,
 		(PF_FpLong)xL,
 		(PF_FpLong)yL,
 		cx,
 		cy
 	);
-	// len ƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£ long
+	// len ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½ long
 	A_long len = (A_long)(lenD + 0.5);
 	if (len <= 0) {
 		*outP = infoP->Color16;
@@ -822,19 +822,19 @@ subG32(
 	}
 
 
-	//buf‚ªƒn[ƒtƒTƒCƒY‚È‚Ì‚ÅˆÊ’u•â³
-	PF_FpLong cx = infoP->pos.x / 2;
-	PF_FpLong cy = infoP->pos.y / 2;
+    // Use direction vector (offsetX, offsetY) instead of absolute position
+    PF_FpLong cx = (PF_FpLong)xL + (infoP->offsetX / 2);
+    PF_FpLong cy = (PF_FpLong)yL + (infoP->offsetY / 2);
 
 	//sqrt( (x1-x2)^2 + (y1-y2)^2 )
-	//lenDƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£
+	//lenDï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
 	PF_FpLong lenD = pointLength(infoP->outP->in_data,
 		(PF_FpLong)xL,
 		(PF_FpLong)yL,
 		cx,
 		cy
 	);
-	// len ƒ^[ƒQƒbƒg‚©‚ç‚Ì‹——£ long
+	// len ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½ long
 	A_long len = (A_long)(lenD + 0.5);
 	if (len <= 0) {
 		*outP = infoP->Color32;
@@ -972,19 +972,19 @@ PF_Err ShineParallel::ParamsSetup(
 	out_data = out_dataP;
 	PF_ParamDef		def;
 	//----------------------------------------------------------------
-	//Šp“x
+	//ï¿½pï¿½x
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_ANGLE(STR_ROT, 45, ID_Rot);
 
 	//----------------------------------------------------------------
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_LENGTH,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		1000,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l
-		200,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_LENGTH,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+		0, 		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+		1000,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+		0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l
+		200,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+		0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 		ID_LENGTH
 	);		
 	//----------------------------------------------------------------
@@ -1010,7 +1010,7 @@ PF_Err ShineParallel::ParamsSetup(
 		ID_ISCOLOR
 	);
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	//ï¿½Fï¿½ÌŽwï¿½ï¿½
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(STR_COLOR,
 		0xFF,

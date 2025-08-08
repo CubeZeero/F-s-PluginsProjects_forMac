@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		TDC00001095A3D3A0012CA3F /* TouchDrawCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100001095A3C810012CA3F /* TouchDrawCenter.cpp */; };
+		TDC00002095A3D3A0012CA3F /* alphaBlur8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100002095A3C810012CA3F /* alphaBlur8.cpp */; };
+		TDC00003095A3D3A0012CA3F /* alphaBlur16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100003095A3C810012CA3F /* alphaBlur16.cpp */; };
+		TDC00004095A3D3A0012CA3F /* alphaBlur32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100004095A3C810012CA3F /* alphaBlur32.cpp */; };
+		TDC00005095A3D3A0012CA3F /* copyImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100005095A3C810012CA3F /* copyImage.cpp */; };
+		TDC00006095A3D3A0012CA3F /* ToutchDraw8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100006095A3C810012CA3F /* ToutchDraw8.cpp */; };
+		TDC00007095A3D3A0012CA3F /* ToutchDraw16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100007095A3C810012CA3F /* ToutchDraw16.cpp */; };
+		TDC00008095A3D3A0012CA3F /* ToutchDraw32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100008095A3C810012CA3F /* ToutchDraw32.cpp */; };
+		TDC00009095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC10000A095A3C810012CA3F /* FsGraphics.cpp */; };
+		TDC0000A095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC10000B095A3C810012CA3F /* FsGraphicsLine.cpp */; };
+		TDC0000B095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC10000C095A3C810012CA3F /* FsGraphicsCircle.cpp */; };
+		TDC0000C095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC10000D095A3C810012CA3F /* FsGraphicsBox.cpp */; };
+		TDC0000D095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC10000E095A3C810012CA3F /* FsGraphicsBlend.cpp */; };
+		TDC0000E095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = TDC100010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		TDC0000F095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		TDC00010095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		TDC00011095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		TDC00012095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		TDC00013095A3D3A0012CA3F /* TouchDrawCenterPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = TDC10000F095A3C810012CA3F /* TouchDrawCenterPiPL.r */; };
+		TDC00014095A3D3A0012CA3F /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TDC100016095A3C810012CA3F /* FsMat.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		TDC100001095A3C810012CA3F /* TouchDrawCenter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TouchDrawCenter.cpp; path = ../TouchDrawCenter.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100002095A3C810012CA3F /* alphaBlur8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = alphaBlur8.cpp; path = ../alphaBlur8.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100003095A3C810012CA3F /* alphaBlur16.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = alphaBlur16.cpp; path = ../alphaBlur16.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100004095A3C810012CA3F /* alphaBlur32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = alphaBlur32.cpp; path = ../alphaBlur32.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100005095A3C810012CA3F /* copyImage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = copyImage.cpp; path = ../copyImage.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100006095A3C810012CA3F /* ToutchDraw8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ToutchDraw8.cpp; path = ../ToutchDraw8.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100007095A3C810012CA3F /* ToutchDraw16.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ToutchDraw16.cpp; path = ../ToutchDraw16.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100008095A3C810012CA3F /* ToutchDraw32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ToutchDraw32.cpp; path = ../ToutchDraw32.cpp; sourceTree = SOURCE_ROOT; };
+		TDC10000A095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		TDC10000B095A3C810012CA3F /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		TDC10000C095A3C810012CA3F /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		TDC10000D095A3C810012CA3F /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		TDC10000E095A3C810012CA3F /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		TDC10000F095A3C810012CA3F /* TouchDrawCenterPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = TouchDrawCenterPiPL.r; path = ../TouchDrawCenterPiPL.r; sourceTree = SOURCE_ROOT; };
+		TDC100010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		TDC100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		TDC100016095A3C810012CA3F /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+		TDC10001A095A3C810012CA3F /* TouchDrawCenter.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = TouchDrawCenter.plugin-Info.plist; path = TouchDrawCenter.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		TDC1001001095A3C810012CA3F /* TouchDrawCenter.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = TouchDrawCenter.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		TDCFRAMEWORKS095A3CE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		TDCGROUPROOT095A3CE8 = {
+			isa = PBXGroup;
+			children = (
+				TDCREZGROUP095A3E04 /* Rez */,
+				TDCFRAMEWORKSGROUP095A3CE8 /* Frameworks */,
+				TDCPRODUCTSGROUP095A3CE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		TDCPRODUCTSGROUP095A3CE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				TDC1001001095A3C810012CA3F /* TouchDrawCenter.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		TDCREZGROUP095A3E04 /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				TDC10000F095A3C810012CA3F /* TouchDrawCenterPiPL.r */,
+				TDC100001095A3C810012CA3F /* TouchDrawCenter.cpp */,
+				TDC100002095A3C810012CA3F /* alphaBlur8.cpp */,
+				TDC100003095A3C810012CA3F /* alphaBlur16.cpp */,
+				TDC100004095A3C810012CA3F /* alphaBlur32.cpp */,
+				TDC100005095A3C810012CA3F /* copyImage.cpp */,
+				TDC100006095A3C810012CA3F /* ToutchDraw8.cpp */,
+				TDC100007095A3C810012CA3F /* ToutchDraw16.cpp */,
+				TDC100008095A3C810012CA3F /* ToutchDraw32.cpp */,
+				TDC10000A095A3C810012CA3F /* FsGraphics.cpp */,
+				TDC10000B095A3C810012CA3F /* FsGraphicsLine.cpp */,
+				TDC10000C095A3C810012CA3F /* FsGraphicsCircle.cpp */,
+				TDC10000D095A3C810012CA3F /* FsGraphicsBox.cpp */,
+				TDC10000E095A3C810012CA3F /* FsGraphicsBlend.cpp */,
+				TDC100016095A3C810012CA3F /* FsMat.cpp */,
+				TDC100010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				TDC100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				TDC100012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				TDC100013095A3C810012CA3F /* Smart_Utils.cpp */,
+				TDC100015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				TDC10001A095A3C810012CA3F /* TouchDrawCenter.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		TDCFRAMEWORKSGROUP095A3CE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TDCNATIVE095A3CE8 /* TouchDrawCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = TDCBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "TouchDrawCenter" */;
+			buildPhases = (
+				TDCFRAMEWORKS095A3CE8 /* Frameworks */,
+				TDCREZPHASE095A3E04 /* Rez */,
+				TDCSOURCESPHASE095A3CE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchDrawCenter;
+			productName = TouchDrawCenter;
+			productReference = TDC1001001095A3C810012CA3F /* TouchDrawCenter.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		TDCPROJECTOBJ095A3CE8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = TDCPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "TouchDrawCenter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = TDCGROUPROOT095A3CE8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TDCNATIVE095A3CE8 /* TouchDrawCenter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		TDCREZPHASE095A3E04 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TDC00013095A3D3A0012CA3F /* TouchDrawCenterPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		TDCSOURCESPHASE095A3CE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TDC00001095A3D3A0012CA3F /* TouchDrawCenter.cpp in Sources */,
+				TDC00002095A3D3A0012CA3F /* alphaBlur8.cpp in Sources */,
+				TDC00003095A3D3A0012CA3F /* alphaBlur16.cpp in Sources */,
+				TDC00004095A3D3A0012CA3F /* alphaBlur32.cpp in Sources */,
+				TDC00005095A3D3A0012CA3F /* copyImage.cpp in Sources */,
+				TDC00006095A3D3A0012CA3F /* ToutchDraw8.cpp in Sources */,
+				TDC00007095A3D3A0012CA3F /* ToutchDraw16.cpp in Sources */,
+				TDC00008095A3D3A0012CA3F /* ToutchDraw32.cpp in Sources */,
+				TDC00009095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+				TDC0000A095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */,
+				TDC0000B095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */,
+				TDC0000C095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */,
+				TDC0000D095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */,
+				TDC0000E095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				TDC0000F095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				TDC00010095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				TDC00011095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				TDC00012095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+				TDC00014095A3D3A0012CA3F /* FsMat.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		TDCPROJECTDEBUG095A3CE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = TouchDrawCenter.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.TouchDrawCenter;
+				PRODUCT_NAME = TouchDrawCenter;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		TDCPROJECTRELEASE095A3CE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = TouchDrawCenter.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.TouchDrawCenter;
+				PRODUCT_NAME = TouchDrawCenter;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		TDCPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "TouchDrawCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TDCPROJECTDEBUG095A3CE8 /* Debug */,
+				TDCPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		TDCBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "TouchDrawCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TDCPROJECTDEBUG095A3CE8 /* Debug */,
+				TDCPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = TDCPROJECTOBJ095A3CE8 /* Project object */;
+}

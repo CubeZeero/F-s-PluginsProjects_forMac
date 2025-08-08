@@ -33,8 +33,8 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
-//#include "FsAE.h"
+// Use shared FsLibrary include path via project search paths
+#include "FsAE.h"
 
 
 enum {

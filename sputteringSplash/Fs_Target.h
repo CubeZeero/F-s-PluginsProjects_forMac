@@ -15,8 +15,8 @@
 #define FS_NAME			"F's sputteringSplash"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�A���t�@�[���E�̎w�肵�������ɃX�p�b�^�����O"
+// Description shown in AE UI
+#define FS_DESCRIPTION	"Sputters around the specified position on alpha edge"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -35,8 +35,8 @@
 //#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved by REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

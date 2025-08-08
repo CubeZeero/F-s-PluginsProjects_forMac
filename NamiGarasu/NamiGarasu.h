@@ -37,8 +37,8 @@
 
 #include "../FsLibrary/FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+// UI parameter IDs
+// Used by ParamsSetup and Render functions
 enum {
 	ID_INPUT = 0,	// default input layer
 	
@@ -81,7 +81,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UIの表示文字列
+// UI strings
 #define	STR_Y			"WaveValue"
 #define	STR_LENGTH_X		"X_Length"
 #define	STR_LENGTH_Y		"Y_Length"
@@ -115,7 +115,7 @@ enum {
 
 #define	STR_POINT			"point"
 
-//UIのパラメータ
+// UI parameter structs
 typedef struct ScrInfo {
 	PF_PixelPtr data;
 	A_long	width;

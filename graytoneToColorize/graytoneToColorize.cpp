@@ -28,8 +28,8 @@ static PF_Err (*func32)(
 			PF_PixelFloat 	*inP, 
 			PF_PixelFloat	*outP);
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+// Place parameters in After Effects UI
+// See Param_Utils.h for details
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -39,11 +39,11 @@ static PF_Err ParamsSetup (
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 	//----------------------------------------------------------------
-	//ƒ|ƒbƒvƒAƒbƒvƒƒjƒ…[
+	// Popup menu
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_POPUP(STR_TARGET,
-		STR_TARGET_COUNT,	//ƒƒjƒ…[‚Ì”
-		STR_TARGET_DEFLT,	//ƒfƒtƒHƒ‹ƒg
+		STR_TARGET_COUNT,	//ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ìï¿½
+		STR_TARGET_DEFLT,	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½g
 		STR_TARGET_ITEMS,
 		ID_TARGET
 	);
@@ -81,7 +81,7 @@ static PF_Err ParamsSetup (
 		ID_OFFSET_ON
 	);
 	//----------------------------------------------------------------
-	//Šp“x
+	// Angle offset
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_ANGLE(STR_OFFSET, 0, ID_OFFSET);
 	//----------------------------------------------------------------
@@ -541,7 +541,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	infoP->frame = ae->frame();
 	ParamInfo16 info16;
@@ -569,10 +569,9 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+// Render entry point
 /*
-	SmartFX‚É‘Î‰‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ğ‘‚¢‚Ä‚¨‚¯‚Îˆê‰v6.5‘Î‰‚É‚È‚é
+	If host does not support SmartFX (AE7 or older), use this Render.
 */
 static PF_Err 
 Render ( 
@@ -596,7 +595,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ğs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

@@ -25,7 +25,7 @@
 //#define FS_CATEGORY "F's Plugins-Channel"
 //#define FS_CATEGORY "F's Plugins-Colorize"
 //#define FS_CATEGORY "F's Plugins-Draw"
-#define FS_CATEGORY "F's Plugins-Filter"
+#define FS_CATEGORY "NF's Plugins-Filter"
 //#define FS_CATEGORY "F's Plugins-Noise"
 //#define FS_CATEGORY "F's Plugins-expression"
 //#define FS_CATEGORY "F's Plugins-{Legacy}"
@@ -36,18 +36,8 @@
 //#define NO_USE_FSGRAPHICS	// Do not include FsGraphics related when enabled
 
 //-----------------------------------------------------------------------------------
-// Version information
-#define MAJOR_VERSION	1
-#define MINOR_VERSION	0
-#define FS_MAJOR_VERSION	1
-#define FS_MINOR_VERSION	0
-#define FS_BUG_VERSION	    0
-#define FS_STAGE_VERSION	PF_Stage_DEVELOP
-#define FS_BUILD_VERSION	0
-
-//-----------------------------------------------------------------------------------
-// Version value for plugin
-#define FS_VERSION	1572864
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 // out_flags

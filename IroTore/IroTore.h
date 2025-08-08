@@ -112,7 +112,7 @@ enum {
 #define	STR_COLOR6			"Color6"
 
 #define	STR_LEVEL			"level"
-#define	STR_IG_COLOR		"������ߐF"
+#define	STR_IG_COLOR		"IgnoreColor"
 
 #define	STR_LINE_MINMAX1	"Min/Max1"
 #define	STR_LINE_MINMAX2	"Min/Max2"

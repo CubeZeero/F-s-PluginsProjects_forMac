@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -367,7 +367,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ðƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	
 	if ((infoP->y == 0) && (infoP->u == 0) && (infoP->v == 0) )return err;
@@ -375,10 +375,10 @@ static PF_Err
 	switch(ae->pixelFormat())
 	{
 	case PF_PixelFormat_ARGB128:
-		//ERR(ae->iterate32((refconType)infoP,FilterImage32));
+		ERR(ae->iterate32((refconType)infoP,FilterImage32));
 		break;
 	case PF_PixelFormat_ARGB64:
-		//ERR(ae->iterate16((refconType)infoP,FilterImage16));
+		ERR(ae->iterate16((refconType)infoP,FilterImage16));
 		break;
 	case PF_PixelFormat_ARGB32:
 		ERR(ae->iterate8((refconType)infoP,FilterImage8));
@@ -388,10 +388,10 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 /*
-	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
+	SmartFXï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½zï¿½Xï¿½g(After Effects7ï¿½È‘Oï¿½Ì‚ï¿½ï¿½ï¿½)ï¿½Í‚ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½Ä•`ï¿½æ‚·ï¿½ï¿½
+	ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Îˆê‰žv6.5ï¿½Î‰ï¿½ï¿½É‚È‚ï¿½
 */
 static PF_Err 
 Render ( 
@@ -415,7 +415,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

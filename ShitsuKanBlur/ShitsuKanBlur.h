@@ -35,14 +35,14 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
+#include "FsAE.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer
 
-	//ƒ^[ƒQƒbƒgƒJƒ‰[
+	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½Jï¿½ï¿½ï¿½[
 	ID_COLOR_TOPICS0,
 
 	ID_CBX_COLOR0,
@@ -116,7 +116,7 @@ enum {
 	ID_NUM_PARAMS
 };
 #define LENGTH_MIN 3
-//UI‚Ì•\¦•¶š—ñ
+//UIï¿½Ì•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define	STR_CBX_ON				"on"
 
 #define	STR_CBX_COLOR0			"Enabled0"
@@ -198,7 +198,7 @@ enum {
 
 
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 
 	A_long		Color_Max;

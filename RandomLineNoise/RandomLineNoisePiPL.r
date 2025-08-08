@@ -15,25 +15,25 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AE�̃��j���[�Ɏg���� */
+			/* Used in AE menu */
 				FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*AE�̃��j���[�Ɏg���� */
+			/* Used in AE menu */
 			FS_CATEGORY
 		},
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
-		CodeWin64X86 {"EffectMain"},
+		CodeWin64X86 {"EntryPointFunc"},
 	#else
-		CodeWin32X86 {"EffectMain"},
+		CodeWin32X86 {"EntryPointFunc"},
 	#endif	
 #else
 	#ifdef AE_OS_MAC
-		CodeMacIntel64 {"EffectMain"},
-		CodeMacARM64 {"EffectMain"},
+		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacARM64 {"EntryPointFunc"},
 	#endif
 #endif
 
@@ -68,7 +68,7 @@ resource 'PiPL' (16000) {
 		},
 		/* [12] */
 		AE_Reserved_Info {
-			8
+			0
 		}
 	}
 };

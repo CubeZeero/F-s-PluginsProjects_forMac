@@ -1,4 +1,4 @@
-/* ’è‹`‚ÍFs_Target.h‚Ås‚È‚Á‚Ä‚¢‚éB‚±‚Ìƒtƒ@ƒCƒ‹‚Í•ÒW‚·‚é•K—v‚È‚µ */
+/* Do not include headers in Rez. Fs_Target.h is included here intentionally. */
 #include "Fs_Target.h"
 
 #include "AEConfig.h"
@@ -14,16 +14,16 @@ resource 'PiPL' (16000) {
 		Kind {
 			AEEffect
 		},
-		/* [2] */
-		Name {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
-			FS_NAME
-		},
-		/* [3] */
-		Category {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
-			FS_CATEGORY
-		},
+        /* [2] */
+        Name {
+            /* Name shown in AE menu */
+            FS_NAME
+        },
+        /* [3] */
+        Category {
+            /* Category shown in AE menu */
+            FS_CATEGORY
+        },
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
@@ -32,11 +32,12 @@ resource 'PiPL' (16000) {
 		CodeWin32X86 {"EntryPointFunc"},
 	#endif	
 #else
-	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
-	#endif
+    #ifdef AE_OS_MAC
+        CodeMachOPowerPC {"EntryPointFunc"},
+        CodeMacIntel32 {"EntryPointFunc"},
+        CodeMacIntel64 {"EntryPointFunc"},
+        CodeMacARM64 {"EntryPointFunc"},
+    #endif
 #endif
 		/* [6] */
 		AE_PiPL_Version {
@@ -67,7 +68,7 @@ resource 'PiPL' (16000) {
 
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é */
+			/*ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Ìï¿½ï¿½Ê‚Égï¿½ï¿½ï¿½ï¿½ */
 			FS_NAME
 		},
 		/* [12] */

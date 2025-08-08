@@ -16,7 +16,7 @@
 
 //-----------------------------------------------------------------------------------
 //�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�w�肵���_����~�`�ɃX�p�b�^�����O"
+#define FS_DESCRIPTION	"Sputters along a circle around the specified point"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -35,8 +35,8 @@
 //#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
-#include "../FsLibrary/FsVersion.h"
+// Common version header (Rez resolves via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

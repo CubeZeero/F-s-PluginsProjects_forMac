@@ -13,13 +13,15 @@ resource 'PiPL' (16000) {
 			AEEffect
 		},
 		/* [2] */
-		Name {
-			FS_NAME
-		},
+        Name {
+            /* Name shown in AE menu */
+            FS_NAME
+        },
 		/* [3] */
-		Category {
-			FS_CATEGORY
-		},
+        Category {
+            /* Category in AE menu */
+            FS_CATEGORY
+        },
 		
 		
 #ifdef AE_OS_WIN
@@ -29,11 +31,12 @@ resource 'PiPL' (16000) {
 		CodeWin32X86 {"EntryPointFunc"},
 	#endif	
 #else
-	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
-	#endif
+    #ifdef AE_OS_MAC
+        CodeMachOPowerPC {"EntryPointFunc"},
+        CodeMacIntel32 {"EntryPointFunc"},
+        CodeMacIntel64 {"EntryPointFunc"},
+        CodeMacARM64 {"EntryPointFunc"},
+    #endif
 #endif
 
 		/* [6] */

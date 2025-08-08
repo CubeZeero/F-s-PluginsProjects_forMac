@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffextsにパラメータを通達する
-//Param_Utils.hを参照のこと
+// Place parameters in After Effects
+// See Param_Utils.h for details
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -21,32 +21,32 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//整数のスライダーバー
+	// Slider parameter
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_MAX,	//パラメータの名前
-		-30, 				//数値入力する場合の最小値
-		30,			//数値入力する場合の最大値
-		-15,				//スライダーの最小値 
-		15,			//スライダーの最大値
-		0,				//デフォルトの値
+	PF_ADD_SLIDER(STR_MAX,	// parameter name
+		-30, 				// slider min when negative values allowed
+		30,			// slider max when negative values allowed
+		-15,				// slider default min
+		15,			// slider default max
+		0,				// default value
 		ID_MAX
 	);
 
 	//----------------------------------------------------------------
-	//ポップアップメニュー
+	// Popup menu
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_POPUP(STR_DIR1,
-		3,	//メニューの数
-		1,	//デフォルト
+		3,	// items
+		1,	// default
 		STR_DIR2,
 		ID_DIR
 	);
 	//----------------------------------------------------------------
-	//ポップアップメニュー
+	// Popup menu
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_POPUP(STR_CH1,
-		3,	//メニューの数
-		1,	//デフォルト
+		3,	// items
+		1,	// default
 		STR_CH2,
 		ID_CHANNEL
 	);
@@ -107,7 +107,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//画面をコピー
+	// Copy input to output
 	ERR(ae->CopyInToOut());
 	
 	if ( infoP->max==0)
@@ -133,10 +133,10 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//レンダリングのメイン
+	// Main rendering for legacy host
 /*
-	SmartFXに対応していないホスト(After Effects7以前のもの)はこの関数が呼び出されて描画する
-	この関数を書いておけば一応v6.5対応になる
+	If host does not support SmartFX (older than After Effects 7),
+	this function is used for rendering (AE 6.5 compatible path).
 */
 static PF_Err 
 Render ( 
@@ -160,7 +160,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX対応の場合、まずこの関数が呼ばれてパラメータの獲得を行う
+	If SmartFX is supported, parameters are fetched in PreRender.
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

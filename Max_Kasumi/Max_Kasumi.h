@@ -37,8 +37,8 @@
 
 #include "../FsLibrary/FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+// UI parameter IDs
+// Used by ParamsSetup and Render functions
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -50,7 +50,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UIの表示文字列
+// UI strings
 #define STR_MAX		"Value"
 #define STR_DIR1	"ScanLine"
 #define STR_DIR2	"Horizon+Vertical|Horizon|Vertical"
@@ -60,7 +60,7 @@ enum {
 
 
 
-//UIのパラメータ
+// UI parameter structs
 typedef struct ParamInfo {
 	A_long		max;
 	PF_Boolean	minus;

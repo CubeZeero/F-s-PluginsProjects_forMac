@@ -34,9 +34,8 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
-#include "../FsLibrary/FsHLS.h"
-//#include "FsAE.h"
+#include "FsAE.h"
+#include "FsHLS.h"
 
 
 #define STR_GRAY_MODE_POP1	"mode"
@@ -45,8 +44,8 @@
 #define STR_GRAY_MODE_DEF	1
 #define STR_ORG_BLEND		"blend original(%)"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_GRAY_MODE,	//long 1..
@@ -54,7 +53,7 @@ enum {
 	ID_NUM_PARAMS
 	};
 
-//ƒvƒ‰ƒOƒCƒ““Æ©‚Ìƒpƒ‰ƒ[ƒ^‚ğW‚ß‚½\‘¢‘Ì
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Æï¿½ï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Wï¿½ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 typedef struct ParamsInfo{
 	PF_InData	*in_data;
 	A_long		gray_mode;

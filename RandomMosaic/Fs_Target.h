@@ -14,14 +14,14 @@
 #define FS_NAME			"F's RandomMosaic"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�����_�����U�C�N"
+// Description used in the plugin UI
+#define FS_DESCRIPTION	"Random mosaic"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
 
 //#define FS_CATEGORY "NF's Plugins-Cell"
-#define FS_CATEGORY "NF's Plugins-Channel"
+//#define FS_CATEGORY "NF's Plugins-Channel"
 //#define FS_CATEGORY "NF's Plugins-Colorize"
 //#define FS_CATEGORY "NF's Plugins-Draw"
 //#define FS_CATEGORY "NF's Plugins-Filter"
@@ -34,11 +34,8 @@
 //#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
-// Version settings
-#define FS_VERSION	1572864
-#define MAJOR_VERSION	1
-#define MINOR_VERSION	0
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 
 

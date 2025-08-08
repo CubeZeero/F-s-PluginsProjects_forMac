@@ -15,17 +15,17 @@
 #define FS_NAME			"F's Extract-Hi"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"���邢�Ƃ���𒊏o����t�B���^�i�W���̂��̃A���S���Y�����Ⴄ�j"
+// Description used in the plugin UI
+#define FS_DESCRIPTION	"Extract high luminance (threshold filter)"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
 
-#define FS_CATEGORY "NF's Plugins-Cell"
+//#define FS_CATEGORY "NF's Plugins-Cell"
 //#define FS_CATEGORY "NF's Plugins-Channel"
 //#define FS_CATEGORY "NF's Plugins-Colorize"
 //#define FS_CATEGORY "NF's Plugins-Draw"
-//#define FS_CATEGORY "NF's Plugins-Filter"
+#define FS_CATEGORY "NF's Plugins-Filter"
 //#define FS_CATEGORY "NF's Plugins-Noise"
 //#define FS_CATEGORY "NF's Plugins-expression"
 //#define FS_CATEGORY "NF's Plugins-{Legacy}"
@@ -35,10 +35,8 @@
 //#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-//#include "../FsLibrary/FsVersion.h"
-#define MAJOR_VERSION 1
-#define MINOR_VERSION 0
-#define FS_VERSION ((MAJOR_VERSION << 16) | MINOR_VERSION)
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

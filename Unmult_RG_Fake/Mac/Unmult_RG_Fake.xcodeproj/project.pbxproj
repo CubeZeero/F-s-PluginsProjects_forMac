@@ -1,0 +1,243 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		UR00001095A3D3A0012CA3F /* Unmult_RG_Fake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UR100001095A3C810012CA3F /* Unmult_RG_Fake.cpp */; };
+		UR00002095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = UR100010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		UR00003095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UR100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		UR00004095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UR100012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		UR00005095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UR100013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		UR00006095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = UR100015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		UR00008095A3D3A0012CA3F /* Unmult_RG_FakePiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = UR10000F095A3C810012CA3F /* Unmult_RG_FakePiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		UR100001095A3C810012CA3F /* Unmult_RG_Fake.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Unmult_RG_Fake.cpp; path = ../Unmult_RG_Fake.cpp; sourceTree = SOURCE_ROOT; };
+		UR10000F095A3C810012CA3F /* Unmult_RG_FakePiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = Unmult_RG_FakePiPL.r; path = ../Unmult_RG_FakePiPL.r; sourceTree = SOURCE_ROOT; };
+		UR100010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		UR100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		UR100012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		UR100013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		UR100015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		UR10001A095A3C810012CA3F /* Unmult_RG_Fake.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Unmult_RG_Fake.plugin-Info.plist; path = Unmult_RG_Fake.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		UR1001001095A3C810012CA3F /* Unmult_RG_Fake.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = Unmult_RG_Fake.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		URFRAMEWORKS095A3CE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		URGROUPROOT095A3CE8 = {
+			isa = PBXGroup;
+			children = (
+				URREZGROUP095A3E04 /* Rez */,
+				URFRAMEWORKSGROUP095A3CE8 /* Frameworks */,
+				URPRODUCTSGROUP095A3CE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		URPRODUCTSGROUP095A3CE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				UR1001001095A3C810012CA3F /* Unmult_RG_Fake.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		URREZGROUP095A3E04 /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				UR10000F095A3C810012CA3F /* Unmult_RG_FakePiPL.r */,
+				UR100001095A3C810012CA3F /* Unmult_RG_Fake.cpp */,
+				UR100010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				UR100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				UR100012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				UR100013095A3C810012CA3F /* Smart_Utils.cpp */,
+				UR100015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				UR10001A095A3C810012CA3F /* Unmult_RG_Fake.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		URFRAMEWORKSGROUP095A3CE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		URNATIVE095A3CE8 /* Unmult_RG_Fake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = URBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "Unmult_RG_Fake" */;
+			buildPhases = (
+				URFRAMEWORKS095A3CE8 /* Frameworks */,
+				URREZPHASE095A3E04 /* Rez */,
+				URSOURCESPHASE095A3CE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Unmult_RG_Fake;
+			productName = Unmult_RG_Fake;
+			productReference = UR1001001095A3C810012CA3F /* Unmult_RG_Fake.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		URPROJECTOBJ095A3CE8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = URPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "Unmult_RG_Fake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = URGROUPROOT095A3CE8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				URNATIVE095A3CE8 /* Unmult_RG_Fake */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		URREZPHASE095A3E04 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				UR00008095A3D3A0012CA3F /* Unmult_RG_FakePiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		URSOURCESPHASE095A3CE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				UR00001095A3D3A0012CA3F /* Unmult_RG_Fake.cpp in Sources */,
+				UR00002095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				UR00003095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				UR00004095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				UR00005095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				UR00006095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		URPROJECTDEBUG095A3CE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Unmult_RG_Fake.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Unmult_RG_Fake;
+				PRODUCT_NAME = Unmult_RG_Fake;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../NFsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../NFsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		URPROJECTRELEASE095A3CE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Unmult_RG_Fake.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Unmult_RG_Fake;
+				PRODUCT_NAME = Unmult_RG_Fake;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../NFsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../NFsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		URPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "Unmult_RG_Fake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				URPROJECTDEBUG095A3CE8 /* Debug */,
+				URPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		URBUILDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "Unmult_RG_Fake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				URPROJECTDEBUG095A3CE8 /* Debug */,
+				URPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = URPROJECTOBJ095A3CE8 /* Project object */;
+}

@@ -1,4 +1,4 @@
-/* 定義はFs_Target.hで行なっている。このファイルは編集する必要なし */
+/* Do not edit these definitions; they are driven by Fs_Target.h */
 #include "Fs_Target.h"
 
 
@@ -16,15 +16,15 @@ resource 'PiPL' (16000) {
 			AEEffect
 		},
 		/* [2] */
-		Name {
-			/*AEのメニューに使われる */
-			FS_NAME
-		},
+        Name {
+            /* Name shown in AE menu */
+            FS_NAME
+        },
 		/* [3] */
-		Category {
-			/*AEのメニューに使われる */
-			FS_CATEGORY
-		},
+        Category {
+            /* Category in AE menu */
+            FS_CATEGORY
+        },
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
@@ -33,11 +33,12 @@ resource 'PiPL' (16000) {
 		CodeWin32X86 {"EntryPointFunc"},
 	#endif	
 #else
-	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
-	#endif
+    #ifdef AE_OS_MAC
+        CodeMachOPowerPC {"EntryPointFunc"},
+        CodeMacIntel32 {"EntryPointFunc"},
+        CodeMacIntel64 {"EntryPointFunc"},
+        CodeMacARM64 {"EntryPointFunc"},
+    #endif
 #endif
 
 
@@ -69,10 +70,10 @@ resource 'PiPL' (16000) {
 		},
 
 		/* [11] */
-		AE_Effect_Match_Name {
-			/*プラグインの識別に使われる */
-			FS_NAME
-		},
+        AE_Effect_Match_Name {
+            /* Match name */
+            FS_NAME
+        },
 		/* [12] */
 		AE_Reserved_Info {
 			0

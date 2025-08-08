@@ -43,20 +43,14 @@
 
 
 #define	STR_TOPIC			"Point_%d"
-#define	STR_EXECUTED_CB1	"Executed_%d"
-#define	STR_EXECUTED_CB2	"ON"
+#define	STR_EXECUTED_CB1	"Execute_%d"
+#define	STR_EXECUTED_CB2	"On"
 #define	STR_POS				"Position_%d"
-#define	STR_COLOR			"Color_%d"
+#define	STR_COLOR			"Paint Color_%d"
 
-#ifdef AE_OS_WIN
-#define	STR_GUIDE_CB1		"Guide_Display_%d"
-#define	STR_GUIDE_ALL_CB2	"Display_All"
-#define STR_GUIDE_ALL_CB1 "Display all guides"
-#else
-#define	STR_GUIDE_CB1		"Guide_Display_%d"
-#define	STR_GUIDE_ALL_CB2	"Display_All"
-#define STR_GUIDE_ALL_CB1 "Display all guides"
-#endif
+#define	STR_GUIDE_CB1		"Show guide_%d"
+#define	STR_GUIDE_ALL_CB2	"All"
+#define STR_GUIDE_ALL_CB1 "Show all guides"
 
 
 typedef struct{
@@ -73,7 +67,7 @@ typedef struct{
 	PF_Boolean		disp_guide_all;
 } ParamInfo;
 
-//User interface parameter IDs
+//���[�U�[�C���^�[�t�F�[�X��ID
 #define ID_INPUT	0
 #define ID_UI_START	1
 #define ID_UI_COUNT	6

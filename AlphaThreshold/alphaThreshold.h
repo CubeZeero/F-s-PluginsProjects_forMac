@@ -40,8 +40,8 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-//���[�U�[�C���^�[�t�F�[�X��ID
-//ParamsSetup�֐���Render�֐���params�p�����[�^��ID�ɂȂ�
+//ユーザーインターフェースのID
+//ParamsSetup関数とRender関数のparamsパラメータのIDになる
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -49,11 +49,11 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI�̕\��������
+//UIの表示文字列
 #define	STR_A				"AlphaThreshold"
 
 
-//UI�̃p�����[�^
+//UIのパラメータ
 typedef struct ParamInfo {
 	PF_FpLong	a;
 	
@@ -67,7 +67,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EffectMain (	
+EntryPointFunc (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

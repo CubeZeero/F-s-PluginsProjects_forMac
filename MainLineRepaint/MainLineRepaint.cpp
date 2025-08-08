@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+// Place parameters in After Effects UI
+// See Param_Utils.h for details
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -21,7 +21,7 @@ static PF_Err ParamsSetup (
 	PF_ParamDef		def;
 
 	//----------------------------------------------------------------
-	//F‚ÌŽw’è
+	// Main color
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_Main_Color, 
 					0x00,
@@ -90,17 +90,17 @@ static PF_Err Exec16(CFsAE* ae, ParamInfo* infoP)
 	data = (PF_Pixel16*)ae->out->data();
 	
 	PF_Pixel16 m2 = CONV8TO16(infoP->Main_Color);
-	//…•½•ûŒü
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	A_long cnt = 0;
 	for (A_long j = 0; j < h; j++) {
 		A_long adrY = j * wt;
-		//Œ³‰æ‘œ‚ðƒXƒLƒƒƒ“ƒ‰ƒCƒ“‚²‚Æ‚É‘Þ”ð
+		//ï¿½ï¿½ï¿½æ‘œï¿½ï¿½ï¿½Xï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Æ‚É‘Þ”ï¿½
 		for (A_long i = 0; i < w; i++) {
 			scanline[i] = data[adrY + i];
-			//ŽåüE“§–¾‚Æ–¾‚é‚³‚Ìƒe[ƒuƒ‹
-			//@–¾‚é‚³ 0-255
-			// “§–¾ 256 PPTRANS
-			// Žåü 257 PPMAIN
+			//ï¿½ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½Æ–ï¿½ï¿½é‚³ï¿½Ìƒeï¿½[ï¿½uï¿½ï¿½
+			//ï¿½@ï¿½ï¿½ï¿½é‚³ 0-255
+			// ï¿½ï¿½ï¿½ï¿½ 256 PPTRANS
+			// ï¿½ï¿½ï¿½ 257 PPMAIN
 			scanlineV[i] = pV16(data[adrY + i], infoP->Main_Color, infoP->lv);
 		}
 
@@ -201,7 +201,7 @@ static PF_Err Exec16(CFsAE* ae, ParamInfo* infoP)
 		}
 	}
 	if (cnt == 0) return err;
-	// ‚’¼•ûŒü
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	cnt = 0;
 	for (A_long i = 0; i < w; i++) {
 		for (A_long j = 0; j < h; j++) {
@@ -324,17 +324,17 @@ static PF_Err Exec32(CFsAE* ae, ParamInfo* infoP)
 	data = (PF_PixelFloat*)ae->out->data();
 
 	PF_PixelFloat m2 = CONV8TO32(infoP->Main_Color);
-	//…•½•ûŒü
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	A_long cnt = 0;
 	for (A_long j = 0; j < h; j++) {
 		A_long adrY = j * wt;
-		//Œ³‰æ‘œ‚ðƒXƒLƒƒƒ“ƒ‰ƒCƒ“‚²‚Æ‚É‘Þ”ð
+		//ï¿½ï¿½ï¿½æ‘œï¿½ï¿½ï¿½Xï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Æ‚É‘Þ”ï¿½
 		for (A_long i = 0; i < w; i++) {
 			scanline[i] = data[adrY + i];
-			//ŽåüE“§–¾‚Æ–¾‚é‚³‚Ìƒe[ƒuƒ‹
-			//@–¾‚é‚³ 0-255
-			// “§–¾ 256 PPTRANS
-			// Žåü 257 PPMAIN
+			//ï¿½ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½Æ–ï¿½ï¿½é‚³ï¿½Ìƒeï¿½[ï¿½uï¿½ï¿½
+			//ï¿½@ï¿½ï¿½ï¿½é‚³ 0-255
+			// ï¿½ï¿½ï¿½ï¿½ 256 PPTRANS
+			// ï¿½ï¿½ï¿½ 257 PPMAIN
 			scanlineV[i] = pV32(data[adrY + i], infoP->Main_Color, infoP->lv);
 		}
 
@@ -435,7 +435,7 @@ static PF_Err Exec32(CFsAE* ae, ParamInfo* infoP)
 		}
 	}
 	if (cnt == 0) return err;
-	// ‚’¼•ûŒü
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	cnt = 0;
 	for (A_long i = 0; i < w; i++) {
 		for (A_long j = 0; j < h; j++) {
@@ -571,7 +571,7 @@ static PF_Err
 	if ( w < ae->out->height() ) w = ae->out->height();
 	w *=2;
 
-	//‰æ–Ê‚ðƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	
 
@@ -617,10 +617,10 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 /*
-	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
+	SmartFXï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½zï¿½Xï¿½g(After Effects7ï¿½È‘Oï¿½Ì‚ï¿½ï¿½ï¿½)ï¿½Í‚ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½Ä•`ï¿½æ‚·ï¿½ï¿½
+	ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Îˆê‰žv6.5ï¿½Î‰ï¿½ï¿½É‚È‚ï¿½
 */
 static PF_Err 
 Render ( 
@@ -644,7 +644,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

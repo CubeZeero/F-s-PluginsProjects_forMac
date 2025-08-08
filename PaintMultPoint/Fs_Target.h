@@ -10,31 +10,28 @@
 
 
 //-----------------------------------------------------------------------------------
-//Plugin name used in After Effects
-#define FS_NAME			"F's PaintMultPoint"
+// Plugin display name
+#define FS_NAME			"F's PaintMalutPaint"
 //-----------------------------------------------------------------------------------
-//Plugin description used in After Effects
-#define FS_DESCRIPTION	"Paint multiple points (for cell animation)"
+// Description used in the plugin UI
+#define FS_DESCRIPTION	"Paint multiple points"
 
 //-----------------------------------------------------------------------------------
-//Category displayed in After Effects
-
+//�v���O�C�����\������郁�j���[��
+//#define FS_CATEGORY "F's Plugins-Fx"
+//#define FS_CATEGORY "F's Plugins-Channel"
 #define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "NF's Plugins-Channel"
-//#define FS_CATEGORY "NF's Plugins-Colorize"
-//#define FS_CATEGORY "NF's Plugins-Draw"
-//#define FS_CATEGORY "NF's Plugins-Filter"
-//#define FS_CATEGORY "NF's Plugins-Noise"
-//#define FS_CATEGORY "NF's Plugins-expression"
-//#define FS_CATEGORY "NF's Plugins-{Legacy}"
+//#define FS_CATEGORY "F's Plugins-Script"
+//#define FS_CATEGORY "F's Plugins-Draw"
+
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//Enable SmartFX+Float_Color support
-//#define NO_USE_FSGRAPHICS	//Disable FsGraphics related code
+#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
+//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-//Plugin version
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 
 //-----------------------------------------------------------------------------------
@@ -49,9 +46,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//Normal setting
-//#define FS_OUT_FLAGS	33556036	//Enable for SmartFX to prevent flickering. NON_PARAM_VARY may need to be set manually
-//#define FS_OUT_FLAGS	1600		//8bit only
+#define FS_OUT_FLAGS	33556032	//�ʏ�͂�����
+//#define FS_OUT_FLAGS	33556036	//��������L���ɂ���Ɩ��t���[�����Ƃɕ`�悷��BNON_PARAM_VARY�𓮍쒆�ɐ؂�ւ���Ƃ����������
+//#define FS_OUT_FLAGS	1600		//8bit�̂�
 
 //-----------------------------------------------------------------------------------
 //out_flags2

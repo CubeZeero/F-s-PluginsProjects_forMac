@@ -34,10 +34,8 @@
 //#define NO_USE_FSGRAPHICS	// Disable FsGraphics include if not needed
 
 //-----------------------------------------------------------------------------------
-// Version information
-#define MAJOR_VERSION    1
-#define MINOR_VERSION    5
-#define FS_VERSION       ((MAJOR_VERSION << 20) | MINOR_VERSION)  // 1572864
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

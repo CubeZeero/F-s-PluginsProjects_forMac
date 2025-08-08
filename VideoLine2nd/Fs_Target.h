@@ -14,8 +14,8 @@
 #define FS_NAME			"F's VideoLine2nd"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�e���r�̑��������ۂ����� �o�O�t�B�b�N�X�o�[�W����"
+// Description used in the plugin UI
+#define FS_DESCRIPTION	"Draw bright/dark band lines (bugfix version)"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -36,7 +36,8 @@
 //-----------------------------------------------------------------------------------
 //�v���O�C���̃o�[�W����
 
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

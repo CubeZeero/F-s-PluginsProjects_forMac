@@ -38,8 +38,8 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+//Parameter ID for AfterEffects
+//This ID becomes the params parameter in ParamsSetup function and Render function
 enum {
 	ID_INPUT = 0,	// default input layer
 	ID_POPUP,
@@ -60,7 +60,7 @@ namespace M_MODE
 		MAX
 	};
 };
-//UIの表示文字列
+//UI display strings
 
 #define	STR_POPUP			"Mask"
 #define	STR_POPUP_ITEMS		"Red|Green|Blue|Yellow|Magenta|Cyan|Max"
@@ -72,7 +72,7 @@ namespace M_MODE
 #define BD_HI	192
 #define BD_LO	192
 
-//UIのパラメータ
+//UI parameters
 typedef struct ParamInfo {
 	A_long		mode;
 	PF_FpLong	col_level;

@@ -171,7 +171,7 @@ extern "C" {
 
 	DllExport
 		PF_Err
-		EffectMain(
+		EntryPointFunc(
 			PF_Cmd			cmd,
 			PF_InData* in_dataP,
 			PF_OutData* out_dataP,

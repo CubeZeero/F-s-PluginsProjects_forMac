@@ -38,8 +38,8 @@
 #include "../FsLibrary/FsAE.h"
 //#include "FsAE.h"
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+//Layer parameter file ID
+//ParamsSetup function and Render function params parameter ID
 namespace M_COL{
 	enum{
 		R =0,
@@ -63,7 +63,7 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UIの表示文字列
+//UI display string
 
 #define	STR_LEVEL		"Level"
 #define	STR_R			"Red"
@@ -75,7 +75,7 @@ enum {
 #define	STR_ON			"on"
 
 
-//UIのパラメータ
+//UI parameters
 typedef struct ParamInfo {
 	PF_Boolean		colFlag[M_COL::Count];
 	PF_FpLong		col_level;

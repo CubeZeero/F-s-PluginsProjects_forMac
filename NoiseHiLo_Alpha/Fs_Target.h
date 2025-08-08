@@ -35,10 +35,8 @@
 //#define NO_USE_FSGRAPHICS	//Disable FsGraphics related code in After Effects
 
 //-----------------------------------------------------------------------------------
-// Version settings
-#define FS_VERSION	1572864
-#define MAJOR_VERSION	1
-#define MINOR_VERSION	0
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 
 //-----------------------------------------------------------------------------------

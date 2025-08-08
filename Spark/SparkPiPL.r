@@ -1,4 +1,4 @@
-/* ’è‹`‚ÍFs_Target.h‚Ås‚È‚Á‚Ä‚¢‚éB‚±‚Ìƒtƒ@ƒCƒ‹‚Í•ÒW‚·‚é•K—v‚È‚µ */
+/* ï¿½ï¿½`ï¿½ï¿½Fs_Target.hï¿½Åsï¿½È‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½Ìƒtï¿½@ï¿½Cï¿½ï¿½ï¿½Í•ÒWï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½È‚ï¿½ */
 #include "Fs_Target.h"
 
 #include "AEConfig.h"
@@ -15,15 +15,15 @@ resource 'PiPL' (16000) {
 			AEEffect
 		},
 		/* [2] */
-		Name {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
-			FS_NAME
-		},
+        Name {
+            /* Name shown in AE menu */
+            FS_NAME
+        },
 		/* [3] */
-		Category {
-			/*AE‚Ìƒƒjƒ…[‚Ég‚í‚ê‚é */
-			FS_CATEGORY
-		},
+        Category {
+            /* Category in AE menu */
+            FS_CATEGORY
+        },
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
@@ -32,11 +32,12 @@ resource 'PiPL' (16000) {
 		CodeWin32X86 {"EntryPointFunc"},
 	#endif	
 #else
-	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
-	#endif
+    #ifdef AE_OS_MAC
+        CodeMachOPowerPC {"EntryPointFunc"},
+        CodeMacIntel32 {"EntryPointFunc"},
+        CodeMacIntel64 {"EntryPointFunc"},
+        CodeMacARM64 {"EntryPointFunc"},
+    #endif
 #endif
 		/* [6] */
 		AE_PiPL_Version {
@@ -66,10 +67,10 @@ resource 'PiPL' (16000) {
 		},
 
 		/* [11] */
-		AE_Effect_Match_Name {
-			/*ƒvƒ‰ƒOƒCƒ“‚Ì¯•Ê‚Ég‚í‚ê‚é */
-			FS_NAME
-		},
+        AE_Effect_Match_Name {
+            /* Match name */
+            FS_NAME
+        },
 		/* [12] */
 		AE_Reserved_Info {
 			0

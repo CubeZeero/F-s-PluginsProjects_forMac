@@ -41,7 +41,7 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
+#include "FsAE.h"
 
 #include "FsTDpset.h"
 
@@ -73,32 +73,32 @@
 
 #define	STR_ORG_CB1			"Original_Blend"
 #define	STR_ORG_CB2			"ON"
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	MY_INPUT = 0,	// default input layer 
 	
-	ID_SEED,			//ƒ‰ƒ“ƒ_ƒ€‚ÌŠî“_
-	ID_TARGET_VALUE,	//ƒ^ƒbƒ`‚ª”­¶‚·‚éŠm—¦
+	ID_SEED,			//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ÌŠï¿½_
+	ID_TARGET_VALUE,	//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½ï¿½
 	ID_TARGRT_TOPIC,
-	ID_TARGET_MODE,		// 1:·•ª 2:color 
-	ID_TARGET_COLOR,	//ƒ^[ƒQƒbƒg‚ÌF
-	ID_COLOR_RANGE,	//F‚Ì”ÍˆÍ
-	ID_DELTA_RANGE,	//·•ª‚Ì”ÍˆÍ
+	ID_TARGET_MODE,		// 1:ï¿½ï¿½ï¿½ï¿½ 2:color 
+	ID_TARGET_COLOR,	//ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½ÌF
+	ID_COLOR_RANGE,	//ï¿½Fï¿½Ì”Íˆï¿½
+	ID_DELTA_RANGE,	//ï¿½ï¿½ï¿½ï¿½ï¿½Ì”Íˆï¿½
 	ID_TARGRT_TOPIC_END,
 
-	ID_CENTER,			//ƒ^ƒbƒ`ü‚Ì•ûŒü
-	ID_LENGTH_I_MAX,	//ƒ^ƒbƒ`ü‚Ì’·‚³in•ûŒü
-	ID_LENGTH_I_RND,	//ƒ^ƒbƒ`ü‚Ì’·‚³in•ûŒü‚Ìƒ‰ƒ“ƒ_ƒ€‚³
-	ID_LENGTH_O_MAX,	//ƒ^ƒbƒ`ü‚Ì’·‚³out•ûŒü
-	ID_LENGTH_O_RND,	//ƒ^ƒbƒ`ü‚Ì’·‚³out•ûŒü‚Ìƒ‰ƒ“ƒ_ƒ€‚³
+	ID_CENTER,			//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½Ì•ï¿½ï¿½ï¿½
+	ID_LENGTH_I_MAX,	//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ï¿½inï¿½ï¿½ï¿½ï¿½
+	ID_LENGTH_I_RND,	//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ï¿½inï¿½ï¿½ï¿½ï¿½ï¿½Ìƒï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½
+	ID_LENGTH_O_MAX,	//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ï¿½outï¿½ï¿½ï¿½ï¿½
+	ID_LENGTH_O_RND,	//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ï¿½outï¿½ï¿½ï¿½ï¿½ï¿½Ìƒï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½
 
-	ID_COLOR,			//ƒ^ƒbƒ`ü‚ÌF
-	ID_OPACITY,			//ƒ^ƒbƒ`ü‚Ì•s“§–¾“x
-	ID_OPACITY_RND,		//ƒ^ƒbƒ`ü‚Ì•s“§–¾“x‚Ìƒ‰ƒ“ƒ_ƒ€
+	ID_COLOR,			//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ÌF
+	ID_OPACITY,			//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½Ì•sï¿½ï¿½ï¿½ï¿½ï¿½x
+	ID_OPACITY_RND,		//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½Ì•sï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Ìƒï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½
 
-	ID_POINT_COUNT,		//ƒ^ƒbƒ`‚ª”­¶‚·‚é”
-	ID_POINT_LENGTH,	//ƒ^ƒbƒ`‚ª”­¶‚·‚é”ÍˆÍ
+	ID_POINT_COUNT,		//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é”
+	ID_POINT_LENGTH,	//ï¿½^ï¿½bï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íˆï¿½
 
 	ID_BLOCK_VALUE,
 	ID_BLOCK_SIZE,
@@ -110,7 +110,7 @@ enum {
 
 
 
-//ƒvƒ‰ƒOƒCƒ““ÆŽ©‚Ìƒpƒ‰ƒ[ƒ^‚ðW‚ß‚½\‘¢‘Ì
+//ï¿½vï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ÆŽï¿½ï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Wï¿½ß‚ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½
 typedef struct{
 	A_long			seed;
 	PF_FpShort		target_value;

@@ -27,17 +27,15 @@
 //#define FS_CATEGORY "F's Plugins-Filter"
 //#define FS_CATEGORY "F's Plugins-Noise"
 //#define FS_CATEGORY "F's Plugins-expression"
-#define FS_CATEGORY "F's Plugins-{Legacy}"
+#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
 #define SUPPORT_SMARTFX			// Support SmartFX+Float_Color
 //#define NO_USE_FSGRAPHICS	// Disable FsGraphics related code
 
 //-----------------------------------------------------------------------------------
-// Version settings
-#define FS_VERSION	1572864
-#define MAJOR_VERSION	1
-#define MINOR_VERSION	0
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 
 //-----------------------------------------------------------------------------------

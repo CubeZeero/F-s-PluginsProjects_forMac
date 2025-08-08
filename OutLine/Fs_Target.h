@@ -11,28 +11,30 @@
 
 
 //-----------------------------------------------------------------------------------
-//プラグインの表示名に使う名前
+//�v���O�C���̎��ʂɎg���閼�O
 #define FS_NAME			"F's OutLine"
 
 //-----------------------------------------------------------------------------------
-//プラグインの説明に使う説明
-#define FS_DESCRIPTION	"Outline drawing"
+// Description used in the plugin UI
+#define FS_DESCRIPTION	"Draw outline"
 
-//#define FS_CATEGORY "NF's Plugins-Cell"
-//#define FS_CATEGORY "NF's Plugins-Channel"
-//#define FS_CATEGORY "NF's Plugins-Colorize"
-//#define FS_CATEGORY "NF's Plugins-Draw"
-#define FS_CATEGORY "NF's Plugins-Filter"
-//#define FS_CATEGORY "NF's Plugins-Noise"
-//#define FS_CATEGORY "NF's Plugins-expression"
-//#define FS_CATEGORY "NF's Plugins-{Legacy}"
+	//-----------------------------------------------------------------------------------
+	//�v���O�C�����\������郁�j���[��
+	//#define FS_CATEGORY "F's Plugins-Channel"
+	//#define FS_CATEGORY "F's Plugins-Draw"
+	#define FS_CATEGORY "NF's Plugins-Filter"
+	//#define FS_CATEGORY "F's Plugins-Cell"
+	//#define FS_CATEGORY "F's Plugins-Colorize"
+	//#define FS_CATEGORY "F's Plugins-Script"
+	//#define FS_CATEGORY "F's Plugins-Test"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//コメントアウトするとSmartFX+Float_Colorに対応する
-//#define NO_USE_FSGRAPHICS	//コメントアウトするとFsGraphics関係のコードを無効にする
+#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
+//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags
@@ -46,9 +48,9 @@ out_data->out_flags
 	PF_OutFlag_I_DO_DIALOG				32
 */
 
-#define FS_OUT_FLAGS	33556032	//通常はこれ
-//#define FS_OUT_FLAGS	33556036	//コメントアウトするとパラメータの変化を描画する。NON_PARAM_VARYを最初に戻すとパラメータが変化する
-//#define FS_OUT_FLAGS	1600		//8bitの場合
+#define FS_OUT_FLAGS	33556032	//�ʏ�͂�����
+//#define FS_OUT_FLAGS	33556036	//��������L���ɂ���Ɩ��t���[�����Ƃɕ`�悷��BNON_PARAM_VARY�𓮍쒆�ɐ؂�ւ���Ƃ����������
+//#define FS_OUT_FLAGS	1600		//8bit�̂�
 
 //-----------------------------------------------------------------------------------
 //out_flags2

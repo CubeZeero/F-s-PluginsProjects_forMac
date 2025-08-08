@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4B00001095A3D3A0012CA3F /* Star.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0001095A3C810012CA3F /* Star.cpp */; };
+		C4B00002095A3D3A0012CA3F /* StarBuf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0002095A3C810012CA3F /* StarBuf.cpp */; };
+		C4B00003095A3D3A0012CA3F /* StarDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0003095A3C810012CA3F /* StarDraw.cpp */; };
+		C4B00004095A3D3A0012CA3F /* StarMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0004095A3C810012CA3F /* StarMask.cpp */; };
+		C4B00005095A3D3A0012CA3F /* StarTargetCopy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0005095A3C810012CA3F /* StarTargetCopy.cpp */; };
+		C4B00006095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0006095A3C810012CA3F /* FsGraphics.cpp */; };
+		C4B00007095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0007095A3C810012CA3F /* FsGraphicsLine.cpp */; };
+		C4B00008095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0008095A3C810012CA3F /* FsGraphicsCircle.cpp */; };
+		C4B00009095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0009095A3C810012CA3F /* FsGraphicsBox.cpp */; };
+		C4B0000A095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE000A095A3C810012CA3F /* FsGraphicsBlend.cpp */; };
+		C4B0000B095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		C4B0000C095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		C4B0000D095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		C4B0000E095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		C4B0000F095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4BE0015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		C4B00010095A3D3A0012CA3F /* StarPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = C4BE000B095A3C810012CA3F /* StarPiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C4BE0001095A3C810012CA3F /* Star.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Star.cpp; path = ../Star.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0002095A3C810012CA3F /* StarBuf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StarBuf.cpp; path = ../StarBuf.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0003095A3C810012CA3F /* StarDraw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StarDraw.cpp; path = ../StarDraw.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0004095A3C810012CA3F /* StarMask.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StarMask.cpp; path = ../StarMask.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0005095A3C810012CA3F /* StarTargetCopy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StarTargetCopy.cpp; path = ../StarTargetCopy.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0006095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0007095A3C810012CA3F /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0008095A3C810012CA3F /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0009095A3C810012CA3F /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE000A095A3C810012CA3F /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE000B095A3C810012CA3F /* StarPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = StarPiPL.r; path = ../StarPiPL.r; sourceTree = SOURCE_ROOT; };
+		C4BE000C095A3C810012CA3F /* Star.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Star.plugin-Info.plist; path = Star.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		C4BE1001095A3C810012CA3F /* Star.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = Star.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BE0010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		C4BE0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		C4BE0015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4BEFFC9095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4BEFFB6095A3CE80012CA3F = {
+			isa = PBXGroup;
+			children = (
+				C4BEFFE0095A3E040012CA3F /* Rez */,
+				C4BEFFCA095A3CE80012CA3F /* Frameworks */,
+				C4BEFFC8095A3CE80012CA3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4BEFFC8095A3CE80012CA3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BE1001095A3C810012CA3F /* Star.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4BEFFE0095A3E040012CA3F /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				C4BE000B095A3C810012CA3F /* StarPiPL.r */,
+				C4BE0001095A3C810012CA3F /* Star.cpp */,
+				C4BE0002095A3C810012CA3F /* StarBuf.cpp */,
+				C4BE0003095A3C810012CA3F /* StarDraw.cpp */,
+				C4BE0004095A3C810012CA3F /* StarMask.cpp */,
+				C4BE0005095A3C810012CA3F /* StarTargetCopy.cpp */,
+				C4BE0006095A3C810012CA3F /* FsGraphics.cpp */,
+				C4BE0007095A3C810012CA3F /* FsGraphicsLine.cpp */,
+				C4BE0008095A3C810012CA3F /* FsGraphicsCircle.cpp */,
+				C4BE0009095A3C810012CA3F /* FsGraphicsBox.cpp */,
+				C4BE000A095A3C810012CA3F /* FsGraphicsBlend.cpp */,
+				C4BE0010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				C4BE0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				C4BE0012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				C4BE0013095A3C810012CA3F /* Smart_Utils.cpp */,
+				C4BE0015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				C4BE000C095A3C810012CA3F /* Star.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		C4BEFFCA095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4BEFFA9095A3CE80012CA3F /* Star */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4BEFFB0095A3CE80012CA3F /* Build configuration list for PBXNativeTarget "Star" */;
+			buildPhases = (
+				C4BEFFC9095A3CE80012CA3F /* Frameworks */,
+				C4BEFFE1095A3E040012CA3F /* Rez */,
+				C4BEFFC7095A3CE80012CA3F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Star;
+			productName = Star;
+			productReference = C4BE1001095A3C810012CA3F /* Star.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4BEFFAA095A3CE80012CA3F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C4BEFFAD095A3CE80012CA3F /* Build configuration list for PBXProject "Star" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C4BEFFB6095A3CE80012CA3F;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4BEFFA9095A3CE80012CA3F /* Star */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		C4BEFFE1095A3E040012CA3F /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B00010095A3D3A0012CA3F /* StarPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4BEFFC7095A3CE80012CA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B00001095A3D3A0012CA3F /* Star.cpp in Sources */,
+				C4B00002095A3D3A0012CA3F /* StarBuf.cpp in Sources */,
+				C4B00003095A3D3A0012CA3F /* StarDraw.cpp in Sources */,
+				C4B00004095A3D3A0012CA3F /* StarMask.cpp in Sources */,
+				C4B00005095A3D3A0012CA3F /* StarTargetCopy.cpp in Sources */,
+				C4B00006095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+				C4B00007095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */,
+				C4B00008095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */,
+				C4B00009095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */,
+				C4B0000A095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */,
+				C4B0000B095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				C4B0000C095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				C4B0000D095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				C4B0000E095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				C4B0000F095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C4BEFFAE095A3CE80012CA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Star.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Star;
+				PRODUCT_NAME = Star;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		C4BEFFAF095A3CE80012CA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Star.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Star;
+				PRODUCT_NAME = Star;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4BEFFAD095A3CE80012CA3F /* Build configuration list for PBXProject "Star" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BEFFAE095A3CE80012CA3F /* Debug */,
+				C4BEFFAF095A3CE80012CA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C4BEFFB0095A3CE80012CA3F /* Build configuration list for PBXNativeTarget "Star" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BEFFAE095A3CE80012CA3F /* Debug */,
+				C4BEFFAF095A3CE80012CA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = C4BEFFAA095A3CE80012CA3F /* Project object */;
+}

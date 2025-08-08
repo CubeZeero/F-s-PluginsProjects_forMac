@@ -15,12 +15,12 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			/*AEのメニューに使われる */
+			/* Name shown in AE menu */
 			FS_NAME
 		},
 		/* [3] */
 		Category {
-			/*AEのメニューに使われる */
+			/* Category in AE menu */
 				FS_CATEGORY
 		},
 		
@@ -35,6 +35,7 @@ resource 'PiPL' (16000) {
 		CodeMachOPowerPC {"EntryPointFunc"},
 		CodeMacIntel32 {"EntryPointFunc"},
 		CodeMacIntel64 {"EntryPointFunc"},
+		CodeMacARM64 {"EntryPointFunc"},
 	#endif
 #endif
 
@@ -65,7 +66,7 @@ resource 'PiPL' (16000) {
 		},
 		/* [11] */
 		AE_Effect_Match_Name {
-			/*プラグインの識別に使われる */
+			/* Match name */
 				FS_NAME
 		},
 		/* [12] */

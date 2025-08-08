@@ -9,8 +9,8 @@
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//Register parameters to AfterEffects
+//Referenced from Param_Utils.h
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -22,12 +22,12 @@ static PF_Err ParamsSetup (
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_LEVEL,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		2, 			//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		64,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		2,			//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		12,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		12,			//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_LEVEL,	//Parameter name
+		2, 			//Minimum value when slider is at minimum
+		64,			//Maximum value when slider is at maximum
+		2,			//Slider minimum value 
+		12,			//Slider maximum value
+		12,			//Default value
 		ID_LEVEL
 	);
 
@@ -94,39 +94,39 @@ FilterImage8 (
 		return err;
 	}
 
-	//Šeƒ`ƒƒƒ“ƒlƒ‹‚ð‚P‚ÌŽÀ”‚Ö ‚»‚µ‚ÄMat‚Ìˆ—
+	//Convert each pixel value to 0-1 range, similar to Mat conversion
 	double a = (double)outP->alpha / PF_MAX_CHAN8;
 	double r = (double)outP->red * a / PF_MAX_CHAN8;
 	double g = (double)outP->green * a / PF_MAX_CHAN8;
 	double b = (double)outP->blue * a / PF_MAX_CHAN8;
 
-	//‚Ü‚¸ƒAƒ‹ƒtƒ@[‚Ìˆ—
-	A_long va = (A_long)((double)infoP->level * a + 0.5);//level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-	va = (A_long)((double)va * PF_MAX_CHAN8 / (double)infoP->level + 0.5);//255‚É•ÏŠ·
+	//First, process alpha channel
+	A_long va = (A_long)((double)infoP->level * a + 0.5);//Quantize to level steps to make level maximum
+	va = (A_long)((double)va * PF_MAX_CHAN8 / (double)infoP->level + 0.5);//Convert to 255
 	outP->alpha = RoundByteLong(va);
 
 
 	if (infoP->grayOnly==TRUE)
 	{
 		double y = (0.299 * r + 0.587 * g + 0.114 * b);
-		A_long vy = (A_long)((double)infoP->level * y + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		vy = (A_long)((double)vy * PF_MAX_CHAN8 / (double)infoP->level + 0.5); //255‚É•ÏŠ·
-		vy = (A_long)((double)vy *PF_MAX_CHAN8 / va + 0.5); //Mat‚Ìˆ—
+		A_long vy = (A_long)((double)infoP->level * y + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		vy = (A_long)((double)vy * PF_MAX_CHAN8 / (double)infoP->level + 0.5); //255ï¿½É•ÏŠï¿½
+		vy = (A_long)((double)vy *PF_MAX_CHAN8 / va + 0.5); //Matï¿½Ìï¿½ï¿½ï¿½
 		outP->blue = outP->green = outP->red = RoundByteLong(vy);
 	}
 	else {
 
-		A_long vr = (A_long)((double)infoP->level * r + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		vr = (A_long)((double)vr * PF_MAX_CHAN8 / (double)infoP->level + 0.5); //255‚É•ÏŠ·
-		vr = (A_long)((double)vr *PF_MAX_CHAN8 / va + 0.5); //Mat‚Ìˆ—
+		A_long vr = (A_long)((double)infoP->level * r + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		vr = (A_long)((double)vr * PF_MAX_CHAN8 / (double)infoP->level + 0.5); //255ï¿½É•ÏŠï¿½
+		vr = (A_long)((double)vr *PF_MAX_CHAN8 / va + 0.5); //Matï¿½Ìï¿½ï¿½ï¿½
 
-		A_long vg = (A_long)((double)infoP->level * g + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		vg = (A_long)((double)vg * PF_MAX_CHAN8 / (double)infoP->level + 0.5); //255‚É•ÏŠ·
-		vg = (A_long)((double)vg *PF_MAX_CHAN8 / va + 0.5); //Mat‚Ìˆ—
+		A_long vg = (A_long)((double)infoP->level * g + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		vg = (A_long)((double)vg * PF_MAX_CHAN8 / (double)infoP->level + 0.5); //255ï¿½É•ÏŠï¿½
+		vg = (A_long)((double)vg *PF_MAX_CHAN8 / va + 0.5); //Matï¿½Ìï¿½ï¿½ï¿½
 
-		A_long vb = (A_long)((double)infoP->level * b + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		vb = (A_long)((double)vb * PF_MAX_CHAN8 / (double)infoP->level + 0.5); //255‚É•ÏŠ·
-		vb = (A_long)((double)vb *PF_MAX_CHAN8 / va + 0.5); //Mat‚Ìˆ—
+		A_long vb = (A_long)((double)infoP->level * b + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		vb = (A_long)((double)vb * PF_MAX_CHAN8 / (double)infoP->level + 0.5); //255ï¿½É•ÏŠï¿½
+		vb = (A_long)((double)vb *PF_MAX_CHAN8 / va + 0.5); //Matï¿½Ìï¿½ï¿½ï¿½
 
 		outP->red = RoundByteLong(vr);
 		outP->green = RoundByteLong(vg);
@@ -155,39 +155,39 @@ FilterImage16 (
 		return err;
 	}
 
-	//Šeƒ`ƒƒƒ“ƒlƒ‹‚ð‚P‚ÌŽÀ”‚Ö ‚»‚µ‚ÄMat‚Ìˆ—
+	//ï¿½eï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Pï¿½ÌŽï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Matï¿½Ìï¿½ï¿½ï¿½
 	double a = (double)outP->alpha / PF_MAX_CHAN16;
 	double r = (double)outP->red * a / PF_MAX_CHAN16;
 	double g = (double)outP->green * a / PF_MAX_CHAN16;
 	double b = (double)outP->blue * a / PF_MAX_CHAN16;
 
-	//‚Ü‚¸ƒAƒ‹ƒtƒ@[‚Ìˆ—
-	A_long va = (A_long)((double)infoP->level * a + 0.5);//level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-	va = (A_long)((double)va * PF_MAX_CHAN16 / (double)infoP->level + 0.5);//255‚É•ÏŠ·
+	//ï¿½Ü‚ï¿½ï¿½Aï¿½ï¿½ï¿½tï¿½@ï¿½[ï¿½Ìï¿½ï¿½ï¿½
+	A_long va = (A_long)((double)infoP->level * a + 0.5);//levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	va = (A_long)((double)va * PF_MAX_CHAN16 / (double)infoP->level + 0.5);//255ï¿½É•ÏŠï¿½
 	outP->alpha = RoundShort(va);
 
 
 	if (infoP->grayOnly == TRUE)
 	{
 		double y = (0.299 * r + 0.587 * g + 0.114 * b);
-		A_long vy = (A_long)((double)infoP->level * y + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		vy = (A_long)((double)vy * PF_MAX_CHAN16 / (double)infoP->level + 0.5); //255‚É•ÏŠ·
-		vy = (A_long)((double)vy *PF_MAX_CHAN16 / va + 0.5); //Mat‚Ìˆ—
+		A_long vy = (A_long)((double)infoP->level * y + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		vy = (A_long)((double)vy * PF_MAX_CHAN16 / (double)infoP->level + 0.5); //255ï¿½É•ÏŠï¿½
+		vy = (A_long)((double)vy *PF_MAX_CHAN16 / va + 0.5); //Matï¿½Ìï¿½ï¿½ï¿½
 		outP->blue = outP->green = outP->red = RoundShort(vy);
 	}
 	else {
 
-		A_long vr = (A_long)((double)infoP->level * r + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		vr = (A_long)((double)vr * PF_MAX_CHAN16 / (double)infoP->level + 0.5); //255‚É•ÏŠ·
-		vr = (A_long)((double)vr *PF_MAX_CHAN16 / va + 0.5); //Mat‚Ìˆ—
+		A_long vr = (A_long)((double)infoP->level * r + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		vr = (A_long)((double)vr * PF_MAX_CHAN16 / (double)infoP->level + 0.5); //255ï¿½É•ÏŠï¿½
+		vr = (A_long)((double)vr *PF_MAX_CHAN16 / va + 0.5); //Matï¿½Ìï¿½ï¿½ï¿½
 
-		A_long vg = (A_long)((double)infoP->level * g + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		vg = (A_long)((double)vg * PF_MAX_CHAN16 / (double)infoP->level + 0.5); //255‚É•ÏŠ·
-		vg = (A_long)((double)vg *PF_MAX_CHAN16 / va + 0.5); //Mat‚Ìˆ—
+		A_long vg = (A_long)((double)infoP->level * g + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		vg = (A_long)((double)vg * PF_MAX_CHAN16 / (double)infoP->level + 0.5); //255ï¿½É•ÏŠï¿½
+		vg = (A_long)((double)vg *PF_MAX_CHAN16 / va + 0.5); //Matï¿½Ìï¿½ï¿½ï¿½
 
-		A_long vb = (A_long)((double)infoP->level * b + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		vb = (A_long)((double)vb * PF_MAX_CHAN16 / (double)infoP->level + 0.5); //255‚É•ÏŠ·
-		vb = (A_long)((double)vb *PF_MAX_CHAN16 / va + 0.5); //Mat‚Ìˆ—
+		A_long vb = (A_long)((double)infoP->level * b + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		vb = (A_long)((double)vb * PF_MAX_CHAN16 / (double)infoP->level + 0.5); //255ï¿½É•ÏŠï¿½
+		vb = (A_long)((double)vb *PF_MAX_CHAN16 / va + 0.5); //Matï¿½Ìï¿½ï¿½ï¿½
 
 		outP->red = RoundShort(vr);
 		outP->green = RoundShort(vg);
@@ -216,39 +216,39 @@ FilterImage32 (
 		return err;
 	}
 
-	//Šeƒ`ƒƒƒ“ƒlƒ‹‚ð‚P‚ÌŽÀ”‚Ö ‚»‚µ‚ÄMat‚Ìˆ—
+	//ï¿½eï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Pï¿½ÌŽï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Matï¿½Ìï¿½ï¿½ï¿½
 	double a = (double)outP->alpha;
 	double r = (double)outP->red * a;
 	double g = (double)outP->green * a;
 	double b = (double)outP->blue * a;
 
-	//‚Ü‚¸ƒAƒ‹ƒtƒ@[‚Ìˆ—
-	A_long va = (A_long)((double)infoP->level * a + 0.5);//level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-	a = (double)va / (double)infoP->level;//255‚É•ÏŠ·
+	//ï¿½Ü‚ï¿½ï¿½Aï¿½ï¿½ï¿½tï¿½@ï¿½[ï¿½Ìï¿½ï¿½ï¿½
+	A_long va = (A_long)((double)infoP->level * a + 0.5);//levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	a = (double)va / (double)infoP->level;//255ï¿½É•ÏŠï¿½
 	outP->alpha = RoundFpShortDouble(a);
 
 
 	if (infoP->grayOnly == TRUE)
 	{
 		double y = (0.299 * r + 0.587 * g + 0.114 * b);
-		A_long vy = (A_long)((double)infoP->level * y + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		y = ((double)vy / (double)infoP->level); //255‚É•ÏŠ·
-		y = y / a; //Mat‚Ìˆ—
+		A_long vy = (A_long)((double)infoP->level * y + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		y = ((double)vy / (double)infoP->level); //255ï¿½É•ÏŠï¿½
+		y = y / a; //Matï¿½Ìï¿½ï¿½ï¿½
 		outP->blue = outP->green = outP->red = RoundFpShortDouble(y);
 	}
 	else {
 
-		A_long vr = (A_long)((double)infoP->level * r + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		r = ((double)vr / (double)infoP->level); //255‚É•ÏŠ·
-		r = r / a; //Mat‚Ìˆ—
+		A_long vr = (A_long)((double)infoP->level * r + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		r = ((double)vr / (double)infoP->level); //255ï¿½É•ÏŠï¿½
+		r = r / a; //Matï¿½Ìï¿½ï¿½ï¿½
 
-		A_long vg = (A_long)((double)infoP->level * g + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		g = ((double)vg / (double)infoP->level); //255‚É•ÏŠ·
-		g = g / a; //Mat‚Ìˆ—
+		A_long vg = (A_long)((double)infoP->level * g + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		g = ((double)vg / (double)infoP->level); //255ï¿½É•ÏŠï¿½
+		g = g / a; //Matï¿½Ìï¿½ï¿½ï¿½
 
-		A_long vb = (A_long)((double)infoP->level * b + 0.5); //level‚ªÅ‘å‚É‚È‚é‚æ‚¤‚ÉŽlŽÌŒÜ“ü‚µ‚Ä®”®”‰»
-		b = ((double)vb / (double)infoP->level); //255‚É•ÏŠ·
-		b = b / a; //Mat‚Ìˆ—
+		A_long vb = (A_long)((double)infoP->level * b + 0.5); //levelï¿½ï¿½ï¿½Å‘ï¿½É‚È‚ï¿½æ‚¤ï¿½ÉŽlï¿½ÌŒÜ“ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		b = ((double)vb / (double)infoP->level); //255ï¿½É•ÏŠï¿½
+		b = b / a; //Matï¿½Ìï¿½ï¿½ï¿½
 
 		outP->red = RoundFpShortDouble(r);
 		outP->green = RoundFpShortDouble(g);
@@ -275,7 +275,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ðƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	
 	switch(ae->pixelFormat())
@@ -294,10 +294,10 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 /*
-	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
+	SmartFXï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½zï¿½Xï¿½g(After Effects7ï¿½È‘Oï¿½Ì‚ï¿½ï¿½ï¿½)ï¿½Í‚ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½Ä•`ï¿½æ‚·ï¿½ï¿½
+	ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Îˆê‰žv6.5ï¿½Î‰ï¿½ï¿½É‚È‚ï¿½
 */
 static PF_Err 
 Render ( 
@@ -321,7 +321,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

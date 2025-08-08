@@ -78,7 +78,7 @@ enum {
 #define	Str_OUT_OPACITY			"out_opacity"
 #define	Str_LINE_HEIGHT			"line_height"
 #define	Str_SIZE_POP1			"size"
-#define	Str_SIZE_POP2			"��̐��l|720x540|1024x576|1024x768|1280x720|1440x810|1920x1080"
+#define	Str_SIZE_POP2			"custom|720x540|1024x576|1024x768|1280x720|1440x810|1920x1080"
 
 
 typedef struct {
@@ -104,7 +104,7 @@ typedef struct {
 extern "C" {
 DllExport	
 PF_Err 
-EffectMain (
+EntryPointFunc (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

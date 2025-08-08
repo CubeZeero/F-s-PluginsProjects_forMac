@@ -1,0 +1,251 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4700001095A3D3A0012CA3F /* sputteringRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47E0001095A3C810012CA3F /* sputteringRect.cpp */; };
+		C4700002095A3D3A0012CA3F /* sputteringRectMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47E0002095A3C810012CA3F /* sputteringRectMain.cpp */; };
+		C4700003095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47E0003095A3C810012CA3F /* FsGraphics.cpp */; };
+		C4700004095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = C47E0010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		C4700005095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47E0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		C4700006095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47E0012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		C4700007095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47E0013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		C4700008095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47E0015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		C4700009095A3D3A0012CA3F /* sputteringRectPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = C47E0009095A3C810012CA3F /* sputteringRectPiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C47E0001095A3C810012CA3F /* sputteringRect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = sputteringRect.cpp; path = ../sputteringRect.cpp; sourceTree = SOURCE_ROOT; };
+		C47E0002095A3C810012CA3F /* sputteringRectMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = sputteringRectMain.cpp; path = ../sputteringRectMain.cpp; sourceTree = SOURCE_ROOT; };
+		C47E0003095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		C47E0010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		C47E0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		C47E0012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		C47E0013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		C47E0015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		C47E0009095A3C810012CA3F /* sputteringRectPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = sputteringRectPiPL.r; path = ../sputteringRectPiPL.r; sourceTree = SOURCE_ROOT; };
+		C47E1001095A3C810012CA3F /* sputteringRect.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = sputteringRect.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47E000B095A3C810012CA3F /* sputteringRect.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = sputteringRect.plugin-Info.plist; path = sputteringRect.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C47EFFC9095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C47EFFB6095A3CE80012CA3F = {
+			isa = PBXGroup;
+			children = (
+				C47EFFE0095A3E040012CA3F /* Rez */,
+				C47EFFCA095A3CE80012CA3F /* Frameworks */,
+				C47EFFC8095A3CE80012CA3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C47EFFC8095A3CE80012CA3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C47E1001095A3C810012CA3F /* sputteringRect.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C47EFFE0095A3E040012CA3F /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				C47E0009095A3C810012CA3F /* sputteringRectPiPL.r */,
+				C47E0001095A3C810012CA3F /* sputteringRect.cpp */,
+				C47E0002095A3C810012CA3F /* sputteringRectMain.cpp */,
+				C47E0003095A3C810012CA3F /* FsGraphics.cpp */,
+				C47E0010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				C47E0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				C47E0012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				C47E0013095A3C810012CA3F /* Smart_Utils.cpp */,
+				C47E0015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				C47E000B095A3C810012CA3F /* sputteringRect.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		C47EFFCA095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C47EFFA9095A3CE80012CA3F /* sputteringRect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47EFFB0095A3CE80012CA3F /* Build configuration list for PBXNativeTarget "sputteringRect" */;
+			buildPhases = (
+				C47EFFC9095A3CE80012CA3F /* Frameworks */,
+				C47EFFE1095A3E040012CA3F /* Rez */,
+				C47EFFC7095A3CE80012CA3F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sputteringRect;
+			productName = sputteringRect;
+			productReference = C47E1001095A3C810012CA3F /* sputteringRect.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C47EFFAA095A3CE80012CA3F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C47EFFAD095A3CE80012CA3F /* Build configuration list for PBXProject "sputteringRect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C47EFFB6095A3CE80012CA3F;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C47EFFA9095A3CE80012CA3F /* sputteringRect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		C47EFFE1095A3E040012CA3F /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4700009095A3D3A0012CA3F /* sputteringRectPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C47EFFC7095A3CE80012CA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4700001095A3D3A0012CA3F /* sputteringRect.cpp in Sources */,
+				C4700002095A3D3A0012CA3F /* sputteringRectMain.cpp in Sources */,
+				C4700003095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+				C4700004095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				C4700005095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				C4700006095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				C4700007095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				C4700008095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C47EFFAE095A3CE80012CA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = sputteringRect.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.sputteringRect;
+				PRODUCT_NAME = sputteringRect;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		C47EFFAF095A3CE80012CA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = sputteringRect.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.sputteringRect;
+				PRODUCT_NAME = sputteringRect;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C47EFFAD095A3CE80012CA3F /* Build configuration list for PBXProject "sputteringRect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47EFFAE095A3CE80012CA3F /* Debug */,
+				C47EFFAF095A3CE80012CA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C47EFFB0095A3CE80012CA3F /* Build configuration list for PBXNativeTarget "sputteringRect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47EFFAE095A3CE80012CA3F /* Debug */,
+				C47EFFAF095A3CE80012CA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = C47EFFAA095A3CE80012CA3F /* Project object */;
+}

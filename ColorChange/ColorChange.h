@@ -95,41 +95,41 @@ enum {
 };
 
 
-#define STR_LV		"���e�l"
-#define STR_MODE1	"���[�h"
-#define STR_EXEC	"���s����"
+#define STR_LV		"Level"
+#define STR_MODE1	"Mode"
+#define STR_EXEC	"Execute"
 
 #define STR_TARGET0	"Target0"
-#define STR_SRCCOL0	"���̐F0"
-#define STR_DSTCOL0	"�V�����F0"
+#define STR_SRCCOL0	"Source Color 0"
+#define STR_DSTCOL0	"Destination Color 0"
 
 #define STR_TARGET1	"Target1"
-#define STR_SRCCOL1	"���̐F1"
-#define STR_DSTCOL1	"�V�����F1"
+#define STR_SRCCOL1	"Source Color 1"
+#define STR_DSTCOL1	"Destination Color 1"
 
 #define STR_TARGET2	"Target2"
-#define STR_SRCCOL2	"���̐F2"
-#define STR_DSTCOL2	"�V�����F2"
+#define STR_SRCCOL2	"Source Color 2"
+#define STR_DSTCOL2	"Destination Color 2"
 
 #define STR_TARGET3	"Target3"
-#define STR_SRCCOL3	"���̐F3"
-#define STR_DSTCOL3	"�V�����F3"
+#define STR_SRCCOL3	"Source Color 3"
+#define STR_DSTCOL3	"Destination Color 3"
 
 #define STR_TARGET4	"Target4"
-#define STR_SRCCOL4	"���̐F4"
-#define STR_DSTCOL4	"�V�����F4"
+#define STR_SRCCOL4	"Source Color 4"
+#define STR_DSTCOL4	"Destination Color 4"
 
 #define STR_TARGET5	"Target5"
-#define STR_SRCCOL5	"���̐F5"
-#define STR_DSTCOL5	"�V�����F5"
+#define STR_SRCCOL5	"Source Color 5"
+#define STR_DSTCOL5	"Destination Color 5"
 
 #define STR_TARGET6	"Target6"
-#define STR_SRCCOL6	"���̐F6"
-#define STR_DSTCOL6	"�V�����F6"
+#define STR_SRCCOL6	"Source Color 6"
+#define STR_DSTCOL6	"Destination Color 6"
 
 #define STR_TARGET7	"Target7"
-#define STR_SRCCOL7	"���̐F7"
-#define STR_DSTCOL7	"�V�����F7"
+#define STR_SRCCOL7	"Source Color 7"
+#define STR_DSTCOL7	"Destination Color 7"
 
 
 typedef struct ParamInfo{
@@ -148,7 +148,7 @@ extern "C" {
 
 DllExport 
 PF_Err 
-EffectMain (	
+EntryPointFunc (	
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

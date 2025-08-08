@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		TN000001095A3D3A0012CA3F /* Toner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100001095A3C810012CA3F /* Toner.cpp */; };
+		TN000002095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100005095A3C810012CA3F /* FsGraphics.cpp */; };
+		TN000003095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100006095A3C810012CA3F /* FsGraphicsLine.cpp */; };
+		TN000004095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100007095A3C810012CA3F /* FsGraphicsCircle.cpp */; };
+		TN000005095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100008095A3C810012CA3F /* FsGraphicsBox.cpp */; };
+		TN000006095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100009095A3C810012CA3F /* FsGraphicsBlend.cpp */; };
+		TN000007095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = TN100010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		TN000008095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		TN000009095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		TN00000A095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		TN00000B095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN100015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		TN00000C095A3D3A0012CA3F /* TonerPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = TN10000A095A3C810012CA3F /* TonerPiPL.r */; };
+		TN00000D095A3D3A0012CA3F /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = TN10000C095A3C810012CA3F /* FsMat.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		TN100001095A3C810012CA3F /* Toner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Toner.cpp; path = ../Toner.cpp; sourceTree = SOURCE_ROOT; };
+		TN100005095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		TN100006095A3C810012CA3F /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		TN100007095A3C810012CA3F /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		TN100008095A3C810012CA3F /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		TN100009095A3C810012CA3F /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		TN10000A095A3C810012CA3F /* TonerPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = TonerPiPL.r; path = ../TonerPiPL.r; sourceTree = SOURCE_ROOT; };
+		TN10000B095A3C810012CA3F /* Toner.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Toner.plugin-Info.plist; path = Toner.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		TN1001001095A3C810012CA3F /* Toner.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = Toner.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		TN100010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		TN100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		TN100012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		TN100013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		TN100015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		TN10000C095A3C810012CA3F /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		TNFRAMEWORKS095A3CE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		TNGROUPROOT095A3CE8 = {
+			isa = PBXGroup;
+			children = (
+				TNREZGROUP095A3E04 /* Rez */,
+				TNFRAMEWORKSGROUP095A3CE8 /* Frameworks */,
+				TNPRODUCTSGROUP095A3CE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		TNPRODUCTSGROUP095A3CE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				TN1001001095A3C810012CA3F /* Toner.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		TNREZGROUP095A3E04 /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				TN10000A095A3C810012CA3F /* TonerPiPL.r */,
+				TN100001095A3C810012CA3F /* Toner.cpp */,
+				TN100005095A3C810012CA3F /* FsGraphics.cpp */,
+				TN100006095A3C810012CA3F /* FsGraphicsLine.cpp */,
+				TN100007095A3C810012CA3F /* FsGraphicsCircle.cpp */,
+				TN100008095A3C810012CA3F /* FsGraphicsBox.cpp */,
+				TN100009095A3C810012CA3F /* FsGraphicsBlend.cpp */,
+				TN10000C095A3C810012CA3F /* FsMat.cpp */,
+				TN100010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				TN100011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				TN100012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				TN100013095A3C810012CA3F /* Smart_Utils.cpp */,
+				TN100015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				TN10000B095A3C810012CA3F /* Toner.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		TNFRAMEWORKSGROUP095A3CE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TNNATIVE095A3CE8 /* Toner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = TNBULIDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "Toner" */;
+			buildPhases = (
+				TNFRAMEWORKS095A3CE8 /* Frameworks */,
+				TNREZPHASE095A3E04 /* Rez */,
+				TNSOURCESPHASE095A3CE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Toner;
+			productName = Toner;
+			productReference = TN1001001095A3C810012CA3F /* Toner.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		TNPROJECTOBJ095A3CE8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = TNPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "Toner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = TNGROUPROOT095A3CE8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TNNATIVE095A3CE8 /* Toner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		TNREZPHASE095A3E04 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TN00000C095A3D3A0012CA3F /* TonerPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		TNSOURCESPHASE095A3CE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TN000001095A3D3A0012CA3F /* Toner.cpp in Sources */,
+				TN000002095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+				TN000003095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */,
+				TN000004095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */,
+				TN000005095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */,
+				TN000006095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */,
+				TN000007095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				TN000008095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				TN000009095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				TN00000A095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				TN00000B095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+				TN00000D095A3D3A0012CA3F /* FsMat.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		TNPROJECTDEBUG095A3CE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Toner.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Toner;
+				PRODUCT_NAME = Toner;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		TNPROJECTRELEASE095A3CE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Toner.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Toner;
+				PRODUCT_NAME = Toner;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		TNPROJECTBUILDCONFIG095A3CE8 /* Build configuration list for PBXProject "Toner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TNPROJECTDEBUG095A3CE8 /* Debug */,
+				TNPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		TNBULIDCONFLIST095A3CE8 /* Build configuration list for PBXNativeTarget "Toner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TNPROJECTDEBUG095A3CE8 /* Debug */,
+				TNPROJECTRELEASE095A3CE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = TNPROJECTOBJ095A3CE8 /* Project object */;
+}

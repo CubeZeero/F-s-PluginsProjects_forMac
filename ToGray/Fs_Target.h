@@ -13,8 +13,8 @@
 #define FS_NAME			"F's ToGray"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�F�X�ȕ��@�ŃO���[�����܂�"
+// Description shown in AE UI
+#define FS_DESCRIPTION	"Convert to grayscale with multiple modes"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -33,9 +33,8 @@
 //#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̃o�[�W����
-
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

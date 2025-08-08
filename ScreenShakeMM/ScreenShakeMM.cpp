@@ -85,8 +85,8 @@ static PF_Err SequenceResetup (
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+// Register parameters to After Effects
+// See Param_Utils.h for details
 static PF_Err ParamsSetup (PF_InData		*in_data,
 					PF_OutData		*out_data,
 					PF_ParamDef		*params[],
@@ -95,15 +95,15 @@ static PF_Err ParamsSetup (PF_InData		*in_data,
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 
-	//‚PŒÂ–Ú‚Ìƒpƒ‰ƒ[ƒ^
+	//ï¿½Pï¿½Â–Ú‚Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_MM,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					400,	//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,		//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					50,		//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					2,		//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,		//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_MM,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					400,	//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,		//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					50,		//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					2,		//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,		//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_MM
@@ -111,12 +111,12 @@ static PF_Err ParamsSetup (PF_InData		*in_data,
 
 	AEFX_CLR_STRUCT(def);
 
-	PF_ADD_SLIDER(	STR_VALUE_RND,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					100,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					10,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_VALUE_RND,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					100,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					10,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_VALUE_RND
 					);
 	
@@ -124,48 +124,48 @@ static PF_Err ParamsSetup (PF_InData		*in_data,
 	PF_ADD_ANGLE(STR_DIR,15.0,ID_DIR);
 
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_DIR_RND,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					360,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					45,				//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					10,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_DIR_RND,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					360,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					45,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					10,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_DIR_RND
 					);
 
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_RANDOMSEED,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 				//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					99,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					30,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_RANDOMSEED,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 				//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					99,			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					30,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,				//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_RANDOMSEED
 					);
 
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POPUP(		STR_EDGE_STATUS1, 
-						4,	//ƒƒjƒ…[‚Ì”
-						1,	//ƒfƒtƒHƒ‹ƒg
+						4,	//ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ìï¿½
+						1,	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½g
 						STR_EDGE_STATUS2,
 						ID_EDGE_STATUS
 						);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_FIXED(	STR_DPI,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					10, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					400,		//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					10,			//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					192,		//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					144,		//ƒfƒtƒHƒ‹ƒg‚Ì’l
-					1,			//”’l•\¦‚ÉŠÖ‚·‚éƒtƒ‰ƒO 
+	PF_ADD_FIXED(	STR_DPI,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					10, 		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					400,		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					10,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					192,		//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					144,		//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
+					1,			//ï¿½ï¿½ï¿½lï¿½\ï¿½ï¿½ï¿½ÉŠÖ‚ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 
 					0,
 					0,
 					ID_DPI
 					);
 	//----------------------------------------------------------------
 #ifdef TEST_MODE
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX
+	//ï¿½`ï¿½Fï¿½bï¿½Nï¿½{ï¿½bï¿½Nï¿½X
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_CHECKBOX(STR_TEST_TIME_CB1,
 					STR_TEST_TIME_CB2,
@@ -278,19 +278,19 @@ static void PramSet(CFsAE *ae, ParamInfo *infoP)
 {
 
 	//---------------------------------------------------------------
-	//ˆÚ“®‹——£
+    // Motion amount
 	PF_Fixed valueMin	= infoP->value * (100 - infoP->value_rand) / 100;
 	
 	PF_Fixed valueFin	= F_RAND2( valueMin,infoP->value);
 	//---------------------------------------------------------------
-	//ˆÚ“®•ûŒü
+    // Motion direction
 	PF_Fixed dirFin = infoP->dir + F_RAND2((-1*infoP->dir_rand),infoP->dir_rand);
 		if ( (ae->frame() % 2)==0 ) {
 		dirFin += (180L<<16);
 	}
 	dirFin = RoundAngle360(dirFin);
 	//---------------------------------------------------------------
-	//ˆÚ“®‹——£‚ğXY‚É•ª‚¯‚é
+    // Convert motion amount to X/Y shift
 	CRotCalc rt(ae->in_data);
 	rt.SetRotLength(dirFin, valueFin);
 	infoP->shiftX = rt.x();
@@ -353,7 +353,7 @@ GetParams ( CFsAE *ae, ParamInfo * infoP)
 		infoP->dir = RoundAngle360(infoP->dir);
 	}
 	ERR(ae->GetFIXED(ID_DIR_RND,&infoP->dir_rand));
-	if (!err) infoP->dir_rand = infoP->dir_rand <<16;//PF_Fixed‚É‚ ‚í‚¹‚é
+    if (!err) infoP->dir_rand = infoP->dir_rand <<16; // convert to PF_Fixed
 	ERR(ae->GetADD(ID_RANDOMSEED,&infoP->randomseed));
 	ERR(ae->GetADD(ID_EDGE_STATUS,&infoP->edge_status));
 
@@ -387,7 +387,7 @@ static PF_Err Exec(CFsAE *ae, ParamInfo *infoP)
 	return err;
 }
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 static PF_Err 
 Render ( 
 	PF_InData		*in_data,

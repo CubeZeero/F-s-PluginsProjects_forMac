@@ -224,4 +224,26 @@ EntryPointFunc (
 }
 
 //-------------------------------------------------------------------------------------------------
+extern "C" DllExport
+PF_Err PluginDataEntryFunction2(
+    PF_PluginDataPtr inPtr,
+    PF_PluginDataCB2 inPluginDataCallBackPtr,
+    SPBasicSuite* inSPBasicSuitePtr,
+    const char* inHostName,
+    const char* inHostVersion)
+{
+    PF_Err result = PF_Err_INVALID_CALLBACK;
+    result = PF_REGISTER_EFFECT_EXT2(
+        inPtr,
+        inPluginDataCallBackPtr,
+        FS_NAME,
+        FS_NAME,
+        FS_CATEGORY,
+        0,  // AE_RESERVED_INFO → 0 (Mac互換性)
+        "EntryPointFunc",
+        FS_DESCRIPTION
+    );
+    return result;
+}
+//-------------------------------------------------------------------------------------------------
 #endif

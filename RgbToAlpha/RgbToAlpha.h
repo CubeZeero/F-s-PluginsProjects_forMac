@@ -36,12 +36,13 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
+// Use shared FsLibrary include path via project search paths
+#include "FsAE.h"
 //#include "FsAE.h"
 
 
-//ユーザーインターフェースのID
-//ParamsSetup関数とRender関数のparamsパラメータのIDになる
+//Parameter ID definitions
+//ParamsSetup function and Render function use params parameter ID
 enum {
 	ID_INPUT = 0,	// default input layer 
 	ID_POP,
@@ -50,13 +51,13 @@ enum {
 	ID_NUM_PARAMS
 	};
 
-#define STR_POP1	"塗りつぶし色"
-#define STR_POP2	"白|黒|指定色"
+#define STR_POP1	"Color Mode:"
+#define STR_POP2	"White|Black|Select Color:"
 #define STR_POP		3
 #define STR_POP_DEF	1
 
-#define STR_COLOR	"指定色"
-#define STR_REV1	"Alphaを反転"
+#define STR_COLOR	"Select Color"
+#define STR_REV1	"Invert Alpha"
 #define STR_REV2	"Rev"
 
 typedef struct ParamInfo8{

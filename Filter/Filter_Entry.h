@@ -226,7 +226,7 @@ PF_Err PluginDataEntryFunction(
 
 //=======================================================================================
 PF_Err
-EffectMain(
+EntryPointFunc(
 	PF_Cmd			cmd,
 	PF_InData		*in_dataP,
 	PF_OutData		*out_data,
@@ -322,7 +322,7 @@ PF_Err PluginDataEntryFunction2(
 		FS_NAME,
 		FS_CATEGORY,
 		0,
-		"EffectMain",
+		"EntryPointFunc",
 		FS_DESCRIPTION
 	);
 	return result;

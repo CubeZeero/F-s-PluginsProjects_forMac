@@ -9,8 +9,8 @@
 #include <stdio.h>
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ð’Ê’B‚·‚é
-//Param_Utils.h‚ðŽQÆ‚Ì‚±‚Æ
+//Register parameters to AfterEffects
+//Refer to Param_Utils.h for details
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -60,7 +60,7 @@ static PF_Err ParamsSetup (
 		sprintf(num, "TargetColorEnabled%d", i);
 #endif
 		AEFX_CLR_STRUCT(def);
-		def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+		def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 		PF_ADD_CHECKBOX(num,
 			STR_ON,
 			FALSE,
@@ -73,9 +73,9 @@ static PF_Err ParamsSetup (
 #else
 		sprintf(num, "TargetColor%d", i);
 #endif
-		//F‚ÌŽw’è
+		//Color specification
 		AEFX_CLR_STRUCT(def);
-		def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+		def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 		PF_ADD_COLOR(num,
 			defCol[i][0],
 			defCol[i][1],
@@ -91,82 +91,82 @@ static PF_Err ParamsSetup (
 	PF_ADD_TOPIC(STR_DIR_TOPIC, ID_DIR_TOPIC);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_TOP,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		EXPAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		EXPAND_MAX,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_TOP,	//Parameter name
+		0, 		//Minimum value when valid
+		EXPAND_MAX,			//Maximum value when valid
+		0,				//Slider minimum value 
+		EXPAND_MAX,			//Slider maximum value
+		0,				//Default value
 		ID_TOP
 	);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_TOP_RIGHT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		EXPAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		EXPAND_MAX,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_TOP_RIGHT,	//Parameter name
+		0, 		//Minimum value when valid
+		EXPAND_MAX,			//Maximum value when valid
+		0,				//Slider minimum value 
+		EXPAND_MAX,			//Slider maximum value
+		0,				//Default value
 		ID_TOP_RIGHT
 	);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_RIGHT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		EXPAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		EXPAND_MAX,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_RIGHT,	//Parameter name
+		0, 		//Minimum value when valid
+		EXPAND_MAX,			//Maximum value when valid
+		0,				//Slider minimum value 
+		EXPAND_MAX,			//Slider maximum value
+		0,				//Default value
 		ID_RIGHT
 	);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_BOTTOM_RIGHT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		EXPAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		EXPAND_MAX,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_BOTTOM_RIGHT,	//Parameter name
+		0, 		//Minimum value when valid
+		EXPAND_MAX,			//Maximum value when valid
+		0,				//Slider minimum value 
+		EXPAND_MAX,			//Slider maximum value
+		0,				//Default value
 		ID_BOTTOM_RIGHT
 	);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_BOTTOM,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		EXPAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		EXPAND_MAX,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_BOTTOM,	//Parameter name
+		0, 		//Minimum value when valid
+		EXPAND_MAX,			//Maximum value when valid
+		0,				//Slider minimum value 
+		EXPAND_MAX,			//Slider maximum value
+		0,				//Default value
 		ID_BOTTOM
 	);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_BOTTOM_LEFT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		EXPAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		EXPAND_MAX,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_BOTTOM_LEFT,	//Parameter name
+		0, 		//Minimum value when valid
+		EXPAND_MAX,			//Maximum value when valid
+		0,				//Slider minimum value 
+		EXPAND_MAX,			//Slider maximum value
+		0,				//Default value
 		ID_BOTTOM_LEFT
 	);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_LEFT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		EXPAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		EXPAND_MAX,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_LEFT,	//Parameter name
+		0, 		//Minimum value when valid
+		EXPAND_MAX,			//Maximum value when valid
+		0,				//Slider minimum value 
+		EXPAND_MAX,			//Slider maximum value
+		0,				//Default value
 		ID_LEFT
 	);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(STR_TOP_LEFT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-		0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-		EXPAND_MAX,			//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-		0,				//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-		EXPAND_MAX,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-		0,				//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(STR_TOP_LEFT,	//Parameter name
+		0, 		//Minimum value when valid
+		EXPAND_MAX,			//Maximum value when valid
+		0,				//Slider minimum value 
+		EXPAND_MAX,			//Slider maximum value
+		0,				//Default value
 		ID_TOP_LEFT
 	);
 	//----------------------------------------------------------------
@@ -185,7 +185,7 @@ static PF_Err ParamsSetup (
 		sprintf(num, "NoneColorEnabled%d", i);
 #endif
 		AEFX_CLR_STRUCT(def);
-		def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+		def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 		PF_ADD_CHECKBOX(num,
 			STR_ON,
 			FALSE,
@@ -198,9 +198,9 @@ static PF_Err ParamsSetup (
 #else
 		sprintf(num, "NoneColor%d", i);
 #endif
-		//F‚ÌŽw’è
+		//Color specification
 		AEFX_CLR_STRUCT(def);
-		def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//‚±‚ê‚ð‚Â‚¯‚é‚ÆƒL[ƒtƒŒ[ƒ€‚ªŒ‚‚Ä‚È‚­‚È‚é
+		def.flags = PF_ParamFlag_CANNOT_TIME_VARY;//When collapsed, it becomes the collapsed state in the display
 		PF_ADD_COLOR(num,
 			defCol[i][0],
 			defCol[i][1],
@@ -1459,7 +1459,7 @@ static PF_Err
 		ERR(ae->CopyInToOut());
 		return err;
 	}
-	//’l‚ª‚·‚×‚Ä‚O‚È‚ç‚¨‚í‚é
+	//ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½×‚Ä‚Oï¿½È‚ç‚¨ï¿½ï¿½ï¿½
 	PF_Boolean GoExpand = FALSE;
 	for (A_long i = 0; i < LEN_COUNT; i++)
 	{
@@ -1517,10 +1517,10 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//ƒŒƒ“ƒ_ƒŠƒ“ƒO‚ÌƒƒCƒ“
+//ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ìƒï¿½ï¿½Cï¿½ï¿½
 /*
-	SmartFX‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒzƒXƒg(After Effects7ˆÈ‘O‚Ì‚à‚Ì)‚Í‚±‚ÌŠÖ”‚ªŒÄ‚Ño‚³‚ê‚Ä•`‰æ‚·‚é
-	‚±‚ÌŠÖ”‚ð‘‚¢‚Ä‚¨‚¯‚Îˆê‰žv6.5‘Î‰ž‚É‚È‚é
+	SmartFXï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½zï¿½Xï¿½g(After Effects7ï¿½È‘Oï¿½Ì‚ï¿½ï¿½ï¿½)ï¿½Í‚ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½ï¿½ï¿½Ä•`ï¿½æ‚·ï¿½ï¿½
+	ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Îˆê‰žv6.5ï¿½Î‰ï¿½ï¿½É‚È‚ï¿½
 */
 static PF_Err 
 Render ( 
@@ -1544,7 +1544,7 @@ Render (
 }
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX‘Î‰ž‚Ìê‡A‚Ü‚¸‚±‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚Äƒpƒ‰ƒ[ƒ^‚ÌŠl“¾‚ðs‚¤
+	SmartFXï¿½Î‰ï¿½ï¿½Ìê‡ï¿½Aï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ÌŠÖï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½Äƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌŠlï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err

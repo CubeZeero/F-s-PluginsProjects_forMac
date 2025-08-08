@@ -35,17 +35,18 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
-#include "../FsLibrary/FsScreenShake.h"
+// Use shared FsLibrary include path via project search paths
+#include "FsAE.h"
+#include "FsScreenShake.h"
 
 
-#define	STR_Y			"大きさ(px)"
-#define	STR_VALUE_RND		"大きさのばらつき(%)"
-#define	STR_DIR				"方向(Rot)"
-#define	STR_DIR_RND			"方向のばらつき(Rot)"
+#define	STR_Y			"Magnitude (px)"
+#define	STR_VALUE_RND		"Magnitude Random (%)"
+#define	STR_DIR				"Direction (deg)"
+#define	STR_DIR_RND			"Direction Random (deg)"
 #define	STR_RANDOMSEED		"Random Seed"
-#define	STR_EDGE_STATUS1	"縁の処理"
-#define	STR_EDGE_STATUS2	"透明|伸ばす|繰り返す1|繰り返す2"
+#define	STR_EDGE_STATUS1	"Edge Handling"
+#define	STR_EDGE_STATUS2	"None|Clamp|Repeat|Mirror"
 
 #ifdef TEST_MODE
 	#define	STR_TEST_TIME_CB1	"Time Disp"
@@ -55,10 +56,10 @@
 
 enum {
 	ID_INPUT = 0,	// default input layer 
-	ID_Y,		// 画面動の大きさ
+    ID_Y,		// Magnitude
 	ID_VALUE_RND,
-	ID_DIR,			// 画面動の方向
-	ID_DIR_RND,		// 画面動の方向のばらつき
+    ID_DIR,			// Direction
+    ID_DIR_RND,		// Direction random
 	ID_RANDOMSEED,
 	ID_EDGE_STATUS,
 	ID_NUM_PARAMS
@@ -71,7 +72,7 @@ enum {
 	edge_mirror
 };
 
-//プラグイン独自のパラメータを集めた構造体
+// Parameters used during rendering
 typedef struct{
 	//PF_Fixed			dpi;
 	//PF_Fixed			mm;

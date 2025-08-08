@@ -1,0 +1,157 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		YUV000010001 /* YuvControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000010001 /* YuvControl.cpp */; };
+		YUV000010101 /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000100101 /* AEFX_SuiteHelper.c */; };
+		YUV000010102 /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000100102 /* AEGP_SuiteHandler.cpp */; };
+		YUV000010103 /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000100103 /* MissingSuiteError.cpp */; };
+		YUV000010104 /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000100104 /* Smart_Utils.cpp */; };
+		YUV000010105 /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000100105 /* AEGP_Utils.cpp */; };
+		YUV000020101 /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000200101 /* FsGraphics.cpp */; };
+		YUV000020103 /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000200103 /* FsGraphicsBox.cpp */; };
+		YUV000020104 /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000200104 /* FsGraphicsCircle.cpp */; };
+		YUV000020105 /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000200105 /* FsGraphicsLine.cpp */; };
+		YUV000020108 /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = YUV1000200108 /* FsMat.cpp */; };
+		YUV000030001 /* YuvControlPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = YUV1000030001 /* YuvControlPiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		YUV1000010001 /* YuvControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = YuvControl.cpp; path = ../YuvControl.cpp; sourceTree = SOURCE_ROOT; };
+		YUV1000010002 /* YuvControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YuvControl.h; path = ../YuvControl.h; sourceTree = SOURCE_ROOT; };
+		YUV1000030001 /* YuvControlPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = YuvControlPiPL.r; path = ../YuvControlPiPL.r; sourceTree = SOURCE_ROOT; };
+		YUV10000A001 /* YuvControl.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = YuvControl.plugin-Info.plist; path = YuvControl.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+
+		YUV1000100101 /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		YUV1000100102 /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		YUV1000100103 /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		YUV1000100104 /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		YUV1000100105 /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+
+		YUV1000200101 /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		YUV1000200103 /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		YUV1000200104 /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		YUV1000200105 /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		YUV1000200108 /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		YUVPROJ /* Project */ = {isa = PBXGroup; children = (
+			YUVSRCS /* Sources */, YUVUTIL /* AEUtil */, YUVLIB /* FsLibrary */, YUVRES /* Resources */); sourceTree = "<group>"; };
+		YUVSRCS /* Sources */ = {isa = PBXGroup; children = (YUV1000010001 /* YuvControl.cpp */, YUV1000010002 /* YuvControl.h */); name = Sources; sourceTree = "<group>"; };
+		YUVUTIL /* AEUtil */ = {isa = PBXGroup; children = (
+			YUV1000100101 /* AEFX_SuiteHelper.c */, YUV1000100102 /* AEGP_SuiteHandler.cpp */, YUV1000100104 /* Smart_Utils.cpp */, YUV1000100105 /* AEGP_Utils.cpp */, YUV1000100103 /* MissingSuiteError.cpp */); name = AEUtil; sourceTree = "<group>"; };
+		YUVLIB /* FsLibrary */ = {isa = PBXGroup; children = (
+			YUV1000200101 /* FsGraphics.cpp */, YUV1000200103 /* FsGraphicsBox.cpp */, YUV1000200104 /* FsGraphicsCircle.cpp */, YUV1000200105 /* FsGraphicsLine.cpp */, YUV1000200108 /* FsMat.cpp */); name = FsLibrary; sourceTree = "<group>"; };
+		YUVRES /* Resources */ = {isa = PBXGroup; children = (YUV1000030001 /* YuvControlPiPL.r */, YUV10000A001 /* YuvControl.plugin-Info.plist */); name = Resources; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		YUVAPP /* YuvControl */ = {isa = PBXNativeTarget; buildConfigurationList = YUVBUISET; buildPhases = (
+			YUVSOURCESPHASE /* Sources */, YUVREZPHASE /* Rez */, YUVRESBUILD /* Resources */); name = YuvControl; productName = YuvControl; productType = "com.apple.product-type.bundle"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		YUVPROJOBJ /* Project object */ = {isa = PBXProject; buildConfigurationList = YUVPROJBUILDSET; compatibilityVersion = "Xcode 3.2"; hasScannedForEncodings = 0; mainGroup = YUVPROJ; productRefGroup = YUVPROJ; projectDirPath = ""; targets = (YUVAPP); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		YUVRESBUILD /* Resources */ = {isa = PBXResourcesBuildPhase; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		YUVREZPHASE /* Rez */ = {isa = PBXRezBuildPhase; files = (YUV000030001 /* YuvControlPiPL.r in Rez */); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		YUVSOURCESPHASE /* Sources */ = {isa = PBXSourcesBuildPhase; files = (
+			YUV000010001 /* YuvControl.cpp in Sources */, YUV000010101 /* AEFX_SuiteHelper.c in Sources */, YUV000010102 /* AEGP_SuiteHandler.cpp in Sources */, YUV000010103 /* MissingSuiteError.cpp in Sources */, YUV000010104 /* Smart_Utils.cpp in Sources */, YUV000010105 /* AEGP_Utils.cpp in Sources */, YUV000020101 /* FsGraphics.cpp in Sources */, YUV000020103 /* FsGraphicsBox.cpp in Sources */, YUV000020104 /* FsGraphicsCircle.cpp in Sources */, YUV000020105 /* FsGraphicsLine.cpp in Sources */, YUV000020108 /* FsMat.cpp in Sources */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		YUVBUILDDEBUG /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+			CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/YuvControl.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.YuvControl;
+			PRODUCT_NAME = YuvControl;
+			WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Debug; };
+		YUVBUILDRELEASE /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+			CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/YuvControl.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.YuvControl;
+			PRODUCT_NAME = YuvControl;
+			WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		YUVBUISET /* Build configuration list for PBXNativeTarget */ = {isa = XCConfigurationList; buildConfigurations = (YUVBUILDDEBUG, YUVBUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		YUVPROJBUILDSET /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (YUVBUILDDEBUG, YUVBUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+};
+	rootObject = YUVPROJOBJ /* Project object */;
+}

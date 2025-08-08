@@ -7,7 +7,7 @@
 #include "Premultiply.h"
 
 
-//About表示
+// About dialog
 static PF_Err About (	PF_InData		*in_data,
 						PF_OutData		*out_data,
 						PF_ParamDef		*params[],
@@ -71,8 +71,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffextsにパラメータを通達する
-//Param_Utils.hを参照のこと
+// Pass parameters to After Effects
+// Reference to Param_Utils.h
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -82,17 +82,17 @@ static PF_Err ParamsSetup (
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 	//----------------------------------------------------------------
-	//ポップアップメニュー
+	// Popup menu
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POPUP(		STR_POP1, 
-						STR_POP,	//メニューの数
-						STR_POP_DEF,	//デフォルト
+						STR_POP,	// Number of menu items
+						STR_POP_DEF,	// Default selection
 						STR_POP2,
 						ID_MODE
 						);
 
 	//----------------------------------------------------------------
-	//色の指定
+	// Color specification
 	AEFX_CLR_STRUCT(def);
 	PF_ADD_COLOR(	STR_COLOR, 
 					0x00,
@@ -144,8 +144,8 @@ QueryDynamicFlags(
 {
 	PF_Err 	err 	= PF_Err_NONE,
 			err2 	= PF_Err_NONE;
-	//PF_OutFlag_NON_PARAM_VARYの値をout_flagsへ設定して
-	//毎フレームごとの描画をするか切り替える。
+	// Set PF_OutFlag_NON_PARAM_VARY value to out_flags
+	// Control whether to redraw when the current frame changes
 	/*
 	CFsAE ae;
 	err = ae.QueryDynamicFlags(in_data,out_data,params,extra,ID_NUM_PARAMS);
@@ -182,7 +182,7 @@ static PF_Err Exec(CFsAE *ae, ParamInfo *infoP)
 	return err;
 }
 //-------------------------------------------------------------------------------------------------
-//レンダリングのメイン
+// Main rendering routine
 static PF_Err 
 Render ( 
 	PF_InData		*in_dataP,

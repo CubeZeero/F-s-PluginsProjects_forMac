@@ -37,33 +37,32 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
-//#include "FsAE.h"
+#include "FsAE.h"
 
 #include "../FsLibrary/FsSputtering.h"
 
 
 
 //-----------------------------------------------------------------------------
-//ParamsSetup—p‚Ì’è”
+//ParamsSetupï¿½pï¿½Ì’è”
 enum {
 	ID_INPUT = 0,
 
-	ID_SEED,				//—”‚ÌŠî€
-	ID_Y,				//—Ê
-	ID_OPACITY_RAND,		//“§–¾“x‚ÌÅ‘å’l
+	ID_SEED,				//ï¿½ï¿½ï¿½ï¿½ï¿½ÌŠî€
+	ID_Y,				//ï¿½ï¿½
+	ID_OPACITY_RAND,		//ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ÌÅ‘ï¿½l
 
-	ID_POS,				//ˆÊ’u
-	ID_RADIUS,			//”¼Œa
-	ID_ASPECT,			//ƒAƒXƒyƒNƒg
-	ID_LENGTH_SCALE,		//ƒXƒP[ƒ‹
+	ID_POS,				//ï¿½Ê’u
+	ID_RADIUS,			//ï¿½ï¿½ï¿½a
+	ID_ASPECT,			//ï¿½Aï¿½Xï¿½yï¿½Nï¿½g
+	ID_LENGTH_SCALE,		//ï¿½Xï¿½Pï¿½[ï¿½ï¿½
 
-	ID_ANCHOR_ENABLED,	//ƒAƒ“ƒJ[ƒ|ƒCƒ“ƒg‚ð—LŒø‚É‚·‚é‚©
-	ID_ANCHOR,			//ƒAƒ“ƒJ[ƒ|ƒCƒ“ƒg
+	ID_ANCHOR_ENABLED,	//ï¿½Aï¿½ï¿½ï¿½Jï¿½[ï¿½|ï¿½Cï¿½ï¿½ï¿½gï¿½ï¿½Lï¿½ï¿½ï¿½É‚ï¿½ï¿½é‚©
+	ID_ANCHOR,			//ï¿½Aï¿½ï¿½ï¿½Jï¿½[ï¿½|ï¿½Cï¿½ï¿½ï¿½g
 	
-	ID_POINT_VALUE,	//ˆê‰ñ‚Ì•`‰æ‚Å‘Å‚Â“_‚Ì”
-	ID_POINT_LENGTH,	//“_‚Ì‹——£
-	ID_POINT_LEN_SYNC,	//“_‚Ì‹——£
+	ID_POINT_VALUE,	//ï¿½ï¿½ï¿½Ì•`ï¿½ï¿½Å‘Å‚Â“_ï¿½Ìï¿½
+	ID_POINT_LENGTH,	//ï¿½_ï¿½Ì‹ï¿½ï¿½ï¿½
+	ID_POINT_LEN_SYNC,	//ï¿½_ï¿½Ì‹ï¿½ï¿½ï¿½
 
 	ID_SIZE,
 
@@ -80,7 +79,7 @@ enum {
 	ID_NUM_PARAMS
 };
 //-----------------------------------------------------------------------------
-//ƒpƒ‰ƒ[ƒ^UI—p‚Ì•¶Žš—ñ
+//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^UIï¿½pï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½
 #define UI_SEED			"seed"
 #define UI_VALUE		"value"
 #define UI_OPA_RND		"opacity_rand"
@@ -99,7 +98,7 @@ enum {
 #define UI_POINT_LEN_SYSNC2	"ON"
 
 #define UI_SIZE1		"size"
-#define UI_SIZE2		"‹É¬|¬|’†|‘å|“Á‘å"
+#define UI_SIZE2		"very_small|small|medium|large|very_large"
 #define UI_SIZE_COUNT	5
 #define UI_SIZE_DFLT	2
 
@@ -141,7 +140,7 @@ typedef struct
 
 
 //-----------------------------------------------------------------------------
-//ŠÖ”‚ÌéŒ¾
+//ï¿½Öï¿½ï¿½ÌéŒ¾
 PF_Err MainRender8 (CFsAE *ae, ParamInfo *prm);
 PF_Err MainRender16 (CFsAE *ae, ParamInfo *prm);
 PF_Err MainRender32 (CFsAE *ae, ParamInfo *prm);

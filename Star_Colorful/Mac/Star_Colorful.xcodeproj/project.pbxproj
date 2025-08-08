@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4C00001095A3D3A0012CA3F /* Star_Colorful.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0001095A3C810012CA3F /* Star_Colorful.cpp */; };
+		C4C00002095A3D3A0012CA3F /* Star_ColorfulSub8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0002095A3C810012CA3F /* Star_ColorfulSub8.cpp */; };
+		C4C00003095A3D3A0012CA3F /* Star_ColorfulSub16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0003095A3C810012CA3F /* Star_ColorfulSub16.cpp */; };
+		C4C00004095A3D3A0012CA3F /* Star_ColorfulSub32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0004095A3C810012CA3F /* Star_ColorfulSub32.cpp */; };
+		C4C00005095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0005095A3C810012CA3F /* FsGraphics.cpp */; };
+		C4C00006095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0006095A3C810012CA3F /* FsGraphicsLine.cpp */; };
+		C4C00007095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0007095A3C810012CA3F /* FsGraphicsCircle.cpp */; };
+		C4C00008095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0008095A3C810012CA3F /* FsGraphicsBox.cpp */; };
+		C4C00009095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0009095A3C810012CA3F /* FsGraphicsBlend.cpp */; };
+		C4C0000A095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0010095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		C4C0000B095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		C4C0000C095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0012095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		C4C0000D095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0013095A3C810012CA3F /* Smart_Utils.cpp */; };
+		C4C0000E095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE0015095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		C4C0000F095A3D3A0012CA3F /* Star_ColorfulPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = C4CE000A095A3C810012CA3F /* Star_ColorfulPiPL.r */; };
+        C4C00010095A3D3A0012CA3F /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4CE000C095A3C810012CA3F /* FsMat.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C4CE0001095A3C810012CA3F /* Star_Colorful.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Star_Colorful.cpp; path = ../Star_Colorful.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0002095A3C810012CA3F /* Star_ColorfulSub8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Star_ColorfulSub8.cpp; path = ../Star_ColorfulSub8.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0003095A3C810012CA3F /* Star_ColorfulSub16.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Star_ColorfulSub16.cpp; path = ../Star_ColorfulSub16.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0004095A3C810012CA3F /* Star_ColorfulSub32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Star_ColorfulSub32.cpp; path = ../Star_ColorfulSub32.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0005095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0006095A3C810012CA3F /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0007095A3C810012CA3F /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0008095A3C810012CA3F /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0009095A3C810012CA3F /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE000A095A3C810012CA3F /* Star_ColorfulPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = Star_ColorfulPiPL.r; path = ../Star_ColorfulPiPL.r; sourceTree = SOURCE_ROOT; };
+		C4CE000B095A3C810012CA3F /* Star_Colorful.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Star_Colorful.plugin-Info.plist; path = Star_Colorful.plugin-Info.plist; sourceTree = SOURCE_ROOT; };
+		C4CE1001095A3C810012CA3F /* Star_Colorful.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.plugin; includeInIndex = 0; path = Star_Colorful.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4CE0010095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		C4CE0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0012095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0013095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		C4CE0015095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+        C4CE000C095A3C810012CA3F /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4CEFFC9095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4CEFFB6095A3CE80012CA3F = {
+			isa = PBXGroup;
+			children = (
+				C4CEFFE0095A3E040012CA3F /* Rez */,
+				C4CEFFCA095A3CE80012CA3F /* Frameworks */,
+				C4CEFFC8095A3CE80012CA3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4CEFFC8095A3CE80012CA3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4CE1001095A3C810012CA3F /* Star_Colorful.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4CEFFE0095A3E040012CA3F /* Rez */ = {
+			isa = PBXGroup;
+			children = (
+				C4CE000A095A3C810012CA3F /* Star_ColorfulPiPL.r */,
+				C4CE0001095A3C810012CA3F /* Star_Colorful.cpp */,
+				C4CE0002095A3C810012CA3F /* Star_ColorfulSub8.cpp */,
+				C4CE0003095A3C810012CA3F /* Star_ColorfulSub16.cpp */,
+				C4CE0004095A3C810012CA3F /* Star_ColorfulSub32.cpp */,
+				C4CE0005095A3C810012CA3F /* FsGraphics.cpp */,
+				C4CE0006095A3C810012CA3F /* FsGraphicsLine.cpp */,
+				C4CE0007095A3C810012CA3F /* FsGraphicsCircle.cpp */,
+				C4CE0008095A3C810012CA3F /* FsGraphicsBox.cpp */,
+				C4CE0009095A3C810012CA3F /* FsGraphicsBlend.cpp */,
+                C4CE000C095A3C810012CA3F /* FsMat.cpp */,
+				C4CE0010095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				C4CE0011095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				C4CE0012095A3C810012CA3F /* MissingSuiteError.cpp */,
+				C4CE0013095A3C810012CA3F /* Smart_Utils.cpp */,
+				C4CE0015095A3C810012CA3F /* AEGP_Utils.cpp */,
+				C4CE000B095A3C810012CA3F /* Star_Colorful.plugin-Info.plist */,
+			);
+			name = Rez;
+			sourceTree = "<group>";
+		};
+		C4CEFFCA095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4CEFFA9095A3CE80012CA3F /* Star_Colorful */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4CEFFB0095A3CE80012CA3F /* Build configuration list for PBXNativeTarget "Star_Colorful" */;
+			buildPhases = (
+				C4CEFFC9095A3CE80012CA3F /* Frameworks */,
+				C4CEFFE1095A3E040012CA3F /* Rez */,
+				C4CEFFC7095A3CE80012CA3F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Star_Colorful;
+			productName = Star_Colorful;
+			productReference = C4CE1001095A3C810012CA3F /* Star_Colorful.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4CEFFAA095A3CE80012CA3F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C4CEFFAD095A3CE80012CA3F /* Build configuration list for PBXProject "Star_Colorful" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C4CEFFB6095A3CE80012CA3F;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4CEFFA9095A3CE80012CA3F /* Star_Colorful */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		C4CEFFE1095A3E040012CA3F /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4C0000F095A3D3A0012CA3F /* Star_ColorfulPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4CEFFC7095A3CE80012CA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4C00001095A3D3A0012CA3F /* Star_Colorful.cpp in Sources */,
+				C4C00002095A3D3A0012CA3F /* Star_ColorfulSub8.cpp in Sources */,
+				C4C00003095A3D3A0012CA3F /* Star_ColorfulSub16.cpp in Sources */,
+				C4C00004095A3D3A0012CA3F /* Star_ColorfulSub32.cpp in Sources */,
+				C4C00005095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+				C4C00006095A3D3A0012CA3F /* FsGraphicsLine.cpp in Sources */,
+				C4C00007095A3D3A0012CA3F /* FsGraphicsCircle.cpp in Sources */,
+				C4C00008095A3D3A0012CA3F /* FsGraphicsBox.cpp in Sources */,
+				C4C00009095A3D3A0012CA3F /* FsGraphicsBlend.cpp in Sources */,
+				C4C0000A095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				C4C0000B095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				C4C0000C095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				C4C0000D095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				C4C0000E095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+                C4C00010095A3D3A0012CA3F /* FsMat.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C4CEFFAE095A3CE80012CA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Star_Colorful.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Star_Colorful;
+				PRODUCT_NAME = Star_Colorful;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Debug;
+		};
+		C4CEFFAF095A3CE80012CA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Star_Colorful.plugin-Info.plist;
+				INSTALL_PATH = "";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Star_Colorful;
+				PRODUCT_NAME = Star_Colorful;
+				WRAPPER_EXTENSION = plugin;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../FsLibrary",
+					"$(SRCROOT)/..",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACH__",
+				);
+				REZ_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../Headers",
+					"$(SRCROOT)/../../../Util",
+					"$(SRCROOT)/../../../Headers/SP",
+					"$(SRCROOT)/../../../Resources",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/../../FsLibrary",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4CEFFAD095A3CE80012CA3F /* Build configuration list for PBXProject "Star_Colorful" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CEFFAE095A3CE80012CA3F /* Debug */,
+				C4CEFFAF095A3CE80012CA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C4CEFFB0095A3CE80012CA3F /* Build configuration list for PBXNativeTarget "Star_Colorful" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CEFFAE095A3CE80012CA3F /* Debug */,
+				C4CEFFAF095A3CE80012CA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = C4CEFFAA095A3CE80012CA3F /* Project object */;
+}

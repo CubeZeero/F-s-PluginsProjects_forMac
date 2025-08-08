@@ -13,8 +13,8 @@ PF_Err (*subFunc16)(refconType	refcon, A_long xL, A_long yL,PF_Pixel16	*inP, PF_
 PF_Err (*subFunc32)(refconType	refcon, A_long xL, A_long yL,PF_PixelFloat	*inP, PF_PixelFloat	*outP);
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffextsにパラメータを通達する
-//Param_Utils.hを参照のこと
+// Pass parameters to After Effects
+// Reference to Param_Utils.h
 static PF_Err ParamsSetup (	PF_InData		*in_data,
 							PF_OutData		*out_data,
 							PF_ParamDef		*params[],
@@ -23,14 +23,14 @@ static PF_Err ParamsSetup (	PF_InData		*in_data,
 	PF_Err			err = PF_Err_NONE;
 	PF_ParamDef		def;
 
-	//１個目のパラメータ
+	// First parameter
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_LV,//パラメータの名前
-					0, 				//数値入力する場合の最小値
-					PF_MAX_CHAN8,	//数値入力する場合の最大値
-					0,				//スライダーの最小値 
-					15,				//スライダーの最大値
-					0,				//デフォルトの値
+	PF_ADD_SLIDER(	STR_LV,// Parameter name
+					0, 				// Minimum value for numeric input
+					PF_MAX_CHAN8,	// Maximum value for numeric input
+					0,				// Slider minimum value 
+					15,				// Slider maximum value
+					0,				// Default value
 					ID_LEVEL
 					);
 
@@ -382,7 +382,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//画面をコピー
+	// Copy input to output
 	ERR(ae->CopyInToOut());
 	if ((infoP->enabled ==TRUE )&&(infoP->count>0)) {
 		if ( infoP->Lv ==0){
@@ -413,7 +413,7 @@ static PF_Err
 
 
 //-------------------------------------------------------------------------------------------------
-//レンダリングのメイン
+// Main rendering routine
 static PF_Err 
 Render ( 
 	PF_InData		*in_data,

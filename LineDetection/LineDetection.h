@@ -41,17 +41,17 @@
 
 #define STR_CB				"ON"
 
-#define STR_DELTA_CB		"RGB�������o"
-#define STR_DELTA_OPACITY	"RGB�������o�̔Z�x"
+#define STR_DELTA_CB		"RGB Diff Extract"
+#define STR_DELTA_OPACITY	"RGB Diff Extract Opacity"
 
-#define STR_ALPHA_CB		"Alpha�������o"
-#define STR_ALPHA_OPACITY	"Alpha�������o�̔Z�x"
+#define STR_ALPHA_CB		"Alpha Diff Extract"
+#define STR_ALPHA_OPACITY	"Alpha Diff Extract Opacity"
 
-#define STR_LINE_COLOR		"���o�������̐F"
+#define STR_LINE_COLOR		"Extracted Line Color"
 
 /*
 #define STR_TOPIC			"Extra Colors"
-#define STR_COLOR_OPACITY	"�J���[���o�̔Z�x"
+#define STR_COLOR_OPACITY	"Color Extract Opacity"
 #define STR_COLOR0_CB		"Color0_Enabled"
 #define STR_COLOR0			"Color0"
 #define STR_COLOR0_LEVEL	"Color0_Range"
@@ -80,24 +80,24 @@
 
 
 
-//AfterEffects�̏����܂Ƃ߂��\����
+// After Effects information summary structure
 typedef struct{
 	PF_InData		*in_data;
 	PF_OutData		*out_data;
 
 	PF_EffectWorld 	*input;
 	PF_EffectWorld	*output;
-	PF_PixelPtr  	inData;			//���͉摜�̃A�h���X	
-	PF_PixelPtr  	outData;		//�o�͉摜�̃A�h���X	
-	long			width;					//�Ώۉ摜�̉���(pixel)
-	long			height;					//�Ώۉ摜�̏c	��(pixel)
+	PF_PixelPtr  	inData;			// Input image address	
+	PF_PixelPtr  	outData;		// Output image address	
+	long			width;					// Target image width (pixel)
+	long			height;					// Target image height (pixel)
 	
-	long			inWidth;				//���͉摜�̉����̎��T�C�Ypixel)
-	long			outWidth;				//�o�͉摜�̉����̎��T�C�Ypixel)
-	long			offsetInWidth;	// inWidth - width	�␳�T�C�Y	
+	long			inWidth;				// Input image width sampling size (pixel)
+	long			outWidth;				// Output image width sampling size (pixel)
+	long			offsetInWidth;	// inWidth - width	correction size	
 	long			offsetOutWidth;	// outWidth - width
-	long			Frame;					//�`�撆�̃t���[���i�O�X�^�[�g�j
-	PF_Boolean		is16Bit;		//���[�h��16Bit�Ȃ�TRUE
+	long			Frame;					// Drawing frame number (0-start)
+	PF_Boolean		is16Bit;		// TRUE if mode is 16Bit
 	unsigned char	reserve1;
 	unsigned short	reserve2;
 	long			reserve3;
@@ -225,7 +225,7 @@ typedef struct {
 extern "C" {
 DllExport	
 PF_Err 
-EffectMain (
+EntryPointFunc (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

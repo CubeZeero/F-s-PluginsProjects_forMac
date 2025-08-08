@@ -35,10 +35,10 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
+#include "FsAE.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½tï¿½Fï¿½[ï¿½Xï¿½ï¿½ID
+//ParamsSetupï¿½Öï¿½ï¿½ï¿½Renderï¿½Öï¿½ï¿½ï¿½paramsï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½É‚È‚ï¿½
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -50,15 +50,15 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\¦•¶š—ñ
+// UI label strings
 #define	STR_Y			"Y"
 #define	STR_U			"U"
 #define	STR_V			"V"
 
-#define	STR_UV_AUTO		"UV‚ğY‚Æ˜A“®‚³‚¹‚é"
-#define	STR_ON			"on"
+#define	STR_UV_AUTO		"Auto adjust U/V with Y"
+#define	STR_ON			"On"
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	PF_FpLong	y;
 	PF_FpLong	u;

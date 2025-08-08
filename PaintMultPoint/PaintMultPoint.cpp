@@ -7,7 +7,7 @@
 
 
 //-------------------------------------------------------------------------------------------------
-// About dialog
+// Aboutダイアログ
 static PF_Err About (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -72,8 +72,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//Register parameters in After Effects
-//Refer to Param_Utils.h
+//AfterEffextsにパラメータを通達する
+//Param_Utils.hを参照のこと
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -97,7 +97,7 @@ static PF_Err ParamsSetup (
 	char cap[255] = {"\0"};
 	for (A_long i=0; i<POINT_COLOR_COUNT; i++){
 		AEFX_CLR_STRUCT(def);	
-		def.flags 	= 	PF_ParamFlag_START_COLLAPSED;	//Start collapsed in display
+		def.flags 	= 	PF_ParamFlag_START_COLLAPSED;	//これをつけると表示時に開いた状態になる
 		PF_SPRINTF(cap,STR_TOPIC,i);
 		PF_ADD_TOPIC(cap, ID_UI_TOPIC(i));
 		AEFX_CLR_STRUCT(def);
@@ -200,7 +200,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//Copy input to output
+	//画面をコピー
 	ERR(ae->CopyInToOut());
 	if (!err){
 		if ( infoP->Count>0){
@@ -228,7 +228,7 @@ static PF_Err
 }
 
 //-------------------------------------------------------------------------------------------------
-//Main rendering function
+//レンダリングのメイン
 static PF_Err Render (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

@@ -9,13 +9,13 @@
 #define FS_TAGET_H
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+// Plugin name used in the interface
 #define FS_NAME			"F's Frame"
 //#define FS_NAME			"FsSSFrame"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�t���[����`��"
+// Plugin description used in the interface
+#define FS_DESCRIPTION	"Draw a frame"
 
 //#define FS_CATEGORY "NF's Plugins-Cell"
 //#define FS_CATEGORY "NF's Plugins-Channel"
@@ -28,14 +28,12 @@
 
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
-//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
+#define SUPPORT_SMARTFX			// Enable SmartFX + Float_Color
+//#define NO_USE_FSGRAPHICS	// Disable FsGraphics related code
 
 //-----------------------------------------------------------------------------------
-//#include "../FsLibrary/FsVersion.h"
-#define MAJOR_VERSION 1
-#define MINOR_VERSION 0
-#define FS_VERSION ((MAJOR_VERSION << 16) | MINOR_VERSION)
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 
 //-----------------------------------------------------------------------------------

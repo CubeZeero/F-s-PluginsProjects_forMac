@@ -15,8 +15,8 @@
 #define FS_NAME			"F's NoiseHiLo_RGB"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"RGB�`�����l���̖��邢�E�Â��Ƃ���ʂɃm�C�Y��������t�B���^"
+// Plugin description used in the interface
+#define FS_DESCRIPTION	"Add noise based on RGB luminance (Hi/Mid/Lo)"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -35,10 +35,8 @@
 //#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
 //-----------------------------------------------------------------------------------
-// Version settings
-#define FS_VERSION	1572864
-#define MAJOR_VERSION	1
-#define MINOR_VERSION	0
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

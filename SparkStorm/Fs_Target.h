@@ -11,12 +11,12 @@
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+// Name shown in AE menus
 #define FS_NAME			"F's SparkStorm"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�A�j�����ۂ���Ȃ̕`��A��"
+// Description shown in AE UI
+#define FS_DESCRIPTION	"Generates animated spark-like drawing (storm style)"
 
 //-----------------------------------------------------------------------------------
 //�v���O�C�����\������郁�j���[��
@@ -34,7 +34,8 @@
 #define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
 //#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
 
-#include "../FsLibrary/FsVersion.h"
+// Use centralized version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags

@@ -1,0 +1,254 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4100001095A3D3A0012CA3F /* SparkRing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41E0001095A3C810012CA3F /* SparkRing.cpp */; };
+		C4100002095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = C41E0002095A3C810012CA3F /* AEFX_SuiteHelper.c */; };
+		C4100003095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41E0003095A3C810012CA3F /* AEGP_SuiteHandler.cpp */; };
+		C4100004095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41E0004095A3C810012CA3F /* MissingSuiteError.cpp */; };
+		C4100005095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41E0005095A3C810012CA3F /* Smart_Utils.cpp */; };
+		C4100006095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41E0006095A3C810012CA3F /* AEGP_Utils.cpp */; };
+		C4100007095A3D3A0012CA3F /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41E0007095A3C810012CA3F /* FsGraphics.cpp */; };
+		C4100008095A3D3A0012CA3F /* SparkRingPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = C41E0008095A3C810012CA3F /* SparkRingPiPL.r */; };
+		7EF36F2416F292A6002A3CB3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF36F2316F292A6002A3CB3 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7E76EEE11F70884000536F9D /* AE_Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AE_Effect.h; path = ../../../Headers/AE_Effect.h; sourceTree = "<group>"; };
+		7E76EEE21F70884000536F9D /* AE_PluginData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AE_PluginData.h; path = ../../../Headers/AE_PluginData.h; sourceTree = "<group>"; };
+		7EF36F2316F292A6002A3CB3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C41E0000095A3C810012CA3F /* SparkRing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SparkRing.h; path = ../SparkRing.h; sourceTree = SOURCE_ROOT; };
+		C41E0001095A3C810012CA3F /* SparkRing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SparkRing.cpp; path = ../SparkRing.cpp; sourceTree = SOURCE_ROOT; };
+		C41E0002095A3C810012CA3F /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		C41E0003095A3C810012CA3F /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		C41E0004095A3C810012CA3F /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		C41E0005095A3C810012CA3F /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		C41E0006095A3C810012CA3F /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		C41E0007095A3C810012CA3F /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		C41E0008095A3C810012CA3F /* SparkRingPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = SparkRingPiPL.r; path = ../SparkRingPiPL.r; sourceTree = SOURCE_ROOT; };
+		C41EFF0C095A3CE80012CA3F /* SparkRing.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkRing.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C41EFFC9095A3CE80012CA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF36F2416F292A6002A3CB3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E76EEE01F70882A00536F9D /* Supporting Code */ = {
+			isa = PBXGroup;
+			children = (
+				7E76EEE11F70884000536F9D /* AE_Effect.h */,
+				7E76EEE21F70884000536F9D /* AE_PluginData.h */,
+			);
+			name = "Supporting Code";
+			sourceTree = "<group>";
+		};
+		C41E007C095A3C800012CA3F = {
+			isa = PBXGroup;
+			children = (
+				C41E0001095A3C810012CA3F /* SparkRing.cpp */,
+				C41E0000095A3C810012CA3F /* SparkRing.h */,
+				C41E0008095A3C810012CA3F /* SparkRingPiPL.r */,
+				7E76EEE01F70882A00536F9D /* Supporting Code */,
+				C41E0002095A3C810012CA3F /* AEFX_SuiteHelper.c */,
+				C41E0003095A3C810012CA3F /* AEGP_SuiteHandler.cpp */,
+				C41E0004095A3C810012CA3F /* MissingSuiteError.cpp */,
+				C41E0005095A3C810012CA3F /* Smart_Utils.cpp */,
+				C41E0006095A3C810012CA3F /* AEGP_Utils.cpp */,
+				C41E0007095A3C810012CA3F /* FsGraphics.cpp */,
+				7EF36F2316F292A6002A3CB3 /* Cocoa.framework */,
+				C41E0008C095A3C800012CA3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C41E0008C095A3C800012CA3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C41EFF0C095A3CE80012CA3F /* SparkRing.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C41EFFCB095A3CE80012CA3F /* SparkRing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C41EFFCE095A3CE90012CA3F /* Build configuration list for PBXNativeTarget "SparkRing" */;
+			buildPhases = (
+				C41EFFC8095A3CE80012CA3F /* Resources */,
+				C41EFFCA095A3CE80012CA3F /* Sources */,
+                C41EFFC9095A3CE80012CA3F /* Frameworks */,
+                C41EFFE1095A3E040012CA3F /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SparkRing;
+			productName = SparkRing.plugin;
+			productReference = C41EFF0C095A3CE80012CA3F /* SparkRing.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C41E007E095A3C800012CA3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+			};
+			buildConfigurationList = C41E007F095A3C800012CA3F /* Build configuration list for PBXProject "SparkRing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = C41E007C095A3C800012CA3F;
+			productRefGroup = C41E0008C095A3C800012CA3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C41EFFCB095A3CE80012CA3F /* SparkRing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C41EFFC8095A3CE80012CA3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+        C41EFFE1095A3E040012CA3F /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4100008095A3D3A0012CA3F /* SparkRingPiPL.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C41EFFCA095A3CE80012CA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4100001095A3D3A0012CA3F /* SparkRing.cpp in Sources */,
+				C4100002095A3D3A0012CA3F /* AEFX_SuiteHelper.c in Sources */,
+				C4100003095A3D3A0012CA3F /* AEGP_SuiteHandler.cpp in Sources */,
+				C4100004095A3D3A0012CA3F /* MissingSuiteError.cpp in Sources */,
+				C4100005095A3D3A0012CA3F /* Smart_Utils.cpp in Sources */,
+				C4100006095A3D3A0012CA3F /* AEGP_Utils.cpp in Sources */,
+				C4100007095A3D3A0012CA3F /* FsGraphics.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C41E0080095A3C800012CA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../Headers,
+					../../../Util,
+					../../../Headers/SP,
+					../../../Resources,
+					../../FsLibrary,
+					..,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				REZ_PREPROCESSOR_DEFINITIONS = __MACH__;
+				REZ_SEARCH_PATHS = (
+					../../../Headers,
+					../../../Headers/SP,
+					../../../Resources,
+					../../FsLibrary,
+					..,
+				);
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		C41EFFCF095A3CE90012CA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = G5;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = "SparkRing.plugin-Info.plist";
+				INFOPLIST_KEY_CFBundlePackageType = eFKT;
+				INFOPLIST_KEY_LSRequiresCarbon = YES;
+				"INFOPLIST_KEY_CFBundlePackageType[sdk=macosx*]" = eFKT;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+				OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+				MACH_O_TYPE = mh_bundle;
+				EXECUTABLE_EXTENSION = plugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.SparkRing;
+				PRODUCT_BUNDLE_PACKAGE_TYPE = eFKT;
+				PRODUCT_NAME = SparkRing;
+				SDKROOT = macosx;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C41E007F095A3C800012CA3F /* Build configuration list for PBXProject "SparkRing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41E0080095A3C800012CA3F /* Debug */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+		C41EFFCE095A3CE90012CA3F /* Build configuration list for PBXNativeTarget "SparkRing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41EFFCF095A3CE90012CA3F /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C41E007E095A3C800012CA3F /* Project object */;
+}

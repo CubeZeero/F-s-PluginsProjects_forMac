@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'FsSSFrame' in project 'FsSSFrame' (no dependencies)

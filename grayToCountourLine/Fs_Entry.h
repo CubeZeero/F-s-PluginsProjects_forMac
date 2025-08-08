@@ -150,7 +150,7 @@ RespondtoAEGP (
 }
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EffectMain (
+EntryPointFunc (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -243,7 +243,7 @@ PF_Err PluginDataEntryFunction2(
         FS_NAME,
         FS_CATEGORY,
         AE_RESERVED_INFO,
-        "EffectMain",
+        "EntryPointFunc",
         FS_DESCRIPTION
     );
     return result;

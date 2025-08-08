@@ -1,0 +1,168 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		MOZA000010001 /* Mosaic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000010001 /* Mosaic.cpp */; };
+		MOZA000010101 /* AEFX_SuiteHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000100101 /* AEFX_SuiteHelper.c */; };
+		MOZA000010102 /* AEGP_SuiteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000100102 /* AEGP_SuiteHandler.cpp */; };
+		MOZA000010103 /* MissingSuiteError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000100103 /* MissingSuiteError.cpp */; };
+		MOZA000010104 /* Smart_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000100104 /* Smart_Utils.cpp */; };
+		MOZA000010105 /* AEGP_Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000100105 /* AEGP_Utils.cpp */; };
+		MOZA000010201 /* FsGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000200101 /* FsGraphics.cpp */; };
+		MOZA000010202 /* FsGraphicsBlend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000200102 /* FsGraphicsBlend.cpp */; };
+		MOZA000010203 /* FsGraphicsBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000200103 /* FsGraphicsBox.cpp */; };
+		MOZA000010204 /* FsGraphicsCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000200104 /* FsGraphicsCircle.cpp */; };
+		MOZA000010205 /* FsGraphicsLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000200105 /* FsGraphicsLine.cpp */; };
+		MOZA000010206 /* FsGraphicsPaint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000200106 /* FsGraphicsPaint.cpp */; };
+		MOZA000010207 /* FsMosaic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000200107 /* FsMosaic.cpp */; };
+		MOZA000010208 /* FsMat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = MOZA1000200108 /* FsMat.cpp */; };
+		MOZA000020001 /* MosaicPiPL.r in Rez */ = {isa = PBXBuildFile; fileRef = MOZA1000030001 /* MosaicPiPL.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		MOZA1000010001 /* Mosaic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Mosaic.cpp; path = ../Mosaic.cpp; sourceTree = "<group>"; };
+		MOZA1000020001 /* Fs_Target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fs_Target.h; path = ../Fs_Target.h; sourceTree = "<group>"; };
+		MOZA1000030001 /* MosaicPiPL.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = MosaicPiPL.r; path = ../MosaicPiPL.r; sourceTree = "<group>"; };
+		MOZA1000100101 /* AEFX_SuiteHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = AEFX_SuiteHelper.c; path = ../../../Util/AEFX_SuiteHelper.c; sourceTree = SOURCE_ROOT; };
+		MOZA1000100102 /* AEGP_SuiteHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_SuiteHandler.cpp; path = ../../../Util/AEGP_SuiteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000100103 /* MissingSuiteError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MissingSuiteError.cpp; path = ../../../Util/MissingSuiteError.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000100104 /* Smart_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Smart_Utils.cpp; path = ../../../Util/Smart_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000100105 /* AEGP_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AEGP_Utils.cpp; path = ../../../Util/AEGP_Utils.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000200101 /* FsGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphics.cpp; path = ../../FsLibrary/FsGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000200102 /* FsGraphicsBlend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBlend.cpp; path = ../../FsLibrary/FsGraphicsBlend.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000200103 /* FsGraphicsBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsBox.cpp; path = ../../FsLibrary/FsGraphicsBox.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000200104 /* FsGraphicsCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsCircle.cpp; path = ../../FsLibrary/FsGraphicsCircle.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000200105 /* FsGraphicsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsLine.cpp; path = ../../FsLibrary/FsGraphicsLine.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000200106 /* FsGraphicsPaint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsGraphicsPaint.cpp; path = ../../FsLibrary/FsGraphicsPaint.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000200107 /* FsMosaic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMosaic.cpp; path = ../../FsLibrary/FsMosaic.cpp; sourceTree = SOURCE_ROOT; };
+		MOZA1000200108 /* FsMat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FsMat.cpp; path = ../../FsLibrary/FsMat.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		MOZAPROJ /* Project */ = {isa = PBXGroup; children = (
+			MOZASRCS /* Sources */,
+			MOZAUTIL /* AEUtil */,
+			MOZALIB /* FsLibrary */,
+			MOZARES /* Resources */,
+		); sourceTree = "<group>"; };
+		MOZASRCS /* Sources */ = {isa = PBXGroup; children = (
+			MOZA1000010001 /* Mosaic.cpp */, MOZA1000020001 /* Fs_Target.h */); name = Sources; sourceTree = "<group>"; };
+		MOZAUTIL /* AEUtil */ = {isa = PBXGroup; children = (
+			MOZA1000100101 /* AEFX_SuiteHelper.c */, MOZA1000100102 /* AEGP_SuiteHandler.cpp */, MOZA1000100104 /* Smart_Utils.cpp */, MOZA1000100105 /* AEGP_Utils.cpp */, MOZA1000100103 /* MissingSuiteError.cpp */); name = AEUtil; sourceTree = "<group>"; };
+		MOZALIB /* FsLibrary */ = {isa = PBXGroup; children = (
+			MOZA1000200101 /* FsGraphics.cpp */, MOZA1000200102 /* FsGraphicsBlend.cpp */, MOZA1000200103 /* FsGraphicsBox.cpp */, MOZA1000200104 /* FsGraphicsCircle.cpp */, MOZA1000200105 /* FsGraphicsLine.cpp */, MOZA1000200106 /* FsGraphicsPaint.cpp */, MOZA1000200107 /* FsMosaic.cpp */, MOZA1000200108 /* FsMat.cpp */); name = FsLibrary; sourceTree = "<group>"; };
+		MOZARES /* Resources */ = {isa = PBXGroup; children = (
+			MOZA1000030001 /* MosaicPiPL.r */); name = Resources; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		MOZAAPP /* Mosaic */ = {isa = PBXNativeTarget; buildConfigurationList = MOZABUILDSET; buildPhases = (
+			MOZASOURCESPHASE /* Sources */, MOZAREZPHASE /* Rez */, MOZABUILDRES /* Resources */); name = Mosaic; productName = Mosaic; productType = "com.apple.product-type.bundle"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		MOZAPROJOBJ /* Project object */ = {isa = PBXProject; buildConfigurationList = MOZAPROJECTBUILDSET; compatibilityVersion = "Xcode 3.2"; hasScannedForEncodings = 0; mainGroup = MOZAPROJ; productRefGroup = MOZAPROJ; projectDirPath = ""; targets = (MOZAAPP); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		MOZABUILDRES /* Resources */ = {isa = PBXResourcesBuildPhase; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		MOZAREZPHASE /* Rez */ = {isa = PBXRezBuildPhase; files = (
+			MOZA000020001 /* MosaicPiPL.r in Rez */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		MOZASOURCESPHASE /* Sources */ = {isa = PBXSourcesBuildPhase; files = (
+			MOZA000010001 /* Mosaic.cpp in Sources */, MOZA000010101 /* AEFX_SuiteHelper.c in Sources */, MOZA000010102 /* AEGP_SuiteHandler.cpp in Sources */, MOZA000010103 /* MissingSuiteError.cpp in Sources */, MOZA000010104 /* Smart_Utils.cpp in Sources */, MOZA000010105 /* AEGP_Utils.cpp in Sources */, MOZA000010201 /* FsGraphics.cpp in Sources */, MOZA000010202 /* FsGraphicsBlend.cpp in Sources */, MOZA000010203 /* FsGraphicsBox.cpp in Sources */, MOZA000010204 /* FsGraphicsCircle.cpp in Sources */, MOZA000010205 /* FsGraphicsLine.cpp in Sources */, MOZA000010206 /* FsGraphicsPaint.cpp in Sources */, MOZA000010207 /* FsMosaic.cpp in Sources */, MOZA000010208 /* FsMat.cpp in Sources */
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+        MOZABUILDDEBUG /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+            CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/Mosaic.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Mosaic;
+			PRODUCT_NAME = Mosaic;
+            WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Debug; };
+        MOZABUILDRELEASE /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+			CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+			CLANG_CXX_LIBRARY = "libc++";
+			CODE_SIGN_IDENTITY = "-";
+            CONFIGURATION_BUILD_DIR = "$(SRCROOT)/build/$(CONFIGURATION)";
+			EXECUTABLE_EXTENSION = plugin;
+			EXECUTABLE_PREFIX = "";
+			INFOPLIST_FILE = "$(SRCROOT)/Mosaic.plugin-Info.plist";
+			INSTALL_PATH = "$(CONFIGURATION_BUILD_DIR)";
+			LIBRARY_STYLE = Bundle;
+			MACH_O_TYPE = mh_bundle;
+			MACOSX_DEPLOYMENT_TARGET = 10.13;
+			OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+			PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AfterEffects.Mosaic;
+			PRODUCT_NAME = Mosaic;
+            WRAPPER_EXTENSION = plugin;
+			SDKROOT = macosx;
+			SUPPORTED_PLATFORMS = "macosx";
+			VALID_ARCHS = "arm64 x86_64";
+			ARCHS = "arm64 x86_64";
+			HEADER_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Util",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+			REZ_SEARCH_PATHS = (
+				"$(SRCROOT)/../../../Headers",
+				"$(SRCROOT)/../../../Headers/SP",
+				"$(SRCROOT)/../../../Resources",
+				"$(SRCROOT)/../../FsLibrary",
+				"$(SRCROOT)/.."
+			);
+		}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		MOZABUILDSET /* Build configuration list for PBXNativeTarget */ = {isa = XCConfigurationList; buildConfigurations = (MOZABUILDDEBUG, MOZABUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		MOZAPROJECTBUILDSET /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (MOZABUILDDEBUG, MOZABUILDRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+};
+	rootObject = MOZAPROJOBJ /* Project object */;
+}

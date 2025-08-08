@@ -77,8 +77,8 @@ static PF_Err SequenceResetup (
 }
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts�Ƀp�����[�^��ʒB����
-//Param_Utils.h���Q�Ƃ̂���
+// Pass parameters to After Effects
+// Reference to Param_Utils.h
 static PF_Err ParamsSetup (
 	PF_InData		*in_data,
 	PF_OutData		*out_data,
@@ -341,7 +341,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//��ʂ��R�s�[
+	// Copy input to output
 	ERR(ae->CopyInToOut());
 	if ( (infoP->value>0)&&(infoP->strong>0)){
 
@@ -372,10 +372,10 @@ static PF_Err
 	return err;
 }
 //-------------------------------------------------------------------------------------------------
-//�����_�����O�̃��C��
+// Rendering main routine
 /*
-	SmartFX�ɑΉ����Ă��Ȃ��z�X�g(After Effects7�ȑO�̂���)�͂��̊֐����Ăяo����ĕ`�悷��
-	���̊֐��������Ă����Έꉞv6.5�Ή��ɂȂ�
+	Hosts that don't support SmartFX (Before After Effects 7) call this function for rendering
+	This function supports v6.5 for backward compatibility
 */
 static PF_Err 
 Render ( 
@@ -401,7 +401,7 @@ Render (
 //-------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 /*
-	SmartFX�Ή��̏ꍇ�A�܂����̊֐����Ă΂�ăp�����[�^�̊l�����s��
+	For SmartFX support, this function is called first to check parameter values
 */
 #if defined(SUPPORT_SMARTFX)
 static PF_Err
@@ -476,7 +476,7 @@ RespondtoAEGP (
 
 //-----------------------------------------------------------------------------------
 DllExport	PF_Err 
-EffectMain (
+EntryPointFunc (
 	PF_Cmd			cmd,
 	PF_InData		*in_data,
 	PF_OutData		*out_data,

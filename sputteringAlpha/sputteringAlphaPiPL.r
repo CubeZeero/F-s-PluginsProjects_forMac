@@ -22,17 +22,18 @@ resource 'PiPL' (16000) {
 			FS_CATEGORY
 		},
 #ifdef AE_OS_WIN
-	#ifdef AE_PROC_INTELx64
-		CodeWin64X86 {"EntryPointFunc"},
-	#else
-		CodeWin32X86 {"EntryPointFunc"},
-	#endif	
+    #ifdef AE_PROC_INTELx64
+        CodeWin64X86 {"EntryPointFunc"},
+    #else
+        CodeWin32X86 {"EntryPointFunc"},
+    #endif	
 #else
-	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
-	#endif
+    #ifdef AE_OS_MAC
+        CodeMachOPowerPC {"EntryPointFunc"},
+        CodeMacIntel32 {"EntryPointFunc"},
+        CodeMacIntel64 {"EntryPointFunc"},
+        CodeMacARM64 {"EntryPointFunc"},
+    #endif
 #endif
 		/* [6] */
 		AE_PiPL_Version {

@@ -13,16 +13,16 @@ resource 'PiPL' (16000) {
 			AEEffect
 		},
 		/* [2] */
-		Name {
-			/*AEのメニューに使われる */
-			FS_NAME
-		},
+        Name {
+            /* Name shown in AE menu */
+            FS_NAME
+        },
 		/* [3] */
-		Category {
-			/*AEのメニューに使われる */
-			FS_CATEGORY
-			/*"F's Plugins"*/
-		},
+        Category {
+            /* Category in AE menu */
+            FS_CATEGORY
+            /*"F's Plugins"*/
+        },
 		
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64
@@ -31,11 +31,12 @@ resource 'PiPL' (16000) {
 		CodeWin32X86 {"EntryPointFunc"},
 	#endif	
 #else
-	#ifdef AE_OS_MAC
-		CodeMachOPowerPC {"EntryPointFunc"},
-		CodeMacIntel32 {"EntryPointFunc"},
-		CodeMacIntel64 {"EntryPointFunc"},
-	#endif
+    #ifdef AE_OS_MAC
+        CodeMachOPowerPC {"EntryPointFunc"},
+        CodeMacIntel32 {"EntryPointFunc"},
+        CodeMacIntel64 {"EntryPointFunc"},
+        CodeMacARM64 {"EntryPointFunc"},
+    #endif
 #endif
 
 		/* [6] */
@@ -63,12 +64,12 @@ resource 'PiPL' (16000) {
 		AE_Effect_Global_OutFlags_2 {
 			FS_OUT_FLAGS2
 		},
-		/* [11] */
-		AE_Effect_Match_Name {
-			/*プラグインの識別に使われる */
-			FS_NAME
-		},
-		/* [12] */
+        /* [11] */
+        AE_Effect_Match_Name {
+            /* Match name */
+            FS_NAME
+        },
+        /* [12] */
 		AE_Reserved_Info {
 			0
 		}

@@ -35,10 +35,11 @@
 	#include <Windows.h>
 #endif
 
-#include "../FsLibrary/FsAE.h"
+// Use shared FsLibrary include path via project search paths
+#include "FsAE.h"
 
-//ƒ†[ƒU[ƒCƒ“ƒ^[ƒtƒF[ƒX‚ÌID
-//ParamsSetupŠÖ”‚ÆRenderŠÖ”‚Ìparamsƒpƒ‰ƒ[ƒ^‚ÌID‚É‚È‚é
+// UI parameter IDs
+// Used by ParamsSetup and Render functions
 enum {
 	ID_INPUT = 0,	// default input layer
 
@@ -52,16 +53,16 @@ enum {
 	ID_NUM_PARAMS
 };
 
-//UI‚Ì•\¦•¶š—ñ
-#define	STR_HEIGHT		"ƒ‰ƒCƒ“‚Ì‘¾‚³(pixel)"
-#define	STR_LEVEL0		"Šï”—ñƒ‰ƒCƒ“‚Ì–¾‚é‚³(%)"
-#define	STR_OPACITY0	"Šï”—ñƒ‰ƒCƒ“‚Ì•s“§–¾“x(%)"
-#define	STR_LEVEL1		"‹ô”—ñƒ‰ƒCƒ“‚Ì–¾‚é‚³(%)"
-#define	STR_OPACITY1	"‹ô”—ñƒ‰ƒCƒ“‚Ì•s“§–¾“x(%)"
-#define STR_DIR		"•ûŒü"
-#define STR_DIRSTR	"…•½|‚’¼"
+// UI strings
+#define STR_HEIGHT     "Line Height (px)"
+#define STR_LEVEL0     "Light Lines Brightness (%)"
+#define STR_OPACITY0   "Light Lines Opacity (%)"
+#define STR_LEVEL1     "Dark Lines Brightness (%)"
+#define STR_OPACITY1   "Dark Lines Opacity (%)"
+#define STR_DIR        "Direction"
+#define STR_DIRSTR     "Horizontal|Vertical"
 
-//UI‚Ìƒpƒ‰ƒ[ƒ^
+//UIï¿½Ìƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 typedef struct ParamInfo {
 	A_long		height;
 

@@ -80,8 +80,8 @@ static PF_Err SequenceResetup (
 
 
 //-------------------------------------------------------------------------------------------------
-//AfterEffexts‚Éƒpƒ‰ƒ[ƒ^‚ğ’Ê’B‚·‚é
-//Param_Utils.h‚ğQÆ‚Ì‚±‚Æ
+//AfterEffextsï¿½Éƒpï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Ê’Bï¿½ï¿½ï¿½ï¿½
+//Param_Utils.hï¿½ï¿½ï¿½Qï¿½Æ‚Ì‚ï¿½ï¿½ï¿½
 static PF_Err ParamsSetup (PF_InData		*in_data,
 					PF_OutData		*out_data,
 					PF_ParamDef		*params[],
@@ -106,32 +106,32 @@ static PF_Err ParamsSetup (PF_InData		*in_data,
 	);
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_HEIGHT,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					1, 			//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,		//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					1,			//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					16,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					2,	//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_HEIGHT,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					1, 			//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					1,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					16,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					2,	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_HEIGHT
 					);
 
 	//----------------------------------------------------------------
 	AEFX_CLR_STRUCT(def);
-	PF_ADD_SLIDER(	STR_INTER,	//ƒpƒ‰ƒ[ƒ^‚Ì–¼‘O
-					0, 		//”’l“ü—Í‚·‚éê‡‚ÌÅ¬’l
-					100,		//”’l“ü—Í‚·‚éê‡‚ÌÅ‘å’l
-					0,			//ƒXƒ‰ƒCƒ_[‚ÌÅ¬’l 
-					10,			//ƒXƒ‰ƒCƒ_[‚ÌÅ‘å’l
-					0,	//ƒfƒtƒHƒ‹ƒg‚Ì’l
+	PF_ADD_SLIDER(	STR_INTER,	//ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì–ï¿½ï¿½O
+					0, 		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅï¿½ï¿½l
+					100,		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ê‡ï¿½ÌÅ‘ï¿½l
+					0,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅï¿½ï¿½l 
+					10,			//ï¿½Xï¿½ï¿½ï¿½Cï¿½_ï¿½[ï¿½ÌÅ‘ï¿½l
+					0,	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½gï¿½Ì’l
 					ID_INTER
 					);
 
 	//----------------------------------------------------------------
-	//ƒ|ƒbƒvƒAƒbƒvƒƒjƒ…[
+	//ï¿½|ï¿½bï¿½vï¿½Aï¿½bï¿½vï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[
 	AEFX_CLR_STRUCT(def);	
 	PF_ADD_POPUP(		STR_DIR, 
-						2,	//ƒƒjƒ…[‚Ì”
-						1,	//ƒfƒtƒHƒ‹ƒg
+						2,	//ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ìï¿½
+						1,	//ï¿½fï¿½tï¿½Hï¿½ï¿½ï¿½g
 						STR_DIRSTR,
 						ID_DIR
 						);
@@ -213,9 +213,27 @@ FilterImage16 (
 	PF_Pixel16	*inP, 
 	PF_Pixel16	*outP)
 {
-	PF_Err			err = PF_Err_NONE;
-	
+	PF_Err err = PF_Err_NONE;
+	ParamInfo *niP = reinterpret_cast<ParamInfo*>(refcon);
 
+	PF_FpLong brt = niP->bright;
+	if (brt == 0) return err;
+
+	A_long w = niP->height*2 + niP->inter;
+	A_long fy = (niP->vurFlag == TRUE) ? (yL % w) : (xL % w);
+
+	if ( fy < niP->height){
+		if (brt < 0) {
+			outP->blue  = RoundShortFpLong((PF_FpLong)outP->blue  + outP->blue  * brt);
+			outP->green = RoundShortFpLong((PF_FpLong)outP->green + outP->green * brt);
+			outP->red   = RoundShortFpLong((PF_FpLong)outP->red   + outP->red   * brt);
+		}
+		else {
+			outP->blue  = RoundShortFpLong((PF_FpLong)outP->blue  + (PF_MAX_CHAN16 - outP->blue)  * brt);
+			outP->green = RoundShortFpLong((PF_FpLong)outP->green + (PF_MAX_CHAN16 - outP->green) * brt);
+			outP->red   = RoundShortFpLong((PF_FpLong)outP->red   + (PF_MAX_CHAN16 - outP->red)   * brt);
+		}
+	}
 	return err;
 }
 //-----------------------------------------------------------------------------------
@@ -228,11 +246,30 @@ FilterImage32 (
 	PF_PixelFloat	*inP, 
 	PF_PixelFloat	*outP)
 {
-	PF_Err			err = PF_Err_NONE;
-	
-	ParamInfo *	niP		= reinterpret_cast<ParamInfo*>(refcon);
-					
+	PF_Err err = PF_Err_NONE;
+	ParamInfo *niP = reinterpret_cast<ParamInfo*>(refcon);
 
+	PF_FpLong brt = niP->bright;
+	if (brt == 0) return err;
+
+	A_long w = niP->height*2 + niP->inter;
+	A_long fy = (niP->vurFlag == TRUE) ? (yL % w) : (xL % w);
+
+	if ( fy < niP->height){
+		if (brt < 0) {
+			outP->blue  = (PF_FpShort)((PF_FpLong)outP->blue  + outP->blue  * brt);
+			outP->green = (PF_FpShort)((PF_FpLong)outP->green + outP->green * brt);
+			outP->red   = (PF_FpShort)((PF_FpLong)outP->red   + outP->red   * brt);
+		}
+		else {
+			outP->blue  = (PF_FpShort)((PF_FpLong)outP->blue  + (1.0 - outP->blue)  * brt);
+			outP->green = (PF_FpShort)((PF_FpLong)outP->green + (1.0 - outP->green) * brt);
+			outP->red   = (PF_FpShort)((PF_FpLong)outP->red   + (1.0 - outP->red)   * brt);
+		}
+		if (outP->blue  < 0) outP->blue  = 0; if (outP->blue  > 1) outP->blue  = 1;
+		if (outP->green < 0) outP->green = 0; if (outP->green > 1) outP->green = 1;
+		if (outP->red   < 0) outP->red   = 0; if (outP->red   > 1) outP->red   = 1;
+	}
 	return err;
 }
 
@@ -265,7 +302,7 @@ static PF_Err
 {
 	PF_Err	err = PF_Err_NONE;
 
-	//‰æ–Ê‚ğƒRƒs[
+	//ï¿½ï¿½Ê‚ï¿½ï¿½Rï¿½sï¿½[
 	ERR(ae->CopyInToOut());
 	
 	if (infoP->bright!=0){

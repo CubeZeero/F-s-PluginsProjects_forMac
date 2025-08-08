@@ -38,7 +38,7 @@
 //#include "FsAE.h"
 
 //-----------------------------------------------------------------------------
-//ParamsSetup用の定数
+//ParamsSetup parameters
 #define PR_PRM_COUNT	24
 enum {
 	paramsOffset_topic =0,
@@ -54,11 +54,11 @@ enum {
 #define PixelReplace_LV  (PR_PRM_COUNT * paramsOffset_num +1)
 #define PixelReplace_POP  (PR_PRM_COUNT * paramsOffset_num +2)
 #define PixelReplace_NUM_PARAMS (PR_PRM_COUNT * paramsOffset_num +3)
-#define ID_NUM_PARAMS PixelReplace_NUM_PARAMS //コーディング対策
+#define ID_NUM_PARAMS PixelReplace_NUM_PARAMS //Parameter count
 
 #define PARAMS_IDX(I,J) ((I) *paramsOffset_num + (J) +1)
 //-----------------------------------------------------------------------------
-//パラメータUI用の文字列
+//Parameter UI strings
 #define UI_TOPIC	"Target"
 
 #define UI_ENABLED1	"Enabled"

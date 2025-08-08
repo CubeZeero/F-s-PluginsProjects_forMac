@@ -10,15 +10,15 @@
 
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̎��ʂɎg���閼�O
+// Plugin name used in specifications
 #define FS_NAME			"F's LineTrace"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C���̐����Ɏg���镶��
-#define FS_DESCRIPTION	"�Q�l��"
+// Plugin description text
+#define FS_DESCRIPTION	"Line trace and contour extraction effect"
 
 //-----------------------------------------------------------------------------------
-//�v���O�C�����\������郁�j���[��
+// Menu category where the plugin appears
 
 #define FS_CATEGORY "NF's Plugins-Cell"
 //#define FS_CATEGORY "NF's Plugins-Channel"
@@ -30,11 +30,12 @@
 //#define FS_CATEGORY "NF's Plugins-{Legacy}"
 
 //-----------------------------------------------------------
-#define SUPPORT_SMARTFX			//�����L���ɂ����SmartFX+Float_Color�ɑΉ�����
-//#define NO_USE_FSGRAPHICS	//�����L���ɂ����FsGraphics�֌W���C���N���[�h����Ȃ�
+#define SUPPORT_SMARTFX			// Enable SmartFX and Float_Color support when uncommented
+//#define NO_USE_FSGRAPHICS	// Don't include FsGraphics related when uncommented
 
 //-----------------------------------------------------------------------------------
-#include "../FsLibrary/FsVersion.h"
+// Version header (resolved via REZ_SEARCH_PATHS)
+#include "FsVersion.h"
 
 //-----------------------------------------------------------------------------------
 //out_flags
